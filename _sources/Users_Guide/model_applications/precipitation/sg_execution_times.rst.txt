@@ -1,0 +1,10 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_model_applications_precipitation_sg_execution_times:
+
+Computation times
+=================
+**00:00.038** total execution time for **Users_Guide_model_applications_precipitation** files:
+
+- **00:00.038**: :ref:`sphx_glr_Users_Guide_model_applications_precipitation_nam-vs-mrms.py` (``nam-vs-mrms.py``)

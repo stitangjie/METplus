@@ -1,0 +1,10 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_met_tool_wrapper_grid_stat_sg_execution_times:
+
+Computation times
+=================
+**00:00.038** total execution time for **Users_Guide_met_tool_wrapper_grid_stat** files:
+
+- **00:00.038**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_grid_stat_grid-stat-nam-vs-st4.py` (``grid-stat-nam-vs-st4.py``)

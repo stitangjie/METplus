@@ -1,0 +1,1246 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python Wrappers &mdash; METplus 3.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="System Configuration" href="systemconfiguration.html" />
+    <link rel="prev" title="Software Installation/Getting Started" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> METplus
+          
+
+          
+            
+            <img src="../_static/METplus_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">METplus Wrappers Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">User’s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Software Installation/Getting Started</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python Wrappers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cycloneplotter">CyclonePlotter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ensemblestat">EnsembleStat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-1">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-1">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#extracttiles">ExtractTiles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-2">3.5.1 Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-2">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gempaktocf">GempakToCF</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-3">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-3">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gridstat">GridStat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-4">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-4">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#makeplots">MakePlots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-5">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-5">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mode">Mode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-6">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-6">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mtd">MTD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-7">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-7">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pb2nc">PB2NC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-8">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-8">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pcpcombine">PcpCombine</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-9">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-9">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pointstat">PointStat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-10">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-10">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#regriddataplane">RegridDataPlane</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-11">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-11">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#seriesbyinit">SeriesByInit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-12">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-12">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#seriesbylead">SeriesByLead</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-13">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-13">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#statanalysis">StatAnalysis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-14">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-14">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tcpairs">TcPairs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-15">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-15">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tcstat">TcStat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-16">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-16">Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tcmprplotter">TCMPRPlotter</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-17">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-17">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usecases.html">METplus Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html">METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Contributors_Guide/index.html">Contributor’s Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">METplus</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">User’s Guide</a> &raquo;</li>
+        
+      <li>Python Wrappers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Users_Guide/wrappers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-wrappers">
+<h1>Python Wrappers<a class="headerlink" href="#python-wrappers" title="Permalink to this headline">¶</a></h1>
+<p>This chapter provides a description of each supported Python wrapper in
+METplus Wrappers. A wrapper is generally a Python script that
+encapsulates the behavior of a corresponding MET tool. Each of these
+sections can be added to the PROCESS_LIST configuration list variable.
+The Configuration section of each wrapper section below lists the
+METplus Wrappers configuration variables that are specific to that
+wrapper organized by config file section. You can find more information
+about each item in the A-Z Config Glossary
+(<a class="reference external" href="#sec:SC_AZ_Config_Glossary">[sec:SC_AZ_Config_Glossary]</a>).</p>
+<div class="section" id="cycloneplotter">
+<h2>CyclonePlotter<a class="headerlink" href="#cycloneplotter" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description">
+<h3>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p>This wrapper does not have a corresponding MET tool but instead wraps
+the logic necessary to create plots of cyclone tracks. Currently only
+the output from the MET tc-pairs tool can be plotted.</p>
+</div>
+<div class="section" id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="glossary.html#term-5"><span class="xref std std-term">CYCLONE_INPUT_DIR</span></a></div>
+<div class="line">CYCLONE_OUTPUT_DIR <a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">CYCLONE_INIT_DATE <a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></div>
+<div class="line">CYCLONE_INIT_HOUR <a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></div>
+<div class="line">CYCLONE_MODEL <a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></div>
+<div class="line">CYCLONE_PLOT_TITLE <a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></div>
+<div class="line">CIRCLE_MARKER_SIZE <a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></div>
+<div class="line">CROSS_MARKER_SIZE <a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></div>
+<div class="line">GENERATE_TRACK_ASCII <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<p>CYCLONE_OUT_DIR<a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></p>
+</div>
+</div>
+<div class="section" id="ensemblestat">
+<h2>EnsembleStat<a class="headerlink" href="#ensemblestat" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-1">
+<span id="id1"></span><h3>Description<a class="headerlink" href="#description-1" title="Permalink to this headline">¶</a></h3>
+<p>Used to configure the MET tool ensemble_stat.</p>
+</div>
+<div class="section" id="configuration-1">
+<span id="id2"></span><h3>Configuration<a class="headerlink" href="#configuration-1" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">OBS_ENSEMBLE_STAT_POINT_INPUT_DIR <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_ENSEMBLE_STAT_GRID_INPUT_DIR <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_ENSEMBLE_STAT_INPUT_DIR <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">ENSEMBLE_STAT_OUTPUT_DIR <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+</div>
+<p>[filename_templates]</p>
+<div class="line-block">
+<div class="line">OBS_ENSEMBLE_STAT_POINT_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_ENSEMBLE_STAT_GRID_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_ENSEMBLE_STAT_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">ENSEMBLE_STAT_ONCE_PER_FIELD <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">FCST_ENSEMBLE_STAT_INPUT_DATATYPE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_ENSEMBLE_STAT_INPUT_POINT_DATATYPE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_ENSEMBLE_STAT_INPUT_GRID_DATATYPE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">ENSEMBLE_STAT_GRID_VX <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">ENSEMBLE_STAT_CONFIG_FILE <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">ENSEMBLE_STAT_MET_OBS_ERROR_TABLE <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">ENSEMBLE_STAT_N_MEMBERS <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">OBS_ENSEMBLE_STAT_WINDOW_BEGIN <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_ENSEMBLE_STAT_WINDOW_END <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">ENSEMBLE_STAT_ENS_THRESH <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">ENS_VAR&lt;n&gt;_NAME (optional) <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">ENS_VAR&lt;n&gt;_LEVELS (optional) <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">ENS_VAR&lt;n&gt;_THRESH (optional) <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">ENS_VAR&lt;n&gt;_OPTIONS (optional) <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<div class="line-block">
+<div class="line">ENSEMBLE_STAT_OUT_DIR<a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">ENSEMBLE_STAT_CONFIG<a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="extracttiles">
+<h2>ExtractTiles<a class="headerlink" href="#extracttiles" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-2">
+<span id="id3"></span><h3>3.5.1 Description<a class="headerlink" href="#description-2" title="Permalink to this headline">¶</a></h3>
+<p>The ExtractTiles wrapper is used to regrid and extract subregions from
+paired tropical cyclone tracks that are created by the tc_pairs_wrapper.
+Unlike the other wrappers, the extract_tiles_wrapper does not correspond
+to a specific MET tool. It invokes the tc_stat_wrapper, which in turn
+calls the MET tc_stat tool to determine the lat/lon positions of the
+paired track data. This information is then used to create tiles of
+subregions. The ExtractTiles wrapper creates a 2n degree x 2m degree
+grid/tile with each storm located at the center.</p>
+</div>
+<div class="section" id="configuration-2">
+<span id="id4"></span><h3>Configuration<a class="headerlink" href="#configuration-2" title="Permalink to this headline">¶</a></h3>
+<p>The following should be set in the METplus configuration file to define
+the dimensions and density of the tiles comprising the subregion:</p>
+<p>[dir]</p>
+<p>EXTRACT_TILES_OUTPUT_DIR <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></p>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">LON_ADJ<a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+<div class="line">LAT_ADJ <a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+<div class="line">NLAT <a class="reference external" href="#sec:SC_N">[sec:SC_N]</a></div>
+<div class="line">NLON <a class="reference external" href="#sec:SC_N">[sec:SC_N]</a></div>
+<div class="line">DLON <a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+<div class="line">DLAT <a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+<div class="line">EXTRACT_TILES_FILTER_OPTS <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">EXTRACT_TILES_VAR_LIST <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<p>EXTRACT_OUT_DIR<a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></p>
+</div>
+</div>
+<div class="section" id="gempaktocf">
+<h2>GempakToCF<a class="headerlink" href="#gempaktocf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-3">
+<span id="id5"></span><h3>Description<a class="headerlink" href="#description-3" title="Permalink to this headline">¶</a></h3>
+<p>Used to configure the utility GempakToCF.</p>
+</div>
+<div class="section" id="configuration-3">
+<span id="id6"></span><h3>Configuration<a class="headerlink" href="#configuration-3" title="Permalink to this headline">¶</a></h3>
+<p>[exe]</p>
+<p>GEMPAKTOCF_CLASSPATH <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></p>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">GEMPAKTOCF_INPUT_DIR <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+<div class="line">GEMPAKTOCF_OUTPUT_DIR <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+</div>
+<p>[filename_templates]</p>
+<div class="line-block">
+<div class="line">GEMPAKTOCF_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+<div class="line">GEMPAKTOCF_OUTPUT_TEMPLATE <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+</div>
+<p>[config]</p>
+<p>GEMPAKTOCF_SKIP_IF_OUTPUT_EXISTS <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></p>
+</div>
+</div>
+<div class="section" id="gridstat">
+<h2>GridStat<a class="headerlink" href="#gridstat" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-4">
+<span id="id7"></span><h3>Description<a class="headerlink" href="#description-4" title="Permalink to this headline">¶</a></h3>
+<p>Used to configure the MET tool grid_stat.</p>
+</div>
+<div class="section" id="configuration-4">
+<span id="id8"></span><h3>Configuration<a class="headerlink" href="#configuration-4" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">FCST_GRID_STAT_INPUT_DIR <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_GRID_STAT_INPUT_DIR <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">GRID_STAT_OUTPUT_DIR <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+</div>
+<p>[filename_templates]</p>
+<div class="line-block">
+<div class="line">FCST_GRID_STAT_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_GRID_STAT_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">GRID_STAT_VERIFICATION_MASK_TEMPLATE (optional)
+<a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">GRID_STAT_CONFIG_FILE <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+<div class="line">FCST_GRID_STAT_INPUT_DATATYPE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_GRID_STAT_INPUT_DATATYPE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">GRID_STAT_ONCE_PER_FIELD <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+<div class="line">FCST_GRID_STAT_PROB_THRESH (optional) <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_GRID_STAT_PROB_THRESH (optional) <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">GRID_STAT_NEIGHBORHOOD_WIDTH (optional) <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+<div class="line">GRID_STAT_NEIGHBORHOOD_SHAPE (optional) <a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+<div class="line">FCST_GRID_STAT_WINDOW_BEGIN (optional) <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_GRID_STAT_WINDOW_END (optional) <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_GRID_STAT_WINDOW_BEGIN (optional) <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_GRID_STAT_WINDOW_END (optional) <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<div class="line-block">
+<div class="line">GRID_STAT_OUT_DIR<a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+<div class="line">GRID_STAT_CONFIG<a class="reference external" href="#sec:SC_G">[sec:SC_G]</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="makeplots">
+<h2>MakePlots<a class="headerlink" href="#makeplots" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-5">
+<span id="id9"></span><h3>Description<a class="headerlink" href="#description-5" title="Permalink to this headline">¶</a></h3>
+<p>The MakePlots wrapper creates various statistical plots using python
+scripts for the various METplus Wrappers use cases. This can only be run
+following StatAnalysis wrapper when LOOP_ORDER = processes. To run
+MakePlots wrapper, include MakePlots in PROCESS_LIST.</p>
+</div>
+<div class="section" id="configuration-5">
+<span id="id10"></span><h3>Configuration<a class="headerlink" href="#configuration-5" title="Permalink to this headline">¶</a></h3>
+<p>The following values <strong>must</strong> be defined in the METplus Wrappers
+configuration file:</p>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">PLOTTING_SCRIPTS_DIR <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">STAT_FILES_INPUT_DIR <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">PLOTTING_OUTPUT_DIR <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">VERIF_CASE <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VERIF_TYPE <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">PLOT_TIME <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">VALID_BEG <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VALID_END <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">INIT_BEG <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_END <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">VALID_HOUR_METHOD <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VALID_HOUR_BEG <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VALID_HOUR_END <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VALID_HOUR_INCREMENT <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">INIT_HOUR_METHOD <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_HOUR_BEG <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_HOUR_END <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_HOUR_INCREMENT <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">MODEL&lt;n&gt;_NAME <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">MODEL&lt;n&gt;_OBS_NAME <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">MODEL&lt;n&gt;_NAME_ON_PLOT <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">FCST_VAR&lt;n&gt;_NAME <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_VAR&lt;n&gt;_LEVELS <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">REGION_LIST <a class="reference external" href="#sec:SC_R">[sec:SC_R]</a></div>
+<div class="line">LEAD_LIST <a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+<div class="line">INTERP <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">PLOT_STATS_LIST <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">CI_METHOD <a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></div>
+<div class="line">VERIF_GRID <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">EVENT_EQUALIZATION <a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+</div>
+<p>The following values are <strong>optional</strong> in the METplus Wrappers
+configuration file:</p>
+<div class="line-block">
+<div class="line">FCST_VAR&lt;n&gt;_THRESH <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_VAR&lt;n&gt;_OPTIONS <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">VAR&lt;n&gt;_FOURIER_DECOMP <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VAR&lt;n&gt;_WAVE_NUM_LIST <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="mode">
+<h2>Mode<a class="headerlink" href="#mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-6">
+<span id="id11"></span><h3>Description<a class="headerlink" href="#description-6" title="Permalink to this headline">¶</a></h3>
+<p>Used to configure the MET tool mode.</p>
+</div>
+<div class="section" id="configuration-6">
+<span id="id12"></span><h3>Configuration<a class="headerlink" href="#configuration-6" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">FCST_MODE_INPUT_DIR <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MODE_INPUT_DIR <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">MODE_OUTPUT_DIR <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+</div>
+<p>[filename_templates]</p>
+<div class="line-block">
+<div class="line">FCST_MODE_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MODE_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">MODE_CONFIG_FILE <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">FCST_MODE_INPUT_DATATYPE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MODE_INPUT_DATATYPE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">MODE_QUILT <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">MODE_CONV_RADIUS <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">FCST_MODE_CONV_RADIUS <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MODE_CONV_RADIUS <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">MODE_CONV_THRESH <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">FCST_MODE_CONV_THRESH <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MODE_CONV_THRESH <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">MODE_MERGE_THRESH <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">FCST_MODE_MERGE_THRESH <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MODE_MERGE_THRESH <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">MODE_MERGE_FLAG <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">FCST_MODE_MERGE_FLAG <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MODE_MERGE_FLAG <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">MODE_MERGE_CONFIG_FILE <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">FCST_MODE_WINDOW_BEGIN <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_MODE_WINDOW_END <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MODE_WINDOW_BEGIN <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_MODE_WINDOW_END <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<div class="line-block">
+<div class="line">MODE_OUT_DIR<a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">MODE_CONFIG<a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="mtd">
+<h2>MTD<a class="headerlink" href="#mtd" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-7">
+<span id="id13"></span><h3>Description<a class="headerlink" href="#description-7" title="Permalink to this headline">¶</a></h3>
+<p>Used to configure the MET tool mtd (mode time domain).</p>
+</div>
+<div class="section" id="configuration-7">
+<span id="id14"></span><h3>Configuration<a class="headerlink" href="#configuration-7" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">FCST_MTD_INPUT_DIR <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MTD_INPUT_DIR <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">MTD_OUTPUT_DIR <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+</div>
+<p>[filename_templates]</p>
+<div class="line-block">
+<div class="line">FCST_MTD_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MTD_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">MTD_CONFIG_FILE <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">MTD_MIN_VOLUME <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">MTD_SINGLE_RUN <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">MTD_SINGLE_DATA_SRC <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">FCST_MTD_INPUT_DATATYPE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MTD_INPUT_DATATYPE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_MTD_CONV_RADIUS <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_MTD_CONV_THRESH <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a> OBS_MTD_CONV_RADIUS
+<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_MTD_CONV_THRESH <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<div class="line-block">
+<div class="line">MTD_OUT_DIR<a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">MTD_CONFIG<a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="pb2nc">
+<h2>PB2NC<a class="headerlink" href="#pb2nc" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-8">
+<span id="id15"></span><h3>Description<a class="headerlink" href="#description-8" title="Permalink to this headline">¶</a></h3>
+<p>The PB2NC wrapper is a Python script that encapsulates the behavior of
+the MET pb2nc tool to convert prepBUFR files into netCDF.</p>
+</div>
+<div class="section" id="configuration-8">
+<span id="id16"></span><h3>Configuration<a class="headerlink" href="#configuration-8" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">PB2NC_INPUT_DIR <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_OUTPUT_DIR <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+</div>
+<p>[filename_templates]</p>
+<div class="line-block">
+<div class="line">PB2NC_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_OUTPUT_TEMPLATE <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">PB2NC_SKIP_IF_OUTPUT_EXISTS <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_OFFSETS <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_INPUT_DATATYPE <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_CONFIG_FILE <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_MESSAGE_TYPE (optional) <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_STATION_ID (optional) <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_GRID (optional) <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_POLY <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_OBS_BUFR_VAR_LIST (optional) <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_TIME_SUMMARY_FLAG <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_TIME_SUMMARY_BEG <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_TIME_SUMMARY_END <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_TIME_SUMMARY_VAR_NAMES <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_TIME_SUMMARY_TYPES <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_WINDOW_BEGIN <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PB2NC_WINDOW_END <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<div class="line-block">
+<div class="line">PREPBUFR_DATA_DIR<a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PREPBUFR_MODEL_DIR_NAME<a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PREPBUFR_DIR_REGEX<a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">PREPBUFR_FILE_REGEX<a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">NC_FILE_TMPL<a class="reference external" href="#sec:SC_N">[sec:SC_N]</a></div>
+<div class="line">PB2NC_VERTICAL_LEVEL<a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">OBS_BUFR_VAR_LIST<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">TIME_SUMMARY_FLAG<a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TIME_SUMMARY_BEG<a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TIME_SUMMARY_END<a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TIME_SUMMARY_VAR_NAMES<a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TIME_SUMMARY_TYPE<a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">OVERWRITE_NC_OUTPUT<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">VERTICAL_LOCATION<a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="pcpcombine">
+<h2>PcpCombine<a class="headerlink" href="#pcpcombine" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-9">
+<span id="id17"></span><h3>Description<a class="headerlink" href="#description-9" title="Permalink to this headline">¶</a></h3>
+<p>The PcpCombine wrapper is a Python script that encapsulates the MET
+pcp_combine tool. It provides the infrastructure to combine or extract
+from files to build desired accumulations.</p>
+</div>
+<div class="section" id="configuration-9">
+<span id="id18"></span><h3>Configuration<a class="headerlink" href="#configuration-9" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">FCST_PCP_COMBINE_INPUT_DIR <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_PCP_COMBINE_OUTPUT_DIR <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_INPUT_DIR <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_PCP_COMBINE_OUTPUT_DIR <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+</div>
+<p>[filename_templates]</p>
+<div class="line-block">
+<div class="line">FCST_PCP_COMBINE_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_PCP_COMBINE_OUTPUT_TEMPLATE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_PCP_COMBINE_OUTPUT_TEMPLATE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">FCST_IS_PROB <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_IS_PROB <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_&lt;n&gt;_FIELD_NAME <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_&lt;n&gt;_FIELD_NAME <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_DATA_INTERVAL <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_DATA_INTERVAL <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_TIMES_PER_FILE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_TIMES_PER_FILE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_IS_DAILY_FILE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_IS_DAILY_FILE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_INPUT_DATATYPE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_INPUT_DATATYPE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_INPUT_LEVEL <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_INPUT_LEVEL <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_RUN <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_RUN <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_METHOD <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_METHOD <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_MIN_FORECAST <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_MIN_FORECAST <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_MAX_FORECAST <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_MAX_FORECAST <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_STAT_LIST <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_STAT_LIST <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_PCP_COMBINE_DERIVE_LOOKBACK <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_PCP_COMBINE_DERIVE_LOOKBACK <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">PCP_COMBINE_SKIP_IF_OUTPUT_EXISTS <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<div class="line-block">
+<div class="line">PCP_COMBINE_METHOD<a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">FCST_MIN_FORECAST<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_MAX_FORECAST<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_MIN_FORECAST<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_MAX_FORECAST<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_DATA_INTERVAL<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_DATA_INTERVAL<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_IS_DAILY_FILE<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_IS_DAILY_FILE<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_TIMES_PER_FILE<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_TIMES_PER_FILE<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_LEVEL<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_LEVEL<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="pointstat">
+<h2>PointStat<a class="headerlink" href="#pointstat" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-10">
+<span id="id19"></span><h3>Description<a class="headerlink" href="#description-10" title="Permalink to this headline">¶</a></h3>
+<p>The PointStat wrapper is a Python script that encapsulates the MET
+point_stat tool. It provides the infrastructure to read in gridded model
+data and netCDF point observation data to perform grid-to-point
+(grid-to-obs) verification.</p>
+</div>
+<div class="section" id="configuration-10">
+<span id="id20"></span><h3>Configuration<a class="headerlink" href="#configuration-10" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">FCST_POINT_STAT_INPUT_DIR <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_POINT_STAT_INPUT_DIR <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">POINT_STAT_OUTPUT_DIR <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+</div>
+<p>[filename_templates]</p>
+<div class="line-block">
+<div class="line">FCST_POINT_STAT_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_POINT_STAT_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">POINT_STAT_VERIFICATION_MASK_TEMPLATE (optional)
+<a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">POINT_STAT_OFFSETS <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">FCST_POINT_STAT_INPUT_DATATYPE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_POINT_STAT_INPUT_DATATYPE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">POINT_STAT_CONFIG_FILE <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">MODEL <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">POINT_STAT_REGRID_TO_GRID <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">POINT_STAT_GRID <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">POINT_STAT_POLY <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">POINT_STAT_STATION_ID <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">POINT_STAT_MESSAGE_TYPE <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">FCST_POINT_STAT_WINDOW_BEGIN (optional) <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_POINT_STAT_WINDOW_END (optional) <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_POINT_STAT_WINDOW_BEGIN (optional) <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_POINT_STAT_WINDOW_END (optional) <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">POINT_STAT_NEIGHBORHOOD_WIDTH (optional) <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">POINT_STAT_NEIGHBORHOOD_SHAPE (optional) <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<div class="line-block">
+<div class="line">FCST_INPUT_DIR<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_INPUT_DIR<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">START_HOUR<a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">END_HOUR<a class="reference external" href="#sec:SC_E">[sec:SC_E]</a></div>
+<div class="line">BEG_TIME<a class="reference external" href="#sec:SC_B">[sec:SC_B]</a></div>
+<div class="line">FCST_HR_START<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_HR_END<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_HR_INTERVAL<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_INPUT_DIR_REGEX<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_INPUT_DIR_REGEX<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_INPUT_FILE_REGEX<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_INPUT_FILE_REGEX<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_INPUT_FILE_TMPL<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">FCST_INPUT_FILE_TMPL<a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">REGRID_TO_GRID<a class="reference external" href="#sec:SC_R">[sec:SC_R]</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="regriddataplane">
+<h2>RegridDataPlane<a class="headerlink" href="#regriddataplane" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-11">
+<span id="id21"></span><h3>Description<a class="headerlink" href="#description-11" title="Permalink to this headline">¶</a></h3>
+<p>Used to configure the MET tool regrid_data_plane.</p>
+</div>
+<div class="section" id="configuration-11">
+<span id="id22"></span><h3>Configuration<a class="headerlink" href="#configuration-11" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">FCST_REGRID_DATA_PLANE_INPUT_DIR <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_REGRID_DATA_PLANE_INPUT_DIR <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+</div>
+<p>[filename_templates]</p>
+<div class="line-block">
+<div class="line">FCST_REGRID_DATA_PLANE_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_REGRID_DATA_PLANE_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">FCST_REGRID_DATA_PLANE_RUN <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_REGRID_DATA_PLANE_RUN <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">REGRID_DATA_PLANE_SKIP_IF_OUTPUT_EXISTS <a class="reference external" href="#sec:SC_R">[sec:SC_R]</a></div>
+<div class="line">REGRID_DATA_PLANE_VERIF_GRID <a class="reference external" href="#sec:SC_R">[sec:SC_R]</a></div>
+<div class="line">FCST_REGRID_DATA_PLANE_INPUT_DATATYPE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_REGRID_DATA_PLANE_INPUT_DATATYPE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<p>VERIFICATION_GRID<a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></p>
+</div>
+</div>
+<div class="section" id="seriesbyinit">
+<h2>SeriesByInit<a class="headerlink" href="#seriesbyinit" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-12">
+<span id="id23"></span><h3>Description<a class="headerlink" href="#description-12" title="Permalink to this headline">¶</a></h3>
+<p>The SeriesByInit wrapper provides the infrastructure needed to perform a
+series analysis on tropical cyclone data, based on initialization times.
+The SeriesByInit_wrapper creates numerous plots that represent the
+field, level, and statistic for each initialization time.</p>
+</div>
+<div class="section" id="configuration-12">
+<span id="id24"></span><h3>Configuration<a class="headerlink" href="#configuration-12" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">SERIES_BY_INIT_FILTERED_OUTPUT_DIR <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">SERIES_BY_INIT_OUTPUT_DIR <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+</div>
+<p>[regex_patterns]</p>
+<div class="line-block">
+<div class="line">FCST_TILE_PREFIX <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">ANLY_TILE_PREFIX <a class="reference external" href="#sec:SC_A">[sec:SC_A]</a></div>
+<div class="line">FCST_TILE_REGEX <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">ANLY_TILE_REGEX <a class="reference external" href="#sec:SC_A">[sec:SC_A]</a></div>
+<div class="line">FCST_NC_TILE_REGEX <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">ANLY_NC_TILE_REGEX <a class="reference external" href="#sec:SC_A">[sec:SC_A]</a></div>
+<div class="line">FCST_ASCII_REGEX_LEAD <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">ANLY_ASCII_REGEX_LEAD <a class="reference external" href="#sec:SC_A">[sec:SC_A]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">INIT_BEG <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_END <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_INCREMENT <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_HOUR_END <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_INCLUDE <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_EXCLUDE <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">SERIES_ANALYSIS_FILTER_OPTS <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<p>SERIES_INIT_FILTERED_OUT_DIR<a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></p>
+</div>
+</div>
+<div class="section" id="seriesbylead">
+<h2>SeriesByLead<a class="headerlink" href="#seriesbylead" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-13">
+<span id="id25"></span><h3>Description<a class="headerlink" href="#description-13" title="Permalink to this headline">¶</a></h3>
+<p>The SeriesByLead wrapper provides the infrastructure needed to perform a
+series analysis on tropical cyclone data, based on lead (forecast hour)
+times. The SeriesByLead wrapper creates numerous plots that represent
+the field, level, and statistic for each lead (forecast) time. The
+SeriesByLead can be done in one of two ways: by all forecast hours or by
+forecast hour groupings. Performing a series analysis by valid time with
+forecast hour groupings can be useful when analyzing storm tracks based
+on time ‘bins’ such as by days (eg. day 1, day 2, day 3, etc.).</p>
+</div>
+<div class="section" id="configuration-13">
+<span id="id26"></span><h3>Configuration<a class="headerlink" href="#configuration-13" title="Permalink to this headline">¶</a></h3>
+<p>The input track and model data files are defined in any one of the
+user’s METplus Wrappers configuration files. If creating a final
+configuration file that overrides all other config files, it is
+customary to define the MODEL_DATA_DIR, pointing to the directory where
+all model data resides. The full file path to the INIT_INCLUDE and
+INIT_EXCLUDE are used to list the times in YYYYMMDD_HH format to include
+or exclude from your time window. If these values are undefined (i.e. no
+value is set for the variable), then all available times in your time
+window will be considered. For example, if your data is available every
+6 hours and you are interested in creating a series analysis from init
+time 20180601 to 20180615 for all available times, from 00z to 23z, you
+would set the following:</p>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">SERIES_BY_LEAD_FILTERED_OUTPUT <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">SERIES_BY_LEAD_OUTPUT_DIR <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">INIT_BEG <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_TIME_FMT <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_END <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_INCREMENT <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">SERIES_BY_LEAD_GROUP_FCSTS <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">LEAD_SEQ_&lt;n&gt; <a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+<div class="line">LEAD_SEQ_&lt;n&gt;_LABEL <a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+<div class="line">SERIES_ANALYSIS_FILTER_OPT <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">VAR_LIST <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">STAT_LIST <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<p>SERIES_LEAD_FILTERED_OUT_DIR<a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></p>
+</div>
+</div>
+<div class="section" id="statanalysis">
+<h2>StatAnalysis<a class="headerlink" href="#statanalysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-14">
+<span id="id27"></span><h3>Description<a class="headerlink" href="#description-14" title="Permalink to this headline">¶</a></h3>
+<p>The StatAnalysis wrapper encapsulates the behavior of the MET
+stat_analysis tool. It provides the infrastructure to summarize and
+filter the MET .stat files. StatAnalysis wrapper can be run in two
+different methods. First is to look at the STAT lines for a single date,
+to use this method set LOOP_ORDER = times. Second is to look at the STAT
+lines over a span of dates, to use this method set LOOP_ORDER =
+processes. To run StatAnalysis wrapper, include StatAnalysis in
+PROCESS_LIST.</p>
+</div>
+<div class="section" id="configuration-14">
+<span id="id28"></span><h3>Configuration<a class="headerlink" href="#configuration-14" title="Permalink to this headline">¶</a></h3>
+<p>The following values must be defined in the METplus Wrappers
+configuration file for running with LOOP_ORDER = times:</p>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">STAT_ANALYSIS_LOOKIN_DIR<a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">STAT_ANALYSIS_OUTPUT_DIR <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">LOOP_BY <a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+<div class="line">[VALID/INIT]_TIME_FMT <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">[VALID/INIT]_BEG <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a>
+<a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">[VALID/INIT]_END <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a>
+<a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">VALID_HOUR_METHOD <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VALID_HOUR_BEG <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VALID_HOUR_END <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VALID_HOUR_INCREMENT <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">INIT_HOUR_METHOD <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_HOUR_BEG <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_HOUR_END <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_HOUR_INCREMENT <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">STAT_ANALYSIS_CONFIG <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">MODEL <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">OBTYPE <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">JOB_NAME <a class="reference external" href="#sec:SC_J">[sec:SC_J]</a></div>
+<div class="line">JOB_ARGS <a class="reference external" href="#sec:SC_J">[sec:SC_J]</a></div>
+</div>
+<p>The following values are <strong>optional</strong> in the METplus Wrappers
+configuration file for running with LOOP_ORDER = times:</p>
+<div class="line-block">
+<div class="line">DESC <a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+<div class="line">FCST_LEAD <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_VAR&lt;n&gt;_NAME <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_VAR&lt;n&gt;_LEVEL <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">OBS_VAR&lt;n&gt;_NAME <a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">OBS_VAR&lt;n&gt;_LEVEL<a class="reference external" href="#sec:SC_O">[sec:SC_O]</a></div>
+<div class="line">REGION <a class="reference external" href="#sec:SC_R">[sec:SC_R]</a></div>
+<div class="line">INTERP <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INTERP_PTS <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">FCST_THRESH <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">COV_THRESH <a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></div>
+<div class="line">LINE_TYPE <a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+<div class="line">STAT_ANALYSIS_DUMP_ROW_TMPL <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">STAT_ANALYSIS_OUT_STAT_TMPL <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+</div>
+<p>The following values <strong>must</strong> be defined in the METplus Wrappers
+configuration file for running with LOOP_ORDER = processes:</p>
+<div class="line-block">
+<div class="line">STAT_ANALYSIS_OUTPUT_DIR <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">VERIF_CASE <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VERIF_TYPE <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">PLOT_TIME <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">[VALID/INIT]_BEG <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a>
+<a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">[VALID/INIT]_END <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a>
+<a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">VALID_HOUR_METHOD <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VALID_HOUR_BEG <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VALID_HOUR_END <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VALID_HOUR_INCREMENT <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">INIT_HOUR_METHOD <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_HOUR_BEG <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_HOUR_END <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_HOUR_INCREMENT <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">STAT_ANALYSIS_CONFIG <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">MODEL&lt;n&gt;_NAME <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">MODEL&lt;n&gt;_OBS_NAME <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">MODEL&lt;n&gt;_NAME_ON_PLOT <a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">FCST_VAR&lt;n&gt;_NAME <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_VAR&lt;n&gt;_LEVELS <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">REGION_LIST <a class="reference external" href="#sec:SC_R">[sec:SC_R]</a></div>
+<div class="line">LEAD_LIST <a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+<div class="line">INTERP <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">LINE_TYPE <a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+</div>
+<p>The following values are optional in the METplus Wrappers configuration
+file for running with LOOP_ORDER = processes:</p>
+<div class="line-block">
+<div class="line">FCST_VAR&lt;n&gt;_THRESH <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_VAR&lt;n&gt;_THRESH <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FCST_VAR&lt;n&gt;_OPTIONS <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">VAR&lt;n&gt;_FOURIER_DECOMP <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line">VAR&lt;n&gt;_WAVE_NUM_LIST <a class="reference external" href="#sec:SC_V">[sec:SC_V]</a></div>
+<div class="line"><strong>Deprecated:</strong></div>
+</div>
+<p>STAT_ANALYSIS_OUT_DIR<a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></p>
+</div>
+</div>
+<div class="section" id="tcpairs">
+<h2>TcPairs<a class="headerlink" href="#tcpairs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-15">
+<span id="id29"></span><h3>Description<a class="headerlink" href="#description-15" title="Permalink to this headline">¶</a></h3>
+<p>The TcPairs wrapper encapsulates the behavior of the MET tc_pairs tool.
+The wrapper accepts Adeck and Bdeck (Best track) cyclone track data in
+extra tropical cyclone format (such as the data used by sample data
+provided in the METplus tutorial), or ATCF formatted track data. If data
+is in an extra tropical cyclone (non-ATCF) format, the data is
+reformatted into an ATCF format that is recognized by MET.</p>
+</div>
+<div class="section" id="configuration-15">
+<span id="id30"></span><h3>Configuration<a class="headerlink" href="#configuration-15" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">TC_PAIRS_ADECK_INPUT_DIR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_BDECK_INPUT_DIR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_EDECK_INPUT_DIR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_OUTPUT_DIR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_REFORMAT_DIR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">[filename_templates]</div>
+</div>
+<div class="line-block">
+<div class="line">TC_PAIRS_ADECK_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_BDECK_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_EDECK_INPUT_TEMPLATE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_OUTPUT_TEMPLATE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">[config]</div>
+</div>
+<div class="line-block">
+<div class="line">TC_PAIRS_CONFIG_FILE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">INIT_BEG <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_END <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_INCREMENT <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_HOUR_END <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_INCLUDE <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">INIT_EXCLUDE <a class="reference external" href="#sec:SC_I">[sec:SC_I]</a></div>
+<div class="line">TC_PAIRS_READ_ALL_FILES <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_MODEL <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_STORM_ID <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_BASIN <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_CYCLONE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_STORM_NAME <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_DLAND_FILE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_MISSING_VAL_TO_REPLACE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_MISSING_VAL <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_SKIP_IF_REFACTOR_EXISTS <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_SKIP_IF_OUTPUT_EXISTS <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_REFORMAT_DECK <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_REFORMAT_TYPE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line"><strong>Deprecated:</strong></div>
+<div class="line">ADECK_TRACK_DATA_DIR<a class="reference external" href="#sec:SC_A">[sec:SC_A]</a></div>
+<div class="line">BDECK_TRACK_DATA_DIR<a class="reference external" href="#sec:SC_B">[sec:SC_B]</a></div>
+<div class="line">TRACK_DATA_SUBDIR_MOD<a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_PAIRS_DIR<a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TOP_LEVEL_DIRS<a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">MODEL<a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">STORM_ID<a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">BASIN<a class="reference external" href="#sec:SC_B">[sec:SC_B]</a></div>
+<div class="line">CYCLONE<a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></div>
+<div class="line">STORM_NAME<a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">DLAND_FILE<a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+<div class="line">TRACK_TYPE<a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">ADECK_FILE_PREFIX<a class="reference external" href="#sec:SC_A">[sec:SC_A]</a></div>
+<div class="line">BDECK_FILE_PREFIX<a class="reference external" href="#sec:SC_B">[sec:SC_B]</a></div>
+<div class="line">MISSING_VAL_TO_REPLACE<a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+<div class="line">MISSING_VAL<a class="reference external" href="#sec:SC_M">[sec:SC_M]</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="tcstat">
+<h2>TcStat<a class="headerlink" href="#tcstat" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-16">
+<span id="id31"></span><h3>Description<a class="headerlink" href="#description-16" title="Permalink to this headline">¶</a></h3>
+<p>Used to configure the MET tool tc_stat. This wrapper can be run by
+listing it in the PROCESS_LIST, or can be called from the ExtractTiles
+wrapper (via the MET tc-stat command line commands).</p>
+</div>
+<div class="section" id="configuration-16">
+<span id="id32"></span><h3>Configuration<a class="headerlink" href="#configuration-16" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line">TC_STAT_INPUT_DIR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_OUTPUT_DIR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line">TC_STAT_RUN_VIA <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_CONFIG_FILE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_CMD_LINE_JOB <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_JOBS_LIST <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_AMODEL <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_BMODEL <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_DESC <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_STORM_ID <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_BASIN <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_CYCLONE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_STORM_NAME <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_INIT_BEG <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_INIT_INCLUDE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_INIT_EXCLUDE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_INIT_HOUR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_VALID_BEG <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_VALID_END <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_VALID_INCLUDE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_VALID_EXCLUDE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_VALID_HOUR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_LEAD_REQ <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_INIT_MASK <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_VALID_MASK <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_VALID_HOUR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_LEAD <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_TRACK_WATCH_WARN <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_COLUMN_THRESH_NAME <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_COLUNN_THRESH_VAL <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_COLUMN_STR_NAME <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_COLUMN_STR_VAL <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_INIT_THRESH_NAME <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_INIT_THRESH_VAL <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_INIT_STR_NAME <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_INIT_STR_VAL <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_WATER_ONLY <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_LANDFALL <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_LANDFALL_BEG <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_LANDFALL_END <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TC_STAT_MATCH_POINTS <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+</div>
+</div>
+</div>
+<div class="section" id="tcmprplotter">
+<h2>TCMPRPlotter<a class="headerlink" href="#tcmprplotter" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-17">
+<span id="id33"></span><h3>Description<a class="headerlink" href="#description-17" title="Permalink to this headline">¶</a></h3>
+<p>The TCMPRPlotter wrapper is a Python script that wraps the R script
+plot_tcmpr.R. This script is usefule for plotting the calculated
+statistics for the output from the MET-TC tools. This script, and other
+R scripts are included in the MET installation. Please refer to section
+21.2.3 of the MET User’s Guide for usage information.</p>
+</div>
+<div class="section" id="configuration-17">
+<span id="id34"></span><h3>Configuration<a class="headerlink" href="#configuration-17" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">LOOP ORDER <a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+<div class="line">CONFIG_FILE <a class="reference external" href="#sec:SC_C">[sec:SC_C]</a></div>
+<div class="line">PREFIX <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">TITLE <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">SUBTITLE <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">XLAB <a class="reference external" href="#sec:SC_X">[sec:SC_X]</a></div>
+<div class="line">YLAB <a class="reference external" href="#sec:SC_Y">[sec:SC_Y]</a></div>
+<div class="line">XLIM<a class="reference external" href="#sec:SC_X">[sec:SC_X]</a></div>
+<div class="line">YLIM <a class="reference external" href="#sec:SC_Y">[sec:SC_Y]</a></div>
+<div class="line">FILTER <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">FILTERED_TCST_DATA_FILE <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">DEP_VARS <a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+<div class="line">SCATTER_X <a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+<div class="line">SCATTER_Y <a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+<div class="line">SKILL_REF <a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+<div class="line">SERIES <a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+<div class="line">SERIES_CI <a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+<div class="line">LEGEND <a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+<div class="line">LEAD <a class="reference external" href="#sec:SC_L">[sec:SC_L]</a></div>
+<div class="line">PLOT_TYPES <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">RP_DIFF <a class="reference external" href="#sec:SC_R">[sec:SC_R]</a></div>
+<div class="line">DEMO_YR <a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+<div class="line">HFIP_BASELINE <a class="reference external" href="#sec:SC_H">[sec:SC_H]</a></div>
+<div class="line">FOOTNOTE_FLAG <a class="reference external" href="#sec:SC_F">[sec:SC_F]</a></div>
+<div class="line">PLOT_CONFIG_OPTS <a class="reference external" href="#sec:SC_P">[sec:SC_P]</a></div>
+<div class="line">SAVE_DATA <a class="reference external" href="#sec:SC_D">[sec:SC_D]</a></div>
+</div>
+<p>The following are TCMPR flags, if set to ‘no’, then don’t set flag, if
+set to ‘yes’, then set the flag</p>
+<div class="line-block">
+<div class="line">NO_EE <a class="reference external" href="#sec:SC_N">[sec:SC_N]</a></div>
+<div class="line">NO_LOG <a class="reference external" href="#sec:SC_N">[sec:SC_N]</a></div>
+<div class="line">SAVE <a class="reference external" href="#sec:SC_S">[sec:SC_S]</a></div>
+<div class="line">TCMPR_DATA_DIR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+<div class="line">TCMPR_PLOT_OUTPUT_DIR <a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></div>
+</div>
+<p><strong>Deprecated:</strong></p>
+<p>TCMPR_PLOT_OUT_DIR<a class="reference external" href="#sec:SC_T">[sec:SC_T]</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="systemconfiguration.html" class="btn btn-neutral float-right" title="System Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral float-left" title="Software Installation/Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, NCAR
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
