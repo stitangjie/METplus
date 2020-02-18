@@ -1,0 +1,10 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_met_tool_wrapper_EnsembleStat_sg_execution_times:
+
+Computation times
+=================
+**00:00.017** total execution time for **Users_Guide_met_tool_wrapper_EnsembleStat** files:
+
+- **00:00.017**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_EnsembleStat_EnsembleStat.py` (``EnsembleStat.py``)

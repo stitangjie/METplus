@@ -156,12 +156,12 @@
 <h1>What is METplus and how is it different from the components?<a class="headerlink" href="#what-is-metplus-and-how-is-it-different-from-the-components" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="history">
 <h2>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h2>
-<p>The Model Evaluation Tools (MET) were developed and released by the Developmental Testbed Center in January 2008.  The focus of the tools was to replicate the NOAA EMC (see list of acronyms below) Mesoscale Branch verification package, called VSDB, and to make the tools extensible.  In the first release, MET included several pre-processing, statistical, and analysis tools to provide the same functionality as the EMC VSDB system, and also included a spatial verification package called MODE.</p>
-<p>Over the years, MET and VSDB packages grew in complexity.  Verification capability at other NOAA laboratories, such as ESRL, were also under heavy development.  An effort to unify verification capability was first started under the HIWPP project and led by NOAA ESRL.  In 2015, the NGGPS Program Office started working groups to focus on several aspects of the next gen system, including the Verification and Validation Working Group.  This group made the recommendation to use MET as the foundation for a unified verification capability.  In 2016, NCAR and GSD leads visited EMC to gather requirements.  At that time, the concept of METplus was developed as it extends beyond the original code base.  It was originally called MET+ but several constraints have driven the transition to the use of METplus.</p>
+<p>The Model Evaluation Tools (MET) were developed by the Developmental Testbed Center (DTC)  and released in January 2008.  The goal of the tools was to provide the community with a platform independent and extensible framework for reproducible verification.  The DTC partners, including NCAR, NOAA, and the USAF, decided to start by replicating the NOAA EMC (see list of acronyms below) Mesoscale Branch verification package, called VSDB.  In the first release, MET included several pre-processing, statistical, and analysis tools to provided the primary functionality as the EMC VSDB system, and also included a spatial verification package called MODE.</p>
+<p>Over the years, MET and VSDB packages grew in complexity.  Verification capability at other NOAA laboratories, such as ESRL, were also under heavy development.  An effort to unify verification capability was first started under the HIWPP project and led by NOAA ESRL.  In 2015, the NGGPS Program Office started working groups to focus on several aspects of the next gen system, including the Verification and Validation Working Group.  This group made the recommendation to use MET as the foundation for a unified verification capability.  In 2016, NCAR and GSD leads visited EMC to gather requirements.  At that time, the concept of METplus was developed as it extends beyond the original code base.  It was originally called MET+ but several constraints have driven the transition to the use of METplus. METplus is now the unified verification, validation, and diagnostics capability for NOAA’s UFS and a component of NCAR’s SIMA modeling frameworks.  It being actively developed by NCAR, ESRL, EMC and is open to community contributions.</p>
 </div>
 <div class="section" id="metplus-concept">
 <h2>METplus Concept<a class="headerlink" href="#metplus-concept" title="Permalink to this headline">¶</a></h2>
-<p>METplus is expected to become the overarching, or umbrella, repository and hence framework for the Unified Forecast System verification capability.  It is intended to be extensible through adding additional capability developed by the community.  The core components of the framework include MET, the associated database and display systems called METviewer and METexpress, and a suite of Python wrappers to provide low-level automation and examples, also called use-cases.  A description of each tool along with some ancillary repositories are as follows:</p>
+<p>METplus is the overarching, or umbrella, repository and hence framework for the Unified Forecast System verification capability.  It is intended to be extensible through adding additional capability developed by the community.  The core components of the framework include MET, the associated database and display systems called METviewer and METexpress, and a suite of Python wrappers to provide low-level automation and examples, also called use-cases.  A description of each tool along with some ancillary repositories are as follows:</p>
 <ul class="simple">
 <li><p><strong>MET</strong> - core statistical tool that matches up grids with either gridded analyses or point observations and applies configurable methods to compute statistics and diagnostics</p></li>
 <li><p><strong>METviewer</strong>  - core database and display system intended for deep analysis of MET output</p></li>
@@ -182,10 +182,15 @@ METviewer and METexpress</p></li>
 <div class="section" id="acronyms">
 <h2>Acronyms<a class="headerlink" href="#acronyms" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p><strong>MET</strong> - Model Evaluation Tools</p></li>
+<li><p><strong>DTC</strong> - Developmental Testbed Center</p></li>
+<li><p><strong>NCAR</strong> - National Center for Atmospheric Research</p></li>
 <li><p><strong>NOAA</strong> - National Oceanic and Atmospheric Administration</p></li>
 <li><p><strong>EMC</strong> - Environmental Modeling Center</p></li>
 <li><p><strong>VSDB</strong> - Verification Statistics Data Base</p></li>
 <li><p><strong>MODE</strong> - Method for Object-Based Diagnostic Evaluation</p></li>
+<li><p><strong>UFS</strong> - Unified Forecast System</p></li>
+<li><p><strong>SIMA</strong> -System for Integrated Modeling of the Atmosphere</p></li>
 <li><p><strong>ESRL</strong> - Earth Systems Research Laboratory</p></li>
 <li><p><strong>HIWPP</strong> - High Impact Weather Predication Project</p></li>
 <li><p><strong>NGGPS</strong> - Next Generation Global Predicatio System</p></li>
