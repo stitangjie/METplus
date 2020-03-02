@@ -22,10 +22,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -34,8 +34,10 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -183,6 +185,8 @@
       <li><a href="Users_Guide/glossary.html#term-adeck-file-prefix"><strong>ADECK_FILE_PREFIX</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-adeck-track-data-dir"><strong>ADECK_TRACK_DATA_DIR</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-alpha-list"><strong>ALPHA_LIST</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-amodel"><strong>AMODEL</strong></a>
 </li>
@@ -370,7 +374,7 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="Users_Guide/glossary.html#term-date-time"><strong>DATE_TIME</strong></a>
+      <li><a href="Users_Guide/glossary.html#term-date-type"><strong>DATE_TYPE</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-demo-yr"><strong>DEMO_YR</strong></a>
 </li>
@@ -410,6 +414,14 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-ens-var-n-thresh"><strong>ENS_VAR&lt;n&gt;_THRESH</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-ensemble-stat-climo-mean-input-dir"><strong>ENSEMBLE_STAT_CLIMO_MEAN_INPUT_DIR</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-ensemble-stat-climo-mean-input-template"><strong>ENSEMBLE_STAT_CLIMO_MEAN_INPUT_TEMPLATE</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-ensemble-stat-climo-stdev-input-dir"><strong>ENSEMBLE_STAT_CLIMO_STDEV_INPUT_DIR</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-ensemble-stat-climo-stdev-input-template"><strong>ENSEMBLE_STAT_CLIMO_STDEV_INPUT_TEMPLATE</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-ensemble-stat-config"><strong>ENSEMBLE_STAT_CONFIG</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-ensemble-stat-config-file"><strong>ENSEMBLE_STAT_CONFIG_FILE</strong></a>
@@ -428,12 +440,12 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-ensemble-stat-out-dir"><strong>ENSEMBLE_STAT_OUT_DIR</strong></a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="Users_Guide/glossary.html#term-ensemble-stat-output-dir"><strong>ENSEMBLE_STAT_OUTPUT_DIR</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-ensemble-stat-output-prefix"><strong>ENSEMBLE_STAT_OUTPUT_PREFIX</strong></a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="Users_Guide/glossary.html#term-ensemble-stat-output-template"><strong>ENSEMBLE_STAT_OUTPUT_TEMPLATE</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-ensemble-stat-regrid-to-grid"><strong>ENSEMBLE_STAT_REGRID_TO_GRID</strong></a>
@@ -492,6 +504,14 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-ensemble-stat-input-template"><strong>FCST_ENSEMBLE_STAT_INPUT_TEMPLATE</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-ensemble-stat-var-n-levels"><strong>FCST_ENSEMBLE_STAT_VAR&lt;n&gt;_LEVELS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-ensemble-stat-var-n-name"><strong>FCST_ENSEMBLE_STAT_VAR&lt;n&gt;_NAME</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-ensemble-stat-var-n-options"><strong>FCST_ENSEMBLE_STAT_VAR&lt;n&gt;_OPTIONS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-ensemble-stat-var-n-thresh"><strong>FCST_ENSEMBLE_STAT_VAR&lt;n&gt;_THRESH</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-fcst-ensemble-stat-window-begin"><strong>FCST_ENSEMBLE_STAT_WINDOW_BEGIN</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-ensemble-stat-window-end"><strong>FCST_ENSEMBLE_STAT_WINDOW_END</strong></a>
@@ -521,6 +541,14 @@
       <li><a href="Users_Guide/glossary.html#term-fcst-grid-stat-input-template"><strong>FCST_GRID_STAT_INPUT_TEMPLATE</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-grid-stat-prob-thresh"><strong>FCST_GRID_STAT_PROB_THRESH</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-grid-stat-var-n-levels"><strong>FCST_GRID_STAT_VAR&lt;n&gt;_LEVELS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-grid-stat-var-n-name"><strong>FCST_GRID_STAT_VAR&lt;n&gt;_NAME</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-grid-stat-var-n-options"><strong>FCST_GRID_STAT_VAR&lt;n&gt;_OPTIONS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-grid-stat-var-n-thresh"><strong>FCST_GRID_STAT_VAR&lt;n&gt;_THRESH</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-grid-stat-window-begin"><strong>FCST_GRID_STAT_WINDOW_BEGIN</strong></a>
 </li>
@@ -554,6 +582,8 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-level"><strong>FCST_LEVEL</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-level-list"><strong>FCST_LEVEL_LIST</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-0"><strong>FCST_MAX_FORECAST</strong></a>, <a href="Users_Guide/glossary.html#term-fcst-max-forecast"><strong>[1]</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-min-forecast"><strong>FCST_MIN_FORECAST</strong></a>
@@ -576,6 +606,14 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-mode-merge-thresh"><strong>FCST_MODE_MERGE_THRESH</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-mode-var-n-levels"><strong>FCST_MODE_VAR&lt;n&gt;_LEVELS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-mode-var-n-name"><strong>FCST_MODE_VAR&lt;n&gt;_NAME</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-mode-var-n-options"><strong>FCST_MODE_VAR&lt;n&gt;_OPTIONS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-mode-var-n-thresh"><strong>FCST_MODE_VAR&lt;n&gt;_THRESH</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-fcst-mode-window-begin"><strong>FCST_MODE_WINDOW_BEGIN</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-mode-window-end"><strong>FCST_MODE_WINDOW_END</strong></a>
@@ -594,8 +632,18 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-mtd-input-template"><strong>FCST_MTD_INPUT_TEMPLATE</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-mtd-var-n-levels"><strong>FCST_MTD_VAR&lt;n&gt;_LEVELS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-mtd-var-n-name"><strong>FCST_MTD_VAR&lt;n&gt;_NAME</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-mtd-var-n-options"><strong>FCST_MTD_VAR&lt;n&gt;_OPTIONS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-mtd-var-n-thresh"><strong>FCST_MTD_VAR&lt;n&gt;_THRESH</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-fcst-native-data-type"><strong>FCST_NATIVE_DATA_TYPE</strong></a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="Users_Guide/glossary.html#term-fcst-nc-tile-regex"><strong>FCST_NC_TILE_REGEX</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-pcp-combine-n-field-name"><strong>FCST_PCP_COMBINE_&lt;n&gt;_FIELD_NAME</strong></a>
@@ -608,8 +656,6 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-pcp-combine-data-interval"><strong>FCST_PCP_COMBINE_DATA_INTERVAL</strong></a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="Users_Guide/glossary.html#term-fcst-pcp-combine-derive-lookback"><strong>FCST_PCP_COMBINE_DERIVE_LOOKBACK</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-pcp-combine-input-accums"><strong>FCST_PCP_COMBINE_INPUT_ACCUMS</strong></a>
@@ -660,6 +706,14 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-point-stat-input-template"><strong>FCST_POINT_STAT_INPUT_TEMPLATE</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-point-stat-var-n-levels"><strong>FCST_POINT_STAT_VAR&lt;n&gt;_LEVELS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-point-stat-var-n-name"><strong>FCST_POINT_STAT_VAR&lt;n&gt;_NAME</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-point-stat-var-n-options"><strong>FCST_POINT_STAT_VAR&lt;n&gt;_OPTIONS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-point-stat-var-n-thresh"><strong>FCST_POINT_STAT_VAR&lt;n&gt;_THRESH</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-fcst-point-stat-window-begin"><strong>FCST_POINT_STAT_WINDOW_BEGIN</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-point-stat-window-end"><strong>FCST_POINT_STAT_WINDOW_END</strong></a>
@@ -700,6 +754,8 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-times-per-file"><strong>FCST_TIMES_PER_FILE</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-fcst-units-list"><strong>FCST_UNITS_LIST</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-fcst-valid-hour-list"><strong>FCST_VALID_HOUR_LIST</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-var"><strong>FCST_VAR</strong></a>
@@ -713,8 +769,6 @@
       <li><a href="Users_Guide/glossary.html#term-fcst-var-n-thresh"><strong>FCST_VAR&lt;n&gt;_THRESH</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-var-level"><strong>FCST_VAR_LEVEL</strong></a>
-</li>
-      <li><a href="Users_Guide/glossary.html#term-fcst-var-level-list"><strong>FCST_VAR_LEVEL_LIST</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-fcst-var-list"><strong>FCST_VAR_LIST</strong></a>
 </li>
@@ -770,8 +824,16 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-gfs-fcst-file-tmpl"><strong>GFS_FCST_FILE_TMPL</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-grid-stat-climo-mean-input-dir"><strong>GRID_STAT_CLIMO_MEAN_INPUT_DIR</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-grid-stat-climo-mean-input-template"><strong>GRID_STAT_CLIMO_MEAN_INPUT_TEMPLATE</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-grid-stat-climo-stdev-input-dir"><strong>GRID_STAT_CLIMO_STDEV_INPUT_DIR</strong></a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="Users_Guide/glossary.html#term-grid-stat-climo-stdev-input-template"><strong>GRID_STAT_CLIMO_STDEV_INPUT_TEMPLATE</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-grid-stat-config"><strong>GRID_STAT_CONFIG</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-grid-stat-config-file"><strong>GRID_STAT_CONFIG_FILE</strong></a>
@@ -793,6 +855,8 @@
       <li><a href="Users_Guide/glossary.html#term-grid-stat-regrid-to-grid"><strong>GRID_STAT_REGRID_TO_GRID</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-grid-stat-verification-mask-template"><strong>GRID_STAT_VERIFICATION_MASK_TEMPLATE</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-group-list-items"><strong>GROUP_LIST_ITEMS</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -932,6 +996,8 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-loop-by-init"><strong>LOOP_BY_INIT</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-loop-list-items"><strong>LOOP_LIST_ITEMS</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-loop-order"><strong>LOOP_ORDER</strong></a>
 </li>
   </ul></td>
@@ -940,7 +1006,7 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="Users_Guide/glossary.html#term-make-plot-stats-list"><strong>MAKE_PLOT_STATS_LIST</strong></a>
+      <li><a href="Users_Guide/glossary.html#term-make-plots-average-method"><strong>MAKE_PLOTS_AVERAGE_METHOD</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-make-plots-ci-method"><strong>MAKE_PLOTS_CI_METHOD</strong></a>
 </li>
@@ -952,11 +1018,13 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-make-plots-scripts-dir"><strong>MAKE_PLOTS_SCRIPTS_DIR</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-make-plots-stats-list"><strong>MAKE_PLOTS_STATS_LIST</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-make-plots-verif-case"><strong>MAKE_PLOTS_VERIF_CASE</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-make-plots-verif-grid"><strong>MAKE_PLOTS_VERIF_GRID</strong></a>
 </li>
-      <li><a href="Users_Guide/glossary.html#term-2"><strong>MAKE_PLOTS_VERIF_TYPE</strong></a>, <a href="Users_Guide/glossary.html#term-make-plots-verif-type"><strong>[1]</strong></a>
+      <li><a href="Users_Guide/glossary.html#term-make-plots-verif-type"><strong>MAKE_PLOTS_VERIF_TYPE</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-met-base"><strong>MET_BASE</strong></a>
 </li>
@@ -1043,6 +1111,8 @@
       <li><a href="Users_Guide/glossary.html#term-model-n-stat-dir"><strong>MODEL&lt;n&gt;_STAT_DIR</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-model-data-dir"><strong>MODEL_DATA_DIR</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-model-list"><strong>MODEL_LIST</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-model-name"><strong>MODEL_NAME</strong></a>
 </li>
@@ -1132,6 +1202,14 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-ensemble-stat-point-input-template"><strong>OBS_ENSEMBLE_STAT_POINT_INPUT_TEMPLATE</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-obs-ensemble-stat-var-n-levels"><strong>OBS_ENSEMBLE_STAT_VAR&lt;n&gt;_LEVELS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-ensemble-stat-var-n-name"><strong>OBS_ENSEMBLE_STAT_VAR&lt;n&gt;_NAME</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-ensemble-stat-var-n-options"><strong>OBS_ENSEMBLE_STAT_VAR&lt;n&gt;_OPTIONS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-ensemble-stat-var-n-thresh"><strong>OBS_ENSEMBLE_STAT_VAR&lt;n&gt;_THRESH</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-obs-ensemble-stat-window-begin"><strong>OBS_ENSEMBLE_STAT_WINDOW_BEGIN</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-ensemble-stat-window-end"><strong>OBS_ENSEMBLE_STAT_WINDOW_END</strong></a>
@@ -1160,6 +1238,14 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-grid-stat-prob-thresh"><strong>OBS_GRID_STAT_PROB_THRESH</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-obs-grid-stat-var-n-levels"><strong>OBS_GRID_STAT_VAR&lt;n&gt;_LEVELS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-grid-stat-var-n-name"><strong>OBS_GRID_STAT_VAR&lt;n&gt;_NAME</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-grid-stat-var-n-options"><strong>OBS_GRID_STAT_VAR&lt;n&gt;_OPTIONS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-grid-stat-var-n-thresh"><strong>OBS_GRID_STAT_VAR&lt;n&gt;_THRESH</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-obs-grid-stat-window-begin"><strong>OBS_GRID_STAT_WINDOW_BEGIN</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-grid-stat-window-end"><strong>OBS_GRID_STAT_WINDOW_END</strong></a>
@@ -1178,7 +1264,11 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-is-prob"><strong>OBS_IS_PROB</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-obs-lead-list"><strong>OBS_LEAD_LIST</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-obs-level"><strong>OBS_LEVEL</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-level-list"><strong>OBS_LEVEL_LIST</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-max-forecast"><strong>OBS_MAX_FORECAST</strong></a>
 </li>
@@ -1202,6 +1292,14 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-mode-merge-thresh"><strong>OBS_MODE_MERGE_THRESH</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-obs-mode-var-n-levels"><strong>OBS_MODE_VAR&lt;n&gt;_LEVELS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-mode-var-n-name"><strong>OBS_MODE_VAR&lt;n&gt;_NAME</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-mode-var-n-options"><strong>OBS_MODE_VAR&lt;n&gt;_OPTIONS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-mode-var-n-thresh"><strong>OBS_MODE_VAR&lt;n&gt;_THRESH</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-obs-mode-window-begin"><strong>OBS_MODE_WINDOW_BEGIN</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-mode-window-end"><strong>OBS_MODE_WINDOW_END</strong></a>
@@ -1220,6 +1318,16 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-mtd-input-template"><strong>OBS_MTD_INPUT_TEMPLATE</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-obs-mtd-var-n-levels"><strong>OBS_MTD_VAR&lt;n&gt;_LEVELS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-mtd-var-n-name"><strong>OBS_MTD_VAR&lt;n&gt;_NAME</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="Users_Guide/glossary.html#term-obs-mtd-var-n-options"><strong>OBS_MTD_VAR&lt;n&gt;_OPTIONS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-mtd-var-n-thresh"><strong>OBS_MTD_VAR&lt;n&gt;_THRESH</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-obs-name"><strong>OBS_NAME</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-native-data-type"><strong>OBS_NATIVE_DATA_TYPE</strong></a>
@@ -1228,8 +1336,6 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-pcp-combine-bucket-interval"><strong>OBS_PCP_COMBINE_BUCKET_INTERVAL</strong></a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="Users_Guide/glossary.html#term-obs-pcp-combine-command"><strong>OBS_PCP_COMBINE_COMMAND</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-pcp-combine-constant-init"><strong>OBS_PCP_COMBINE_CONSTANT_INIT</strong></a>
@@ -1286,6 +1392,14 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-point-stat-input-template"><strong>OBS_POINT_STAT_INPUT_TEMPLATE</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-obs-point-stat-var-n-levels"><strong>OBS_POINT_STAT_VAR&lt;n&gt;_LEVELS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-point-stat-var-n-name"><strong>OBS_POINT_STAT_VAR&lt;n&gt;_NAME</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-point-stat-var-n-options"><strong>OBS_POINT_STAT_VAR&lt;n&gt;_OPTIONS</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-point-stat-var-n-thresh"><strong>OBS_POINT_STAT_VAR&lt;n&gt;_THRESH</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-obs-point-stat-window-begin"><strong>OBS_POINT_STAT_WINDOW_BEGIN</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-point-stat-window-end"><strong>OBS_POINT_STAT_WINDOW_END</strong></a>
@@ -1316,7 +1430,11 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-series-analysis-nc-tile-regex"><strong>OBS_SERIES_ANALYSIS_NC_TILE_REGEX</strong></a>
 </li>
+      <li><a href="Users_Guide/glossary.html#term-obs-thresh-list"><strong>OBS_THRESH_LIST</strong></a>
+</li>
       <li><a href="Users_Guide/glossary.html#term-obs-times-per-file"><strong>OBS_TIMES_PER_FILE</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-obs-units-list"><strong>OBS_UNITS_LIST</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-valid-hour-list"><strong>OBS_VALID_HOUR_LIST</strong></a>
 </li>
@@ -1331,8 +1449,6 @@
       <li><a href="Users_Guide/glossary.html#term-obs-var-n-thresh"><strong>OBS_VAR&lt;n&gt;_THRESH</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-var-level"><strong>OBS_VAR_LEVEL</strong></a>
-</li>
-      <li><a href="Users_Guide/glossary.html#term-obs-var-level-list"><strong>OBS_VAR_LEVEL_LIST</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-obs-var-list"><strong>OBS_VAR_LIST</strong></a>
 </li>
@@ -1412,12 +1528,12 @@
 </li>
       <li><a href="Users_Guide/glossary.html#term-pcp-combine-method"><strong>PCP_COMBINE_METHOD</strong></a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="Users_Guide/glossary.html#term-pcp-combine-skip-if-output-exists"><strong>PCP_COMBINE_SKIP_IF_OUTPUT_EXISTS</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-plot-config-opts"><strong>PLOT_CONFIG_OPTS</strong></a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="Users_Guide/glossary.html#term-plot-stats-list"><strong>PLOT_STATS_LIST</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-plot-time"><strong>PLOT_TIME</strong></a>
@@ -1427,6 +1543,14 @@
       <li><a href="Users_Guide/glossary.html#term-plotting-output-dir"><strong>PLOTTING_OUTPUT_DIR</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-plotting-scripts-dir"><strong>PLOTTING_SCRIPTS_DIR</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-point-stat-climo-mean-input-dir"><strong>POINT_STAT_CLIMO_MEAN_INPUT_DIR</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-point-stat-climo-mean-input-template"><strong>POINT_STAT_CLIMO_MEAN_INPUT_TEMPLATE</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-point-stat-climo-stdev-input-dir"><strong>POINT_STAT_CLIMO_STDEV_INPUT_DIR</strong></a>
+</li>
+      <li><a href="Users_Guide/glossary.html#term-point-stat-climo-stdev-input-template"><strong>POINT_STAT_CLIMO_STDEV_INPUT_TEMPLATE</strong></a>
 </li>
       <li><a href="Users_Guide/glossary.html#term-point-stat-config-file"><strong>POINT_STAT_CONFIG_FILE</strong></a>
 </li>

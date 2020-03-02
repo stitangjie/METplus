@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,8 +33,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="8. Adding Use Cases" href="add_use_case.html" />
@@ -152,7 +154,7 @@
         
           <li><a href="index.html">Contributor’s Guide</a> &raquo;</li>
         
-      <li>7. Testing</li>
+      <li><span class="section-number">7. </span>Testing</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -172,16 +174,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="testing">
-<h1>7. Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7. </span>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h1>
 <p>Test scripts are found in the GitHub repository in the internal_tests directory.</p>
 <div class="section" id="unit-tests">
-<h2>7.1. Unit Tests<a class="headerlink" href="#unit-tests" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>Unit Tests<a class="headerlink" href="#unit-tests" title="Permalink to this headline">¶</a></h2>
 <p>Unit tests are run with pytest. They are found in the ‘pytests’ directory. Each tool has its own sub-directory containing its test files.</p>
 <p>run_pytests.sh is a bash script that can be run to execute all of the pytests. A report will be output showing which pytest categories failed.
 When running on a new computer, you must create a minimum_pytest.&lt;HOST&gt;.sh file to be able to run the script. This file contains information about the local environment so that the tests can run.</p>
 </div>
 <div class="section" id="use-case-tests">
-<h2>7.2. Use Case Tests<a class="headerlink" href="#use-case-tests" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>Use Case Tests<a class="headerlink" href="#use-case-tests" title="Permalink to this headline">¶</a></h2>
 <p>Use case tests are run via a Python script called test_use_cases.py, found in the use_cases directory.
 Eventually the running of these tests will be automated using an external tool, such as GitHub Actions or Travis CI.
 The script contains a list of use cases that are found in the repository.  For each computer that will run the use cases, a metplus_test_env.&lt;HOST&gt;.sh file must exist to set local configurations.

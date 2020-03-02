@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -33,12 +33,14 @@
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="5.2. Model Applications" href="../../model_applications/index.html" />
-    <link rel="prev" title="5.1.18.2. TCPairs Extra Tropical Cyclone" href="../TCPairs/TCPairs_ETC.html" /> 
+    <link rel="prev" title="5.1.18.2. TCPairs HWRF" href="../TCPairs/TCPairs_HWRF.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -120,7 +122,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../references.html">6. References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. ßMETplus Configuration Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -172,11 +174,11 @@
         
           <li><a href="../../index.html">User’s Guide</a> &raquo;</li>
         
-          <li><a href="../../usecases.html">5. METplus Use Cases</a> &raquo;</li>
+          <li><a href="../../usecases.html"><span class="section-number">5. </span>METplus Use Cases</a> &raquo;</li>
         
-          <li><a href="../index.html">5.1. MET tools</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">5.1. </span>MET tools</a> &raquo;</li>
         
-      <li>5.1.19.1. TCStat</li>
+      <li><span class="section-number">5.1.19.1. </span>TCStat</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -197,18 +199,18 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-tcstat-tcstat-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-tcstat-tcstat-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="tcstat">
-<span id="sphx-glr-users-guide-met-tool-wrapper-tcstat-tcstat-py"></span><h1>5.1.19.1. TCStat<a class="headerlink" href="#tcstat" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-users-guide-met-tool-wrapper-tcstat-tcstat-py"></span><h1><span class="section-number">5.1.19.1. </span>TCStat<a class="headerlink" href="#tcstat" title="Permalink to this headline">¶</a></h1>
 <p>This use case will run the MET TCStat tool to provide summary statistics
 from a TCPairs run.</p>
 <div class="section" id="scientific-objective">
-<h2>5.1.19.1.1. Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.19.1.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>Summarize and stratify the data from TC-Pairs track and intensity data</p>
 </div>
 <div class="section" id="datasets">
-<h2>5.1.19.1.2. Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.19.1.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line">TC-Pairs data from 201503</div>
 </div>
@@ -221,13 +223,13 @@ from a TCPairs run.</p>
 </div>
 </div>
 <div class="section" id="metplus-components">
-<h2>5.1.19.1.3. METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.19.1.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case utilizes the METplus TCStat wrapper to search for
 files that are valid at a given run time and generate a command to run
 the MET tool tc_stat if all required files are found.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2>5.1.19.1.4. METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.19.1.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>TCStat is the only tool called in this example. It processes the following
 run times:</p>
 <div class="line-block">
@@ -235,7 +237,7 @@ run times:</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2>5.1.19.1.5. METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.19.1.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/TCStat/TCStat.conf</p>
@@ -397,7 +399,7 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/TCStat/TCStat.conf</
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2>5.1.19.1.6. MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.19.1.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -603,7 +605,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 </ul>
 </div>
 <div class="section" id="running-metplus">
-<h2>5.1.19.1.7. Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.19.1.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in TCStat.conf then a user-specific system configuration file:</p>
@@ -633,7 +635,7 @@ INPUT_BASE/tc_pairs <span class="o">=</span> path/to/tc_pairs/
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2>5.1.19.1.8. Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.19.1.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -644,12 +646,12 @@ and will contain the following files:</p>
 <p>OUTPUT_BASE/tc_stat/tc_stat_summary.tcst</p>
 </div>
 <div class="section" id="keywords">
-<h2>5.1.19.1.9. Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.19.1.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=TCStatUseCase&amp;check_keywords=yes&amp;area=default">TCStatUseCase</a></p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.017 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-met-tool-wrapper-tcstat-tcstat-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/81028e51d42a2577984414392a5a58cf/TCStat.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">TCStat.py</span></code></a></p>
@@ -673,7 +675,7 @@ and will contain the following files:</p>
         <a href="../../model_applications/index.html" class="btn btn-neutral float-right" title="5.2. Model Applications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../TCPairs/TCPairs_ETC.html" class="btn btn-neutral float-left" title="5.1.18.2. TCPairs Extra Tropical Cyclone" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../TCPairs/TCPairs_HWRF.html" class="btn btn-neutral float-left" title="5.1.18.2. TCPairs HWRF" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

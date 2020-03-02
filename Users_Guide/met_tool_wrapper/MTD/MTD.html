@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1.9.1. MTD &mdash; METplus 3.0 documentation</title>
+  <title>5.1.9.2. MTD &mdash; METplus 3.0 documentation</title>
   
 
   
@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -33,12 +33,14 @@
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="5.1.10.1. PB2NC" href="../PB2NC/PB2NC.html" />
-    <link rel="prev" title="5.1.8.1. MODE" href="../MODE/MODE.html" /> 
+    <link rel="prev" title="5.1.9.1. MTD using Python Embedding" href="MTD_python_embedding.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -120,7 +122,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../references.html">6. References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. ßMETplus Configuration Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -172,11 +174,11 @@
         
           <li><a href="../../index.html">User’s Guide</a> &raquo;</li>
         
-          <li><a href="../../usecases.html">5. METplus Use Cases</a> &raquo;</li>
+          <li><a href="../../usecases.html"><span class="section-number">5. </span>METplus Use Cases</a> &raquo;</li>
         
-          <li><a href="../index.html">5.1. MET tools</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">5.1. </span>MET tools</a> &raquo;</li>
         
-      <li>5.1.9.1. MTD</li>
+      <li><span class="section-number">5.1.9.2. </span>MTD</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -197,17 +199,17 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-mtd-mtd-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-mtd-mtd-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="mtd">
-<span id="sphx-glr-users-guide-met-tool-wrapper-mtd-mtd-py"></span><h1>5.1.9.1. MTD<a class="headerlink" href="#mtd" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-users-guide-met-tool-wrapper-mtd-mtd-py"></span><h1><span class="section-number">5.1.9.2. </span>MTD<a class="headerlink" href="#mtd" title="Permalink to this headline">¶</a></h1>
 <p>This use case will run the MET MTD (MODE Time Domain) tool to compare gridded forecast data to gridded observation data over time.</p>
 <div class="section" id="scientific-objective">
-<h2>5.1.9.1.1. Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.9.2.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>Compare forecast and observation 3 hour precipitation accumulation spatially and temporally over the 6 hour, 9 hour, and 12 hour forecast leads.</p>
 </div>
 <div class="section" id="datasets">
-<h2>5.1.9.1.2. Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.9.2.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Forecast:</strong> WRF GRIB Precipitation Accumulation</div>
 <div class="line"><strong>Observation:</strong> Stage 2 NetCDF Precipitation Accumulation (converted from GRIB format)</div>
@@ -218,13 +220,13 @@
 </div>
 </div>
 <div class="section" id="metplus-components">
-<h2>5.1.9.1.3. METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.9.2.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case utilizes the METplus MTD wrapper to search for
 files that are valid at a given run time and generate a command to run
 the MET tool mode if all required files are found.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2>5.1.9.1.4. METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.9.2.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>MTD is the only tool called in this example. It processes the following
 run times:</p>
 <div class="line-block">
@@ -233,7 +235,7 @@ run times:</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2>5.1.9.1.5. METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.9.2.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/MTD/MTD.conf</p>
@@ -368,7 +370,7 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/MTD/MTD.conf</p>
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2>5.1.9.1.6. MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.9.2.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -427,6 +429,9 @@ These variables are referenced in the MET configuration file.</p>
    //
 
 <span class="nv">fcst</span> <span class="o">=</span> <span class="o">{</span>
+
+   <span class="si">${</span><span class="nv">FCST_FILE_TYPE</span><span class="si">}</span>
+
    <span class="nv">field</span> <span class="o">=</span> <span class="si">${</span><span class="nv">FCST_FIELD</span><span class="si">}</span><span class="p">;</span>
 
    <span class="nv">censor_thresh</span>     <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
@@ -437,11 +442,15 @@ These variables are referenced in the MET configuration file.</p>
 
 <span class="o">}</span>
 
-<span class="nv">obs</span> <span class="o">=</span> fcst<span class="p">;</span>
-
 <span class="nv">obs</span> <span class="o">=</span> <span class="o">{</span>
+
+   <span class="si">${</span><span class="nv">OBS_FILE_TYPE</span><span class="si">}</span>
+
    <span class="nv">field</span> <span class="o">=</span> <span class="si">${</span><span class="nv">OBS_FIELD</span><span class="si">}</span><span class="p">;</span>
 
+   <span class="nv">censor_thresh</span>     <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">censor_val</span>        <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">conv_time_window</span>  <span class="o">=</span> <span class="o">{</span> <span class="nv">beg</span> <span class="o">=</span> -1<span class="p">;</span> <span class="nv">end</span> <span class="o">=</span> <span class="m">1</span><span class="p">;</span> <span class="o">}</span><span class="p">;</span>
    <span class="nv">conv_radius</span>       <span class="o">=</span> <span class="si">${</span><span class="nv">OBS_CONV_RADIUS</span><span class="si">}</span><span class="p">;</span>
    <span class="nv">conv_thresh</span>       <span class="o">=</span> <span class="si">${</span><span class="nv">OBS_CONV_THRESH</span><span class="si">}</span><span class="p">;</span>
 <span class="o">}</span>
@@ -631,10 +640,11 @@ These variables are referenced in the MET configuration file.</p>
 <li><p><strong>${FCST_VAR}</strong> - Field name of forecast data to process. Used in output_prefix to include input information in the output filenames. Corresponds to [FCST/BOTH]_VAR&lt;n&gt;_NAME in the METplus configuration file.</p></li>
 <li><p><strong>${OBS_VAR}</strong> - Field name of observation data to process. Used in output_prefix to include input information in the output filenames. Corresponds to [OBS/BOTH]_VAR&lt;n&gt;_NAME in the METplus configuration file.</p></li>
 <li><p><strong>${REGRID_TO_GRID}</strong> - Grid to remap data. Corresponds to MTD_REGRID_TO_GRID in the METplus configuration file.</p></li>
+<li><p><strong>${OUTPUT_PREFIX}</strong> - String to prepend to the output filenames. Corresponds to MTD_OUTPUT_PREFIX in the METplus configuration file.</p></li>
 </ul>
 </div>
 <div class="section" id="running-metplus">
-<h2>5.1.9.1.7. Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.9.2.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in MTD.conf then a user-specific system configuration file:</p>
@@ -664,7 +674,7 @@ These variables are referenced in the MET configuration file.</p>
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2>5.1.9.1.8. Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.9.2.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -679,12 +689,12 @@ and will contain the following files:</p>
 </div>
 </div>
 <div class="section" id="keywords">
-<h2>5.1.9.1.9. Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.9.2.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MTDUseCase&amp;check_keywords=yes&amp;area=default">MTDUseCase</a></p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.017 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-met-tool-wrapper-mtd-mtd-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/4a53f520d1c9607a825e15c312e8acba/MTD.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">MTD.py</span></code></a></p>
@@ -708,7 +718,7 @@ and will contain the following files:</p>
         <a href="../PB2NC/PB2NC.html" class="btn btn-neutral float-right" title="5.1.10.1. PB2NC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../MODE/MODE.html" class="btn btn-neutral float-left" title="5.1.8.1. MODE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="MTD_python_embedding.html" class="btn btn-neutral float-left" title="5.1.9.1. MTD using Python Embedding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

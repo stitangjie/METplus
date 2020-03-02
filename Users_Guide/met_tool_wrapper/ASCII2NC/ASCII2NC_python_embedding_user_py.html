@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1.1.1. ASCII2NC Python Embedding with User Python &mdash; METplus 3.0 documentation</title>
+  <title>5.1.1.1. ASCII2NC using Python Embedding with User Python &mdash; METplus 3.0 documentation</title>
   
 
   
@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -33,8 +33,10 @@
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="5.1.1.2. ASCII2NC" href="ASCII2NC.html" />
@@ -120,7 +122,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../references.html">6. References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. ßMETplus Configuration Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -172,11 +174,11 @@
         
           <li><a href="../../index.html">User’s Guide</a> &raquo;</li>
         
-          <li><a href="../../usecases.html">5. METplus Use Cases</a> &raquo;</li>
+          <li><a href="../../usecases.html"><span class="section-number">5. </span>METplus Use Cases</a> &raquo;</li>
         
-          <li><a href="../index.html">5.1. MET tools</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">5.1. </span>MET tools</a> &raquo;</li>
         
-      <li>5.1.1.1. ASCII2NC Python Embedding with User Python</li>
+      <li><span class="section-number">5.1.1.1. </span>ASCII2NC using Python Embedding with User Python</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -197,17 +199,17 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-ascii2nc-ascii2nc-python-embedding-user-py-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-ascii2nc-ascii2nc-python-embedding-user-py-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="ascii2nc-python-embedding-with-user-python">
-<span id="sphx-glr-users-guide-met-tool-wrapper-ascii2nc-ascii2nc-python-embedding-user-py-py"></span><h1>5.1.1.1. ASCII2NC Python Embedding with User Python<a class="headerlink" href="#ascii2nc-python-embedding-with-user-python" title="Permalink to this headline">¶</a></h1>
+<div class="sphx-glr-example-title section" id="ascii2nc-using-python-embedding-with-user-python">
+<span id="sphx-glr-users-guide-met-tool-wrapper-ascii2nc-ascii2nc-python-embedding-user-py-py"></span><h1><span class="section-number">5.1.1.1. </span>ASCII2NC using Python Embedding with User Python<a class="headerlink" href="#ascii2nc-using-python-embedding-with-user-python" title="Permalink to this headline">¶</a></h1>
 <p>This use case will run the MET ASCII2NC tool to convert point observation data in ASCII text format to NetCDF format using Python Embedding functionality and specifying a different user-defined version of Python to run the script.</p>
 <div class="section" id="scientific-objective">
-<h2>5.1.1.1.1. Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.1.1.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>None. Simply converting file formats so point observations can be read by the MET tools.</p>
 </div>
 <div class="section" id="datasets">
-<h2>5.1.1.1.2. Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.1.1.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Observations:</strong> Precipitation accumulation observations in ASCII text files</div>
 </div>
@@ -220,15 +222,15 @@
 </div>
 </div>
 <div class="section" id="metplus-components">
-<h2>5.1.1.1.3. METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.1.1.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case utilizes the METplus ASCII2NC wrapper to generate a command to run the MET tool ASCII2NC.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2>5.1.1.1.4. METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.1.1.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>ASCII2NC is the only tool called in this example. It has one run time, but the time is not relevant because the files processed do not have any time information in the names.</p>
 </div>
 <div class="section" id="metplus-configuration">
-<h2>5.1.1.1.5. METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.1.1.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/ASCII2NC/ASCII2NC_python_embedding_user_py.conf</p>
@@ -346,11 +348,11 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/ASCII2NC/ASCII2NC_py
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2>5.1.1.1.6. MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.1.1.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>None. No MET configuration file for ASCII2NC is used in this case.</p>
 </div>
 <div class="section" id="running-metplus">
-<h2>5.1.1.1.7. Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.1.1.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in ASCII2NC_python_embedding_user_py.conf then a user-specific system configuration file:</p>
@@ -380,7 +382,7 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/ASCII2NC/ASCII2NC_py
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2>5.1.1.1.8. Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.1.1.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -393,12 +395,12 @@ and will contain the following file:</p>
 </ul>
 </div>
 <div class="section" id="keywords">
-<h2>5.1.1.1.9. Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.1.1.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ASCII2NCToolUseCase&amp;check_keywords=yes&amp;area=default">ASCII2NCToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PythonEmbeddingUseCase&amp;check_keywords=yes&amp;area=default">PythonEmbeddingUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MET_PYTHON_EXEUseCase&amp;check_keywords=yes&amp;area=default">MET_PYTHON_EXEUseCase</a></p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ASCII2NCToolUseCase&amp;check_keywords=yes&amp;area=default">ASCII2NC Tool</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&amp;check_keywords=yes&amp;area=default">Python Embedding File</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MET_PYTHON_EXEUseCase&amp;check_keywords=yes&amp;area=default">MET_PYTHON_EXE environment variable</a></p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.018 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-met-tool-wrapper-ascii2nc-ascii2nc-python-embedding-user-py-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/6cf44dd4f9376e38c2bd7630f7f32339/ASCII2NC_python_embedding_user_py.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">ASCII2NC_python_embedding_user_py.py</span></code></a></p>

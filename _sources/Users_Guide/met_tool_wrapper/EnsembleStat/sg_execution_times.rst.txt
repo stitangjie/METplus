@@ -5,6 +5,10 @@
 
 Computation times
 =================
-**00:00.017** total execution time for **Users_Guide_met_tool_wrapper_EnsembleStat** files:
+**00:00.000** total execution time for **Users_Guide_met_tool_wrapper_EnsembleStat** files:
 
-- **00:00.017**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_EnsembleStat_EnsembleStat.py` (``EnsembleStat.py``)
++-----------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_EnsembleStat_EnsembleStat.py` (``EnsembleStat.py``)                                   | 00:00.000 | 0.0 MB |
++-----------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_EnsembleStat_EnsembleStat_python_embedding.py` (``EnsembleStat_python_embedding.py``) | 00:00.000 | 0.0 MB |
++-----------------------------------------------------------------------------------------------------------------------------------+-----------+--------+

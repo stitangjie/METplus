@@ -1,10 +1,12 @@
-.. note::
-    :class: sphx-glr-download-link-note
+.. only:: html
 
-    Click :ref:`here <sphx_glr_download_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_ExtraTC.py>` to download the full example code
-.. rst-class:: sphx-glr-example-title
+    .. note::
+        :class: sphx-glr-download-link-note
 
-.. _sphx_glr_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_ExtraTC.py:
+        Click :ref:`here <sphx_glr_download_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_ExtraTC.py>`     to download the full example code
+    .. rst-class:: sphx-glr-example-title
+
+    .. _sphx_glr_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_ExtraTC.py:
 
 
 Cyclone Plotter Use case
@@ -130,12 +132,12 @@ Keywords
 
 
 
-.. note:: `TcPairsUseCase <https://ncar.github.io/METplus/search.html?q=TCPairsUseCase&check_keywords=yes&area=default>`_, `CyclonePlotterUseCase <https://ncar.github.io/METplus/search.html?q=CyclonePlotterUseCase&check_keywords=yes&area=default>`_
+.. note:: `TcPairs <https://ncar.github.io/METplus/search.html?q=TCPairsUseCase&check_keywords=yes&area=default>`_, `CyclonePlotter <https://ncar.github.io/METplus/search.html?q=CyclonePlotterUseCase&check_keywords=yes&area=default>`_
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.017 seconds)
+   **Total running time of the script:** ( 0 minutes  0.000 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_ExtraTC.py:

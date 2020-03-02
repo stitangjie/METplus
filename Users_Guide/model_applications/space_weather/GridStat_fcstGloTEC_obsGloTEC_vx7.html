@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -33,8 +33,10 @@
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="5.2.6.1. Cyclone Plotter Use case" href="../tc_and_extra_tc/Plotter_fcstGFS_obsGFS_ExtraTC.html" />
@@ -107,7 +109,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../references.html">6. References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. ßMETplus Configuration Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -159,11 +161,11 @@
         
           <li><a href="../../index.html">User’s Guide</a> &raquo;</li>
         
-          <li><a href="../../usecases.html">5. METplus Use Cases</a> &raquo;</li>
+          <li><a href="../../usecases.html"><span class="section-number">5. </span>METplus Use Cases</a> &raquo;</li>
         
-          <li><a href="../index.html">5.2. Model Applications</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li>5.2.5.1. Glotec vs. Glotec</li>
+      <li><span class="section-number">5.2.5.1. </span>Glotec vs. Glotec</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,14 +186,15 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-space-weather-gridstat-fcstglotec-obsglotec-vx7-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-space-weather-gridstat-fcstglotec-obsglotec-vx7-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="glotec-vs-glotec">
-<span id="sphx-glr-users-guide-model-applications-space-weather-gridstat-fcstglotec-obsglotec-vx7-py"></span><h1>5.2.5.1. Glotec vs. Glotec<a class="headerlink" href="#glotec-vs-glotec" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-users-guide-model-applications-space-weather-gridstat-fcstglotec-obsglotec-vx7-py"></span><h1><span class="section-number">5.2.5.1. </span>Glotec vs. Glotec<a class="headerlink" href="#glotec-vs-glotec" title="Permalink to this headline">¶</a></h1>
 <p>This use case runs the MET GridStat tool to compare gridded forecast data
 from two runs of the GloTEC model.</p>
 <div class="section" id="overview">
-<h2>5.2.5.1.1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.5.1.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<img alt="../../../_images/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg" src="../../../_images/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg" />
 <p>This use case illustrates the use of grid_stat tool for the space weather domain.
 It compares Total Electron Content for a GloTEC model run initialized with COSMIC-1
 radio occultation (RO) data to a GloTEC model run without such data.</p>
@@ -199,32 +202,22 @@ radio occultation (RO) data to a GloTEC model run without such data.</p>
 The observations are considered to be the run with COSMIC-1 RO data.</p>
 <p>This use case runs grid_stat for the first two forecast times of a
 space weather event known as the St. Patrick’s Day Storm (Mar 17, 2015).</p>
-<dl class="simple">
-<dt>Novel aspects of this use case:</dt><dd><ul class="simple">
+<p>Novel aspects of this use case:</p>
+<ul class="simple">
 <li><p>This is the first example use case to run grid_stat on a space weather model (GloTEC)</p></li>
-<li><dl class="simple">
-<dt>Example of how to run with NetCDF input data which do not strictly conform to the</dt><dd><p>Climate Forecasts (CF) conventions</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Example of using masks covering latitudinal bands of interest to the space weather community:</dt><dd><p>equatorial region, mid-latitude region, and polar region</p>
-</dd>
-</dl>
-</li>
+<li><p>Example of how to run with NetCDF input data which do not strictly conform to the Climate Forecasts (CF) conventions</p></li>
+<li><p>Example of using masks covering latitudinal bands of interest to the space weather community: equatorial region, mid-latitude region, and polar region</p></li>
 <li><p>Example of masking using the values of a quality flag which vary at each time step and grid point</p></li>
 </ul>
-</dd>
-</dl>
 </div>
 <div class="section" id="scientific-objective">
-<h2>5.2.5.1.2. Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.5.1.2. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>Compare gridded forecast data from a run of the GloTEC model that includes
 assimilation of COSMIC-1 radio occultation (RO) observations to gridded forecast
 data from a GloTEC model run that does not include COSMIC-1 RO data.</p>
 </div>
 <div class="section" id="datasets">
-<h2>5.2.5.1.3. Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.5.1.3. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Forecast:</strong> GloTEC Total Electron Content (TEC) model run without assimilation of any COSMIC-1 RO data</div>
 <div class="line"><strong>Observation:</strong> GloTEC TEC model run that assimilates COSMIC-1 RO data</div>
@@ -240,20 +233,20 @@ data from a GloTEC model run that does not include COSMIC-1 RO data.</p>
 </div>
 </div>
 <div class="section" id="metplus-use-case-contact">
-<h2>5.2.5.1.4. METplus Use Case Contact<a class="headerlink" href="#metplus-use-case-contact" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.5.1.4. </span>METplus Use Case Contact<a class="headerlink" href="#metplus-use-case-contact" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Author:</strong> Jonathan L. Vigh (National Center for Atmospheric Research / Research Applications Laboratory / Joint Numerical Testbed)</div>
 <div class="line"><strong>Last modified:</strong> 06 February 2020</div>
 </div>
 </div>
 <div class="section" id="metplus-components">
-<h2>5.2.5.1.5. METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.5.1.5. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case utilizes the METplus GridStat wrapper to search for
 files that are valid at a given run time and generate a command to run
 the MET tool grid_stat if all required files are found.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2>5.2.5.1.6. METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.5.1.6. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>GridStat is the only tool called in this example. It processes the following
 run times:</p>
 <div class="line-block">
@@ -266,10 +259,10 @@ run times:</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2>5.2.5.1.7. METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.5.1.7. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
-with the -c option, i.e. -c parm/use_cases/model_applications_space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.conf</p>
+with the -c option, i.e. -c parm/use_cases/model_applications/space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.conf</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># GridStat METplus Configuration for the glotec_vs_glotec space weather use case: </span>
 <span class="c1">#    GloTEC initialized with and without COSMIC-1 RO data (id: vx7)</span>
 <span class="c1">#</span>
@@ -450,7 +443,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications_space_weather/Grid
 
 <span class="c1"># directory containing climatology input to GridStat</span>
 <span class="c1"># Not used in this example</span>
-<span class="nv">CLIMO_GRID_STAT_INPUT_DIR</span> <span class="o">=</span>
+<span class="nv">GRID_STAT_CLIMO_MEAN_INPUT_DIR</span> <span class="o">=</span>
 
 <span class="c1"># directory to write output from GridStat</span>
 <span class="nv">GRID_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/space_weather/glotec_vs_glotec
@@ -467,9 +460,9 @@ with the -c option, i.e. -c parm/use_cases/model_applications_space_weather/Grid
 <span class="c1"># Optional subdirectories relative to GRID_STAT_OUTPUT_DIR to write output from GridStat</span>
 <span class="nv">GRID_STAT_OUTPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>valid?fmt<span class="o">=</span>%Y_%m_%d<span class="o">}</span>
 
-<span class="c1"># Template to look for climatology input to GridStat relative to CLIMO_GRID_STAT_INPUT_DIR</span>
+<span class="c1"># Template to look for climatology input to GridStat relative to GRID_STAT_CLIMO_MEAN_INPUT_DIR</span>
 <span class="c1"># Not used in this example</span>
-<span class="nv">CLIMO_GRID_STAT_INPUT_TEMPLATE</span> <span class="o">=</span>
+<span class="nv">GRID_STAT_CLIMO_MEAN_INPUT_TEMPLATE</span> <span class="o">=</span>
 
 <span class="c1"># Used to specify one or more verification mask files for GridStat</span>
 <span class="c1"># Not used for this example</span>
@@ -484,7 +477,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications_space_weather/Grid
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2>5.2.5.1.8. MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.5.1.8. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -571,7 +564,7 @@ These variables are referenced in the MET configuration file.</p>
 //
 //climo_mean <span class="o">=</span> <span class="o">{</span>
 //
-//   <span class="nv">file_name</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">CLIMO_FILE</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
+//   <span class="nv">file_name</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">CLIMO_MEAN_FILE</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
 //   <span class="nv">field</span>     <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
 //
 //   <span class="nv">regrid</span> <span class="o">=</span> <span class="o">{</span>
@@ -750,7 +743,6 @@ These variables are referenced in the MET configuration file.</p>
 <li><p><strong>${OBTYPE}</strong> - Name of observation input. Corresponds to OBTYPE in the METplus configuration file.</p></li>
 <li><p><strong>${FCST_FIELD}</strong> - Formatted forecast field information. Generated from FCST_VAR&lt;n&gt;_[NAME/LEVEL/THRESH/OPTIONS] in the METplus configuration file.</p></li>
 <li><p><strong>${OBS_FIELD}</strong> - Formatted observation field information. Generated from OBS_VAR&lt;n&gt;_[NAME/LEVEL/THRESH/OPTIONS] in the METplus configuration file.</p></li>
-<li><p><strong>${CLIMO_FILE}</strong> - Optional path to climatology file. Corresponds to CLIMO_GRID_STAT_INPUT_[DIR/TEMPLATE] in the METplus configuration file.</p></li>
 <li><p><strong>${FCST_VAR}</strong> - Field name of forecast data to process. Used in output_prefix to include input information in the output filenames. Corresponds to FCST_VAR&lt;n&gt;_NAME in the METplus configuration file.</p></li>
 <li><p><strong>${OBS_VAR}</strong> - Field name of observation data to process. Used in output_prefix to include input information in the output filenames. Corresponds to OBS_VAR&lt;n&gt;_NAME in the METplus configuration file.</p></li>
 <li><p><strong>${LEVEL}</strong> - Vertical level of the forecast input data. Used in output_prefix to include input information in the output filenames. Corresponds to FCST_VAR&lt;n&gt;_LEVELS in the METplus configuration file.</p></li>
@@ -760,7 +752,7 @@ These variables are referenced in the MET configuration file.</p>
 </ul>
 </div>
 <div class="section" id="running-metplus">
-<h2>5.2.5.1.9. Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.5.1.9. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in GridStat_fcstGloTEC_obsGloTEC_vx7.conf then a user-specific system configuration file:</p>
@@ -790,7 +782,7 @@ These variables are referenced in the MET configuration file.</p>
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2>5.2.5.1.10. Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.5.1.10. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -806,12 +798,13 @@ and will contain the following files:</p>
 </ul>
 </div>
 <div class="section" id="keywords">
-<h2>5.2.5.1.11. Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.5.1.11. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>GridStatUseCase SpaceWeatherAppUseCase NOAASWPCOrgUseCase GloTECModelUseCase</p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.017 seconds)</p>
+<p>sphinx_gallery_thumbnail_path = ‘_static/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg’</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-space-weather-gridstat-fcstglotec-obsglotec-vx7-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/ab62dc0dac8bdb352ee78bbd03a046e0/GridStat_fcstGloTEC_obsGloTEC_vx7.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">GridStat_fcstGloTEC_obsGloTEC_vx7.py</span></code></a></p>

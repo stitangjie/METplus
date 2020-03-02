@@ -1,10 +1,12 @@
-.. note::
-    :class: sphx-glr-download-link-note
+.. only:: html
 
-    Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_MTD_MTD.py>` to download the full example code
-.. rst-class:: sphx-glr-example-title
+    .. note::
+        :class: sphx-glr-download-link-note
 
-.. _sphx_glr_Users_Guide_met_tool_wrapper_MTD_MTD.py:
+        Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_MTD_MTD.py>`     to download the full example code
+    .. rst-class:: sphx-glr-example-title
+
+    .. _sphx_glr_Users_Guide_met_tool_wrapper_MTD_MTD.py:
 
 
 MTD
@@ -78,6 +80,8 @@ Note the following variables are referenced in the MET configuration file.
 * **${FCST_VAR}** - Field name of forecast data to process. Used in output_prefix to include input information in the output filenames. Corresponds to [FCST/BOTH]_VAR<n>_NAME in the METplus configuration file.
 * **${OBS_VAR}** - Field name of observation data to process. Used in output_prefix to include input information in the output filenames. Corresponds to [OBS/BOTH]_VAR<n>_NAME in the METplus configuration file.
 * **${REGRID_TO_GRID}** - Grid to remap data. Corresponds to MTD_REGRID_TO_GRID in the METplus configuration file.
+* **${OUTPUT_PREFIX}** - String to prepend to the output filenames. Corresponds to MTD_OUTPUT_PREFIX in the METplus configuration file.
+
 
 Running METplus
 ---------------
@@ -133,6 +137,7 @@ and will contain the following files:
 
 
 
+
 Keywords
 --------
 
@@ -141,7 +146,7 @@ Keywords
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.017 seconds)
+   **Total running time of the script:** ( 0 minutes  0.000 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_met_tool_wrapper_MTD_MTD.py:

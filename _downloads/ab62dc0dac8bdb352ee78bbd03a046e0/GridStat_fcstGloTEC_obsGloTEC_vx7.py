@@ -6,10 +6,13 @@ This use case runs the MET GridStat tool to compare gridded forecast data
 from two runs of the GloTEC model. 
 
 """
+
 ##############################################################################
 # Overview
 # --------
-# 
+#
+# .. image:: ../../../../docs/_static/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg
+#
 # This use case illustrates the use of grid_stat tool for the space weather domain.
 # It compares Total Electron Content for a GloTEC model run initialized with COSMIC-1
 # radio occultation (RO) data to a GloTEC model run without such data. 
@@ -21,12 +24,11 @@ from two runs of the GloTEC model.
 # space weather event known as the St. Patrick's Day Storm (Mar 17, 2015). 
 #
 # Novel aspects of this use case:
-#    - This is the first example use case to run grid_stat on a space weather model (GloTEC)
-#    - Example of how to run with NetCDF input data which do not strictly conform to the 
-#          Climate Forecasts (CF) conventions
-#    - Example of using masks covering latitudinal bands of interest to the space weather community:
-#          equatorial region, mid-latitude region, and polar region
-#    - Example of masking using the values of a quality flag which vary at each time step and grid point
+#
+# * This is the first example use case to run grid_stat on a space weather model (GloTEC)
+# * Example of how to run with NetCDF input data which do not strictly conform to the Climate Forecasts (CF) conventions
+# * Example of using masks covering latitudinal bands of interest to the space weather community: equatorial region, mid-latitude region, and polar region
+# * Example of masking using the values of a quality flag which vary at each time step and grid point
 
 ##############################################################################
 # Scientific Objective
@@ -87,7 +89,7 @@ from two runs of the GloTEC model.
 #
 # METplus first loads all of the configuration files found in parm/metplus_config,
 # then it loads any configuration files passed to METplus via the command line
-# with the -c option, i.e. -c parm/use_cases/model_applications_space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.conf
+# with the -c option, i.e. -c parm/use_cases/model_applications/space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.conf
 #
 # .. highlight:: bash
 # .. literalinclude:: ../../../../parm/use_cases/model_applications/space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.conf
@@ -108,7 +110,6 @@ from two runs of the GloTEC model.
 # * **${OBTYPE}** - Name of observation input. Corresponds to OBTYPE in the METplus configuration file.
 # * **${FCST_FIELD}** - Formatted forecast field information. Generated from FCST_VAR<n>_[NAME/LEVEL/THRESH/OPTIONS] in the METplus configuration file.
 # * **${OBS_FIELD}** - Formatted observation field information. Generated from OBS_VAR<n>_[NAME/LEVEL/THRESH/OPTIONS] in the METplus configuration file.
-# * **${CLIMO_FILE}** - Optional path to climatology file. Corresponds to CLIMO_GRID_STAT_INPUT_[DIR/TEMPLATE] in the METplus configuration file.
 # * **${FCST_VAR}** - Field name of forecast data to process. Used in output_prefix to include input information in the output filenames. Corresponds to FCST_VAR<n>_NAME in the METplus configuration file.
 # * **${OBS_VAR}** - Field name of observation data to process. Used in output_prefix to include input information in the output filenames. Corresponds to OBS_VAR<n>_NAME in the METplus configuration file.
 # * **${LEVEL}** - Vertical level of the forecast input data. Used in output_prefix to include input information in the output filenames. Corresponds to FCST_VAR<n>_LEVELS in the METplus configuration file.
@@ -165,9 +166,11 @@ from two runs of the GloTEC model.
 # * grid_stat_GloTEC_without_cosmic-vx7_TEC_vs_GloTEC_with_cosmic_000000L_20150317_001500V.stat
 
 
-
 ##############################################################################
 # Keywords
 # --------
 #
 # .. note:: GridStatUseCase SpaceWeatherAppUseCase NOAASWPCOrgUseCase GloTECModelUseCase
+#
+# sphinx_gallery_thumbnail_path = '_static/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg'
+#

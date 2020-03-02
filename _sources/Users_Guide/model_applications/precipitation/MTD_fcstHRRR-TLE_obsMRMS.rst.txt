@@ -1,10 +1,12 @@
-.. note::
-    :class: sphx-glr-download-link-note
+.. only:: html
 
-    Click :ref:`here <sphx_glr_download_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_obsMRMS.py>` to download the full example code
-.. rst-class:: sphx-glr-example-title
+    .. note::
+        :class: sphx-glr-download-link-note
 
-.. _sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_obsMRMS.py:
+        Click :ref:`here <sphx_glr_download_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_obsMRMS.py>`     to download the full example code
+    .. rst-class:: sphx-glr-example-title
+
+    .. _sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_obsMRMS.py:
 
 
 HRRR-TLE MODE Time Domain Use Case
@@ -121,12 +123,12 @@ Keywords
 --------
 
 
-.. note:: `MTDUseCase <https://ncar.github.io/METplus/search.html?q=MTDUSeCase&check_keywords=yes&area=default>`_, `PrecipitationUseCase <https://ncar.github.io/METplus/search.html?q=PrecipitationUseCase&check_keywords=yes&area=default>`_
+.. note:: `MTD <https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&check_keywords=yes&area=default>`_, `Precipitation <https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&check_keywords=yes&area=default>`_, `GRIB2 <https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&check_keywords=yes&area=default>`_, `NetCDF <https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&check_keywords=yes&area=default>`_
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.017 seconds)
+   **Total running time of the script:** ( 0 minutes  0.000 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_obsMRMS.py:

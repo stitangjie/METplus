@@ -5,7 +5,10 @@
 
 Computation times
 =================
-**00:00.034** total execution time for **Users_Guide_model_applications_convection_allowing_models** files:
+**00:00.000** total execution time for **Users_Guide_model_applications_convection_allowing_models** files:
 
-- **00:00.017**: :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.py` (``EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.py``)
-- **00:00.017**: :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_MTD_fcstHREF_FcstOnly_Gempak.py` (``MTD_fcstHREF_FcstOnly_Gempak.py``)
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.py` (``EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.py``) | 00:00.000 | 0.0 MB |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_MTD_fcstHREF_FcstOnly_Gempak.py` (``MTD_fcstHREF_FcstOnly_Gempak.py``)                                     | 00:00.000 | 0.0 MB |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+

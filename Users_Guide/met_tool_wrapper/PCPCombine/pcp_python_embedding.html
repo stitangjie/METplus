@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -33,12 +33,14 @@
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.1.11.6. PCPCombine SUBTRACT" href="pcp_subtract.html" />
-    <link rel="prev" title="5.1.11.4. PCPCombine CUSTOM" href="pcp_custom.html" /> 
+    <link rel="next" title="5.1.11.6. PCPCombine Bucket Interval" href="pcp_bucket.html" />
+    <link rel="prev" title="5.1.11.4. PCPCombine DERIVE" href="pcp_derive.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -120,7 +122,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../references.html">6. References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. ßMETplus Configuration Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -172,11 +174,11 @@
         
           <li><a href="../../index.html">User’s Guide</a> &raquo;</li>
         
-          <li><a href="../../usecases.html">5. METplus Use Cases</a> &raquo;</li>
+          <li><a href="../../usecases.html"><span class="section-number">5. </span>METplus Use Cases</a> &raquo;</li>
         
-          <li><a href="../index.html">5.1. MET tools</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">5.1. </span>MET tools</a> &raquo;</li>
         
-      <li>5.1.11.5. PCPCombine Python Embedding</li>
+      <li><span class="section-number">5.1.11.5. </span>PCPCombine Python Embedding</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -197,17 +199,17 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-pcpcombine-pcp-python-embedding-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-pcpcombine-pcp-python-embedding-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="pcpcombine-python-embedding">
-<span id="sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcp-python-embedding-py"></span><h1>5.1.11.5. PCPCombine Python Embedding<a class="headerlink" href="#pcpcombine-python-embedding" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcp-python-embedding-py"></span><h1><span class="section-number">5.1.11.5. </span>PCPCombine Python Embedding<a class="headerlink" href="#pcpcombine-python-embedding" title="Permalink to this headline">¶</a></h1>
 <p>This use case will run the MET PCPCombine tool in ADD mode using a python script to read input data and build a 2 hour accumulation field</p>
 <div class="section" id="scientific-objective">
-<h2>5.1.11.5.1. Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.11.5.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>Build a 2 hour precipitation accumulation field from 30 minute IMERG data.</p>
 </div>
 <div class="section" id="datasets">
-<h2>5.1.11.5.2. Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.11.5.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Forecast:</strong> IMERG HDF5 30 minute precipitation accumulation</div>
 </div>
@@ -220,7 +222,7 @@
 </div>
 </div>
 <div class="section" id="external-dependencies">
-<h2>5.1.11.5.3. External Dependencies<a class="headerlink" href="#external-dependencies" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.11.5.3. </span>External Dependencies<a class="headerlink" href="#external-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>You will need to use a version of Python 3.6+ that has the following packages installed:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">h5</span><span class="o">-</span><span class="n">py</span>
 <span class="o">*</span> <span class="n">numpy</span>
@@ -234,13 +236,13 @@ MET_PYTHON_EXE = /path/to/python/with/h5-py/and/numpy/packages/bin/python</p>
 </div></blockquote>
 </div>
 <div class="section" id="metplus-components">
-<h2>5.1.11.5.4. METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.11.5.4. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case utilizes the METplus PCPCombine wrapper to run a Python script to read input data to build the desired accumulation for a given run time
 using a filename template and a list of available input accumulations. If enough files meeting the criteria are found to build
 the output accumulation, it will generate a command to run PCPCombine to combine the data.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2>5.1.11.5.5. METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.11.5.5. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>PCPCombine is the only tool called in this example. It processes the following
 run times:</p>
 <div class="line-block">
@@ -248,7 +250,7 @@ run times:</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2>5.1.11.5.6. METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.11.5.6. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/PCPCombine/pcp_python_embedding.conf</p>
@@ -279,7 +281,7 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/PCPCombine/pcp_pytho
 <span class="nv">LOOP_ORDER</span> <span class="o">=</span> <span class="nb">times</span>
 
 <span class="c1"># List of applications to run</span>
-<span class="nv">PROCESS_LIST</span> <span class="o">=</span> PcpCombine
+<span class="nv">PROCESS_LIST</span> <span class="o">=</span> PCPCombine
 
 <span class="c1"># run pcp_combine on observation data</span>
 <span class="nv">OBS_PCP_COMBINE_RUN</span> <span class="o">=</span> True
@@ -295,14 +297,14 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/PCPCombine/pcp_pytho
 <span class="nv">OBTYPE</span> <span class="o">=</span> IMERG
 
 <span class="c1"># File format. Options are GRIB, NETCDF, or GEMPAK</span>
-<span class="nv">OBS_PCP_COMBINE_INPUT_DATATYPE</span> <span class="o">=</span> PYTHON
+<span class="nv">OBS_PCP_COMBINE_INPUT_DATATYPE</span> <span class="o">=</span> PYTHON_NUMPY
 
 <span class="nv">OBS_PCP_COMBINE_INPUT_ACCUMS</span> <span class="o">=</span> <span class="m">6</span>
 <span class="nv">OBS_PCP_COMBINE_INPUT_NAMES</span> <span class="o">=</span> <span class="o">{</span>PARM_BASE<span class="o">}</span>/use_cases/met_tool_wrapper/PCPCombine/sum_IMERG_V06_HDF5.py <span class="o">{</span>OBS_PCP_COMBINE_INPUT_DIR<span class="o">}</span> IRprecipitation <span class="o">{</span>valid?fmt<span class="o">=</span>%Y%m%d%H<span class="o">}</span> <span class="m">02</span>
 
 <span class="o">[</span>dir<span class="o">]</span>
 <span class="nv">OBS_PCP_COMBINE_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/met_test/new/imerg
-<span class="nv">OBS_PCP_COMBINE_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/pcp_combine_py_embed
+<span class="nv">OBS_PCP_COMBINE_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/met_tool_wrapper/PCPCombine/pcp_combine_py_embed
 
 <span class="o">[</span>filename_templates<span class="o">]</span>
 <span class="c1"># format of filenames</span>
@@ -317,11 +319,11 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/PCPCombine/pcp_pytho
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2>5.1.11.5.7. MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.11.5.7. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>None. PCPCombine does not use configuration files.</p>
 </div>
 <div class="section" id="running-metplus">
-<h2>5.1.11.5.8. Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.11.5.8. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in pcp_python_embedding.conf then a user-specific system configuration file:</p>
@@ -351,7 +353,7 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/PCPCombine/pcp_pytho
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2>5.1.11.5.9. Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.11.5.9. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -364,12 +366,12 @@ and will contain the following files:</p>
 </ul>
 </div>
 <div class="section" id="keywords">
-<h2>5.1.11.5.10. Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1.11.5.10. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PCPCombineUseCase&amp;check_keywords=yes&amp;area=default">PCP Combine</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PythonEmbeddingUseCase&amp;check_keywords=yes&amp;area=default">PythonEmbeddingUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MET_PYTHON_EXEUseCase&amp;check_keywords=yes&amp;area=default">MET_PYTHON_EXEUseCase</a></p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.017 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-met-tool-wrapper-pcpcombine-pcp-python-embedding-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/7a065121265e980e490ce8d2f237410d/pcp_python_embedding.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pcp_python_embedding.py</span></code></a></p>
@@ -390,10 +392,10 @@ and will contain the following files:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pcp_subtract.html" class="btn btn-neutral float-right" title="5.1.11.6. PCPCombine SUBTRACT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pcp_bucket.html" class="btn btn-neutral float-right" title="5.1.11.6. PCPCombine Bucket Interval" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pcp_custom.html" class="btn btn-neutral float-left" title="5.1.11.4. PCPCombine CUSTOM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pcp_derive.html" class="btn btn-neutral float-left" title="5.1.11.4. PCPCombine DERIVE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

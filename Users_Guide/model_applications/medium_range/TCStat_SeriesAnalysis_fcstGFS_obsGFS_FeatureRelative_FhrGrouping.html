@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -33,12 +33,14 @@
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.2.2.5. Anomaly Grid Comparison" href="GridStat_fcstGFS_obsGFS_climoNCEP_Multifield.html" />
-    <link rel="prev" title="5.2.2.3. Feature Relative Standard Use Case (simple series analysis by initialization times)" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_Standard.html" /> 
+    <link rel="next" title="5.2.2.5. Grid Comparison" href="GridStat_fcstGFS_obsGFS_Sfc_MultiField.html" />
+    <link rel="prev" title="5.2.2.3. Anomaly Grid Comparison" href="GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -107,7 +109,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../references.html">6. References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. ßMETplus Configuration Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -159,11 +161,11 @@
         
           <li><a href="../../index.html">User’s Guide</a> &raquo;</li>
         
-          <li><a href="../../usecases.html">5. METplus Use Cases</a> &raquo;</li>
+          <li><a href="../../usecases.html"><span class="section-number">5. </span>METplus Use Cases</a> &raquo;</li>
         
-          <li><a href="../index.html">5.2. Model Applications</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li>5.2.2.4. Series by Lead (for forecast hour groupings)</li>
+      <li><span class="section-number">5.2.2.4. </span>Series by Lead (for forecast hour groupings)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,10 +186,10 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-fhrgrouping-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-fhrgrouping-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="series-by-lead-for-forecast-hour-groupings">
-<span id="sphx-glr-users-guide-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-fhrgrouping-py"></span><h1>5.2.2.4. Series by Lead (for forecast hour groupings)<a class="headerlink" href="#series-by-lead-for-forecast-hour-groupings" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-users-guide-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-fhrgrouping-py"></span><h1><span class="section-number">5.2.2.4. </span>Series by Lead (for forecast hour groupings)<a class="headerlink" href="#series-by-lead-for-forecast-hour-groupings" title="Permalink to this headline">¶</a></h1>
 <p>This use case performs a series analysis on tropical cyclone
 data based on all lead times. This use case illustrates how one can “build” on an existing
 configuration file by overriding configuration settings. In this example, we have
@@ -196,7 +198,7 @@ series by lead example illustrates that results can be grouped based on forecast
 For example, one can readily aggregate series analysis results by the first, second, and third days of
 a storm event, rather than by all the forecast hours/lead times.</p>
 <div class="section" id="scientific-objective">
-<h2>5.2.2.4.1. Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.2.4.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>By maintaining focus of each evaluation time (or evaluation time series, in this case)
 on a user-defined area around a cyclone, the model statistical errors associated
 with cyclonic physical features (moisture flux, stability, strength of upper-level
@@ -209,7 +211,7 @@ Specifically, this use case creates bins of forecast lead times as specified by 
 given ranges which provides additional insight directly into forecast lead time accuracy.</p>
 </div>
 <div class="section" id="datasets">
-<h2>5.2.2.4.2. Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.2.4.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <p>Relevant information about the datasets that would be beneficial include:</p>
 <blockquote>
 <div><ul class="simple">
@@ -220,7 +222,7 @@ given ranges which provides additional insight directly into forecast lead time 
 </div></blockquote>
 </div>
 <div class="section" id="metplus-components">
-<h2>5.2.2.4.3. METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.2.4.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case first runs TcPairs and ExtractTiles wrappers to generate matched
 tropical cyclone data and regrid them into appropriately-sized tiles
 along a storm track. The MET tc-stat tool is used to filter the
@@ -233,7 +235,7 @@ groupings as specified by the start, end and increment in the METplus
 configuration file, as well as labels to identify each forecast hour grouping.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2>5.2.2.4.4. METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.2.4.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>The following tools are used for each run time:</p>
 <p>TcPairs &gt; RegridDataPlane, TCStat &gt; SeriesAnalysis</p>
 <p>This example loops by forecast/lead time (with begin, end, and increment as specified in the METplus
@@ -256,7 +258,7 @@ in the run times below.</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2>5.2.2.4.5. METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.2.4.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_Standard.conf
@@ -279,7 +281,6 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="nv">SERIES_ANALYSIS_REGRID_TO_GRID</span> <span class="o">=</span> FCST
 
 <span class="c1">## NOTE: &quot;TOTAL&quot; is a REQUIRED cnt statistic used by the series analysis scripts</span>
-<span class="c1">#STAT_LIST = TOTAL, FBAR, OBAR, ME, MAE, RMSE, BCMSE, E50, EIQR, MAD</span>
 <span class="nv">SERIES_ANALYSIS_STAT_LIST</span> <span class="o">=</span> TOTAL, FBAR, OBAR, ME
 
 <span class="c1"># The init time begin and end times, increment</span>
@@ -370,7 +371,6 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="c1"># TC-STAT filtering options, used for extract tiles and series analysis</span>
 <span class="c1">#</span>
 <span class="c1">##</span>
-<span class="c1">#EXTRACT_TILES_FILTER_OPTS =</span>
 <span class="nv">EXTRACT_TILES_FILTER_OPTS</span> <span class="o">=</span> -basin ML
 <span class="nv">SERIES_ANALYSIS_FILTER_OPTS</span> <span class="o">=</span> -init_beg <span class="o">{</span>INIT_BEG<span class="o">}</span> -init_end <span class="o">{</span>INIT_END<span class="o">}</span>
 
@@ -559,7 +559,6 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="c1">#</span>
 <span class="o">[</span>dir<span class="o">]</span>
 <span class="c1"># Location of your model data of interest</span>
-<span class="c1">#EXTRACT_TILES_GRID_INPUT_DIR = {INPUT_BASE}/cyclone_track_feature/reduced_model_data</span>
 <span class="c1"># Using further reduced data set than what was previously used</span>
 <span class="nv">EXTRACT_TILES_GRID_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/met_test/new/reduced_model_data
 
@@ -666,9 +665,8 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="nv">INIT_TIME_FMT</span> <span class="o">=</span> %Y%m%d
 <span class="nv">INIT_BEG</span> <span class="o">=</span> <span class="m">20141214</span>
 <span class="nv">INIT_END</span> <span class="o">=</span> <span class="m">20141214</span>
-<span class="c1">#INIT_INCREMENT =  86400</span>
+<span class="c1">#The increment in seconds in integer format</span>
 <span class="nv">INIT_INCREMENT</span> <span class="o">=</span>  <span class="m">21600</span>
-<span class="c1">#21600 ;; The increment in seconds in integer format</span>
 <span class="c1">#INIT_HOUR_END = 18 ;; Should be a string in HH or HHH format</span>
 
 <span class="c1"># if true, run series_by_lead for groups of forecasts</span>
@@ -686,16 +684,11 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 <span class="nv">LEAD_SEQ_2</span> <span class="o">=</span> begin_end_incr<span class="o">(</span><span class="m">24</span>,42,6<span class="o">)</span>
 <span class="c1"># forecast lead sequence 2 label</span>
 <span class="nv">LEAD_SEQ_2_LABEL</span> <span class="o">=</span> Day2
-
-<span class="c1"># forecast lead sequence 3 list (48, 54, 60, 66)</span>
-<span class="c1">#LEAD_SEQ_3 = begin_end_incr(48,66,6)</span>
-<span class="c1"># forecast lead sequence 3 label</span>
-<span class="c1">#LEAD_SEQ_3_LABEL = Day3</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2>5.2.2.4.6. MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.2.4.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -1182,7 +1175,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p>parm/use_cases/met_tool_wrapper/SeriesByLead/SeriesByLead.py</p>
 </div>
 <div class="section" id="running-metplus">
-<h2>5.2.2.4.7. Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.2.4.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_Standard.conf and TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_FhrGrouping.conf, then a user-specific system configuration file:</p>
@@ -1250,7 +1243,7 @@ Example User Configuration File:</p>
 <p><strong>NOTE:</strong> The INPUT_BASE, OUTPUT_BASE, and MET_INSTALL_DIR must be located under the [dir] section, while the RM, CUT, TR, NCAP2, CONVERT, and NCDUMP must be located under the [exe] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2>5.2.2.4.8. Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.2.4.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -1292,12 +1285,12 @@ results.</p>
 </div></blockquote>
 </div>
 <div class="section" id="keywords">
-<h2>5.2.2.4.9. Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.2.4.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=TcPairsUseCase&amp;check_keywords=yes&amp;area=default">TcPairsUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=SeriesByLeadGroupingUseCase&amp;check_keywords=yes&amp;area=default">SeriesByLeadGroupingUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=TCStatUseCase&amp;check_keywords=yes&amp;area=default">TCStatUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=RegridDataPlaneUseCase&amp;check_keywords=yes&amp;area=default">RegridDataPlaneUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MediumRangeUseCase&amp;check_keywords=yes&amp;area=default">MediumRangeUseCase</a>,  <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=SeriesAnalysisUseCase&amp;check_keywords=yes&amp;area=default">SeriesAnalysis</a></p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=TcPairsUseCase&amp;check_keywords=yes&amp;area=default">TcPairs</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=SeriesByLeadGroupingUseCase&amp;check_keywords=yes&amp;area=default">SeriesByLeadGrouping</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=TCStatToolUseCase&amp;check_keywords=yes&amp;area=default">TCStat</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=RegridDataPlaneToolUseCase&amp;check_keywords=yes&amp;area=default">RegridDataPlane</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MediumRangeAppUseCase&amp;check_keywords=yes&amp;area=default">MediumRange</a>,  <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=SeriesAnalysisUseCase&amp;check_keywords=yes&amp;area=default">SeriesAnalysis</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&amp;check_keywords=yes&amp;area=default">GRIB2</a></p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.017 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-fhrgrouping-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/b5a52dd87031a731c71783199b7552df/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_FhrGrouping.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_FhrGrouping.py</span></code></a></p>
@@ -1318,10 +1311,10 @@ results.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="GridStat_fcstGFS_obsGFS_climoNCEP_Multifield.html" class="btn btn-neutral float-right" title="5.2.2.5. Anomaly Grid Comparison" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="GridStat_fcstGFS_obsGFS_Sfc_MultiField.html" class="btn btn-neutral float-right" title="5.2.2.5. Grid Comparison" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_Standard.html" class="btn btn-neutral float-left" title="5.2.2.3. Feature Relative Standard Use Case (simple series analysis by initialization times)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.html" class="btn btn-neutral float-left" title="5.2.2.3. Anomaly Grid Comparison" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

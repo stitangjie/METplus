@@ -1,10 +1,12 @@
-.. note::
-    :class: sphx-glr-download-link-note
+.. only:: html
 
-    Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_GempakToCF_GempakToCF.py>` to download the full example code
-.. rst-class:: sphx-glr-example-title
+    .. note::
+        :class: sphx-glr-download-link-note
 
-.. _sphx_glr_Users_Guide_met_tool_wrapper_GempakToCF_GempakToCF.py:
+        Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_GempakToCF_GempakToCF.py>`     to download the full example code
+    .. rst-class:: sphx-glr-example-title
+
+    .. _sphx_glr_Users_Guide_met_tool_wrapper_GempakToCF_GempakToCF.py:
 
 
 GempakToCF
@@ -32,11 +34,11 @@ Datasets
 External Dependencies
 ---------------------
 
-GempakToCF.jar
+**GempakToCF.jar**
 
 GempakToCF is an external tool that utilizes the Unidata NetCDF-Java package. The jar file that can be used to run the utility is available here: https://dtcenter.org/sites/default/files/community-code/metplus/utilities/GempakToCF.jar
 
-See the METplus Configuration section for information on how to configure METplus to find the jar file.
+See the METplus Configuration section below for information on how to configure METplus to find the jar file.
 
 More information on the package used to create the file is here:  https://www.unidata.ucar.edu/software/netcdf-java
 
@@ -61,10 +63,10 @@ run times:
 METplus Configuration
 ---------------------
 
-To enable Gempak support, you must set [exe] GEMPAKTOCF_JAR in your user METplus configuration file.:
+To enable Gempak support, you must set [exe] :term:`GEMPAKTOCF_JAR` in your user METplus configuration file.:
 
    [exe]
-   GEMPAKTOCF_JAR = /path/to/GempakToCF.jar
+   :term:`GEMPAKTOCF_JAR` = /path/to/GempakToCF.jar
 
 
 METplus first loads all of the configuration files found in parm/metplus_config,
@@ -121,12 +123,12 @@ and will contain the following file:
 Keywords
 --------
 
-.. note:: `GempakToCFToolUseCase <https://ncar.github.io/METplus/search.html?q=GempakToCFToolUseCase&check_keywords=yes&area=default>`_
+.. note:: `GempakToCF Tool <https://ncar.github.io/METplus/search.html?q=GempakToCFToolUseCase&check_keywords=yes&area=default>`_, `GEMPAK file <https://ncar.github.io/METplus/search.html?q=GEMPAKFileUseCase&check_keywords=yes&area=default>`_
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.017 seconds)
+   **Total running time of the script:** ( 0 minutes  0.000 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_met_tool_wrapper_GempakToCF_GempakToCF.py:

@@ -37,11 +37,12 @@ comparing the resulting data to forecast data
 # ----------------
 #
 # The following tools are used for each run time:
-#  PB2NC > EnsembleStat
+#
+# PB2NC > EnsembleStat
 #
 # This example loops by initialization time. For each initialization time
-#  it will process forecast leads 0, 1, and 2. There is only one
-#  initialization time in this example, so the following will be run:
+# it will process forecast leads 0, 1, and 2. There is only one
+# initialization time in this example, so the following will be run:
 #
 # Run times:
 #
@@ -77,7 +78,8 @@ comparing the resulting data to forecast data
 # .. literalinclude:: ../../../../parm/use_cases/model_applications/convection_allowing_models/EnsembleStatConfig_SFC
 #
 # See the following files for more information about the environment variables set in this configuration file.
-#   parm/use_cases/met_tool_wrapper/EnsembleStat/EnsembleStat.py
+#
+# parm/use_cases/met_tool_wrapper/EnsembleStat/EnsembleStat.py
 
 ##############################################################################
 # Running METplus
@@ -152,4 +154,4 @@ comparing the resulting data to forecast data
 # Keywords
 # --------
 #
-# .. note:: EnsembleStatUseCase, ConvectionAllowingModelsUseCase, PB2NCUseCase
+# .. note:: `EnsembleStat <https://ncar.github.io/METplus/search.html?q=EnsembleStatToolUseCase&check_keywords=yes&area=default>`_, `ConvectionAllowingModels <https://ncar.github.io/METplus/search.html?q=ConvectionAllowingModelsAppUseCase&check_keywords=yes&area=default>`_, `PB2NC <https://ncar.github.io/METplus/search.html?q=PB2NCToolUseCase&check_keywords=yes&area=default>`_, `prepBUFR <https://ncar.github.io/METplus/search.html?q=prepBUFRFileUseCase&check_keywords=yes&area=default>`_, `GRIB2 <https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&check_keywords=yes&area=default>`_

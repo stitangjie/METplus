@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
@@ -33,8 +33,10 @@
   
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="6. References" href="../../references.html" />
@@ -107,7 +109,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../references.html">6. References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. ßMETplus Configuration Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -159,11 +161,11 @@
         
           <li><a href="../../index.html">User’s Guide</a> &raquo;</li>
         
-          <li><a href="../../usecases.html">5. METplus Use Cases</a> &raquo;</li>
+          <li><a href="../../usecases.html"><span class="section-number">5. </span>METplus Use Cases</a> &raquo;</li>
         
-          <li><a href="../index.html">5.2. Model Applications</a> &raquo;</li>
+          <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li>5.2.6.2. Track and Intensity Use case (generate mean, median and box plots)</li>
+      <li><span class="section-number">5.2.6.2. </span>Track and Intensity Use case (generate mean, median and box plots)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,16 +186,16 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-tc-and-extra-tc-plotter-fcstgfs-obsgfs-rplotting-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-tc-and-extra-tc-plotter-fcstgfs-obsgfs-rplotting-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="track-and-intensity-use-case-generate-mean-median-and-box-plots">
-<span id="sphx-glr-users-guide-model-applications-tc-and-extra-tc-plotter-fcstgfs-obsgfs-rplotting-py"></span><h1>5.2.6.2. Track and Intensity Use case (generate mean, median and box plots)<a class="headerlink" href="#track-and-intensity-use-case-generate-mean-median-and-box-plots" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-users-guide-model-applications-tc-and-extra-tc-plotter-fcstgfs-obsgfs-rplotting-py"></span><h1><span class="section-number">5.2.6.2. </span>Track and Intensity Use case (generate mean, median and box plots)<a class="headerlink" href="#track-and-intensity-use-case-generate-mean-median-and-box-plots" title="Permalink to this headline">¶</a></h1>
 <p>This use case generates plots of TC-pairs .tcst output files
 using the MET R script plot_tcmpr.R.  There is a pre-requisite for running
 this use case, the user must have R installed on the computer where the use
 case is being run.</p>
 <div class="section" id="scientific-objective">
-<h2>5.2.6.2.1. Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.6.2.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>By maintaining focus of each evaluation time on a user-defined area around a cyclone,
 the model statistical errors associated with cyclonic physical features (moisture
 flux, stability, strength of upper-level PV anomaly and jet, etc.) can be related
@@ -205,7 +207,7 @@ that can be gathered. This use case relays the mean and median of forecast lead
 times for cyclone position compared to a reference dataset via boxplot.</p>
 </div>
 <div class="section" id="datasets">
-<h2>5.2.6.2.2. Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.6.2.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>Forecast dataset: ADeck non-ATCF tropical cyclone data (GFS)</p></li>
@@ -214,14 +216,14 @@ times for cyclone position compared to a reference dataset via boxplot.</p>
 </div></blockquote>
 </div>
 <div class="section" id="metplus-components">
-<h2>5.2.6.2.3. METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.6.2.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case first runs TcPairs and then generates the requested
 plot types for statistics of interest. The TCMPRPlotterConfig_customize configuration
 file is used by the plot_tcmpr.R script to select things such as the size of
 the plot window that appears on your screen, etc.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2>5.2.6.2.4. METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.6.2.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>The following tools are used for each run time:</p>
 <p>TcPairs &gt; plot_tcmpr.R</p>
 <p>To generate TcPairs output, this example loops by initialization time for every 6 hour period that is available
@@ -230,7 +232,7 @@ the difference between the MSLP of the Adeck and Bdeck tracks (AMSLP-BMSLP), the
 Bdeck tracks (AMAX_WIND-BMSLP), and the track err (TK_ERR).</p>
 </div>
 <div class="section" id="metplus-configuration">
-<h2>5.2.6.2.5. METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.6.2.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/model_applications/tc_and_extra_tc/Plotter_fcstGFS_obsGFS_RPlotting.conf</p>
@@ -396,7 +398,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/tc_and_extra_tc/Pl
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2>5.2.6.2.6. MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.6.2.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -534,7 +536,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p>parm/use_cases/met_tool_wrapper/TCPairs/TCPairs.py</p>
 </div>
 <div class="section" id="running-metplus">
-<h2>5.2.6.2.7. Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.6.2.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in Plotter_fcstGFS_obsGFS_RPlotting.conf then a user-specific system configuration file:</p>
@@ -564,7 +566,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2>5.2.6.2.8. Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.6.2.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -588,12 +590,12 @@ and will contain files with the following format:</p>
 * TK_ERR_median.png</p>
 </div>
 <div class="section" id="keywords">
-<h2>5.2.6.2.9. Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.6.2.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=TCPairsUseCase&amp;check_keywords=yes&amp;area=default">TcPairsUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=TCandExtraTCUseCase&amp;check_keywords=yes&amp;area=default">TCandExtraTCUseCase</a></p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=TCPairsUseCase&amp;check_keywords=yes&amp;area=default">TcPairs</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=TCandExtraTCAppUseCase&amp;check_keywords=yes&amp;area=default">TCandExtraTC</a></p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.017 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-tc-and-extra-tc-plotter-fcstgfs-obsgfs-rplotting-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/3091f003080709c6a3b4ac4d10986877/Plotter_fcstGFS_obsGFS_RPlotting.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">Plotter_fcstGFS_obsGFS_RPlotting.py</span></code></a></p>

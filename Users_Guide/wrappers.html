@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,8 +33,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. System Configuration" href="systemconfiguration.html" />
@@ -202,7 +204,7 @@
 <li class="toctree-l2"><a class="reference internal" href="usecases.html">5. METplus Use Cases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="references.html">6. References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary.html">8. METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html">8. ßMETplus Configuration Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -254,7 +256,7 @@
         
           <li><a href="index.html">User’s Guide</a> &raquo;</li>
         
-      <li>3. Python Wrappers</li>
+      <li><span class="section-number">3. </span>Python Wrappers</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -274,7 +276,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="python-wrappers">
-<h1>3. Python Wrappers<a class="headerlink" href="#python-wrappers" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3. </span>Python Wrappers<a class="headerlink" href="#python-wrappers" title="Permalink to this headline">¶</a></h1>
 <p>This chapter provides a description of each supported Python wrapper in
 METplus Wrappers. A wrapper is generally a Python script that
 encapsulates the behavior of a corresponding MET tool. Each of these
@@ -284,13 +286,13 @@ METplus Wrappers configuration variables that are specific to that
 wrapper organized by config file section. You can find more information
 about each item in the METplus Configuration Glossary.</p>
 <div class="section" id="ascii2nc">
-<h2>3.1. ASCII2NC<a class="headerlink" href="#ascii2nc" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>ASCII2NC<a class="headerlink" href="#ascii2nc" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description">
-<span id="description-1"></span><h3>3.1.1. Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<span id="description-1"></span><h3><span class="section-number">3.1.1. </span>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the MET tool ASCII2NC</p>
 </div>
 <div class="section" id="configuration">
-<span id="configuration-1"></span><h3>3.1.2. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
+<span id="configuration-1"></span><h3><span class="section-number">3.1.2. </span>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-ascii2nc-input-dir"><span class="xref std std-term">ASCII2NC_INPUT_DIR</span></a></div>
@@ -328,13 +330,13 @@ about each item in the METplus Configuration Glossary.</p>
 </div>
 </div>
 <div class="section" id="customingest">
-<h2>3.2. CustomIngest<a class="headerlink" href="#customingest" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>CustomIngest<a class="headerlink" href="#customingest" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-2">
-<span id="id1"></span><h3>3.2.1. Description<a class="headerlink" href="#description-2" title="Permalink to this headline">¶</a></h3>
+<span id="id1"></span><h3><span class="section-number">3.2.1. </span>Description<a class="headerlink" href="#description-2" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the CustomIngest wrapper that runs RegridDataPlane to convert data using python embedding scripts into NetCDF so it can be read by the MET tools.</p>
 </div>
 <div class="section" id="configuration-2">
-<span id="id2"></span><h3>3.2.2. Configuration<a class="headerlink" href="#configuration-2" title="Permalink to this headline">¶</a></h3>
+<span id="id2"></span><h3><span class="section-number">3.2.2. </span>Configuration<a class="headerlink" href="#configuration-2" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-custom-ingest-n-output-dir"><span class="xref std std-term">CUSTOM_INGEST_&lt;n&gt;_OUTPUT_DIR</span></a></div>
@@ -352,15 +354,15 @@ about each item in the METplus Configuration Glossary.</p>
 </div>
 </div>
 <div class="section" id="cycloneplotter">
-<h2>3.3. CyclonePlotter<a class="headerlink" href="#cycloneplotter" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>CyclonePlotter<a class="headerlink" href="#cycloneplotter" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-3">
-<span id="id3"></span><h3>3.3.1. Description<a class="headerlink" href="#description-3" title="Permalink to this headline">¶</a></h3>
+<span id="id3"></span><h3><span class="section-number">3.3.1. </span>Description<a class="headerlink" href="#description-3" title="Permalink to this headline">¶</a></h3>
 <p>This wrapper does not have a corresponding MET tool but instead wraps
 the logic necessary to create plots of cyclone tracks. Currently only
 the output from the MET tc-pairs tool can be plotted.</p>
 </div>
 <div class="section" id="configuration-3">
-<span id="id4"></span><h3>3.3.2. Configuration<a class="headerlink" href="#configuration-3" title="Permalink to this headline">¶</a></h3>
+<span id="id4"></span><h3><span class="section-number">3.3.2. </span>Configuration<a class="headerlink" href="#configuration-3" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-cyclone-plotter-input-dir"><span class="xref std std-term">CYCLONE_PLOTTER_INPUT_DIR</span></a></div>
@@ -393,19 +395,21 @@ the output from the MET tc-pairs tool can be plotted.</p>
 </div>
 </div>
 <div class="section" id="ensemblestat">
-<h2>3.4. EnsembleStat<a class="headerlink" href="#ensemblestat" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>EnsembleStat<a class="headerlink" href="#ensemblestat" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-4">
-<span id="id5"></span><h3>3.4.1. Description<a class="headerlink" href="#description-4" title="Permalink to this headline">¶</a></h3>
+<span id="id5"></span><h3><span class="section-number">3.4.1. </span>Description<a class="headerlink" href="#description-4" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the MET tool ensemble_stat.</p>
 </div>
 <div class="section" id="configuration-4">
-<span id="id6"></span><h3>3.4.2. Configuration<a class="headerlink" href="#configuration-4" title="Permalink to this headline">¶</a></h3>
+<span id="id6"></span><h3><span class="section-number">3.4.2. </span>Configuration<a class="headerlink" href="#configuration-4" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-ensemble-stat-point-input-dir"><span class="xref std std-term">OBS_ENSEMBLE_STAT_POINT_INPUT_DIR</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-ensemble-stat-grid-input-dir"><span class="xref std std-term">OBS_ENSEMBLE_STAT_GRID_INPUT_DIR</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-ensemble-stat-input-dir"><span class="xref std std-term">FCST_ENSEMBLE_STAT_INPUT_DIR</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-ensemble-stat-output-dir"><span class="xref std std-term">ENSEMBLE_STAT_OUTPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-ensemble-stat-climo-mean-input-dir"><span class="xref std std-term">ENSEMBLE_STAT_CLIMO_MEAN_INPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-ensemble-stat-climo-stdev-input-dir"><span class="xref std std-term">ENSEMBLE_STAT_CLIMO_STDEV_INPUT_DIR</span></a></div>
 </div>
 <p>[filename_templates]</p>
 <div class="line-block">
@@ -413,6 +417,8 @@ the output from the MET tc-pairs tool can be plotted.</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-ensemble-stat-grid-input-template"><span class="xref std std-term">OBS_ENSEMBLE_STAT_GRID_INPUT_TEMPLATE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-ensemble-stat-input-template"><span class="xref std std-term">FCST_ENSEMBLE_STAT_INPUT_TEMPLATE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-ensemble-stat-output-template"><span class="xref std std-term">ENSEMBLE_STAT_OUTPUT_TEMPLATE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-ensemble-stat-climo-mean-input-template"><span class="xref std std-term">ENSEMBLE_STAT_CLIMO_MEAN_INPUT_TEMPLATE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-ensemble-stat-climo-stdev-input-template"><span class="xref std std-term">ENSEMBLE_STAT_CLIMO_STDEV_INPUT_TEMPLATE</span></a></div>
 </div>
 <p>[config]</p>
 <div class="line-block">
@@ -434,6 +440,14 @@ the output from the MET tc-pairs tool can be plotted.</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-ens-var-n-levels"><span class="xref std std-term">ENS_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-ens-var-n-thresh"><span class="xref std std-term">ENS_VAR&lt;n&gt;_THRESH</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-ens-var-n-options"><span class="xref std std-term">ENS_VAR&lt;n&gt;_OPTIONS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-ensemble-stat-var-n-name"><span class="xref std std-term">FCST_ENSEMBLE_STAT_VAR&lt;n&gt;_NAME</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-ensemble-stat-var-n-levels"><span class="xref std std-term">FCST_ENSEMBLE_STAT_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-ensemble-stat-var-n-thresh"><span class="xref std std-term">FCST_ENSEMBLE_STAT_VAR&lt;n&gt;_THRESH</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-ensemble-stat-var-n-options"><span class="xref std std-term">FCST_ENSEMBLE_STAT_VAR&lt;n&gt;_OPTIONS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-ensemble-stat-var-n-name"><span class="xref std std-term">OBS_ENSEMBLE_STAT_VAR&lt;n&gt;_NAME</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-ensemble-stat-var-n-levels"><span class="xref std std-term">OBS_ENSEMBLE_STAT_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-ensemble-stat-var-n-thresh"><span class="xref std std-term">OBS_ENSEMBLE_STAT_VAR&lt;n&gt;_THRESH</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-ensemble-stat-var-n-options"><span class="xref std std-term">OBS_ENSEMBLE_STAT_VAR&lt;n&gt;_OPTIONS</span></a> (optional)</div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -448,13 +462,13 @@ the output from the MET tc-pairs tool can be plotted.</p>
 </div>
 </div>
 <div class="section" id="example">
-<h2>3.5. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.5. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-5">
-<span id="id7"></span><h3>3.5.1. Description<a class="headerlink" href="#description-5" title="Permalink to this headline">¶</a></h3>
+<span id="id7"></span><h3><span class="section-number">3.5.1. </span>Description<a class="headerlink" href="#description-5" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the CustomIngest wrapper that runs RegridDataPlane to convert data using python embedding scripts into NetCDF so it can be read by the MET tools.</p>
 </div>
 <div class="section" id="configuration-5">
-<span id="id8"></span><h3>3.5.2. Configuration<a class="headerlink" href="#configuration-5" title="Permalink to this headline">¶</a></h3>
+<span id="id8"></span><h3><span class="section-number">3.5.2. </span>Configuration<a class="headerlink" href="#configuration-5" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-example-input-dir"><span class="xref std std-term">EXAMPLE_INPUT_DIR</span></a></div>
@@ -466,9 +480,9 @@ the output from the MET tc-pairs tool can be plotted.</p>
 </div>
 </div>
 <div class="section" id="extracttiles">
-<h2>3.6. ExtractTiles<a class="headerlink" href="#extracttiles" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.6. </span>ExtractTiles<a class="headerlink" href="#extracttiles" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-6">
-<span id="id9"></span><h3>3.6.1. 3.5.1 Description<a class="headerlink" href="#description-6" title="Permalink to this headline">¶</a></h3>
+<span id="id9"></span><h3><span class="section-number">3.6.1. </span>3.5.1 Description<a class="headerlink" href="#description-6" title="Permalink to this headline">¶</a></h3>
 <p>The ExtractTiles wrapper is used to regrid and extract subregions from
 paired tropical cyclone tracks that are created by the tc_pairs_wrapper.
 Unlike the other wrappers, the extract_tiles_wrapper does not correspond
@@ -479,7 +493,7 @@ subregions. The ExtractTiles wrapper creates a 2n degree x 2m degree
 grid/tile with each storm located at the center.</p>
 </div>
 <div class="section" id="configuration-6">
-<span id="id10"></span><h3>3.6.2. Configuration<a class="headerlink" href="#configuration-6" title="Permalink to this headline">¶</a></h3>
+<span id="id10"></span><h3><span class="section-number">3.6.2. </span>Configuration<a class="headerlink" href="#configuration-6" title="Permalink to this headline">¶</a></h3>
 <p>The following should be set in the METplus configuration file to define
 the dimensions and density of the tiles comprising the subregion:</p>
 <p>[dir]</p>
@@ -515,13 +529,13 @@ the dimensions and density of the tiles comprising the subregion:</p>
 </div>
 </div>
 <div class="section" id="gempaktocf">
-<h2>3.7. GempakToCF<a class="headerlink" href="#gempaktocf" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.7. </span>GempakToCF<a class="headerlink" href="#gempaktocf" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-7">
-<span id="id11"></span><h3>3.7.1. Description<a class="headerlink" href="#description-7" title="Permalink to this headline">¶</a></h3>
+<span id="id11"></span><h3><span class="section-number">3.7.1. </span>Description<a class="headerlink" href="#description-7" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the utility GempakToCF.</p>
 </div>
 <div class="section" id="configuration-7">
-<span id="id12"></span><h3>3.7.2. Configuration<a class="headerlink" href="#configuration-7" title="Permalink to this headline">¶</a></h3>
+<span id="id12"></span><h3><span class="section-number">3.7.2. </span>Configuration<a class="headerlink" href="#configuration-7" title="Permalink to this headline">¶</a></h3>
 <p>[exe]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-gempaktocf-jar"><span class="xref std std-term">GEMPAKTOCF_JAR</span></a></div>
@@ -550,26 +564,28 @@ the dimensions and density of the tiles comprising the subregion:</p>
 </div>
 </div>
 <div class="section" id="gridstat">
-<h2>3.8. GridStat<a class="headerlink" href="#gridstat" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.8. </span>GridStat<a class="headerlink" href="#gridstat" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-8">
-<span id="id13"></span><h3>3.8.1. Description<a class="headerlink" href="#description-8" title="Permalink to this headline">¶</a></h3>
+<span id="id13"></span><h3><span class="section-number">3.8.1. </span>Description<a class="headerlink" href="#description-8" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the MET tool grid_stat.</p>
 </div>
 <div class="section" id="configuration-8">
-<span id="id14"></span><h3>3.8.2. Configuration<a class="headerlink" href="#configuration-8" title="Permalink to this headline">¶</a></h3>
+<span id="id14"></span><h3><span class="section-number">3.8.2. </span>Configuration<a class="headerlink" href="#configuration-8" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-grid-stat-input-dir"><span class="xref std std-term">FCST_GRID_STAT_INPUT_DIR</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-grid-stat-input-dir"><span class="xref std std-term">OBS_GRID_STAT_INPUT_DIR</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-output-dir"><span class="xref std std-term">GRID_STAT_OUTPUT_DIR</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-climo-grid-stat-input-dir"><span class="xref std std-term">CLIMO_GRID_STAT_INPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-climo-mean-input-dir"><span class="xref std std-term">GRID_STAT_CLIMO_MEAN_INPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-climo-stdev-input-dir"><span class="xref std std-term">GRID_STAT_CLIMO_STDEV_INPUT_DIR</span></a></div>
 </div>
 <p>[filename_templates]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-grid-stat-input-template"><span class="xref std std-term">FCST_GRID_STAT_INPUT_TEMPLATE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-grid-stat-input-template"><span class="xref std std-term">OBS_GRID_STAT_INPUT_TEMPLATE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-output-template"><span class="xref std std-term">GRID_STAT_OUTPUT_TEMPLATE</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-climo-grid-stat-input-template"><span class="xref std std-term">CLIMO_GRID_STAT_INPUT_TEMPLATE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-climo-mean-input-template"><span class="xref std std-term">GRID_STAT_CLIMO_MEAN_INPUT_TEMPLATE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-climo-stdev-input-template"><span class="xref std std-term">GRID_STAT_CLIMO_STDEV_INPUT_TEMPLATE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-verification-mask-template"><span class="xref std std-term">GRID_STAT_VERIFICATION_MASK_TEMPLATE</span></a> (optional)</div>
 </div>
 <p>[config]</p>
@@ -592,6 +608,14 @@ the dimensions and density of the tiles comprising the subregion:</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-grid-stat-file-window-end"><span class="xref std std-term">FCST_GRID_STAT_FILE_WINDOW_END</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-grid-stat-file-window-begin"><span class="xref std std-term">OBS_GRID_STAT_FILE_WINDOW_BEGIN</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-grid-stat-file-window-end"><span class="xref std std-term">OBS_GRID_STAT_FILE_WINDOW_END</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-grid-stat-var-n-name"><span class="xref std std-term">FCST_GRID_STAT_VAR&lt;n&gt;_NAME</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-grid-stat-var-n-levels"><span class="xref std std-term">FCST_GRID_STAT_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-grid-stat-var-n-thresh"><span class="xref std std-term">FCST_GRID_STAT_VAR&lt;n&gt;_THRESH</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-grid-stat-var-n-options"><span class="xref std std-term">FCST_GRID_STAT_VAR&lt;n&gt;_OPTIONS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-grid-stat-var-n-name"><span class="xref std std-term">OBS_GRID_STAT_VAR&lt;n&gt;_NAME</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-grid-stat-var-n-levels"><span class="xref std std-term">OBS_GRID_STAT_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-grid-stat-var-n-thresh"><span class="xref std std-term">OBS_GRID_STAT_VAR&lt;n&gt;_THRESH</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-grid-stat-var-n-options"><span class="xref std std-term">OBS_GRID_STAT_VAR&lt;n&gt;_OPTIONS</span></a> (optional)</div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -599,21 +623,23 @@ the dimensions and density of the tiles comprising the subregion:</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-out-dir"><span class="xref std std-term">GRID_STAT_OUT_DIR</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-grid-stat-config"><span class="xref std std-term">GRID_STAT_CONFIG</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-climo-grid-stat-input-dir"><span class="xref std std-term">CLIMO_GRID_STAT_INPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-climo-grid-stat-input-template"><span class="xref std std-term">CLIMO_GRID_STAT_INPUT_TEMPLATE</span></a></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="makeplots">
-<h2>3.9. MakePlots<a class="headerlink" href="#makeplots" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.9. </span>MakePlots<a class="headerlink" href="#makeplots" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-9">
-<span id="id15"></span><h3>3.9.1. Description<a class="headerlink" href="#description-9" title="Permalink to this headline">¶</a></h3>
+<span id="id15"></span><h3><span class="section-number">3.9.1. </span>Description<a class="headerlink" href="#description-9" title="Permalink to this headline">¶</a></h3>
 <p>The MakePlots wrapper creates various statistical plots using python
 scripts for the various METplus Wrappers use cases. This can only be run
 following StatAnalysis wrapper when LOOP_ORDER = processes. To run
 MakePlots wrapper, include MakePlots in PROCESS_LIST.</p>
 </div>
 <div class="section" id="configuration-9">
-<span id="id16"></span><h3>3.9.2. Configuration<a class="headerlink" href="#configuration-9" title="Permalink to this headline">¶</a></h3>
+<span id="id16"></span><h3><span class="section-number">3.9.2. </span>Configuration<a class="headerlink" href="#configuration-9" title="Permalink to this headline">¶</a></h3>
 <p>The following values <strong>must</strong> be defined in the METplus Wrappers
 configuration file:</p>
 <p>[dir]</p>
@@ -625,25 +651,39 @@ configuration file:</p>
 <p>[config]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-make-plots-verif-case"><span class="xref std std-term">MAKE_PLOTS_VERIF_CASE</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-2"><span class="xref std std-term">MAKE_PLOTS_VERIF_TYPE</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-date-time"><span class="xref std std-term">DATE_TIME</span></a></div>
-</div>
-<div class="line-block">
+<div class="line"><a class="reference internal" href="glossary.html#term-make-plots-verif-type"><span class="xref std std-term">MAKE_PLOTS_VERIF_TYPE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-date-type"><span class="xref std std-term">DATE_TYPE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-model-n"><span class="xref std std-term">MODEL&lt;n&gt;</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-model-n-obtype"><span class="xref std std-term">MODEL&lt;n&gt;_OBTYPE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-model-n-reference-name"><span class="xref std std-term">MODEL&lt;n&gt;_REFERENCE_NAME</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-group-list-items"><span class="xref std std-term">GROUP_LIST_ITEMS</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-loop-list-items"><span class="xref std std-term">LOOP_LIST_ITEMS</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model-list"><span class="xref std std-term">MODEL_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-lead-list"><span class="xref std std-term">FCST_LEAD_LIST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-vx-mask-list"><span class="xref std std-term">VX_MASK_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-interp-mthd-list"><span class="xref std std-term">INTERP_MTHD_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-make-plot-stats-list"><span class="xref std std-term">MAKE_PLOT_STATS_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-line-type-list"><span class="xref std std-term">LINE_TYPE_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-make-plots-average-method"><span class="xref std std-term">MAKE_PLOTS_AVERAGE_METHOD</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-make-plots-stats-list"><span class="xref std std-term">MAKE_PLOTS_STATS_LIST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-make-plots-ci-method"><span class="xref std std-term">MAKE_PLOTS_CI_METHOD</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-make-plots-verif-grid"><span class="xref std std-term">MAKE_PLOTS_VERIF_GRID</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-make-plots-event-equalization"><span class="xref std std-term">MAKE_PLOTS_EVENT_EQUALIZATION</span></a></div>
 </div>
 <p>The following values are <strong>optional</strong> in the METplus Wrappers
 configuration file:</p>
+<p>[config]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-var-n-fourier-decomp"><span class="xref std std-term">VAR&lt;n&gt;_FOURIER_DECOMP</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-var-n-wave-num-list"><span class="xref std std-term">VAR&lt;n&gt;_WAVE_NUM_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-valid-hour-list"><span class="xref std std-term">FCST_VALID_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-valid-hour-list"><span class="xref std std-term">OBS_VALID_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-init-hour-list"><span class="xref std std-term">FCST_INIT_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-init-hour-list"><span class="xref std std-term">OBS_INIT_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-lead-list"><span class="xref std std-term">OBS_LEAD_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-desc-list"><span class="xref std std-term">DESC_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-interp-mthd-list"><span class="xref std std-term">INTERP_MTHD_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-interp-pnts-list"><span class="xref std std-term">INTERP_PNTS_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-cov-thresh-list"><span class="xref std std-term">COV_THRESH_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-alpha-list"><span class="xref std std-term">ALPHA_LIST</span></a></div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -658,7 +698,16 @@ configuration file:</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-model-n-name"><span class="xref std std-term">MODEL&lt;n&gt;_NAME</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-model-n-obs-name"><span class="xref std std-term">MODEL&lt;n&gt;_OBS_NAME</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-model-n-name-on-plot"><span class="xref std std-term">MODEL&lt;n&gt;_NAME_ON_PLOT</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-method"><span class="xref std std-term">VALID_HOUR_METHOD</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-beg"><span class="xref std std-term">VALID_HOUR_BEG</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-end"><span class="xref std std-term">VALID_HOUR_END</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-increment"><span class="xref std std-term">VALID_HOUR_INCREMENT</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-init-hour-beg"><span class="xref std std-term">INIT_HOUR_BEG</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-init-hour-end"><span class="xref std std-term">INIT_HOUR_END</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-init-hour-increment"><span class="xref std std-term">INIT_HOUR_INCREMENT</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-region-list"><span class="xref std std-term">REGION_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-lead-list"><span class="xref std std-term">LEAD_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-line-type"><span class="xref std std-term">LINE_TYPE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-interp"><span class="xref std std-term">INTERP</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-plot-stats-list"><span class="xref std std-term">PLOT_STATS_LIST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-ci-method"><span class="xref std std-term">CI_METHOD</span></a></div>
@@ -669,13 +718,13 @@ configuration file:</p>
 </div>
 </div>
 <div class="section" id="mode">
-<h2>3.10. MODE<a class="headerlink" href="#mode" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.10. </span>MODE<a class="headerlink" href="#mode" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-10">
-<span id="id17"></span><h3>3.10.1. Description<a class="headerlink" href="#description-10" title="Permalink to this headline">¶</a></h3>
+<span id="id17"></span><h3><span class="section-number">3.10.1. </span>Description<a class="headerlink" href="#description-10" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the MET Method for Object-based Diagnostic Evaluation tool mode.</p>
 </div>
 <div class="section" id="configuration-10">
-<span id="id18"></span><h3>3.10.2. Configuration<a class="headerlink" href="#configuration-10" title="Permalink to this headline">¶</a></h3>
+<span id="id18"></span><h3><span class="section-number">3.10.2. </span>Configuration<a class="headerlink" href="#configuration-10" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-mode-input-dir"><span class="xref std std-term">FCST_MODE_INPUT_DIR</span></a></div>
@@ -719,6 +768,14 @@ configuration file:</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-mode-file-window-end"><span class="xref std std-term">FCST_MODE_FILE_WINDOW_END</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-mode-file-window-begin"><span class="xref std std-term">OBS_MODE_FILE_WINDOW_BEGIN</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-mode-file-window-end"><span class="xref std std-term">OBS_MODE_FILE_WINDOW_END</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-mode-var-n-name"><span class="xref std std-term">FCST_MODE_VAR&lt;n&gt;_NAME</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-mode-var-n-levels"><span class="xref std std-term">FCST_MODE_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-mode-var-n-thresh"><span class="xref std std-term">FCST_MODE_VAR&lt;n&gt;_THRESH</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-mode-var-n-options"><span class="xref std std-term">FCST_MODE_VAR&lt;n&gt;_OPTIONS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-mode-var-n-name"><span class="xref std std-term">OBS_MODE_VAR&lt;n&gt;_NAME</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-mode-var-n-levels"><span class="xref std std-term">OBS_MODE_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-mode-var-n-thresh"><span class="xref std std-term">OBS_MODE_VAR&lt;n&gt;_THRESH</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-mode-var-n-options"><span class="xref std std-term">OBS_MODE_VAR&lt;n&gt;_OPTIONS</span></a> (optional)</div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -731,13 +788,13 @@ configuration file:</p>
 </div>
 </div>
 <div class="section" id="mtd">
-<h2>3.11. MTD<a class="headerlink" href="#mtd" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.11. </span>MTD<a class="headerlink" href="#mtd" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-11">
-<span id="id19"></span><h3>3.11.1. Description<a class="headerlink" href="#description-11" title="Permalink to this headline">¶</a></h3>
+<span id="id19"></span><h3><span class="section-number">3.11.1. </span>Description<a class="headerlink" href="#description-11" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the MET MODE Time Domain tool mtd.  This tools follows objects through time and can also be used to track objects.</p>
 </div>
 <div class="section" id="configuration-11">
-<span id="id20"></span><h3>3.11.2. Configuration<a class="headerlink" href="#configuration-11" title="Permalink to this headline">¶</a></h3>
+<span id="id20"></span><h3><span class="section-number">3.11.2. </span>Configuration<a class="headerlink" href="#configuration-11" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-mtd-input-dir"><span class="xref std std-term">FCST_MTD_INPUT_DIR</span></a></div>
@@ -762,6 +819,14 @@ configuration file:</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-mtd-conv-thresh"><span class="xref std std-term">FCST_MTD_CONV_THRESH</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-mtd-conv-radius"><span class="xref std std-term">OBS_MTD_CONV_RADIUS</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-mtd-conv-thresh"><span class="xref std std-term">OBS_MTD_CONV_THRESH</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-mtd-var-n-name"><span class="xref std std-term">FCST_MTD_VAR&lt;n&gt;_NAME</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-mtd-var-n-levels"><span class="xref std std-term">FCST_MTD_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-mtd-var-n-thresh"><span class="xref std std-term">FCST_MTD_VAR&lt;n&gt;_THRESH</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-mtd-var-n-options"><span class="xref std std-term">FCST_MTD_VAR&lt;n&gt;_OPTIONS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-mtd-var-n-name"><span class="xref std std-term">OBS_MTD_VAR&lt;n&gt;_NAME</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-mtd-var-n-levels"><span class="xref std std-term">OBS_MTD_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-mtd-var-n-thresh"><span class="xref std std-term">OBS_MTD_VAR&lt;n&gt;_THRESH</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-mtd-var-n-options"><span class="xref std std-term">OBS_MTD_VAR&lt;n&gt;_OPTIONS</span></a> (optional)</div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -775,14 +840,14 @@ configuration file:</p>
 </div>
 </div>
 <div class="section" id="pb2nc">
-<h2>3.12. PB2NC<a class="headerlink" href="#pb2nc" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.12. </span>PB2NC<a class="headerlink" href="#pb2nc" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-12">
-<span id="id21"></span><h3>3.12.1. Description<a class="headerlink" href="#description-12" title="Permalink to this headline">¶</a></h3>
+<span id="id21"></span><h3><span class="section-number">3.12.1. </span>Description<a class="headerlink" href="#description-12" title="Permalink to this headline">¶</a></h3>
 <p>The PB2NC wrapper is a Python script that encapsulates the behavior of
 the MET pb2nc tool to convert prepBUFR files into netCDF.</p>
 </div>
 <div class="section" id="configuration-12">
-<span id="id22"></span><h3>3.12.2. Configuration<a class="headerlink" href="#configuration-12" title="Permalink to this headline">¶</a></h3>
+<span id="id22"></span><h3><span class="section-number">3.12.2. </span>Configuration<a class="headerlink" href="#configuration-12" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-pb2nc-input-dir"><span class="xref std std-term">PB2NC_INPUT_DIR</span></a></div>
@@ -837,15 +902,15 @@ the MET pb2nc tool to convert prepBUFR files into netCDF.</p>
 </div>
 </div>
 <div class="section" id="pcpcombine">
-<h2>3.13. PcpCombine<a class="headerlink" href="#pcpcombine" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.13. </span>PcpCombine<a class="headerlink" href="#pcpcombine" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-13">
-<span id="id23"></span><h3>3.13.1. Description<a class="headerlink" href="#description-13" title="Permalink to this headline">¶</a></h3>
+<span id="id23"></span><h3><span class="section-number">3.13.1. </span>Description<a class="headerlink" href="#description-13" title="Permalink to this headline">¶</a></h3>
 <p>The PcpCombine wrapper is a Python script that encapsulates the MET
 pcp_combine tool. It provides the infrastructure to combine or extract
 from files to build desired accumulations.</p>
 </div>
 <div class="section" id="configuration-13">
-<span id="id24"></span><h3>3.13.2. Configuration<a class="headerlink" href="#configuration-13" title="Permalink to this headline">¶</a></h3>
+<span id="id24"></span><h3><span class="section-number">3.13.2. </span>Configuration<a class="headerlink" href="#configuration-13" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-pcp-combine-input-dir"><span class="xref std std-term">FCST_PCP_COMBINE_INPUT_DIR</span></a></div>
@@ -931,27 +996,31 @@ from files to build desired accumulations.</p>
 </div>
 </div>
 <div class="section" id="pointstat">
-<h2>3.14. PointStat<a class="headerlink" href="#pointstat" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.14. </span>PointStat<a class="headerlink" href="#pointstat" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-14">
-<span id="id25"></span><h3>3.14.1. Description<a class="headerlink" href="#description-14" title="Permalink to this headline">¶</a></h3>
+<span id="id25"></span><h3><span class="section-number">3.14.1. </span>Description<a class="headerlink" href="#description-14" title="Permalink to this headline">¶</a></h3>
 <p>The PointStat wrapper is a Python script that encapsulates the MET
 point_stat tool. It provides the infrastructure to read in gridded model
 data and netCDF point observation data to perform grid-to-point
 (grid-to-obs) verification.</p>
 </div>
 <div class="section" id="configuration-14">
-<span id="id26"></span><h3>3.14.2. Configuration<a class="headerlink" href="#configuration-14" title="Permalink to this headline">¶</a></h3>
+<span id="id26"></span><h3><span class="section-number">3.14.2. </span>Configuration<a class="headerlink" href="#configuration-14" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-point-stat-input-dir"><span class="xref std std-term">FCST_POINT_STAT_INPUT_DIR</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-point-stat-input-dir"><span class="xref std std-term">OBS_POINT_STAT_INPUT_DIR</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-point-stat-output-dir"><span class="xref std std-term">POINT_STAT_OUTPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-point-stat-climo-mean-input-dir"><span class="xref std std-term">POINT_STAT_CLIMO_MEAN_INPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-point-stat-climo-stdev-input-dir"><span class="xref std std-term">POINT_STAT_CLIMO_STDEV_INPUT_DIR</span></a></div>
 </div>
 <p>[filename_templates]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-point-stat-input-template"><span class="xref std std-term">FCST_POINT_STAT_INPUT_TEMPLATE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-point-stat-input-template"><span class="xref std std-term">OBS_POINT_STAT_INPUT_TEMPLATE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-point-stat-verification-mask-template"><span class="xref std std-term">POINT_STAT_VERIFICATION_MASK_TEMPLATE</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-point-stat-climo-mean-input-template"><span class="xref std std-term">POINT_STAT_CLIMO_MEAN_INPUT_TEMPLATE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-point-stat-climo-stdev-input-template"><span class="xref std std-term">POINT_STAT_CLIMO_STDEV_INPUT_TEMPLATE</span></a></div>
 </div>
 <p>[config]</p>
 <div class="line-block">
@@ -973,6 +1042,14 @@ data and netCDF point observation data to perform grid-to-point
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-point-stat-window-end"><span class="xref std std-term">OBS_POINT_STAT_WINDOW_END</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-point-stat-neighborhood-width"><span class="xref std std-term">POINT_STAT_NEIGHBORHOOD_WIDTH</span></a> (optional)</div>
 <div class="line"><a class="reference internal" href="glossary.html#term-point-stat-neighborhood-shape"><span class="xref std std-term">POINT_STAT_NEIGHBORHOOD_SHAPE</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-point-stat-var-n-name"><span class="xref std std-term">FCST_POINT_STAT_VAR&lt;n&gt;_NAME</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-point-stat-var-n-levels"><span class="xref std std-term">FCST_POINT_STAT_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-point-stat-var-n-thresh"><span class="xref std std-term">FCST_POINT_STAT_VAR&lt;n&gt;_THRESH</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-point-stat-var-n-options"><span class="xref std std-term">FCST_POINT_STAT_VAR&lt;n&gt;_OPTIONS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-point-stat-var-n-name"><span class="xref std std-term">OBS_POINT_STAT_VAR&lt;n&gt;_NAME</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-point-stat-var-n-levels"><span class="xref std std-term">OBS_POINT_STAT_VAR&lt;n&gt;_LEVELS</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-point-stat-var-n-thresh"><span class="xref std std-term">OBS_POINT_STAT_VAR&lt;n&gt;_THRESH</span></a> (optional)</div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-point-stat-var-n-options"><span class="xref std std-term">OBS_POINT_STAT_VAR&lt;n&gt;_OPTIONS</span></a> (optional)</div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -993,18 +1070,20 @@ data and netCDF point observation data to perform grid-to-point
 <div class="line"><a class="reference internal" href="glossary.html#term-obs-input-file-tmpl"><span class="xref std std-term">OBS_INPUT_FILE_TMPL</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-input-file-tmpl"><span class="xref std std-term">FCST_INPUT_FILE_TMPL</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-regrid-to-grid"><span class="xref std std-term">REGRID_TO_GRID</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-climo-point-stat-input-dir"><span class="xref std std-term">CLIMO_POINT_STAT_INPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-climo-point-stat-input-template"><span class="xref std std-term">CLIMO_POINT_STAT_INPUT_TEMPLATE</span></a></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="regriddataplane">
-<h2>3.15. RegridDataPlane<a class="headerlink" href="#regriddataplane" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.15. </span>RegridDataPlane<a class="headerlink" href="#regriddataplane" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-15">
-<span id="id27"></span><h3>3.15.1. Description<a class="headerlink" href="#description-15" title="Permalink to this headline">¶</a></h3>
+<span id="id27"></span><h3><span class="section-number">3.15.1. </span>Description<a class="headerlink" href="#description-15" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the MET tool regrid_data_plane which can be used to change projections of a grid with user configurable interpolation choices.  It can also be used to convert GRIB1 and GRIB2 files into netcdf files if desired.</p>
 </div>
 <div class="section" id="configuration-15">
-<span id="id28"></span><h3>3.15.2. Configuration<a class="headerlink" href="#configuration-15" title="Permalink to this headline">¶</a></h3>
+<span id="id28"></span><h3><span class="section-number">3.15.2. </span>Configuration<a class="headerlink" href="#configuration-15" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-regrid-data-plane-input-dir"><span class="xref std std-term">FCST_REGRID_DATA_PLANE_INPUT_DIR</span></a></div>
@@ -1048,14 +1127,14 @@ data and netCDF point observation data to perform grid-to-point
 </div>
 </div>
 <div class="section" id="seriesbyinit">
-<h2>3.16. SeriesByInit<a class="headerlink" href="#seriesbyinit" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.16. </span>SeriesByInit<a class="headerlink" href="#seriesbyinit" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-16">
-<span id="id29"></span><h3>3.16.1. Description<a class="headerlink" href="#description-16" title="Permalink to this headline">¶</a></h3>
+<span id="id29"></span><h3><span class="section-number">3.16.1. </span>Description<a class="headerlink" href="#description-16" title="Permalink to this headline">¶</a></h3>
 <p>The SeriesByInit wrapper provides the infrastructure needed to demonstrates the use  of the series analysis tool using tropical cyclone data, based on initialization times. The SeriesByInit_wrapper creates numerous plots that represent the
 field, level, and statistic for each initialization time.</p>
 </div>
 <div class="section" id="configuration-16">
-<span id="id30"></span><h3>3.16.2. Configuration<a class="headerlink" href="#configuration-16" title="Permalink to this headline">¶</a></h3>
+<span id="id30"></span><h3><span class="section-number">3.16.2. </span>Configuration<a class="headerlink" href="#configuration-16" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-input-dir"><span class="xref std std-term">SERIES_ANALYSIS_INPUT_DIR</span></a></div>
@@ -1099,9 +1178,9 @@ field, level, and statistic for each initialization time.</p>
 </div>
 </div>
 <div class="section" id="seriesbylead">
-<h2>3.17. SeriesByLead<a class="headerlink" href="#seriesbylead" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.17. </span>SeriesByLead<a class="headerlink" href="#seriesbylead" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-17">
-<span id="id31"></span><h3>3.17.1. Description<a class="headerlink" href="#description-17" title="Permalink to this headline">¶</a></h3>
+<span id="id31"></span><h3><span class="section-number">3.17.1. </span>Description<a class="headerlink" href="#description-17" title="Permalink to this headline">¶</a></h3>
 <p>The SeriesByLead wrapper provides the infrastructure needed to perform a
 series analysis on tropical cyclone data, based on lead (forecast hour)
 times. The SeriesByLead wrapper creates numerous plots that represent
@@ -1112,7 +1191,7 @@ forecast hour groupings can be useful when analyzing storm tracks based
 on time ‘bins’ such as by days (eg. day 1, day 2, day 3, etc.).</p>
 </div>
 <div class="section" id="configuration-17">
-<span id="id32"></span><h3>3.17.2. Configuration<a class="headerlink" href="#configuration-17" title="Permalink to this headline">¶</a></h3>
+<span id="id32"></span><h3><span class="section-number">3.17.2. </span>Configuration<a class="headerlink" href="#configuration-17" title="Permalink to this headline">¶</a></h3>
 <p>The input track and model data files are defined in any one of the
 user’s METplus Wrappers configuration files. If creating a final
 configuration file that overrides all other config files, it is
@@ -1164,9 +1243,9 @@ would set the following:</p>
 </div>
 </div>
 <div class="section" id="statanalysis">
-<h2>3.18. StatAnalysis<a class="headerlink" href="#statanalysis" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.18. </span>StatAnalysis<a class="headerlink" href="#statanalysis" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-18">
-<span id="id33"></span><h3>3.18.1. Description<a class="headerlink" href="#description-18" title="Permalink to this headline">¶</a></h3>
+<span id="id33"></span><h3><span class="section-number">3.18.1. </span>Description<a class="headerlink" href="#description-18" title="Permalink to this headline">¶</a></h3>
 <p>The StatAnalysis wrapper encapsulates the behavior of the MET
 stat_analysis tool. It provides the infrastructure to summarize and
 filter the MET .stat files. StatAnalysis wrapper can be run in two
@@ -1177,12 +1256,11 @@ processes. To run StatAnalysis wrapper, include StatAnalysis in
 PROCESS_LIST.</p>
 </div>
 <div class="section" id="configuration-18">
-<span id="id34"></span><h3>3.18.2. Configuration<a class="headerlink" href="#configuration-18" title="Permalink to this headline">¶</a></h3>
+<span id="id34"></span><h3><span class="section-number">3.18.2. </span>Configuration<a class="headerlink" href="#configuration-18" title="Permalink to this headline">¶</a></h3>
 <p>The following values must be defined in the METplus Wrappers
 configuration file for running with LOOP_ORDER = times:</p>
 <p>[dir]</p>
 <div class="line-block">
-<div class="line"><a class="reference internal" href="glossary.html#term-model-n-stat-analysis-lookin-dir"><span class="xref std std-term">MODEL&lt;n&gt;_STAT_ANALYSIS_LOOKIN_DIR</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-stat-analysis-output-dir"><span class="xref std std-term">STAT_ANALYSIS_OUTPUT_DIR</span></a></div>
 </div>
 <p>[filename_templates]</p>
@@ -1195,49 +1273,77 @@ configuration file for running with LOOP_ORDER = times:</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-log-stat-analysis-verbosity"><span class="xref std std-term">LOG_STAT_ANALYSIS_VERBOSITY</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-model-n"><span class="xref std std-term">MODEL&lt;n&gt;</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-model-n-obtype"><span class="xref std std-term">MODEL&lt;n&gt;_OBTYPE</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-fcst-valid-hour-list"><span class="xref std std-term">FCST_VALID_HOUR_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-obs-valid-hour-list"><span class="xref std std-term">OBS_VALID_HOUR_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-fcst-init-hour-list"><span class="xref std std-term">FCST_INIT_HOUR_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-obs-init-hour-list"><span class="xref std std-term">OBS_INIT_HOUR_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-fcst-var-list"><span class="xref std std-term">FCST_VAR_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-obs-var-list"><span class="xref std std-term">OBS_VAR_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-fcst-var-level-list"><span class="xref std std-term">FCST_VAR_LEVEL_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-obs-var-level-list"><span class="xref std std-term">OBS_VAR_LEVEL_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-fcst-lead-list"><span class="xref std std-term">FCST_LEAD_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-vx-mask-list"><span class="xref std std-term">VX_MASK_LIST</span></a></div>
-</div>
-<div class="line-block">
+<div class="line"><a class="reference internal" href="glossary.html#term-model-n-stat-analysis-lookin-dir"><span class="xref std std-term">MODEL&lt;n&gt;_STAT_ANALYSIS_LOOKIN_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model-list"><span class="xref std std-term">MODEL_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-group-list-items"><span class="xref std std-term">GROUP_LIST_ITEMS</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-loop-list-items"><span class="xref std std-term">LOOP_LIST_ITEMS</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-stat-analysis-config-file"><span class="xref std std-term">STAT_ANALYSIS_CONFIG_FILE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-stat-analysis-job-name"><span class="xref std std-term">STAT_ANALYSIS_JOB_NAME</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-stat-analysis-job-args"><span class="xref std std-term">STAT_ANALYSIS_JOB_ARGS</span></a></div>
 </div>
 <p>The following values are <strong>optional</strong> in the METplus Wrappers
 configuration file for running with LOOP_ORDER = times:</p>
+<p>[config]</p>
 <div class="line-block">
+<div class="line"><a class="reference internal" href="glossary.html#term-desc-list"><span class="xref std std-term">DESC_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-valid-hour-list"><span class="xref std std-term">FCST_VALID_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-valid-hour-list"><span class="xref std std-term">OBS_VALID_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-init-hour-list"><span class="xref std std-term">FCST_INIT_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-init-hour-list"><span class="xref std std-term">OBS_INIT_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-var-list"><span class="xref std std-term">FCST_VAR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-var-list"><span class="xref std std-term">OBS_VAR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-level-list"><span class="xref std std-term">FCST_LEVEL_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-level-list"><span class="xref std std-term">OBS_LEVEL_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-units-list"><span class="xref std std-term">FCST_UNITS_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-units-list"><span class="xref std std-term">OBS_UNITS_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-thresh-list"><span class="xref std std-term">FCST_THRESH_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-thresh-list"><span class="xref std std-term">OBS_THRESH_LIST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-lead-list"><span class="xref std std-term">FCST_LEAD_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-lead-list"><span class="xref std std-term">OBS_LEAD_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-vx-mask-list"><span class="xref std std-term">VX_MASK_LIST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-interp-mthd-list"><span class="xref std std-term">INTERP_MTHD_LIST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-interp-pnts-list"><span class="xref std std-term">INTERP_PNTS_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-fcst-thresh-list"><span class="xref std std-term">FCST_THRESH_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-alpha-list"><span class="xref std std-term">ALPHA_LIST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-cov-thresh-list"><span class="xref std std-term">COV_THRESH_LIST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-line-type-list"><span class="xref std std-term">LINE_TYPE_LIST</span></a></div>
 </div>
 <p>The following values <strong>must</strong> be defined in the METplus Wrappers
 configuration file for running with LOOP_ORDER = processes:</p>
+<p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-stat-analysis-output-dir"><span class="xref std std-term">STAT_ANALYSIS_OUTPUT_DIR</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-model-n-name"><span class="xref std std-term">MODEL&lt;n&gt;_NAME</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-model-n-obs-name"><span class="xref std std-term">MODEL&lt;n&gt;_OBS_NAME</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-model-n-name-on-plot"><span class="xref std std-term">MODEL&lt;n&gt;_NAME_ON_PLOT</span></a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="glossary.html#term-log-stat-analysis-verbosity"><span class="xref std std-term">LOG_STAT_ANALYSIS_VERBOSITY</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-date-type"><span class="xref std std-term">DATE_TYPE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-stat-analysis-config-file"><span class="xref std std-term">STAT_ANALYSIS_CONFIG_FILE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model-n"><span class="xref std std-term">MODEL&lt;n&gt;</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model-n-obtype"><span class="xref std std-term">MODEL&lt;n&gt;_OBTYPE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model-n-stat-analysis-lookin-dir"><span class="xref std std-term">MODEL&lt;n&gt;_STAT_ANALYSIS_LOOKIN_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model-n-reference-name"><span class="xref std std-term">MODEL&lt;n&gt;_REFERENCE_NAME</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-group-list-items"><span class="xref std std-term">GROUP_LIST_ITEMS</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-loop-list-items"><span class="xref std std-term">LOOP_LIST_ITEMS</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model-list"><span class="xref std std-term">MODEL_LIST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-vx-mask-list"><span class="xref std std-term">VX_MASK_LIST</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-lead-list"><span class="xref std std-term">FCST_LEAD_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-interp-mthd-list"><span class="xref std std-term">INTERP_MTHD_LIST</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-interp-pnts-list"><span class="xref std std-term">INTERP_PNTS_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-line-type-list"><span class="xref std std-term">LINE_TYPE_LIST</span></a></div>
 </div>
 <p>The following values are optional in the METplus Wrappers configuration
 file for running with LOOP_ORDER = processes:</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-var-n-fourier-decomp"><span class="xref std std-term">VAR&lt;n&gt;_FOURIER_DECOMP</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-var-n-wave-num-list"><span class="xref std std-term">VAR&lt;n&gt;_WAVE_NUM_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-valid-hour-list"><span class="xref std std-term">FCST_VALID_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-valid-hour-list"><span class="xref std std-term">OBS_VALID_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-init-hour-list"><span class="xref std std-term">FCST_INIT_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-init-hour-list"><span class="xref std std-term">OBS_INIT_HOUR_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-lead-list"><span class="xref std std-term">OBS_LEAD_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-desc-list"><span class="xref std std-term">DESC_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-interp-mthd-list"><span class="xref std std-term">INTERP_MTHD_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-interp-pnts-list"><span class="xref std std-term">INTERP_PNTS_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-cov-thresh-list"><span class="xref std std-term">COV_THRESH_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-alpha-list"><span class="xref std std-term">ALPHA_LIST</span></a></div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1246,10 +1352,23 @@ file for running with LOOP_ORDER = processes:</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-stat-analysis-lookin-dir"><span class="xref std std-term">STAT_ANALYSIS_LOOKIN_DIR</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-stat-analysis-out-dir"><span class="xref std std-term">STAT_ANALYSIS_OUT_DIR</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-stat-analysis-config"><span class="xref std std-term">STAT_ANALYSIS_CONFIG</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-method"><span class="xref std std-term">VALID_HOUR_METHOD</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-beg"><span class="xref std std-term">VALID_HOUR_BEG</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-end"><span class="xref std std-term">VALID_HOUR_END</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-increment"><span class="xref std std-term">VALID_HOUR_INCREMENT</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-init-hour-beg"><span class="xref std std-term">INIT_HOUR_BEG</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-init-hour-end"><span class="xref std std-term">INIT_HOUR_END</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-init-hour-increment"><span class="xref std std-term">INIT_HOUR_INCREMENT</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model"><span class="xref std std-term">MODEL</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obtype"><span class="xref std std-term">OBTYPE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-job-name"><span class="xref std std-term">JOB_NAME</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-job-args"><span class="xref std std-term">JOB_ARGS</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-desc"><span class="xref std std-term">DESC</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-fcst-lead"><span class="xref std std-term">FCST_LEAD</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-var-name"><span class="xref std std-term">FCST_VAR_NAME</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-var-level"><span class="xref std std-term">FCST_VAR_LEVEL</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-var-name"><span class="xref std std-term">OBS_VAR_NAME</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-var-level"><span class="xref std std-term">OBS_VAR_LEVEL</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-region"><span class="xref std std-term">REGION</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-interp"><span class="xref std std-term">INTERP</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-interp-pts"><span class="xref std std-term">INTERP_PTS</span></a></div>
@@ -1261,22 +1380,20 @@ file for running with LOOP_ORDER = processes:</p>
 <div class="line"><a class="reference internal" href="glossary.html#term-plot-time"><span class="xref std std-term">PLOT_TIME</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-verif-case"><span class="xref std std-term">VERIF_CASE</span></a></div>
 <div class="line"><a class="reference internal" href="glossary.html#term-verif-type"><span class="xref std std-term">VERIF_TYPE</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-method"><span class="xref std std-term">VALID_HOUR_METHOD</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-beg"><span class="xref std std-term">VALID_HOUR_BEG</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-end"><span class="xref std std-term">VALID_HOUR_END</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-valid-hour-increment"><span class="xref std std-term">VALID_HOUR_INCREMENT</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-init-hour-method"><span class="xref std std-term">INIT_HOUR_METHOD</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-init-hour-beg"><span class="xref std std-term">INIT_HOUR_BEG</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-init-hour-end"><span class="xref std std-term">INIT_HOUR_END</span></a></div>
-<div class="line"><a class="reference internal" href="glossary.html#term-init-hour-increment"><span class="xref std std-term">INIT_HOUR_INCREMENT</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model-n-name"><span class="xref std std-term">MODEL&lt;n&gt;_NAME</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model-n-obs-name"><span class="xref std std-term">MODEL&lt;n&gt;_OBS_NAME</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model-n-name-on-plot"><span class="xref std std-term">MODEL&lt;n&gt;_NAME_ON_PLOT</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-model-n-stat-dir"><span class="xref std std-term">MODEL&lt;n&gt;_STAT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-region-list"><span class="xref std std-term">REGION_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-lead-list"><span class="xref std std-term">LEAD_LIST</span></a></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="tcmprplotter">
-<h2>3.19. TCMPRPlotter<a class="headerlink" href="#tcmprplotter" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.19. </span>TCMPRPlotter<a class="headerlink" href="#tcmprplotter" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-19">
-<span id="id35"></span><h3>3.19.1. Description<a class="headerlink" href="#description-19" title="Permalink to this headline">¶</a></h3>
+<span id="id35"></span><h3><span class="section-number">3.19.1. </span>Description<a class="headerlink" href="#description-19" title="Permalink to this headline">¶</a></h3>
 <p>The TCMPRPlotter wrapper is a Python script that wraps the R script
 plot_tcmpr.R. This script is useful for plotting the calculated
 statistics for the output from the MET-TC tools. This script, and other
@@ -1284,7 +1401,7 @@ R scripts are included in the MET installation. Please refer to section
 21.2.3 of the MET User’s Guide for usage information.</p>
 </div>
 <div class="section" id="configuration-19">
-<span id="id36"></span><h3>3.19.2. Configuration<a class="headerlink" href="#configuration-19" title="Permalink to this headline">¶</a></h3>
+<span id="id36"></span><h3><span class="section-number">3.19.2. </span>Configuration<a class="headerlink" href="#configuration-19" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-tcmpr-plotter-tcmpr-data-dir"><span class="xref std std-term">TCMPR_PLOTTER_TCMPR_DATA_DIR</span></a></div>
@@ -1358,9 +1475,9 @@ set to ‘yes’, then set the flag</p>
 </div>
 </div>
 <div class="section" id="tcpairs">
-<h2>3.20. TcPairs<a class="headerlink" href="#tcpairs" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.20. </span>TcPairs<a class="headerlink" href="#tcpairs" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-20">
-<span id="id37"></span><h3>3.20.1. Description<a class="headerlink" href="#description-20" title="Permalink to this headline">¶</a></h3>
+<span id="id37"></span><h3><span class="section-number">3.20.1. </span>Description<a class="headerlink" href="#description-20" title="Permalink to this headline">¶</a></h3>
 <p>The TcPairs wrapper encapsulates the behavior of the MET tc_pairs tool.
 The wrapper accepts Adeck and Bdeck (Best track) cyclone track data in
 extra tropical cyclone format (such as the data used by sample data
@@ -1369,7 +1486,7 @@ is in an extra tropical cyclone (non-ATCF) format, the data is
 reformatted into an ATCF format that is recognized by MET.</p>
 </div>
 <div class="section" id="configuration-20">
-<span id="id38"></span><h3>3.20.2. Configuration<a class="headerlink" href="#configuration-20" title="Permalink to this headline">¶</a></h3>
+<span id="id38"></span><h3><span class="section-number">3.20.2. </span>Configuration<a class="headerlink" href="#configuration-20" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-tc-pairs-adeck-input-dir"><span class="xref std std-term">TC_PAIRS_ADECK_INPUT_DIR</span></a></div>
@@ -1430,15 +1547,15 @@ reformatted into an ATCF format that is recognized by MET.</p>
 </div>
 </div>
 <div class="section" id="tcstat">
-<h2>3.21. TcStat<a class="headerlink" href="#tcstat" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.21. </span>TcStat<a class="headerlink" href="#tcstat" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-21">
-<span id="id39"></span><h3>3.21.1. Description<a class="headerlink" href="#description-21" title="Permalink to this headline">¶</a></h3>
+<span id="id39"></span><h3><span class="section-number">3.21.1. </span>Description<a class="headerlink" href="#description-21" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the MET tool tc_stat. This wrapper can be run by
 listing it in the PROCESS_LIST, or can be called from the ExtractTiles
 wrapper (via the MET tc-stat command line commands).</p>
 </div>
 <div class="section" id="configuration-21">
-<span id="id40"></span><h3>3.21.2. Configuration<a class="headerlink" href="#configuration-21" title="Permalink to this headline">¶</a></h3>
+<span id="id40"></span><h3><span class="section-number">3.21.2. </span>Configuration<a class="headerlink" href="#configuration-21" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-tc-stat-input-dir"><span class="xref std std-term">TC_STAT_INPUT_DIR</span></a></div>

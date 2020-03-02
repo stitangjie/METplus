@@ -21,10 +21,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -33,8 +33,10 @@
   
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Software Installation/Getting Started" href="installation.html" />
@@ -103,7 +105,7 @@
 <li class="toctree-l2"><a class="reference internal" href="usecases.html">5. METplus Use Cases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="references.html">6. References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary.html">8. METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html">8. ßMETplus Configuration Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -155,7 +157,7 @@
         
           <li><a href="index.html">User’s Guide</a> &raquo;</li>
         
-      <li>1. Overview</li>
+      <li><span class="section-number">1. </span>Overview</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,11 +177,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="overview">
-<h1>1. Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="purpose-and-organization-of-the-user-s-guide">
-<h2>1.1. Purpose and organization of the User’s Guide<a class="headerlink" href="#purpose-and-organization-of-the-user-s-guide" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Purpose and organization of the User’s Guide<a class="headerlink" href="#purpose-and-organization-of-the-user-s-guide" title="Permalink to this headline">¶</a></h2>
 <p>The goal of this User’s Guide is to equip users with the information
-needed to use the Model Evaluation Tools (MET) and it’s companion
+needed to use the Model Evaluation Tools (MET) and its companion
 package METplus Wrappers. MET is a set of verification tools developed
 and supported to community via the Developmental Testbed Center (DTC)
 for use by the numerical weather prediction community. METplus Wrappers
@@ -195,7 +197,7 @@ information about configuring your environment and METplus Wrappers
 installation.</p>
 </div>
 <div class="section" id="the-developmental-testbed-center-dtc">
-<h2>1.2. The Developmental Testbed Center (DTC)<a class="headerlink" href="#the-developmental-testbed-center-dtc" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>The Developmental Testbed Center (DTC)<a class="headerlink" href="#the-developmental-testbed-center-dtc" title="Permalink to this headline">¶</a></h2>
 <p>METplus Wrappers has been developed, and will be maintained and
 enhanced, by the Developmental Testbed Center (DTC;
 <a class="reference external" href="http://www.dtcenter.org/">http://www.dtcenter.org/</a> ). The main goal of the DTC is to serve as a
@@ -217,7 +219,7 @@ METplus Wrappers major release number is six less than the MET major
 release number (e.g. MET 8.X is released with METplus Wrappers 2.X).</p>
 </div>
 <div class="section" id="metplus-wrappers-goals-and-design-philosophy">
-<h2>1.3. METplus Wrappers goals and design philosophy<a class="headerlink" href="#metplus-wrappers-goals-and-design-philosophy" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>METplus Wrappers goals and design philosophy<a class="headerlink" href="#metplus-wrappers-goals-and-design-philosophy" title="Permalink to this headline">¶</a></h2>
 <p>METplus Wrappers is a Python scripting infrastructure for the MET tools.
 The primary goal of METplus Wrappers development is to provide MET users
 with a highly configurable and simple means to perform model
@@ -234,7 +236,7 @@ their verification environments. Wrappers can be run individually, or as
 a group of wrappers that represent a sequence of MET processes. New
 wrappers can readily be added to the METplus Wrappers package due to
 this modular design. Currently, METplus Wrappers can easily be applied
-by any user on their own computer platform that supports Python 3.6.  We have depricated support to Python 2.7.</p>
+by any user on their own computer platform that supports Python 3.6.  We have deprecated support to Python 2.7.</p>
 <p>The METplus Wrappers code and documentation is maintained by the DTC in
 Boulder, Colorado. METplus Wrappers is freely available to the modeling,
 verification, and operational communities, including universities,
@@ -243,7 +245,7 @@ centers through a publicly accessible GitHub repository. Refer to
 <a class="reference internal" href="installation.html#getcode"><span class="std std-ref">Getting the METplus Wrappers source code</span></a> for simple examples of obtaining METplus Wrappers.</p>
 </div>
 <div class="section" id="metplus-wrappers-components">
-<h2>1.4. METplus Wrappers Components<a class="headerlink" href="#metplus-wrappers-components" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>METplus Wrappers Components<a class="headerlink" href="#metplus-wrappers-components" title="Permalink to this headline">¶</a></h2>
 <p>The major components of the METplus Wrappers package are METplus Python
 wrappers to the MET tools, MET configuration files and a hierarchy of
 METplus Wrappers configuration files. Some Python wrappers do not
@@ -251,7 +253,7 @@ correspond to a particular MET tool, but wrap utilities to extend
 METplus functionality.</p>
 </div>
 <div class="section" id="future-development-plans">
-<h2>1.5. Future development plans<a class="headerlink" href="#future-development-plans" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.5. </span>Future development plans<a class="headerlink" href="#future-development-plans" title="Permalink to this headline">¶</a></h2>
 <p>METplus Wrappers is an evolving application. New capabilities are
 planned in controlled, successive version releases that are synchronized
 with MET releases. Bug fixes and user-identified problems will be
@@ -265,7 +267,7 @@ community. Issues that are in the development queue detailed in the
 <a class="reference external" href="mailto:met_help&#37;&#52;&#48;ucar&#46;edu">met_help<span>&#64;</span>ucar<span>&#46;</span>edu</a>.</p>
 </div>
 <div class="section" id="code-support">
-<h2>1.6. Code support<a class="headerlink" href="#code-support" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.6. </span>Code support<a class="headerlink" href="#code-support" title="Permalink to this headline">¶</a></h2>
 <p>Support for METplus Wrappers is provided through a MET-help e-mail
 address: <a class="reference external" href="mailto:met_help&#37;&#52;&#48;ucar&#46;edu">met_help<span>&#64;</span>ucar<span>&#46;</span>edu</a>. We will endeavor to respond to requests for
 help in a timely fashion. In addition, information about METplus
