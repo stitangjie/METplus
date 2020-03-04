@@ -109,7 +109,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../references.html">6. References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. ßMETplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../glossary.html">8. METplus Configuration Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#indices-and-tables">Indices and tables</a></li>
 </ul>
 </li>
@@ -190,7 +190,7 @@
 </div>
 <div class="sphx-glr-example-title section" id="bmkg-apik-seasonal-forecast">
 <span id="sphx-glr-users-guide-model-applications-s2s-gridstat-fcstnmme-obscpc-seasonal-forecast-py"></span><h1><span class="section-number">5.2.4.1. </span>BMKG APIK Seasonal Forecast<a class="headerlink" href="#bmkg-apik-seasonal-forecast" title="Permalink to this headline">¶</a></h1>
-<p>Brief summary of this use case…</p>
+<p>Seasonal forecast use case running GridStat, then passing the output into SeriesAnalysis.</p>
 <div class="section" id="scientific-objective">
 <h2><span class="section-number">5.2.4.1.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>The process of seasonal forecasting with a time horizon of one to many months
@@ -302,7 +302,8 @@ time variable inside the netCDF file).</p>
 </div>
 <div class="section" id="metplus-components">
 <h2><span class="section-number">5.2.4.1.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
-<p>This use case loops over initialization years and processes forecast lead months with GridStat</p>
+<p>This use case loops over initialization years and processes forecast lead months with GridStat
+It also processes the output of GridStat using two calls to SeriesAnalysis.</p>
 </div>
 <div class="section" id="metplus-workflow">
 <h2><span class="section-number">5.2.4.1.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
@@ -334,75 +335,15 @@ time variable inside the netCDF file).</p>
 <div class="line"><strong>Init:</strong> 2010-07</div>
 <div class="line"><strong>Forecast leads:</strong> 1 month, 2 months, 3 months, 4 months, 5 months</div>
 </div>
-<p>Because not all of this use case has been incorporated into the METplus wrappers framework, the application of
-seasonal forecast verification is split into two steps:</p>
-<ol class="arabic simple">
-<li><p>work with ~30-years of hindcasts to determine how well forecasting mechanisms worked
-in the past. This is done using the python-wrapped tools of METplus that are ready
-for automated processing using the GridStat tool.</p></li>
-<li><p>select one or more verification criteria and investigate these in context of the
-hindcast archive to generate a mask that then is applied to the actual forecast.
-This step users StatAnalysis, an element of this use case that has not yet been configured in
-the METplus wrappers, and thus it needs to be run directly under MET.</p></li>
-</ol>
-<p>Step 1: GridStat using METplus
-In order to run the python-based METplus packages, the user needs to issue a command to
-activate the appropriate version of python on the system. In the virtual machine delivered
-to BMKG, this is done with the following command:</p>
-<blockquote>
-<div><p>conda activate py3.6.3</p>
-</div></blockquote>
-<p>The GridStat tool is driven by the following ASCII configuration and run-scripts:</p>
-<ul class="simple">
-<li><p>METplus: run_grid_stat_metplus.bash sets key variables and executes the
-master_metplus.py with configurations. Look for …/ush/master_metplus.py call:</p></li>
-<li><p>user-config: “apik.conf”: defines which met version is used, where input data is to
-be found, and where output. It also provides the filters for the formats of both input
-and output.</p></li>
-<li><p>met_config: contains “GridStatConfig_seasonal_forecast” where it sets all the
-GridStat parameters for data handling as well as types of statistics to be computed.</p></li>
-<li><p>use-case config: points to the specific configuration file, in this case
-“grid_to_grid_s2s_use_case_1_August-December.conf”, though a separate configuration
-file for the 6th month of the example is needed because the forecast for January is
-located in a file with a year parameter that is advanced over August through December.
-In future versions this separation will not be necessary.</p></li>
-</ul>
-<p>Step 2: SeriesAnalysis and StatAnalysis using MET
-The SeriesAnalysis and StatAnalysis tools are core MET tools that offer analysis
-capabilities based on prior processing and calculation steps. Series Analysis can
-generate initial products, but it can also pickup secondary products and analyze
-them in a time-series context. For the purpose of the use case, two sequential
-calculations are necessary. First, a summary of each statistical quantity has to be
-computed across the different hindcast cases (each of which had been processed separately
-before). This includes the application of thresholds and counting of occurrences above or
-below these thresholds. Then second, based on these climatologies, the full statistics
-can now be computed across the collection to provide the overall skill computation
-within the hindcast context.</p>
-<dl class="simple">
-<dt>The following scripts define the process:</dt><dd><p>MET run script: run_sereis_analysis.bash sets all key configurations determining
-input and output data, provides templates for reading variables inside the statistics
-files. Because this part of the use case is not yet run via the METplus wrappers, the run-script has
-to cover many aspects of the configuration that in METplus are better generalized.
-SeriesAnalysis Climatology: SeriesAnalysisConfig_seasonal_forecast_climo
-contains the parameters that calculate the climatological mean difference between the
-hindcast experiments and their associated observations.
-SeriesAnalysis 2: SeriesAnalysisConfig_seasonal_forecast_full_stats
-contains all necessary configurations to compute the skill statistics. The options for
-these statistics are listed in the MET-Users Guide. There are many options, and
-turning them on is done in the context of the different groups or “packages”.</p>
-</dd>
-</dl>
 </div>
 <div class="section" id="metplus-configuration">
 <h2><span class="section-number">5.2.4.1.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Grid to Grid APIK Verification - S2S Use Case 1: Comparison of NMME hindcasts to CPC observations</span>
 
-<span class="c1">#NOTE: This METplus use case is called by a shell script, which sets several environment variables:</span>
-
-<span class="c1">#  INIT_MONTH</span>
-
-
 <span class="o">[</span>config<span class="o">]</span>
+
+<span class="c1"># List of applications to run</span>
+<span class="nv">PROCESS_LIST</span> <span class="o">=</span> GridStat, SeriesAnalysis
 
 <span class="c1"># loop by INIT time (options are INIT, VALID, or ?)</span>
 <span class="nv">LOOP_BY</span> <span class="o">=</span> INIT
@@ -415,37 +356,39 @@ turning them on is done in the context of the different groups or “packages”
 
 <span class="c1"># End time for METplus run</span>
 <span class="nv">INIT_END</span> <span class="o">=</span> <span class="m">201007</span>
-<span class="c1">#INIT_END = 198207</span>
-
-<span class="c1"># Increment between METplus runs. Normally, this is given in seconds (Must be &gt;= 60), but George McCabe has done some new development to support shifts of months and years.</span>
-<span class="c1"># NOTE: You MUST use the following METplus branch: feature_281_py_embed!</span>
-<span class="c1"># Use 1Y to do a 1-year increment</span>
-<span class="c1"># Use 1m to do a 1-month increment</span>
 
 <span class="nv">INIT_INCREMENT</span> <span class="o">=</span> 1Y
+
+<span class="c1"># list of forecast leads to process  (JLV-NOTE: This only works for grid_stat and example wrappers right now, using feature_281_py_embed)</span>
+<span class="nv">LEAD_SEQ</span> <span class="o">=</span> 1m, 2m, 3m, 4m, 5m
+
+<span class="c1"># list of strings to loop over to run SeriesAnalysis multiple times for a</span>
+<span class="c1"># given run time. Each item can be referenced using the filename template</span>
+<span class="c1"># syntax {custom?fmt=%s}</span>
+<span class="c1"># In this example, this is used to set the SeriesAnalysis config file used</span>
+<span class="c1"># and the output filename template</span>
+<span class="nv">SERIES_ANALYSIS_CUSTOM_LOOP_LIST</span> <span class="o">=</span> climo, full_stats
 
 <span class="c1"># Options are times, processes</span>
 <span class="c1"># times = run all items in the PROCESS_LIST for a single initialization</span>
 <span class="c1"># time, then repeat until all times have been evaluated.</span>
 <span class="c1"># processes = run each item in the PROCESS_LIST for all times</span>
 <span class="c1">#   specified, then repeat for the next item in the PROCESS_LIST.</span>
-<span class="nv">LOOP_ORDER</span> <span class="o">=</span> <span class="nb">times</span>
+<span class="nv">LOOP_ORDER</span> <span class="o">=</span> processes
 
-<span class="c1"># List of applications to run</span>
-<span class="nv">PROCESS_LIST</span> <span class="o">=</span> GridStat
-<span class="c1">#PROCESS_LIST = Example</span>
+<span class="nv">FCST_GRID_STAT_VAR1_NAME</span> <span class="o">=</span> pr
+<span class="nv">FCST_GRID_STAT_VAR1_LEVELS</span> <span class="o">=</span> <span class="s2">&quot;({valid?fmt=%Y%m01_000000},*,*)&quot;</span>
+<span class="nv">FCST_GRID_STAT_VAR1_THRESH</span> <span class="o">=</span> &gt;0, &gt;50, &gt;100, &gt;150, &gt;200, &gt;250, &gt;300, &gt;400, &gt;500
 
-<span class="c1"># list of variables to compare # JLV-NOTE: By using the explicit time-matching, we can be sure that the obs and forecast data are being compared at the same time</span>
-<span class="nv">FCST_VAR1_NAME</span> <span class="o">=</span> pr
-<span class="nv">FCST_VAR1_LEVELS</span> <span class="o">=</span> <span class="s2">&quot;({valid?fmt=%Y%m01_000000},*,*)&quot;</span>
-<span class="nv">FCST_VAR1_THRESH</span> <span class="o">=</span> &gt;0, &gt;50, &gt;100, &gt;150, &gt;200, &gt;250, &gt;300, &gt;400, &gt;500
+<span class="nv">OBS_GRID_STAT_VAR1_NAME</span> <span class="o">=</span> precip
+<span class="nv">OBS_GRID_STAT_VAR1_LEVELS</span> <span class="o">=</span> <span class="s2">&quot;({valid?fmt=%Y%m01_000000},*,*)&quot;</span>
+<span class="nv">OBS_GRID_STAT_VAR1_THRESH</span> <span class="o">=</span> &gt;0, &gt;50, &gt;100, &gt;150, &gt;200, &gt;250, &gt;300, &gt;400, &gt;500
 
-<span class="nv">OBS_VAR1_NAME</span> <span class="o">=</span> precip
-<span class="nv">OBS_VAR1_LEVELS</span> <span class="o">=</span> <span class="s2">&quot;({valid?fmt=%Y%m01_000000},*,*)&quot;</span>
-<span class="nv">OBS_VAR1_THRESH</span> <span class="o">=</span> &gt;0, &gt;50, &gt;100, &gt;150, &gt;200, &gt;250, &gt;300, &gt;400, &gt;500
+<span class="nv">FCST_SERIES_ANALYSIS_VAR1_NAME</span> <span class="o">=</span> FCST_precip_FULL
+<span class="nv">FCST_SERIES_ANALYSIS_VAR1_LEVELS</span> <span class="o">=</span> <span class="s2">&quot;(*,*)&quot;</span>
 
-<span class="c1"># list of forecast leads to process  (JLV-NOTE: This only works for grid_stat and example wrappers right now, using feature_281_py_embed)</span>
-<span class="nv">LEAD_SEQ</span> <span class="o">=</span> 1m, 2m, 3m, 4m, 5m
+<span class="nv">OBS_SERIES_ANALYSIS_VAR1_NAME</span> <span class="o">=</span> OBS_precip_FULL
+<span class="nv">OBS_SERIES_ANALYSIS_VAR1_LEVELS</span> <span class="o">=</span> <span class="s2">&quot;(*,*)&quot;</span>
 
 <span class="c1"># description of data to be processed</span>
 <span class="c1"># used in output file path</span>
@@ -466,39 +409,51 @@ turning them on is done in the context of the different groups or “packages”
 
 <span class="nv">GRID_STAT_OUTPUT_PREFIX</span> <span class="o">=</span> <span class="o">{</span>MODEL<span class="o">}</span>-hindcast_<span class="o">{</span>CURRENT_OBS_NAME<span class="o">}</span>_vs_<span class="o">{</span>OBTYPE<span class="o">}</span>_IC<span class="o">{</span>init?fmt<span class="o">=</span>%Y%b<span class="o">}</span>_V<span class="o">{</span>valid?fmt<span class="o">=</span>%Y%2m%d<span class="o">}</span>
 
+<span class="c1"># set to True to add the -paired flag to the SeriesAnalysis command</span>
+<span class="nv">SERIES_ANALYSIS_IS_PAIRED</span> <span class="o">=</span> False
+
+<span class="c1"># MET Configuration file passed to SeriesAnalysis</span>
+<span class="nv">SERIES_ANALYSIS_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>CONFIG_DIR<span class="o">}</span>/SeriesAnalysisConfig_seasonal_forecast_<span class="o">{</span>custom?fmt<span class="o">=</span>%s<span class="o">}</span>
+
 <span class="o">[</span>dir<span class="o">]</span>
 
 <span class="c1"># location of configuration files used by MET applications</span>
-<span class="c1">#CONFIG_DIR=/home/demo/APIK/METplus-for-Indonesia-APIK/METplus_feature_281_py_embed_parm/met_config</span>
 <span class="nv">CONFIG_DIR</span><span class="o">={</span>PARM_BASE<span class="o">}</span>/use_cases/model_applications/s2s
 
 <span class="c1"># input and output data directories</span>
-<span class="nv">FCST_GRID_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/s2s/NMME/hindcast/monthly/
-<span class="nv">OBS_GRID_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/s2s/NMME/obs/
+<span class="nv">FCST_GRID_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/s2s/NMME/hindcast/monthly
+<span class="nv">OBS_GRID_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/s2s/NMME/obs
 <span class="nv">GRID_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast/GridStat
+
+<span class="nv">BOTH_SERIES_ANALYSIS_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>GRID_STAT_OUTPUT_DIR<span class="o">}</span>
+
+<span class="nv">SERIES_ANALYSIS_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast/SeriesAnalysis
+
+<span class="c1"># used in full_stats config file only</span>
+<span class="nv">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>SERIES_ANALYSIS_OUTPUT_DIR<span class="o">}</span>
 
 
 <span class="o">[</span>filename_templates<span class="o">]</span>
 
 <span class="c1"># format of filenames</span>
 <span class="c1"># FCST</span>
-<span class="c1">#FCST_GRID_STAT_INPUT_TEMPLATE = nmme_pr_hcst_JulIC_{valid?fmt=%2m}_1982-2010.nc</span>
 <span class="nv">FCST_GRID_STAT_INPUT_TEMPLATE</span> <span class="o">=</span> nmme_pr_hcst_<span class="o">{</span>init?fmt<span class="o">=</span>%b<span class="o">}</span>IC_<span class="o">{</span>valid?fmt<span class="o">=</span>%2m<span class="o">}</span>_1982-2010.nc
 
 <span class="c1"># ANLYS</span>
 <span class="nv">OBS_GRID_STAT_INPUT_TEMPLATE</span> <span class="o">=</span> obs_cpc_pp.1x1.nc
 
-<span class="c1"># Template for the directory</span>
-<span class="c1">#GRID_STAT_OUTPUT_TEMPLATE = S2S_grid_stat_NMME-hindcast_vs_CPC_precip_{init?fmt=%Y_%2m}_{valid?fmt=%Y_%2m}</span>
+<span class="nv">BOTH_SERIES_ANALYSIS_INPUT_TEMPLATE</span> <span class="o">=</span> grid_stat_<span class="o">{</span>MODEL<span class="o">}</span>-hindcast_precip_vs_<span class="o">{</span>OBTYPE<span class="o">}</span>_IC*<span class="o">{</span>init?fmt<span class="o">=</span>%b<span class="o">}</span>_V*<span class="o">{</span>valid?fmt<span class="o">=</span>%2m<span class="o">}</span>01_*pairs.nc
+
+<span class="c1"># output template that differs based on CUSTOM_LOOP_LIST</span>
+<span class="nv">SERIES_ANALYSIS_OUTPUT_TEMPLATE</span> <span class="o">=</span> series_analysis_<span class="o">{</span>MODEL<span class="o">}</span>_<span class="o">{</span>OBTYPE<span class="o">}</span>_stats_IC<span class="o">{</span>init?fmt<span class="o">=</span>%b<span class="o">}</span>_<span class="o">{</span>valid?fmt<span class="o">=</span>%2m<span class="o">}</span>_<span class="o">{</span>custom?fmt<span class="o">=</span>%s<span class="o">}</span>.nc
+
+<span class="c1"># used in full_stat config file only</span>
+<span class="nv">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_TEMPLATE</span> <span class="o">=</span> series_analysis_<span class="o">{</span>MODEL<span class="o">}</span>_<span class="o">{</span>OBTYPE<span class="o">}</span>_stats_IC<span class="o">{</span>init?fmt<span class="o">=</span>%b<span class="o">}</span>_<span class="o">{</span>valid?fmt<span class="o">=</span>%2m<span class="o">}</span>_climo.nc
 
 
 <span class="o">[</span>user_env_vars<span class="o">]</span>
-
-<span class="c1">#OBS_FILE=/path/to/file</span>
+<span class="c1"># passed to the desc item in the MET config files</span>
 <span class="nv">DESCRIPTION</span><span class="o">=</span>hindcast
-<span class="c1"># JLV-NOTE: INIT_MONTH is already an environment variable set by our run script</span>
-<span class="c1">#OUTPUT_FILENAME_INFO=IC{init?fmt=%Y%b}_V{valid?fmt=%Y%2m%d}_L{lead?fmt=%2m}</span>
-<span class="c1">#OUTPUT_FILENAME_INFO=IC{init?fmt=%Y%b}_V{valid?fmt=%Y%2m%d}</span>
 </pre></div>
 </div>
 </div>
@@ -506,6 +461,7 @@ turning them on is done in the context of the different groups or “packages”
 <h2><span class="section-number">5.2.4.1.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
+<p><strong>GridStatConfig_seasonal_forecast</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
 //
 // Grid-Stat configuration file.
@@ -556,7 +512,8 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <span class="nv">wind_thresh</span>   <span class="o">=</span> <span class="o">[</span> NA <span class="o">]</span><span class="p">;</span>
 <span class="nv">wind_logic</span>    <span class="o">=</span> UNION<span class="p">;</span>
 <span class="nv">eclv_points</span>   <span class="o">=</span> <span class="m">0</span>.05<span class="p">;</span>
-<span class="nv">nc_pairs_var_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">nc_pairs_var_name</span> <span class="o">=</span> <span class="s2">&quot;precip&quot;</span><span class="p">;</span>
+<span class="nv">nc_pairs_var_suffix</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="nv">rank_corr_flag</span>   <span class="o">=</span> FALSE<span class="p">;</span>
 
 
@@ -734,7 +691,352 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 </pre></div>
 </div>
 <dl class="simple">
-<dt>See the following files for more information about the environment variables set in this configuration file.</dt><dd><p>parm/use_cases/met_tool_wrapper/GridStat/GridStat.py</p>
+<dt>See the following file for more information about the environment variables set in this configuration file::</dt><dd><p>parm/use_cases/met_tool_wrapper/GridStat/GridStat.py</p>
+</dd>
+</dl>
+<p><strong>SeriesAnalysisConfig_seasonal_forecast_climo</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
+//
+// Series-Analysis configuration file <span class="k">for</span> the Indonesia APIK project.
+//
+//   The goal of this script is to compute the skill <span class="k">for</span> <span class="m">29</span> years of precipitation hindcasts
+//
+// For additional information, see the MET_BASE/config/README file.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Output model name to be written
+//
+<span class="nv">model</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+
+//
+// Output description to be written
+// May be <span class="nb">set</span> separately in each <span class="s2">&quot;obs.field&quot;</span> entry
+//
+<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">DESCRIPTION</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+
+//
+// Output observation <span class="nb">type</span> to be written
+//
+<span class="nv">obtype</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">OBTYPE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Verification grid
+// May be <span class="nb">set</span> separately in each <span class="s2">&quot;field&quot;</span> entry
+//
+<span class="nv">regrid</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="nv">to_grid</span>    <span class="o">=</span> NONE<span class="p">;</span>
+   <span class="nv">method</span>     <span class="o">=</span> NEAREST<span class="p">;</span>
+   <span class="nv">width</span>      <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
+   <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.5<span class="p">;</span>
+   <span class="nv">shape</span>      <span class="o">=</span> SQUARE<span class="p">;</span>
+<span class="o">}</span>
+
+////////////////////////////////////////////////////////////////////////////////
+
+<span class="nv">censor_thresh</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+<span class="nv">censor_val</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+<span class="nv">cat_thresh</span>    <span class="o">=</span> <span class="o">[</span> &gt;<span class="o">=</span><span class="m">50</span>, &gt;<span class="o">=</span><span class="m">100</span>, &gt;<span class="o">=</span><span class="m">150</span>, &gt;<span class="o">=</span><span class="m">200</span>, &gt;<span class="o">=</span><span class="m">250</span>, &gt;<span class="o">=</span><span class="m">300</span>, &gt;<span class="o">=</span><span class="m">400</span>, &gt;<span class="o">=</span><span class="m">500</span> <span class="o">]</span><span class="p">;</span>
+<span class="nv">cnt_thresh</span>    <span class="o">=</span> <span class="o">[</span> NA <span class="o">]</span><span class="p">;</span>
+<span class="nv">cnt_logic</span>     <span class="o">=</span> UNION<span class="p">;</span>
+
+//
+// Forecast and observation fields to be verified
+//
+<span class="nv">fcst</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="si">${</span><span class="nv">FCST_FILE_TYPE</span><span class="si">}</span>
+
+   <span class="nv">field</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">FCST_FIELD</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
+<span class="o">}</span>
+<span class="nv">obs</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="si">${</span><span class="nv">OBS_FILE_TYPE</span><span class="si">}</span>
+
+   <span class="nv">field</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">OBS_FIELD</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
+<span class="o">}</span>
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Confidence interval settings
+//
+<span class="nv">ci_alpha</span>  <span class="o">=</span> <span class="o">[</span> <span class="m">0</span>.05 <span class="o">]</span><span class="p">;</span>
+
+<span class="nv">boot</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="nv">interval</span> <span class="o">=</span> PCTILE<span class="p">;</span>
+   <span class="nv">rep_prop</span> <span class="o">=</span> <span class="m">1</span>.0<span class="p">;</span>
+   <span class="nv">n_rep</span>    <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
+   <span class="nv">rng</span>      <span class="o">=</span> <span class="s2">&quot;mt19937&quot;</span><span class="p">;</span>
+   <span class="nv">seed</span>     <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="o">}</span>
+
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Verification masking regions
+//
+<span class="nv">mask</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="nv">grid</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+   <span class="nv">poly</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="o">}</span>
+//
+// Verification masking regions
+// May be <span class="nb">set</span> separately in each <span class="s2">&quot;obs.field&quot;</span> entry
+//
+// JLV, <span class="m">03</span>/20/2019: The following mask uses the quality flag variable <span class="nb">set</span> in the GloTEC model files
+//                  Data coverage quality flag. <span class="nv">0</span><span class="o">=</span>none<span class="p">;</span> <span class="nv">1</span><span class="o">=</span>poor<span class="p">;</span> <span class="nv">2</span><span class="o">=</span>fair<span class="p">;</span> <span class="nv">3</span><span class="o">=</span>good<span class="p">;</span> <span class="nv">4</span><span class="o">=</span>very good<span class="p">;</span> <span class="nv">5</span><span class="o">=</span>excellent 
+// JLV, <span class="m">04</span>/17/2019: This didn<span class="s1">&#39;t work initially because MET was interpreting this as a polyline file. </span>
+<span class="s1">//                  JHG helped determine that the key was to add file_type=NETCDF_NCCF; below to tell it </span>
+<span class="s1">//                  that this is a NetCDF file (it doesn&#39;</span>t know from the larger context that this is the <span class="k">case</span><span class="o">)</span>.
+// JLV, <span class="m">07</span>/08/2019: JHG looked at this today and it turns out that series_analysis doesn<span class="s1">&#39;t need to have any</span>
+<span class="s1">//                  masking region set, since it just runs on the data for each grid point independently</span>
+<span class="s1">//                  as a time series. The only reason to set a masking region in this tool would be</span>
+<span class="s1">//                  if you didn&#39;</span>t want to waste computational <span class="nb">time</span> processing data <span class="k">for</span> a given region
+//                  <span class="o">(</span>e.g., over water<span class="o">)</span>. In summary, don<span class="s1">&#39;t do something like the following. Instead,</span>
+<span class="s1">//                  just use the empty specifications in the mask definition above (which means don&#39;</span>t
+//                  apply any mask<span class="o">)</span>.
+//
+//mask <span class="o">=</span> <span class="o">{</span>
+//   <span class="nv">grid</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;FULL&quot;</span> <span class="o">]</span><span class="p">;</span>
+//   <span class="nv">poly</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MASK_DIR</span><span class="si">}</span><span class="s2">/EQUATORIAL.nc&quot;</span>,
+//            <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MASK_DIR</span><span class="si">}</span><span class="s2">/MIDLATITUDE.nc&quot;</span>,
+//            <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MASK_DIR</span><span class="si">}</span><span class="s2">/POLAR.nc&quot;</span> <span class="o">]</span><span class="p">;</span>
+//<span class="o">}</span>
+//          <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=0&quot;</span>,
+//          <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=1&quot;</span>,
+//          <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=2&quot;</span>,
+//          <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=3&quot;</span>,
+//	    <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=4&quot;</span>,
+//	    <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=5&quot;</span>, 
+	    
+
+//
+// Number of grid points to be processed concurrently.  Set smaller to use
+// less memory but increase the number of passes through the data.
+//
+<span class="nv">block_size</span> <span class="o">=</span> <span class="m">72</span>*72<span class="p">;</span>
+
+//
+// Ratio of valid matched pairs to compute statistics <span class="k">for</span> a grid point
+//
+// Requires <span class="m">50</span>% of matched pairs in series to be valid
+<span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.50<span class="p">;</span> 
+
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Statistical output types
+//
+<span class="nv">output_stats</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="nv">fho</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">ctc</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">cts</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">mctc</span>   <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">mcts</span>   <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">cnt</span>    <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;OBAR&quot;</span> <span class="o">]</span><span class="p">;</span>
+   <span class="nv">sl1l2</span>  <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">sal1l2</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">pct</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">pstd</span>   <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">pjc</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">prc</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+<span class="o">}</span>
+
+////////////////////////////////////////////////////////////////////////////////
+
+<span class="nv">rank_corr_flag</span> <span class="o">=</span> FALSE<span class="p">;</span>
+<span class="nv">tmp_dir</span>        <span class="o">=</span> <span class="s2">&quot;/tmp&quot;</span><span class="p">;</span>
+<span class="nv">version</span>        <span class="o">=</span> <span class="s2">&quot;V9.0&quot;</span><span class="p">;</span>
+
+////////////////////////////////////////////////////////////////////////////////
+</pre></div>
+</div>
+<p><strong>SeriesAnalysisConfig_seasonal_forecast_full_stats</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
+//
+// Series-Analysis configuration file <span class="k">for</span> the Indonesia APIK project.
+//
+//   The goal of this script is to compute the skill <span class="k">for</span> <span class="m">29</span> years of precipitation hindcasts
+//
+// For additional information, see the MET_BASE/config/README file.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Output model name to be written
+//
+<span class="nv">model</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MODEL</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+
+//
+// Output description to be written
+// May be <span class="nb">set</span> separately in each <span class="s2">&quot;obs.field&quot;</span> entry
+//
+<span class="nv">desc</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">DESCRIPTION</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+
+//
+// Output observation <span class="nb">type</span> to be written
+//
+<span class="nv">obtype</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">OBTYPE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span>
+
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Verification grid
+// May be <span class="nb">set</span> separately in each <span class="s2">&quot;field&quot;</span> entry
+//
+<span class="nv">regrid</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="nv">to_grid</span>    <span class="o">=</span> NONE<span class="p">;</span>
+   <span class="nv">method</span>     <span class="o">=</span> NEAREST<span class="p">;</span>
+   <span class="nv">width</span>      <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
+   <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.5<span class="p">;</span>
+   <span class="nv">shape</span>      <span class="o">=</span> SQUARE<span class="p">;</span>
+<span class="o">}</span>
+
+////////////////////////////////////////////////////////////////////////////////
+
+<span class="nv">censor_thresh</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+<span class="nv">censor_val</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+<span class="nv">cat_thresh</span>    <span class="o">=</span> <span class="o">[</span> &gt;<span class="o">=</span><span class="m">50</span>, &gt;<span class="o">=</span><span class="m">100</span>, &gt;<span class="o">=</span><span class="m">150</span>, &gt;<span class="o">=</span><span class="m">200</span>, &gt;<span class="o">=</span><span class="m">250</span>, &gt;<span class="o">=</span><span class="m">300</span>, &gt;<span class="o">=</span><span class="m">400</span>, &gt;<span class="o">=</span><span class="m">500</span> <span class="o">]</span><span class="p">;</span>
+<span class="nv">cnt_thresh</span>    <span class="o">=</span> <span class="o">[</span> NA <span class="o">]</span><span class="p">;</span>
+<span class="nv">cnt_logic</span>     <span class="o">=</span> UNION<span class="p">;</span>
+
+//
+// Forecast and observation fields to be verified
+//
+<span class="nv">fcst</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="nv">field</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">FCST_FIELD</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
+<span class="o">}</span>
+<span class="nv">obs</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="nv">field</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">OBS_FIELD</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
+<span class="o">}</span>
+
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Climatology mean data
+//
+<span class="nv">climo_mean</span> <span class="o">=</span> <span class="o">{</span>
+
+   <span class="nv">file_name</span> <span class="o">=</span> <span class="o">[</span> <span class="si">${</span><span class="nv">CLIMO_MEAN_FILE</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span>
+//   <span class="nv">file_name</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;/home/demo/APIK/output_met/s2s_use_case_1/series_analysis/series_analysis_NMME_CPC_stats_ICJul_08_climo.nc&quot;</span> <span class="o">]</span><span class="p">;</span>
+   <span class="nv">field</span>     <span class="o">=</span> <span class="o">[</span> <span class="o">{</span> <span class="nv">name</span>  <span class="o">=</span> <span class="s2">&quot;series_cnt_OBAR&quot;</span><span class="p">;</span> <span class="nv">level</span> <span class="o">=</span> <span class="s2">&quot;(*,*)&quot;</span><span class="p">;</span> <span class="o">}</span> <span class="o">]</span><span class="p">;</span>
+
+   <span class="nv">regrid</span> <span class="o">=</span> <span class="o">{</span>
+      <span class="nv">method</span>     <span class="o">=</span> NEAREST<span class="p">;</span>
+      <span class="nv">width</span>      <span class="o">=</span> <span class="m">1</span><span class="p">;</span>
+      <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.5<span class="p">;</span>
+      <span class="nv">shape</span>      <span class="o">=</span> SQUARE<span class="p">;</span>
+   <span class="o">}</span>
+
+   <span class="nv">time_interp_method</span> <span class="o">=</span> DW_MEAN<span class="p">;</span>
+   <span class="nv">match_month</span>        <span class="o">=</span> TRUE<span class="p">;</span>
+   <span class="nv">match_day</span>          <span class="o">=</span> FALSE<span class="p">;</span>
+   <span class="nv">time_step</span>          <span class="o">=</span> <span class="m">21600</span><span class="p">;</span>
+<span class="o">}</span>
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Confidence interval settings
+//
+<span class="nv">ci_alpha</span>  <span class="o">=</span> <span class="o">[</span> <span class="m">0</span>.05 <span class="o">]</span><span class="p">;</span>
+
+<span class="nv">boot</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="nv">interval</span> <span class="o">=</span> PCTILE<span class="p">;</span>
+   <span class="nv">rep_prop</span> <span class="o">=</span> <span class="m">1</span>.0<span class="p">;</span>
+   <span class="nv">n_rep</span>    <span class="o">=</span> <span class="m">0</span><span class="p">;</span>
+   <span class="nv">rng</span>      <span class="o">=</span> <span class="s2">&quot;mt19937&quot;</span><span class="p">;</span>
+   <span class="nv">seed</span>     <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="o">}</span>
+
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Verification masking regions
+//
+<span class="nv">mask</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="nv">grid</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+   <span class="nv">poly</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="o">}</span>
+//
+// Verification masking regions
+// May be <span class="nb">set</span> separately in each <span class="s2">&quot;obs.field&quot;</span> entry
+//
+// JLV, <span class="m">03</span>/20/2019: The following mask uses the quality flag variable <span class="nb">set</span> in the GloTEC model files
+//                  Data coverage quality flag. <span class="nv">0</span><span class="o">=</span>none<span class="p">;</span> <span class="nv">1</span><span class="o">=</span>poor<span class="p">;</span> <span class="nv">2</span><span class="o">=</span>fair<span class="p">;</span> <span class="nv">3</span><span class="o">=</span>good<span class="p">;</span> <span class="nv">4</span><span class="o">=</span>very good<span class="p">;</span> <span class="nv">5</span><span class="o">=</span>excellent 
+// JLV, <span class="m">04</span>/17/2019: This didn<span class="s1">&#39;t work initially because MET was interpreting this as a polyline file. </span>
+<span class="s1">//                  JHG helped determine that the key was to add file_type=NETCDF_NCCF; below to tell it </span>
+<span class="s1">//                  that this is a NetCDF file (it doesn&#39;</span>t know from the larger context that this is the <span class="k">case</span><span class="o">)</span>.
+// JLV, <span class="m">07</span>/08/2019: JHG looked at this today and it turns out that series_analysis doesn<span class="s1">&#39;t need to have any</span>
+<span class="s1">//                  masking region set, since it just runs on the data for each grid point independently</span>
+<span class="s1">//                  as a time series. The only reason to set a masking region in this tool would be</span>
+<span class="s1">//                  if you didn&#39;</span>t want to waste computational <span class="nb">time</span> processing data <span class="k">for</span> a given region
+//                  <span class="o">(</span>e.g., over water<span class="o">)</span>. In summary, don<span class="s1">&#39;t do something like the following. Instead,</span>
+<span class="s1">//                  just use the empty specifications in the mask definition above (which means don&#39;</span>t
+//                  apply any mask<span class="o">)</span>.
+//
+//mask <span class="o">=</span> <span class="o">{</span>
+//   <span class="nv">grid</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;FULL&quot;</span> <span class="o">]</span><span class="p">;</span>
+//   <span class="nv">poly</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MASK_DIR</span><span class="si">}</span><span class="s2">/EQUATORIAL.nc&quot;</span>,
+//            <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MASK_DIR</span><span class="si">}</span><span class="s2">/MIDLATITUDE.nc&quot;</span>,
+//            <span class="s2">&quot;</span><span class="si">${</span><span class="nv">MASK_DIR</span><span class="si">}</span><span class="s2">/POLAR.nc&quot;</span> <span class="o">]</span><span class="p">;</span>
+//<span class="o">}</span>
+//          <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=0&quot;</span>,
+//          <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=1&quot;</span>,
+//          <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=2&quot;</span>,
+//          <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=3&quot;</span>,
+//	    <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=4&quot;</span>,
+//	    <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GLO_FILE</span><span class="si">}</span><span class="s2"> {name = \&quot;quality_flag\&quot;; level = \&quot;</span><span class="si">${</span><span class="nv">GLO_LEVEL</span><span class="si">}</span><span class="s2">\&quot;; file_type=NETCDF_NCCF;} &gt;=5&quot;</span>, 
+	    
+
+//
+// Number of grid points to be processed concurrently.  Set smaller to use
+// less memory but increase the number of passes through the data.
+//
+<span class="nv">block_size</span> <span class="o">=</span> <span class="m">72</span>*72<span class="p">;</span>
+
+//
+// Ratio of valid matched pairs to compute statistics <span class="k">for</span> a grid point
+//
+// Requires <span class="m">50</span>% of matched pairs in series to be valid
+<span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">0</span>.50<span class="p">;</span> 
+
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// Statistical output types
+//
+<span class="nv">output_stats</span> <span class="o">=</span> <span class="o">{</span>
+   <span class="nv">fho</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">ctc</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">cts</span>    <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;BASER&quot;</span>, <span class="s2">&quot;CSI&quot;</span>, <span class="s2">&quot;GSS&quot;</span> <span class="o">]</span><span class="p">;</span>
+   <span class="nv">mctc</span>   <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">mcts</span>   <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">cnt</span>    <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;TOTAL&quot;</span>, <span class="s2">&quot;FBAR&quot;</span>, <span class="s2">&quot;OBAR&quot;</span>, <span class="s2">&quot;ME&quot;</span>, <span class="s2">&quot;MAE&quot;</span>, <span class="s2">&quot;RMSE&quot;</span>, <span class="s2">&quot;ANOM_CORR&quot;</span>, <span class="s2">&quot;PR_CORR&quot;</span> <span class="o">]</span><span class="p">;</span>
+   <span class="nv">sl1l2</span>  <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">sal1l2</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">pct</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">pstd</span>   <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">pjc</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+   <span class="nv">prc</span>    <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+<span class="o">}</span>
+
+////////////////////////////////////////////////////////////////////////////////
+
+<span class="nv">rank_corr_flag</span> <span class="o">=</span> FALSE<span class="p">;</span>
+<span class="nv">tmp_dir</span>        <span class="o">=</span> <span class="s2">&quot;/tmp&quot;</span><span class="p">;</span>
+<span class="nv">version</span>        <span class="o">=</span> <span class="s2">&quot;V9.0&quot;</span><span class="p">;</span>
+
+////////////////////////////////////////////////////////////////////////////////
+</pre></div>
+</div>
+<dl class="simple">
+<dt>See the following file for more information about the environment variables set in these configuration files::</dt><dd><p>parm/use_cases/met_tool_wrapper/SeriesAnalysis/SeriesAnalysis.conf</p>
 </dd>
 </dl>
 </div>
@@ -777,17 +1079,21 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p>Refer to the value set for <strong>OUTPUT_BASE</strong> to find where the output data was generated.
 Output for this use case will be found in model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast/GridStat (relative to <strong>OUTPUT_BASE</strong>)</p>
 <p>For each month and year there will be two files written:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>* grid_stat_NMME-hindcast_precip_vs_CPC_IC<span class="o">{</span>%Y<span class="o">}{</span>%N<span class="o">}</span>01_2301360000L_20081001_000000V.stat
-* grid_stat_NMME-hindcast_precip_vs_CPC_IC<span class="o">{</span>%Y<span class="o">}{</span>%N<span class="o">}</span>01_2301360000L_20081001_000000V_pairs.nc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>* grid_stat_NMME-hindcast_precip_vs_CPC_IC<span class="o">{</span>%Y%b<span class="o">}</span>01_2301360000L_20081001_000000V.stat
+* grid_stat_NMME-hindcast_precip_vs_CPC_IC<span class="o">{</span>%Y%b<span class="o">}</span>01_2301360000L_20081001_000000V_pairs.nc
+</pre></div>
+</div>
+<p>Output from SeriesAnalysis will be found in model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast/SeriesAnalysis (relative to <strong>OUTPUT_BASE</strong>)</p>
+<p>For each month there will be two files written:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>* series_analysis_NMME_CPC_stats_ICJul_<span class="o">{</span>%m<span class="o">}</span>_climo.nc
+* series_analysis_NMME_CPC_stats_ICJul_<span class="o">{</span>%m<span class="o">}</span>_full_stats.nc
 </pre></div>
 </div>
 </div>
 <div class="section" id="keywords">
 <h2><span class="section-number">5.2.4.1.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStat</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDF</a></p>
-</div>
+<p>sphinx_gallery_thumbnail_path = ‘_static/s2s-GridStat_fcstNMME_obsCPC_seasonal_forecast.png’
+.. note:: <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDFFileUseCase</a></p>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-s2s-gridstat-fcstnmme-obscpc-seasonal-forecast-py">
 <div class="sphx-glr-download docutils container">

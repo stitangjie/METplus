@@ -341,7 +341,7 @@ Subseasonal to Seasonal
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Brief summary of this use case...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Seasonal forecast use case running GridStat, then passing the output into SeriesAnalysis.">
 
 .. only:: html
 
