@@ -485,6 +485,26 @@ PCPCombine
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode and read in files. It highlights the...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_pcp_loop_custom_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_loop_custom.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/met_tool_wrapper/PCPCombine/pcp_loop_custom
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in DERIVE mode to generate statistics using mult...">
 
 .. only:: html

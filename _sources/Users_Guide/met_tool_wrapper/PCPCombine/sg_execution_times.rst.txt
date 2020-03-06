@@ -8,17 +8,19 @@ Computation times
 **00:00.000** total execution time for **Users_Guide_met_tool_wrapper_PCPCombine** files:
 
 +---------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_custom.py` (``pcp_custom.py``)                     | 00:00.000 | 0.0 MB |
+| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_loop_custom.py` (``pcp_loop_custom.py``)           | 00:00.000 | 0.0 MB |
++---------------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_add.py` (``pcp_add.py``)                           | 00:00.000 | 0.0 MB |
++---------------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_bucket.py` (``pcp_bucket.py``)                     | 00:00.000 | 0.0 MB |
++---------------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_python_embedding.py` (``pcp_python_embedding.py``) | 00:00.000 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------+-----------+--------+
 | :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_derive.py` (``pcp_derive.py``)                     | 00:00.000 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------+-----------+--------+
 | :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_subtract.py` (``pcp_subtract.py``)                 | 00:00.000 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_add.py` (``pcp_add.py``)                           | 00:00.000 | 0.0 MB |
-+---------------------------------------------------------------------------------------------------------------+-----------+--------+
 | :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_sum.py` (``pcp_sum.py``)                           | 00:00.000 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_python_embedding.py` (``pcp_python_embedding.py``) | 00:00.000 | 0.0 MB |
-+---------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_bucket.py` (``pcp_bucket.py``)                     | 00:00.000 | 0.0 MB |
+| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_custom.py` (``pcp_custom.py``)                     | 00:00.000 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------+-----------+--------+

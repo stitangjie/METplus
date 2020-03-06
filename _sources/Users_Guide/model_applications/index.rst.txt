@@ -309,6 +309,26 @@ Precipitation
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case builds a 3 hour gridded precipitation accumulation using 1 hour accumulation fiel...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_EnsembleStat_fcstHRRRE_APCP3_GRIB_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_EnsembleStat_fcstHRRRE_APCP3_GRIB.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/EnsembleStat_fcstHRRRE_APCP3_GRIB
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This use case compares 1 6- hour gridded forecast precipitation accumulation file to gridded 6 ...">
 
 .. only:: html

@@ -349,6 +349,9 @@
 <span class="c1">#   wrappers have been run</span>
 <span class="nv">LOOP_ORDER</span> <span class="o">=</span> <span class="nb">times</span>
 
+<span class="c1"># list of strings to loop over for each run time.</span>
+<span class="c1"># value for each item can be referenced in filename templates with {custom?fmt=%s}</span>
+<span class="nv">EXAMPLE_CUSTOM_LOOP_LIST</span> <span class="o">=</span> ext, nc
 
 <span class="c1"># End of [config] section and start of [dir] section</span>
 <span class="o">[</span>dir<span class="o">]</span>
@@ -360,7 +363,7 @@
 <span class="o">[</span>filename_templates<span class="o">]</span>
 <span class="c1"># Fake template to use to look for input data. This template is substituted with the time information of each</span>
 <span class="c1"># run time that is executed</span>
-<span class="nv">EXAMPLE_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>/file_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%2H<span class="o">}</span>_F<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>.ext
+<span class="nv">EXAMPLE_INPUT_TEMPLATE</span> <span class="o">=</span> <span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>/file_<span class="o">{</span>init?fmt<span class="o">=</span>%Y%m%d<span class="o">}</span>_<span class="o">{</span>init?fmt<span class="o">=</span>%2H<span class="o">}</span>_F<span class="o">{</span>lead?fmt<span class="o">=</span>%3H<span class="o">}</span>.<span class="o">{</span>custom?fmt<span class="o">=</span>%s<span class="o">}</span>
 </pre></div>
 </div>
 <p>The following configuration variables tell METplus to loop by valid time starting at 2017-02-01 0Z, ending on 2017-02-02 0Z, incrementing 6 hours each iteration:</p>

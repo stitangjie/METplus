@@ -168,34 +168,39 @@
 <li class="toctree-l4"><a class="reference internal" href="#configuration-15">3.15.2. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#seriesbyinit">3.16. SeriesByInit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#seriesanalysis">3.16. SeriesAnalysis</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#description-16">3.16.1. Description</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configuration-16">3.16.2. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#seriesbylead">3.17. SeriesByLead</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#seriesbyinit">3.17. SeriesByInit</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#description-17">3.17.1. Description</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configuration-17">3.17.2. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#statanalysis">3.18. StatAnalysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#seriesbylead">3.18. SeriesByLead</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#description-18">3.18.1. Description</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configuration-18">3.18.2. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#tcmprplotter">3.19. TCMPRPlotter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#statanalysis">3.19. StatAnalysis</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#description-19">3.19.1. Description</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configuration-19">3.19.2. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#tcpairs">3.20. TcPairs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tcmprplotter">3.20. TCMPRPlotter</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#description-20">3.20.1. Description</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configuration-20">3.20.2. Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#tcstat">3.21. TcStat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tcpairs">3.21. TcPairs</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#description-21">3.21.1. Description</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configuration-21">3.21.2. Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tcstat">3.22. TcStat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#description-22">3.22.1. Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration-22">3.22.2. Configuration</a></li>
 </ul>
 </li>
 </ul>
@@ -1126,15 +1131,50 @@ data and netCDF point observation data to perform grid-to-point
 </div>
 </div>
 </div>
-<div class="section" id="seriesbyinit">
-<h2><span class="section-number">3.16. </span>SeriesByInit<a class="headerlink" href="#seriesbyinit" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="seriesanalysis">
+<h2><span class="section-number">3.16. </span>SeriesAnalysis<a class="headerlink" href="#seriesanalysis" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="description-16">
 <span id="id29"></span><h3><span class="section-number">3.16.1. </span>Description<a class="headerlink" href="#description-16" title="Permalink to this headline">¶</a></h3>
-<p>The SeriesByInit wrapper provides the infrastructure needed to demonstrates the use  of the series analysis tool using tropical cyclone data, based on initialization times. The SeriesByInit_wrapper creates numerous plots that represent the
-field, level, and statistic for each initialization time.</p>
+<p>The SeriesAnalysis wrapper is used to find files and build a command that calls the MET tool SeriesAnalysis.</p>
 </div>
 <div class="section" id="configuration-16">
 <span id="id30"></span><h3><span class="section-number">3.16.2. </span>Configuration<a class="headerlink" href="#configuration-16" title="Permalink to this headline">¶</a></h3>
+<p>[dir]</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-series-analysis-input-dir"><span class="xref std std-term">FCST_SERIES_ANALYSIS_INPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-series-analysis-input-dir"><span class="xref std std-term">OBS_SERIES_ANALYSIS_INPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-climo-mean-input-dir"><span class="xref std std-term">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-climo-stdev-input-dir"><span class="xref std std-term">SERIES_ANALYSIS_CLIMO_STDEV_INPUT_DIR</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-output-dir"><span class="xref std std-term">SERIES_ANALYSIS_OUTPUT_DIR</span></a></div>
+</div>
+<p>[filename_templates]</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="glossary.html#term-fcst-series-analysis-input-template"><span class="xref std std-term">FCST_SERIES_ANALYSIS_INPUT_TEMPLATE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-obs-series-analysis-input-template"><span class="xref std std-term">OBS_SERIES_ANALYSIS_INPUT_TEMPLATE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-climo-mean-input-template"><span class="xref std std-term">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_TEMPLATE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-climo-stdev-input-template"><span class="xref std std-term">SERIES_ANALYSIS_CLIMO_STDEV_INPUT_TEMPLATE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-output-template"><span class="xref std std-term">SERIES_ANALYSIS_OUTPUT_TEMPLATE</span></a></div>
+</div>
+<p>[config]</p>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="glossary.html#term-log-series-analysis-verbosity"><span class="xref std std-term">LOG_SERIES_ANALYSIS_VERBOSITY</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-is-paired"><span class="xref std std-term">SERIES_ANALYSIS_IS_PAIRED</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-config-file"><span class="xref std std-term">SERIES_ANALYSIS_CONFIG_FILE</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-regrid-to-grid"><span class="xref std std-term">SERIES_ANALYSIS_REGRID_TO_GRID</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-stat-list"><span class="xref std std-term">SERIES_ANALYSIS_STAT_LIST</span></a></div>
+<div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-custom-loop-list"><span class="xref std std-term">SERIES_ANALYSIS_CUSTOM_LOOP_LIST</span></a></div>
+</div>
+</div>
+</div>
+<div class="section" id="seriesbyinit">
+<h2><span class="section-number">3.17. </span>SeriesByInit<a class="headerlink" href="#seriesbyinit" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-17">
+<span id="id31"></span><h3><span class="section-number">3.17.1. </span>Description<a class="headerlink" href="#description-17" title="Permalink to this headline">¶</a></h3>
+<p>The SeriesByInit wrapper provides the infrastructure needed to demonstrates the use  of the series analysis tool using tropical cyclone data, based on initialization times. The SeriesByInit_wrapper creates numerous plots that represent the
+field, level, and statistic for each initialization time.</p>
+</div>
+<div class="section" id="configuration-17">
+<span id="id32"></span><h3><span class="section-number">3.17.2. </span>Configuration<a class="headerlink" href="#configuration-17" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-series-analysis-input-dir"><span class="xref std std-term">SERIES_ANALYSIS_INPUT_DIR</span></a></div>
@@ -1178,9 +1218,9 @@ field, level, and statistic for each initialization time.</p>
 </div>
 </div>
 <div class="section" id="seriesbylead">
-<h2><span class="section-number">3.17. </span>SeriesByLead<a class="headerlink" href="#seriesbylead" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="description-17">
-<span id="id31"></span><h3><span class="section-number">3.17.1. </span>Description<a class="headerlink" href="#description-17" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">3.18. </span>SeriesByLead<a class="headerlink" href="#seriesbylead" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-18">
+<span id="id33"></span><h3><span class="section-number">3.18.1. </span>Description<a class="headerlink" href="#description-18" title="Permalink to this headline">¶</a></h3>
 <p>The SeriesByLead wrapper provides the infrastructure needed to perform a
 series analysis on tropical cyclone data, based on lead (forecast hour)
 times. The SeriesByLead wrapper creates numerous plots that represent
@@ -1190,8 +1230,8 @@ forecast hour groupings. Performing a series analysis by valid time with
 forecast hour groupings can be useful when analyzing storm tracks based
 on time ‘bins’ such as by days (eg. day 1, day 2, day 3, etc.).</p>
 </div>
-<div class="section" id="configuration-17">
-<span id="id32"></span><h3><span class="section-number">3.17.2. </span>Configuration<a class="headerlink" href="#configuration-17" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="configuration-18">
+<span id="id34"></span><h3><span class="section-number">3.18.2. </span>Configuration<a class="headerlink" href="#configuration-18" title="Permalink to this headline">¶</a></h3>
 <p>The input track and model data files are defined in any one of the
 user’s METplus Wrappers configuration files. If creating a final
 configuration file that overrides all other config files, it is
@@ -1243,9 +1283,9 @@ would set the following:</p>
 </div>
 </div>
 <div class="section" id="statanalysis">
-<h2><span class="section-number">3.18. </span>StatAnalysis<a class="headerlink" href="#statanalysis" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="description-18">
-<span id="id33"></span><h3><span class="section-number">3.18.1. </span>Description<a class="headerlink" href="#description-18" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">3.19. </span>StatAnalysis<a class="headerlink" href="#statanalysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-19">
+<span id="id35"></span><h3><span class="section-number">3.19.1. </span>Description<a class="headerlink" href="#description-19" title="Permalink to this headline">¶</a></h3>
 <p>The StatAnalysis wrapper encapsulates the behavior of the MET
 stat_analysis tool. It provides the infrastructure to summarize and
 filter the MET .stat files. StatAnalysis wrapper can be run in two
@@ -1255,8 +1295,8 @@ lines over a span of dates, to use this method set LOOP_ORDER =
 processes. To run StatAnalysis wrapper, include StatAnalysis in
 PROCESS_LIST.</p>
 </div>
-<div class="section" id="configuration-18">
-<span id="id34"></span><h3><span class="section-number">3.18.2. </span>Configuration<a class="headerlink" href="#configuration-18" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="configuration-19">
+<span id="id36"></span><h3><span class="section-number">3.19.2. </span>Configuration<a class="headerlink" href="#configuration-19" title="Permalink to this headline">¶</a></h3>
 <p>The following values must be defined in the METplus Wrappers
 configuration file for running with LOOP_ORDER = times:</p>
 <p>[dir]</p>
@@ -1391,17 +1431,17 @@ file for running with LOOP_ORDER = processes:</p>
 </div>
 </div>
 <div class="section" id="tcmprplotter">
-<h2><span class="section-number">3.19. </span>TCMPRPlotter<a class="headerlink" href="#tcmprplotter" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="description-19">
-<span id="id35"></span><h3><span class="section-number">3.19.1. </span>Description<a class="headerlink" href="#description-19" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">3.20. </span>TCMPRPlotter<a class="headerlink" href="#tcmprplotter" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-20">
+<span id="id37"></span><h3><span class="section-number">3.20.1. </span>Description<a class="headerlink" href="#description-20" title="Permalink to this headline">¶</a></h3>
 <p>The TCMPRPlotter wrapper is a Python script that wraps the R script
 plot_tcmpr.R. This script is useful for plotting the calculated
 statistics for the output from the MET-TC tools. This script, and other
 R scripts are included in the MET installation. Please refer to section
 21.2.3 of the MET User’s Guide for usage information.</p>
 </div>
-<div class="section" id="configuration-19">
-<span id="id36"></span><h3><span class="section-number">3.19.2. </span>Configuration<a class="headerlink" href="#configuration-19" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="configuration-20">
+<span id="id38"></span><h3><span class="section-number">3.20.2. </span>Configuration<a class="headerlink" href="#configuration-20" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-tcmpr-plotter-tcmpr-data-dir"><span class="xref std std-term">TCMPR_PLOTTER_TCMPR_DATA_DIR</span></a></div>
@@ -1475,9 +1515,9 @@ set to ‘yes’, then set the flag</p>
 </div>
 </div>
 <div class="section" id="tcpairs">
-<h2><span class="section-number">3.20. </span>TcPairs<a class="headerlink" href="#tcpairs" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="description-20">
-<span id="id37"></span><h3><span class="section-number">3.20.1. </span>Description<a class="headerlink" href="#description-20" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">3.21. </span>TcPairs<a class="headerlink" href="#tcpairs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-21">
+<span id="id39"></span><h3><span class="section-number">3.21.1. </span>Description<a class="headerlink" href="#description-21" title="Permalink to this headline">¶</a></h3>
 <p>The TcPairs wrapper encapsulates the behavior of the MET tc_pairs tool.
 The wrapper accepts Adeck and Bdeck (Best track) cyclone track data in
 extra tropical cyclone format (such as the data used by sample data
@@ -1485,8 +1525,8 @@ provided in the METplus tutorial), or ATCF formatted track data. If data
 is in an extra tropical cyclone (non-ATCF) format, the data is
 reformatted into an ATCF format that is recognized by MET.</p>
 </div>
-<div class="section" id="configuration-20">
-<span id="id38"></span><h3><span class="section-number">3.20.2. </span>Configuration<a class="headerlink" href="#configuration-20" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="configuration-21">
+<span id="id40"></span><h3><span class="section-number">3.21.2. </span>Configuration<a class="headerlink" href="#configuration-21" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-tc-pairs-adeck-input-dir"><span class="xref std std-term">TC_PAIRS_ADECK_INPUT_DIR</span></a></div>
@@ -1547,15 +1587,15 @@ reformatted into an ATCF format that is recognized by MET.</p>
 </div>
 </div>
 <div class="section" id="tcstat">
-<h2><span class="section-number">3.21. </span>TcStat<a class="headerlink" href="#tcstat" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="description-21">
-<span id="id39"></span><h3><span class="section-number">3.21.1. </span>Description<a class="headerlink" href="#description-21" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">3.22. </span>TcStat<a class="headerlink" href="#tcstat" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="description-22">
+<span id="id41"></span><h3><span class="section-number">3.22.1. </span>Description<a class="headerlink" href="#description-22" title="Permalink to this headline">¶</a></h3>
 <p>Used to configure the MET tool tc_stat. This wrapper can be run by
 listing it in the PROCESS_LIST, or can be called from the ExtractTiles
 wrapper (via the MET tc-stat command line commands).</p>
 </div>
-<div class="section" id="configuration-21">
-<span id="id40"></span><h3><span class="section-number">3.21.2. </span>Configuration<a class="headerlink" href="#configuration-21" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="configuration-22">
+<span id="id42"></span><h3><span class="section-number">3.22.2. </span>Configuration<a class="headerlink" href="#configuration-22" title="Permalink to this headline">¶</a></h3>
 <p>[dir]</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="glossary.html#term-tc-stat-input-dir"><span class="xref std std-term">TC_STAT_INPUT_DIR</span></a></div>

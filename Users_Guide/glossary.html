@@ -213,37 +213,37 @@
 <p><strong>DEPRECATED:</strong> No longer used. The regular expression for the analysis input file. The file is in GRIBv2 format.</p>
 </div>
 </dd>
-<dt id="term-ascii2nc-config-file">ASCII2NC_CONFIG_FILE</dt><dd><p>Path to optional configuration file read by Ascii2Nc.</p>
+<dt id="term-ascii2nc-config-file">ASCII2NC_CONFIG_FILE</dt><dd><p>Path to optional configuration file read by ASCII2NC.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-file-window-begin">ASCII2NC_FILE_WINDOW_BEGIN</dt><dd><p>Used to control the lower bound of the window around the valid time to determine if an Ascii2Nc input file should be used for processing. Overrides <a class="reference internal" href="#term-obs-file-window-begin"><span class="xref std std-term">OBS_FILE_WINDOW_BEGIN</span></a>. See ‘Use Windows to Find Valid Files’ section for more information.</p>
+<dt id="term-ascii2nc-file-window-begin">ASCII2NC_FILE_WINDOW_BEGIN</dt><dd><p>Used to control the lower bound of the window around the valid time to determine if an ASCII2NC input file should be used for processing. Overrides <a class="reference internal" href="#term-obs-file-window-begin"><span class="xref std std-term">OBS_FILE_WINDOW_BEGIN</span></a>. See ‘Use Windows to Find Valid Files’ section for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> 0</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-file-window-end">ASCII2NC_FILE_WINDOW_END</dt><dd><p>Used to control the upper bound of the window around the valid time to determine if an Ascii2Nc input file should be used for processing. Overrides <a class="reference internal" href="#term-obs-file-window-begin"><span class="xref std std-term">OBS_FILE_WINDOW_BEGIN</span></a>. See ‘Use Windows to Find Valid Files’ section for more information.</p>
+<dt id="term-ascii2nc-file-window-end">ASCII2NC_FILE_WINDOW_END</dt><dd><p>Used to control the upper bound of the window around the valid time to determine if an ASCII2NC input file should be used for processing. Overrides <a class="reference internal" href="#term-obs-file-window-begin"><span class="xref std std-term">OBS_FILE_WINDOW_BEGIN</span></a>. See ‘Use Windows to Find Valid Files’ section for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-input-dir">ASCII2NC_INPUT_DIR</dt><dd><p>Directory containing input data to Ascii2Nc. This variable is optional because you can specify the full path to the input files using <a class="reference internal" href="#term-ascii2nc-input-template"><span class="xref std std-term">ASCII2NC_INPUT_TEMPLATE</span></a>.</p>
+<dt id="term-ascii2nc-input-dir">ASCII2NC_INPUT_DIR</dt><dd><p>Directory containing input data to ASCII2NC. This variable is optional because you can specify the full path to the input files using <a class="reference internal" href="#term-ascii2nc-input-template"><span class="xref std std-term">ASCII2NC_INPUT_TEMPLATE</span></a>.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [dir]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
 <dt id="term-ascii2nc-input-format">ASCII2NC_INPUT_FORMAT</dt><dd><p>Optional string to specify the format of the input data. Valid options are “met_point”, “little_r”, “surfrad”, “wwsis”, “aeronet”, “aeronetv2”, or “aeronetv3.”</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
@@ -257,112 +257,112 @@
 </dd>
 <dt id="term-ascii2nc-mask-grid">ASCII2NC_MASK_GRID</dt><dd><p>Named grid or a data file defining the grid for filtering the point observations spatially (optional).</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
 <dt id="term-ascii2nc-mask-poly">ASCII2NC_MASK_POLY</dt><dd><p>A polyline file, the output of gen_vx_mask, or a gridded data file with field information for filtering the point observations spatially (optional).</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
 <dt id="term-ascii2nc-mask-sid">ASCII2NC_MASK_SID</dt><dd><p>A station ID masking file or a comma-separated list of station ID’s for filtering the point observations spatially (optional).</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-output-dir">ASCII2NC_OUTPUT_DIR</dt><dd><p>Directory to write output data generated by Ascii2Nc. This variable is optional because you can specify the full path to the output files using <a class="reference internal" href="#term-ascii2nc-output-template"><span class="xref std std-term">ASCII2NC_OUTPUT_TEMPLATE</span></a>.</p>
+<dt id="term-ascii2nc-output-dir">ASCII2NC_OUTPUT_DIR</dt><dd><p>Directory to write output data generated by ASCII2NC. This variable is optional because you can specify the full path to the output files using <a class="reference internal" href="#term-ascii2nc-output-template"><span class="xref std std-term">ASCII2NC_OUTPUT_TEMPLATE</span></a>.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [dir]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-output-template">ASCII2NC_OUTPUT_TEMPLATE</dt><dd><p>Filename template of the output file generated by Ascii2Nc. See also <a class="reference internal" href="#term-ascii2nc-output-dir"><span class="xref std std-term">ASCII2NC_OUTPUT_DIR</span></a>.</p>
+<dt id="term-ascii2nc-output-template">ASCII2NC_OUTPUT_TEMPLATE</dt><dd><p>Filename template of the output file generated by ASCII2NC. See also <a class="reference internal" href="#term-ascii2nc-output-dir"><span class="xref std std-term">ASCII2NC_OUTPUT_DIR</span></a>.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [filename_templates]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-time-summary-beg">ASCII2NC_TIME_SUMMARY_BEG</dt><dd><p>Read by the Ascii2Nc configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding Ascii2Nc configuration files for more information.</p>
+<dt id="term-ascii2nc-time-summary-beg">ASCII2NC_TIME_SUMMARY_BEG</dt><dd><p>Read by the ASCII2NC configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding ASCII2NC configuration files for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-time-summary-end">ASCII2NC_TIME_SUMMARY_END</dt><dd><p>Read by the Ascii2Nc configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding Ascii2Nc configuration files for more information.</p>
+<dt id="term-ascii2nc-time-summary-end">ASCII2NC_TIME_SUMMARY_END</dt><dd><p>Read by the ASCII2NC configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding ASCII2NC configuration files for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-time-summary-flag">ASCII2NC_TIME_SUMMARY_FLAG</dt><dd><p>Boolean value to turn on/off time summarization. Read by the Ascii2Nc configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding Ascii2Nc configuration for more information.</p>
+<dt id="term-ascii2nc-time-summary-flag">ASCII2NC_TIME_SUMMARY_FLAG</dt><dd><p>Boolean value to turn on/off time summarization. Read by the ASCII2NC configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding ASCII2NC configuration for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> False</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-time-summary-grib-codes">ASCII2NC_TIME_SUMMARY_GRIB_CODES</dt><dd><p>Read by the Ascii2Nc configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding Ascii2Nc configuration files for more information.</p>
+<dt id="term-ascii2nc-time-summary-grib-codes">ASCII2NC_TIME_SUMMARY_GRIB_CODES</dt><dd><p>Read by the ASCII2NC configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding ASCII2NC configuration files for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-time-summary-raw-data">ASCII2NC_TIME_SUMMARY_RAW_DATA</dt><dd><p>Read by the Ascii2Nc configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding Ascii2Nc configuration files for more information.</p>
+<dt id="term-ascii2nc-time-summary-raw-data">ASCII2NC_TIME_SUMMARY_RAW_DATA</dt><dd><p>Read by the ASCII2NC configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding ASCII2NC configuration files for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-time-summary-step">ASCII2NC_TIME_SUMMARY_STEP</dt><dd><p>Read by the Ascii2Nc configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding Ascii2Nc configuration files for more information.</p>
+<dt id="term-ascii2nc-time-summary-step">ASCII2NC_TIME_SUMMARY_STEP</dt><dd><p>Read by the ASCII2NC configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding ASCII2NC configuration files for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-time-summary-types">ASCII2NC_TIME_SUMMARY_TYPES</dt><dd><p>Read by the Ascii2Nc configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding Ascii2Nc configuration files for more information.</p>
+<dt id="term-ascii2nc-time-summary-types">ASCII2NC_TIME_SUMMARY_TYPES</dt><dd><p>Read by the ASCII2NC configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding ASCII2NC configuration files for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-time-summary-valid-freq">ASCII2NC_TIME_SUMMARY_VALID_FREQ</dt><dd><p>Read by the Ascii2Nc configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding Ascii2Nc configuration files for more information.</p>
+<dt id="term-ascii2nc-time-summary-valid-freq">ASCII2NC_TIME_SUMMARY_VALID_FREQ</dt><dd><p>Read by the ASCII2NC configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding ASCII2NC configuration files for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-time-summary-valid-thresh">ASCII2NC_TIME_SUMMARY_VALID_THRESH</dt><dd><p>Read by the Ascii2Nc configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding Ascii2Nc configuration files for more information.</p>
+<dt id="term-ascii2nc-time-summary-valid-thresh">ASCII2NC_TIME_SUMMARY_VALID_THRESH</dt><dd><p>Read by the ASCII2NC configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding ASCII2NC configuration files for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-time-summary-var-names">ASCII2NC_TIME_SUMMARY_VAR_NAMES</dt><dd><p>Read by the Ascii2Nc configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding Ascii2Nc configuration files for more information.</p>
+<dt id="term-ascii2nc-time-summary-var-names">ASCII2NC_TIME_SUMMARY_VAR_NAMES</dt><dd><p>Read by the ASCII2NC configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding ASCII2NC configuration files for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
-<dt id="term-ascii2nc-time-summary-width">ASCII2NC_TIME_SUMMARY_WIDTH</dt><dd><p>Read by the Ascii2Nc configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding Ascii2Nc configuration files for more information.</p>
+<dt id="term-ascii2nc-time-summary-width">ASCII2NC_TIME_SUMMARY_WIDTH</dt><dd><p>Read by the ASCII2NC configuration file if specified by <a class="reference internal" href="#term-ascii2nc-config-file"><span class="xref std std-term">ASCII2NC_CONFIG_FILE</span></a>. See the MET User’s Guide section regarding ASCII2NC configuration files for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
@@ -1913,6 +1913,20 @@
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
+<dt id="term-fcst-series-analysis-input-dir">FCST_SERIES_ANALYSIS_INPUT_DIR</dt><dd><p>Specify the directory to read forecast input for SeriesAnalysis. Corresponds to <a class="reference internal" href="#term-fcst-series-analysis-input-template"><span class="xref std std-term">FCST_SERIES_ANALYSIS_INPUT_TEMPLATE</span></a>. There is an equivalent configuration variable for observation data called <a class="reference internal" href="#term-obs-series-analysis-input-dir"><span class="xref std std-term">OBS_SERIES_ANALYSIS_INPUT_DIR</span></a>.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [dir]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-fcst-series-analysis-input-template">FCST_SERIES_ANALYSIS_INPUT_TEMPLATE</dt><dd><p>Specify the filename template to find forecast input for SeriesAnalysis at each run time. Corresponds to <a class="reference internal" href="#term-fcst-series-analysis-input-dir"><span class="xref std std-term">FCST_SERIES_ANALYSIS_INPUT_DIR</span></a>. There is an equivalent configuration variable for observation data called <a class="reference internal" href="#term-obs-series-analysis-input-template"><span class="xref std std-term">OBS_SERIES_ANALYSIS_INPUT_TEMPLATE</span></a>.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [dir]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-fcst-series-analysis-nc-tile-regex">FCST_SERIES_ANALYSIS_NC_TILE_REGEX</dt><dd><p>Define the regular expression for input forecast files that are in netCDF.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em>  SeriesByLead, SeriesByInit</div>
@@ -2473,9 +2487,9 @@
 <div class="line"><em>Default:</em></div>
 </div>
 </dd>
-<dt id="term-log-ascii2nc-verbosity">LOG_ASCII2NC_VERBOSITY</dt><dd><p>Overrides the log verbosity for Ascii2Nc only. If not set, the verbosity level is controlled by <a class="reference internal" href="#term-log-met-verbosity"><span class="xref std std-term">LOG_MET_VERBOSITY</span></a>.</p>
+<dt id="term-log-ascii2nc-verbosity">LOG_ASCII2NC_VERBOSITY</dt><dd><p>Overrides the log verbosity for ASCII2NC only. If not set, the verbosity level is controlled by <a class="reference internal" href="#term-log-met-verbosity"><span class="xref std std-term">LOG_MET_VERBOSITY</span></a>.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em> Ascii2Nc</div>
+<div class="line"><em>Used by:</em> ASCII2NC</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
@@ -2588,6 +2602,13 @@ CRITICAL</p>
 <dt id="term-log-regrid-data-plane-verbosity">LOG_REGRID_DATA_PLANE_VERBOSITY</dt><dd><p>Overrides the log verbosity for RegridDataPlane only. If not set, the verbosity level is controlled by <a class="reference internal" href="#term-log-met-verbosity"><span class="xref std std-term">LOG_MET_VERBOSITY</span></a>.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em> RegridDataPlane</div>
+<div class="line"><em>Family:</em> [config]</div>
+<div class="line"><em>Default:</em> None</div>
+</div>
+</dd>
+<dt id="term-log-series-analysis-verbosity">LOG_SERIES_ANALYSIS_VERBOSITY</dt><dd><p>Overrides the log verbosity for SeriesAnalysis only. If not set, the verbosity level is controlled by <a class="reference internal" href="#term-log-met-verbosity"><span class="xref std std-term">LOG_MET_VERBOSITY</span></a>.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
 <div class="line"><em>Family:</em> [config]</div>
 <div class="line"><em>Default:</em> None</div>
 </div>
@@ -4011,6 +4032,20 @@ CRITICAL</p>
 <div class="line"><em>Default:</em></div>
 </div>
 </dd>
+<dt id="term-obs-series-analysis-input-dir">OBS_SERIES_ANALYSIS_INPUT_DIR</dt><dd><p>Specify the directory to read observation input for SeriesAnalysis. Corresponds to <a class="reference internal" href="#term-obs-series-analysis-input-template"><span class="xref std std-term">OBS_SERIES_ANALYSIS_INPUT_TEMPLATE</span></a>. There is an equivalent configuration variable for forecast data called <a class="reference internal" href="#term-fcst-series-analysis-input-dir"><span class="xref std std-term">FCST_SERIES_ANALYSIS_INPUT_DIR</span></a>.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [dir]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-obs-series-analysis-input-template">OBS_SERIES_ANALYSIS_INPUT_TEMPLATE</dt><dd><p>Specify the filename template to find observation input for SeriesAnalysis at each run time. Corresponds to <a class="reference internal" href="#term-obs-series-analysis-input-dir"><span class="xref std std-term">OBS_SERIES_ANALYSIS_INPUT_DIR</span></a>. There is an equivalent configuration variable for forecast data called <a class="reference internal" href="#term-fcst-series-analysis-input-template"><span class="xref std std-term">FCST_SERIES_ANALYSIS_INPUT_TEMPLATE</span></a>.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesAnalysis</div>
+<div class="line"><em>Family:</em>  [dir]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-obs-series-analysis-nc-tile-regex">OBS_SERIES_ANALYSIS_NC_TILE_REGEX</dt><dd><p>The regular expression used to search the input files that are in netCDF format and used in the series_by_analysis process.</p>
 <div class="line-block">
 <div class="line"><em>Used by:</em> SeriesByLead, SeriesByInit</div>
@@ -4351,6 +4386,13 @@ CRITICAL</p>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
+<dt id="term-pcp-combine-custom-loop-list">PCP_COMBINE_CUSTOM_LOOP_LIST</dt><dd><p>List of strings that are used to run PCPCombine multiple times for each run time to allow the tool to be run with different configurations. The filename template tag {custom?fmt=%s} can be used throughout the METplus configuration file. If unset or left blank, PCPCombine will run once per run time.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> PCPCombine</div>
+<div class="line"><em>Family:</em> config</div>
+<div class="line"><em>Default:</em> None</div>
+</div>
+</dd>
 <dt id="term-pcp-combine-method">PCP_COMBINE_METHOD</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-obs-pcp-combine-method"><span class="xref std std-term">OBS_PCP_COMBINE_METHOD</span></a> and/or  <a class="reference internal" href="#term-fcst-pcp-combine-method"><span class="xref std std-term">FCST_PCP_COMBINE_METHOD</span></a> instead.</p>
@@ -4679,11 +4721,56 @@ CRITICAL</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-series-analysis-config-file"><span class="xref std std-term">SERIES_ANALYSIS_CONFIG_FILE</span></a> instead.</p>
 </div>
 </dd>
+<dt id="term-series-analysis-climo-mean-input-dir">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_DIR</dt><dd><p>Directory containing the climatology mean file used by SeriesAnalysis. This variable is optional because you can specify the full path to a climatology file using <a class="reference internal" href="#term-series-analysis-climo-mean-input-template"><span class="xref std std-term">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_TEMPLATE</span></a>.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
+<div class="line"><em>Family:</em> [dir]</div>
+<div class="line"><em>Default:</em> None</div>
+</div>
+</dd>
+<dt id="term-series-analysis-climo-mean-input-template">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_TEMPLATE</dt><dd><p>Filename template of the climatology mean file used by SeriesAnalysis. See also <a class="reference internal" href="#term-series-analysis-climo-mean-input-dir"><span class="xref std std-term">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_DIR</span></a>.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
+<div class="line"><em>Family:</em> [filename_templates]</div>
+<div class="line"><em>Default:</em> None</div>
+</div>
+</dd>
+<dt id="term-series-analysis-climo-stdev-input-dir">SERIES_ANALYSIS_CLIMO_STDEV_INPUT_DIR</dt><dd><p>Directory containing the climatology standard deviation file used by SeriesAnalysis. This variable is optional because you can specify the full path to a climatology file using <a class="reference internal" href="#term-series-analysis-climo-stdev-input-template"><span class="xref std std-term">SERIES_ANALYSIS_CLIMO_STDEV_INPUT_TEMPLATE</span></a>.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
+<div class="line"><em>Family:</em> [dir]</div>
+<div class="line"><em>Default:</em> None</div>
+</div>
+</dd>
+<dt id="term-series-analysis-climo-stdev-input-template">SERIES_ANALYSIS_CLIMO_STDEV_INPUT_TEMPLATE</dt><dd><p>Filename template of the climatology standard deviation file used by SeriesAnalysis. See also <a class="reference internal" href="#term-series-analysis-climo-stdev-input-dir"><span class="xref std std-term">SERIES_ANALYSIS_CLIMO_STDEV_INPUT_DIR</span></a>.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
+<div class="line"><em>Family:</em> [filename_templates]</div>
+<div class="line"><em>Default:</em> None</div>
+</div>
+</dd>
 <dt id="term-series-analysis-config-file">SERIES_ANALYSIS_CONFIG_FILE</dt><dd><p>Specify the absolute path for the configuration file to use with the MET series_analysis tool by initialization time.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByInit, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  SeriesByInit, SeriesByLead, SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
+<dt id="term-series-analysis-custom-loop-list">SERIES_ANALYSIS_CUSTOM_LOOP_LIST</dt><dd><p>List of strings that are used to run SeriesAnalysis multiple times for each run time to allow the tool to be run with different configurations. The filename template tag {custom?fmt=%s} can be used throughout the METplus configuration file. For example, the text can be used to supply different configuration files and output filenames/directories. If you have two SeriesAnalysis configuration files, SeriesAnalysisConfig_one and SeriesAnalysisConfig_two, you can set:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[config]
+SERIES_ANALYSIS_CUSTOM_LOOP_LIST = one, two
+SERIES_ANALYSIS_CONFIG_FILE = {CONFIG_DIR}/SeriesAnalysisConfig_{custom?fmt=%s}
+
+[dir]
+SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/{custom?fmt=%s}
+</pre></div>
+</div>
+<p>ith this configuration, SeriesAnalysis will be called twice. The first run will use SeriesAnalysisConfig_one and write output to {OUTPUT_BASE}/one. The second run will use SeriesAnalysisConfig_two and write output to {OUTPUT_BASE}/two.</p>
+<p>f unset or left blank, SeriesAnalysis will run once per run time.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
+<div class="line"><em>Family:</em> config</div>
+<div class="line"><em>Default:</em> None</div>
 </div>
 </dd>
 <dt id="term-series-analysis-filter-opts">SERIES_ANALYSIS_FILTER_OPTS</dt><dd><p>Filtering options to be applied during series analysis. Filter options are performed by invoking the MET tc_stat tool within the METplus wrapper. Refer to the MET User’s Guide for the syntax to use for performing filtering via the MET tc_stat tool.</p>
@@ -4719,23 +4806,37 @@ CRITICAL</p>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
-<dt id="term-series-analysis-output-dir">SERIES_ANALYSIS_OUTPUT_DIR</dt><dd><p>Specify the directory where files will be written from the MET series analysis tool when processing by initialization time.</p>
+<dt id="term-series-analysis-is-paired">SERIES_ANALYSIS_IS_PAIRED</dt><dd><p>If true, the -paired flag is added to the SeriesAnalysis command.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByInit</div>
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
+<div class="line"><em>Family:</em> [config]</div>
+<div class="line"><em>Default:</em> None</div>
+</div>
+</dd>
+<dt id="term-series-analysis-output-dir">SERIES_ANALYSIS_OUTPUT_DIR</dt><dd><p>Specify the directory where files will be written from the MET series analysis tool.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  SeriesByInit, SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [dir]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
 </dd>
+<dt id="term-series-analysis-output-template">SERIES_ANALYSIS_OUTPUT_TEMPLATE</dt><dd><p>Filename template of the output file generated by SeriesAnalysis. See also <a class="reference internal" href="#term-series-analysis-output-dir"><span class="xref std std-term">SERIES_ANALYSIS_OUTPUT_DIR</span></a>.</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em> SeriesAnalysis</div>
+<div class="line"><em>Family:</em> [filename_templates]</div>
+<div class="line"><em>Default:</em> None</div>
+</div>
+</dd>
 <dt id="term-series-analysis-regrid-to-grid">SERIES_ANALYSIS_REGRID_TO_GRID</dt><dd><p>Used to set the regrid dictionary item ‘to_grid’ in the MET SeriesAnalysis config file. See the MET User’s Guide for more information.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByLead, SeriesByInit</div>
+<div class="line"><em>Used by:</em>  SeriesByLead, SeriesByInit, SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em> NONE</div>
 </div>
 </dd>
 <dt id="term-series-analysis-stat-list">SERIES_ANALYSIS_STAT_LIST</dt><dd><p>Specify a list of statistics to be computed by the MET series_analysis tool.</p>
 <div class="line-block">
-<div class="line"><em>Used by:</em>  SeriesByInit, SeriesByLead</div>
+<div class="line"><em>Used by:</em>  SeriesByInit, SeriesByLead, SeriesAnalysis</div>
 <div class="line"><em>Family:</em>  [config]</div>
 <div class="line"><em>Default:</em>  Varies</div>
 </div>
