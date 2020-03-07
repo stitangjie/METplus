@@ -92,8 +92,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">User’s Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">1. Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="installation.html">2. Software Installation/Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wrappers.html">3. Python Wrappers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">4. System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">3. System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wrappers.html">4. Python Wrappers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usecases.html">5. METplus Use Cases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="references.html">6. References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
@@ -2379,6 +2379,13 @@
 <div class="line"><em>Default:</em></div>
 </div>
 </dd>
+<dt id="term-input-base">INPUT_BASE</dt><dd><p>Location of sample input data to run use cases found in the METplus repository. Must be set correctly to run any of the use cases. Each of the sample data tarballs attached to the METplus release should be untarred in this directory. If done correctly, this directory should contain a directory named ‘met_test’ and a directory named ‘model_applications.’</p>
+<div class="line-block">
+<div class="line"><em>Used by:</em>  All</div>
+<div class="line"><em>Family:</em>  [dir]</div>
+<div class="line"><em>Default:</em>  Varies</div>
+</div>
+</dd>
 <dt id="term-interp">INTERP</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-interp-mthd-list"><span class="xref std std-term">INTERP_MTHD_LIST</span></a> instead.</p>
@@ -4590,7 +4597,7 @@ CRITICAL</p>
 </dd>
 <dt id="term-proj-dir">PROJ_DIR</dt><dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>DEPRECATED:</strong> A directory for generic use. The user can store input files (if INPUT_BASE is not defined), intermediate files, and any other project-related files.</p>
+<p><strong>DEPRECATED:</strong> Please use <a class="reference internal" href="#term-input-base"><span class="xref std std-term">INPUT_BASE</span></a> instead.</p>
 </div>
 </dd>
 <dt id="term-reference-tmpl">REFERENCE_TMPL</dt><dd><div class="admonition warning">

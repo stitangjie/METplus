@@ -92,8 +92,8 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">User’s Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../overview.html">1. Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../installation.html">2. Software Installation/Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../wrappers.html">3. Python Wrappers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../systemconfiguration.html">4. System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../systemconfiguration.html">3. System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../wrappers.html">4. Python Wrappers</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../usecases.html">5. METplus Use Cases</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../met_tool_wrapper/index.html">5.1. MET tools</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.2. Model Applications</a><ul class="current">
@@ -317,9 +317,6 @@ with the -c option, i.e. -c parm/use_cases/model_applications/precipitation/Ense
 <span class="c1"># 0 quiet to 5 loud, Verbosity setting for MET output, 2 is default.</span>
 <span class="c1"># This takes precendence over the general MET logging level set in metplus_logging.conf</span>
 <span class="nv">LOG_ENSEMBLE_STAT_VERBOSITY</span> <span class="o">=</span> <span class="m">3</span>
-
-<span class="c1"># MET Configuration files for EnsembleSTat</span>
-<span class="nv">METPLUS_CONF</span>  <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/<span class="o">{</span>MODEL<span class="o">}</span>/ensemble/metplus_final.conf
 
 <span class="c1"># MET Configuration files for EnsembleSTat</span>
 <span class="nv">ENSEMBLE_STAT_CONFIG_FILE</span> <span class="o">=</span> <span class="o">{</span>CONFIG_DIR<span class="o">}</span>/EnsembleStatConfig_APCP03
