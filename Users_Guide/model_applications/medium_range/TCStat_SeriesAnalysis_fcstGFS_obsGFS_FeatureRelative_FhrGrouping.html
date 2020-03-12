@@ -198,7 +198,7 @@ series by lead example illustrates that results can be grouped based on forecast
 For example, one can readily aggregate series analysis results by the first, second, and third days of
 a storm event, rather than by all the forecast hours/lead times.</p>
 <div class="section" id="scientific-objective">
-<h2><span class="section-number">5.2.2.4.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>By maintaining focus of each evaluation time (or evaluation time series, in this case)
 on a user-defined area around a cyclone, the model statistical errors associated
 with cyclonic physical features (moisture flux, stability, strength of upper-level
@@ -211,7 +211,7 @@ Specifically, this use case creates bins of forecast lead times as specified by 
 given ranges which provides additional insight directly into forecast lead time accuracy.</p>
 </div>
 <div class="section" id="datasets">
-<h2><span class="section-number">5.2.2.4.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <p>Relevant information about the datasets that would be beneficial include:</p>
 <blockquote>
 <div><ul class="simple">
@@ -222,7 +222,7 @@ given ranges which provides additional insight directly into forecast lead time 
 </div></blockquote>
 </div>
 <div class="section" id="metplus-components">
-<h2><span class="section-number">5.2.2.4.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case first runs TcPairs and ExtractTiles wrappers to generate matched
 tropical cyclone data and regrid them into appropriately-sized tiles
 along a storm track. The MET tc-stat tool is used to filter the
@@ -235,7 +235,7 @@ groupings as specified by the start, end and increment in the METplus
 configuration file, as well as labels to identify each forecast hour grouping.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2><span class="section-number">5.2.2.4.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>The following tools are used for each run time:</p>
 <p>TcPairs &gt; RegridDataPlane, TCStat &gt; SeriesAnalysis</p>
 <p>This example loops by forecast/lead time (with begin, end, and increment as specified in the METplus
@@ -258,7 +258,7 @@ in the run times below.</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2><span class="section-number">5.2.2.4.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_Standard.conf
@@ -688,7 +688,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/TCSta
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2><span class="section-number">5.2.2.4.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -1175,7 +1175,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p>parm/use_cases/met_tool_wrapper/SeriesByLead/SeriesByLead.py</p>
 </div>
 <div class="section" id="running-metplus">
-<h2><span class="section-number">5.2.2.4.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_Standard.conf and TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_FhrGrouping.conf, then a user-specific system configuration file:</p>
@@ -1243,7 +1243,7 @@ Example User Configuration File:</p>
 <p><strong>NOTE:</strong> The INPUT_BASE, OUTPUT_BASE, and MET_INSTALL_DIR must be located under the [dir] section, while the RM, CUT, TR, NCAP2, CONVERT, and NCDUMP must be located under the [exe] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2><span class="section-number">5.2.2.4.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -1285,7 +1285,7 @@ results.</p>
 </div></blockquote>
 </div>
 <div class="section" id="keywords">
-<h2><span class="section-number">5.2.2.4.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <p>sphinx_gallery_thumbnail_path = ‘_static/medium_range-TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_FhrGrouping.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

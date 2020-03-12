@@ -194,13 +194,13 @@
 compare a gridded forecast field to point observations, with an output of statistical
 comparisons.</p>
 <div class="section" id="scientific-objective">
-<h2><span class="section-number">5.2.2.6.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>To provide useful statistical information on the relationship between observation data
 in point format to a gridded forecast. These values can be used to help correct model
 deviations from observed values.</p>
 </div>
 <div class="section" id="datasets">
-<h2><span class="section-number">5.2.2.6.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Forecast:</strong> GFS temperature, u-wind component, v-wind component, and height</div>
 <div class="line"><strong>Observation:</strong> NAM prepBURF data</div>
@@ -214,11 +214,11 @@ deviations from observed values.</p>
 </div>
 </div>
 <div class="section" id="metplus-components">
-<h2><span class="section-number">5.2.2.6.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case utilizes the METplus PB2NC wrapper to convert PrepBUFR point observations to NetCDF format and then compare them to gridded forecast data using PointStat.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2><span class="section-number">5.2.2.6.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>PB2NC and PointStat are the tools called in this example. It processes the following run times:</p>
 <div class="line-block">
 <div class="line"><strong>Valid:</strong> 2017-06-01 0Z</div>
@@ -231,7 +231,7 @@ deviations from observed values.</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2><span class="section-number">5.2.2.6.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.conf</p>
@@ -365,7 +365,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/medium_range/Point
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2><span class="section-number">5.2.2.6.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -775,7 +775,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 </ul>
 </div>
 <div class="section" id="running-metplus">
-<h2><span class="section-number">5.2.2.6.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.conf then a user-specific system configuration file:</p>
@@ -805,7 +805,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2><span class="section-number">5.2.2.6.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -820,7 +820,7 @@ and will contain the following files:</p>
 </ul>
 </div>
 <div class="section" id="keywords">
-<h2><span class="section-number">5.2.2.6.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <p>sphinx_gallery_thumbnail_path = ‘_static/medium_range-PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

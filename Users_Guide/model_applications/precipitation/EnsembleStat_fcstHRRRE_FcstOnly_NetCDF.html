@@ -171,7 +171,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../../_sources/Users_Guide/model_applications/precipitation/EnsembleStat_fcstHRRRE_APCP3_GRIB.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/Users_Guide/model_applications/precipitation/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -186,40 +186,37 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-precipitation-ensemblestat-fcsthrrre-apcp3-grib-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-precipitation-ensemblestat-fcsthrrre-fcstonly-netcdf-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="hrrr-ensemble-use-case">
-<span id="sphx-glr-users-guide-model-applications-precipitation-ensemblestat-fcsthrrre-apcp3-grib-py"></span><h1><span class="section-number">5.2.3.6. </span>HRRR Ensemble Use Case<a class="headerlink" href="#hrrr-ensemble-use-case" title="Permalink to this headline">¶</a></h1>
-<p>This use case builds a 3 hour gridded precipitation accumulation using 1 hour accumulation fields,</p>
+<span id="sphx-glr-users-guide-model-applications-precipitation-ensemblestat-fcsthrrre-fcstonly-netcdf-py"></span><h1><span class="section-number">5.2.3.6. </span>HRRR Ensemble Use Case<a class="headerlink" href="#hrrr-ensemble-use-case" title="Permalink to this headline">¶</a></h1>
+<p>This use case creates ensemble statistics from a previously accumulated 3 hour
+precipitation case</p>
 <div class="section" id="scientific-objective">
-<h2><span class="section-number">5.2.3.6.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
-<p>Describe the scientific objective of the use case here. This can be fairly
-simple, or complex depending on the task.</p>
+<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<p>To provide useful, statistical information on the relationship between observation data
+and an ensemble forecast. This information can be used to help correct ensemble
+member deviations from observed values.</p>
 </div>
 <div class="section" id="datasets">
-<h2><span class="section-number">5.2.3.6.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
-<p>Describe the datasets here. Relevant information about the datasets that would
-be beneficial include:</p>
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p>Forecast dataset: RUC GRIB 3 hour precipitation accumulation</p></li>
-<li><p>Observation dataset: Stage II GRIB 1 hour precipitation accumulation</p></li>
-<li><p>Sources of data (links, contacts, etc…)</p></li>
+<li><p>Forecast dataset: HRRRE 3 member ensemble netcdf 3 hour precipitation accumulation</p></li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="metplus-components">
-<h2><span class="section-number">5.2.3.6.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
-<p>This use case runs EnsembleStat on the GRIB HRRRE data</p>
+<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<p>This use case runs EnsembleStat on HRRRE data from 3 members after
+running it through pcp_combine to create a 3 hour precipitation accumulation</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2><span class="section-number">5.2.3.6.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
-<dl class="simple">
-<dt>The following tools are used for each run time:</dt><dd><p>EnsembleStat</p>
-</dd>
-<dt>This example loops by initialization time. For each initialization time</dt><dd><p>it will process forecast leads 3, 6, 9 and 12 for 2 initilization times</p>
-</dd>
-</dl>
+<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<p>The following tools are used for each run time:
+EnsembleStat</p>
+<p>This example loops by initialization time. For each initialization time
+it will process forecast leads 3, 6, 9 and 12</p>
 <p>Run times:</p>
 <div class="line-block">
 <div class="line"><strong>Init:</strong> 2019-05-19_12Z</div>
@@ -255,10 +252,10 @@ be beneficial include:</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2><span class="section-number">5.2.3.6.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
-with the -c option, i.e. -c parm/use_cases/model_applications/precipitation/EnsembleStat_fcstHRRRE_APCP3_GRIB.conf</p>
+with the -c option, i.e. -c parm/use_cases/model_applications/precipitation/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.conf</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>config<span class="o">]</span>
 
 <span class="c1">## Configuration-related settings such as the process list, begin and end times, etc.</span>
@@ -335,7 +332,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/precipitation/Ense
 <span class="nv">ENSEMBLE_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/<span class="o">{</span>MODEL<span class="o">}</span>/ensemble
 
 <span class="nv">ENSEMBLE_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/precipitation/HRRRE/pcp_combine
-<span class="nv">ENSEMBLE_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/precipitation/EnsembleSTat_fcstHRRRE_APCP3_GRIB/EnsembleStat
+<span class="nv">ENSEMBLE_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/precipitation/EnsembleSTat_fcstHRRRE_FcstOnly_NetCDF/EnsembleStat
 
 <span class="o">[</span>filename_templates<span class="o">]</span>
 
@@ -349,7 +346,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/precipitation/Ense
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2><span class="section-number">5.2.3.6.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -578,22 +575,20 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 ////////////////////////////////////////////////////////////////////////////////
 </pre></div>
 </div>
-<dl class="simple">
-<dt>See the following files for more information about the environment variables set in this configuration file.</dt><dd><p>parm/use_cases/met_tool_wrapper/EnsembleStat.py</p>
-</dd>
-</dl>
+<p>See the following files for more information about the environment variables set in this configuration file.</p>
+<p>parm/use_cases/met_tool_wrapper/EnsembleStat.py</p>
 </div>
 <div class="section" id="running-metplus">
-<h2><span class="section-number">5.2.3.6.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
-<li><p>Passing in EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.conf then a user-specific system configuration file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/model_applications/precipitation/EnsembleStat_fcstHRRRE_APCP3_GRIB.conf -c /path/to/user_system.conf
+<li><p>Passing in EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.conf then a user-specific system configuration file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/model_applications/precipitation/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.conf -c /path/to/user_system.conf
 </pre></div>
 </div>
 </li>
-<li><p>Modifying the configurations in parm/metplus_config, then passing in EnsembleStat_fcstHRRRE_APCP3_GRIB.conf:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/model_applications/precipitation/EnsembleStat_fcstHRRRE_APCP3_GRIB.conf
+<li><p>Modifying the configurations in parm/metplus_config, then passing in EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.conf:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/model_applications/precipitation/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.conf
 </pre></div>
 </div>
 </li>
@@ -614,19 +609,23 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2><span class="section-number">5.2.3.6.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
 </div>
 <p>Refer to the value set for <strong>OUTPUT_BASE</strong> to find where the output data was generated.
-Output for this use case will be found in model_applications/precipitation/EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField/201807091200 (relative to <strong>OUTPUT_BASE</strong>)
-and will contain the following files:</p>
+Output for this use case will be found in model_applications/precipitation/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF/EnsembleStat (relative to <strong>OUTPUT_BASE</strong>)
+The following folder/file combination will be created:</p>
+<p>-201905191200</p>
 <ul class="simple">
 <li><p>ensemble_stat_APCP_03_20190519_150000V_ens.nc</p></li>
 <li><p>ensemble_stat_APCP_03_20190519_180000V_ens.nc</p></li>
 <li><p>ensemble_stat_APCP_03_20190519_210000V_ens.nc</p></li>
 <li><p>ensemble_stat_APCP_03_20190520_000000V_ens.nc</p></li>
+</ul>
+<p>-201905200000</p>
+<ul class="simple">
 <li><p>ensemble_stat_APCP_03_20190520_030000V_ens.nc</p></li>
 <li><p>ensemble_stat_APCP_03_20190520_060000V_ens.nc</p></li>
 <li><p>ensemble_stat_APCP_03_20190520_090000V_ens.nc</p></li>
@@ -634,22 +633,19 @@ and will contain the following files:</p>
 </ul>
 </div>
 <div class="section" id="keywords">
-<h2><span class="section-number">5.2.3.6.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
-<p>Choose from the following pool of keywords, and include them in a note directive below.
-Remove any keywords you don’t use.</p>
-<p>EnsembleStatUseCase, PrecipitationUseCase</p>
-<p>Now include them like this:</p>
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<p>sphinx_gallery_thumbnail_path = ‘_static/precipitation-EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>EnsembleStatUseCase, PrecipitationUseCases</p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=EnsembleStatToolUseCase&amp;check_keywords=yes&amp;area=default">EnsembleStatToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHWTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHWTOrgUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&amp;check_keywords=yes&amp;area=default">PrecipitationAppUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDFFileUseCase</a></p>
 </div>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-precipitation-ensemblestat-fcsthrrre-apcp3-grib-py">
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-precipitation-ensemblestat-fcsthrrre-fcstonly-netcdf-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/8dd0fbef4997ada9276b737b9a0f2dbe/EnsembleStat_fcstHRRRE_APCP3_GRIB.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">EnsembleStat_fcstHRRRE_APCP3_GRIB.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/05762225a2415ee763e66fdeb4cb8d36/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/9cfee53cebacbcc81ecef165ffb7dab7/EnsembleStat_fcstHRRRE_APCP3_GRIB.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">EnsembleStat_fcstHRRRE_APCP3_GRIB.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/78db7dbf16aba1bdbbee9d2d4de02800/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>

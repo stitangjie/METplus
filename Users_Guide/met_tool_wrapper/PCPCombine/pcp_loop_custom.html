@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1.11.4. PCPCombine loop CUSTOM &mdash; METplus 3.0 documentation</title>
+  <title>5.1.10.4. PCPCombine Custom String Looping &mdash; METplus 3.0 documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.1.11.5. PCPCombine DERIVE" href="pcp_derive.html" />
-    <link rel="prev" title="5.1.11.3. PCPCombine ADD" href="pcp_add.html" /> 
+    <link rel="next" title="5.1.10.5. PCPCombine DERIVE" href="pcp_derive.html" />
+    <link rel="prev" title="5.1.10.3. PCPCombine ADD" href="pcp_add.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,17 +97,17 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../usecases.html">5. METplus Use Cases</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.1. MET tools</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../index.html#ascii2nc">5.1.1. ASCII2NC</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#custom-ingest">5.1.2. Custom Ingest</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#cyclone-plotter">5.1.3. Cyclone Plotter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#ensemblestat">5.1.4. EnsembleStat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#example">5.1.5. Example</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#gempaktocf">5.1.6. GempakToCF</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#gridstat">5.1.7. GridStat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#mode">5.1.8. MODE</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#mtd">5.1.9. MTD</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#pb2nc">5.1.10. PB2NC</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#pcpcombine">5.1.11. PCPCombine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#pointstat">5.1.12. PointStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cyclone-plotter">5.1.2. Cyclone Plotter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#ensemblestat">5.1.3. EnsembleStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#example">5.1.4. Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#gempaktocf">5.1.5. GempakToCF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#gridstat">5.1.6. GridStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#mode">5.1.7. MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#mtd">5.1.8. MTD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#pb2nc">5.1.9. PB2NC</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#pcpcombine">5.1.10. PCPCombine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#pointstat">5.1.11. PointStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#python-embedding-ingest">5.1.12. Python Embedding Ingest</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#regriddataplane">5.1.13. RegridDataPlane</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#seriesbyinit">5.1.14. SeriesByInit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#seriesbylead">5.1.15. SeriesByLead</a></li>
@@ -178,7 +178,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.1. </span>MET tools</a> &raquo;</li>
         
-      <li><span class="section-number">5.1.11.4. </span>PCPCombine loop CUSTOM</li>
+      <li><span class="section-number">5.1.10.4. </span>PCPCombine Custom String Looping</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -201,21 +201,21 @@
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-pcpcombine-pcp-loop-custom-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="pcpcombine-loop-custom">
-<span id="sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcp-loop-custom-py"></span><h1><span class="section-number">5.1.11.4. </span>PCPCombine loop CUSTOM<a class="headerlink" href="#pcpcombine-loop-custom" title="Permalink to this headline">¶</a></h1>
+<div class="sphx-glr-example-title section" id="pcpcombine-custom-string-looping">
+<span id="sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcp-loop-custom-py"></span><h1><span class="section-number">5.1.10.4. </span>PCPCombine Custom String Looping<a class="headerlink" href="#pcpcombine-custom-string-looping" title="Permalink to this headline">¶</a></h1>
 <p>This use case will run the MET PCPCombine tool in ADD mode and read in files. It highlights the ability to loop over a user-defined list of strings, which are used to extract the multiple input files across a given run time.</p>
 <div class="section" id="scientific-objective">
-<h2><span class="section-number">5.1.11.4.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>None. This wrapper’s purpose is to demonstrate the ability to read in a user-defined
 list of strings, processing each item in the list for the given run time.</p>
 </div>
 <div class="section" id="datasets">
-<h2><span class="section-number">5.1.11.4.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Forecast:</strong> WRF-ARW precipitation 24h accumulation fields</div>
 </div>
 <div class="line-block">
-<div class="line"><strong>Location:</strong> All of the input data required for this use case can be found in the sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: <a class="reference external" href="https://github.com/NCAR/METplus/releases">https://github.com/NCAR/METplus/releases</a></div>
+<div class="line"><strong>Location:</strong> All of the input data required for this use case can be found in the met_test sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: <a class="reference external" href="https://github.com/NCAR/METplus/releases">https://github.com/NCAR/METplus/releases</a></div>
 <div class="line">This tarball should be unpacked into the directory that you will set the value of INPUT_BASE. See ‘Running METplus’ section for more information.</div>
 </div>
 <div class="line-block">
@@ -223,14 +223,14 @@ list of strings, processing each item in the list for the given run time.</p>
 </div>
 </div>
 <div class="section" id="metplus-components">
-<h2><span class="section-number">5.1.11.4.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case utilizes the METplus PCPCombine wrapper to run across a user-provided
 list of strings, executing each item in the list for each run time. In this example,
 the ADD mode of PCPCombine is used, but only a single file is processed for each run time.
 Because it is executed in this manner, the output will match the input.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2><span class="section-number">5.1.11.4.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>PCPCombine is the only tool called in this example. It processes the following
 run times:</p>
 <div class="line-block">
@@ -239,7 +239,7 @@ run times:</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2><span class="section-number">5.1.11.4.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/PCPCombine/pcp_loop_custom.conf</p>
@@ -287,6 +287,9 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/PCPCombine/pcp_loop_
 <span class="nv">LOOP_ORDER</span> <span class="o">=</span> <span class="nb">times</span>
 
 <span class="nv">PCP_COMBINE_CUSTOM_LOOP_LIST</span> <span class="o">=</span> arw-fer-gep1, arw-fer-gep5, arw-sch-gep2, arw-sch-gep6, arw-tom-gep3, arw-tom-gep7
+
+<span class="c1"># verbosity of PCPCombine MET output</span>
+<span class="nv">LOG_PCP_COMBINE_VERBOSITY</span> <span class="o">=</span> <span class="m">2</span>
 
 <span class="c1"># If True, run pcp_combine on forecast data</span>
 <span class="c1"># observation equivalent OBS_PCP_COMBINE_RUN also exists</span>
@@ -352,11 +355,11 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/PCPCombine/pcp_loop_
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2><span class="section-number">5.1.11.4.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>None. PCPCombine does not use configuration files.</p>
 </div>
 <div class="section" id="running-metplus">
-<h2><span class="section-number">5.1.11.4.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in pcp_loop_custom.conf then a user-specific system configuration file:</p>
@@ -386,7 +389,7 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/PCPCombine/pcp_loop_
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2><span class="section-number">5.1.11.4.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -408,10 +411,12 @@ and will contain the following folders:</p>
 </ul>
 </div>
 <div class="section" id="keywords">
-<h2><span class="section-number">5.1.11.4.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<p>sphinx_gallery_thumbnail_path = ‘_static/met_tool_wrapper-PCPCombine.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PCPCombineToolUseCase&amp;check_keywords=yes&amp;area=default">PCPCombineToolUseCase</a></p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PCPCombineToolUseCase&amp;check_keywords=yes&amp;area=default">PCPCombineToolUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=CustomStringLoopingUseCase&amp;check_keywords=yes&amp;area=default">CustomStringLoopingUseCase</a></p>
 </div>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-met-tool-wrapper-pcpcombine-pcp-loop-custom-py">
@@ -434,10 +439,10 @@ and will contain the following folders:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pcp_derive.html" class="btn btn-neutral float-right" title="5.1.11.5. PCPCombine DERIVE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pcp_derive.html" class="btn btn-neutral float-right" title="5.1.10.5. PCPCombine DERIVE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pcp_add.html" class="btn btn-neutral float-left" title="5.1.11.3. PCPCombine ADD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pcp_add.html" class="btn btn-neutral float-left" title="5.1.10.3. PCPCombine ADD" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

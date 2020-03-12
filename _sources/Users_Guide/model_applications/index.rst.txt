@@ -309,13 +309,13 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case builds a 3 hour gridded precipitation accumulation using 1 hour accumulation fiel...">
+    <div class="sphx-glr-thumbcontainer" tooltip="HRRR Ensemble Use Case">
 
 .. only:: html
 
- .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_EnsembleStat_fcstHRRRE_APCP3_GRIB_thumb.png
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_EnsembleStat_fcstHRRRE_FcstOnly_NetCDF_thumb.png
 
-     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_EnsembleStat_fcstHRRRE_APCP3_GRIB.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.py`
 
 .. raw:: html
 
@@ -325,7 +325,7 @@ Precipitation
 .. toctree::
    :hidden:
 
-   /Users_Guide/model_applications/precipitation/EnsembleStat_fcstHRRRE_APCP3_GRIB
+   /Users_Guide/model_applications/precipitation/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF
 
 .. raw:: html
 

@@ -195,7 +195,7 @@ using the MET R script plot_tcmpr.R.  There is a pre-requisite for running
 this use case, the user must have R installed on the computer where the use
 case is being run.</p>
 <div class="section" id="scientific-objective">
-<h2><span class="section-number">5.2.6.2.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>By maintaining focus of each evaluation time on a user-defined area around a cyclone,
 the model statistical errors associated with cyclonic physical features (moisture
 flux, stability, strength of upper-level PV anomaly and jet, etc.) can be related
@@ -207,7 +207,7 @@ that can be gathered. This use case relays the mean and median of forecast lead
 times for cyclone position compared to a reference dataset via boxplot.</p>
 </div>
 <div class="section" id="datasets">
-<h2><span class="section-number">5.2.6.2.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>Forecast dataset: ADeck non-ATCF tropical cyclone data (GFS)</p></li>
@@ -216,14 +216,14 @@ times for cyclone position compared to a reference dataset via boxplot.</p>
 </div></blockquote>
 </div>
 <div class="section" id="metplus-components">
-<h2><span class="section-number">5.2.6.2.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case first runs TcPairs and then generates the requested
 plot types for statistics of interest. The TCMPRPlotterConfig_customize configuration
 file is used by the plot_tcmpr.R script to select things such as the size of
 the plot window that appears on your screen, etc.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2><span class="section-number">5.2.6.2.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>The following tools are used for each run time:</p>
 <p>TcPairs &gt; plot_tcmpr.R</p>
 <p>To generate TcPairs output, this example loops by initialization time for every 6 hour period that is available
@@ -232,7 +232,7 @@ the difference between the MSLP of the Adeck and Bdeck tracks (AMSLP-BMSLP), the
 Bdeck tracks (AMAX_WIND-BMSLP), and the track err (TK_ERR).</p>
 </div>
 <div class="section" id="metplus-configuration">
-<h2><span class="section-number">5.2.6.2.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/model_applications/tc_and_extra_tc/Plotter_fcstGFS_obsGFS_RPlotting.conf</p>
@@ -398,7 +398,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/tc_and_extra_tc/Pl
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2><span class="section-number">5.2.6.2.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -536,7 +536,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p>parm/use_cases/met_tool_wrapper/TCPairs/TCPairs.py</p>
 </div>
 <div class="section" id="running-metplus">
-<h2><span class="section-number">5.2.6.2.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in Plotter_fcstGFS_obsGFS_RPlotting.conf then a user-specific system configuration file:</p>
@@ -566,7 +566,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2><span class="section-number">5.2.6.2.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -590,7 +590,7 @@ and will contain files with the following format:</p>
 * TK_ERR_median.png</p>
 </div>
 <div class="section" id="keywords">
-<h2><span class="section-number">5.2.6.2.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <p>sphinx_gallery_thumbnail_path = ‘_static/tc_and_extra_tc-Plotter_fcstGFS_obsGFS_RPlotting.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

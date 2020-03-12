@@ -107,7 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#set-up-metplus-wrappers-configuration-files">2.8. Set up METplus Wrappers Configuration files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deprecated-configuration-variables">2.9. Deprecated Configuration Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#updating-configuration-files-handling-deprecated-configuration-variables">2.9. Updating Configuration Files - Handling Deprecated Configuration Variables</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#simple-rename">2.9.1. Simple Rename</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#fcst-obs-both-variables">2.9.2. FCST/OBS/BOTH Variables</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pcpcombine-input-levels">2.9.3. PCPCombine Input Levels</a></li>
@@ -430,8 +430,8 @@ configuration files are fully defined. Individual users have the option
 to make customizations by over-riding any of these values in their own
 configuration files.</p>
 </div>
-<div class="section" id="deprecated-configuration-variables">
-<h2><span class="section-number">2.9. </span>Deprecated Configuration Variables<a class="headerlink" href="#deprecated-configuration-variables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="updating-configuration-files-handling-deprecated-configuration-variables">
+<h2><span class="section-number">2.9. </span>Updating Configuration Files - Handling Deprecated Configuration Variables<a class="headerlink" href="#updating-configuration-files-handling-deprecated-configuration-variables" title="Permalink to this headline">¶</a></h2>
 <p>If you have used a previous release of METplus before, this content is important to getting started using a newly released version.</p>
 <p>METplus developers strive to allow backwards compatibility so new versions of the tools will continue to work as they did in previous versions.
 However, sometimes changes are necessary for clarity and cohesion. Many configuration variable names have changed in version 3.0 in an attempt to make their function more clear.
@@ -652,25 +652,28 @@ OUTPUT_BASE = /tmp/output
 
 Currently available processes are:
 - ASCII2NC
-- CustomIngest
 - CyclonePlotter
 - EnsembleStat
+- Example
 - ExtractTiles
 - GempakToCF
 - GridStat
-- MakePlots
-- Mode
+- MODE
 - MTD
+- MakePlots
 - PB2NC
-- PcpCombine
+- PCPCombine
 - PointStat
+- PyEmbedIngest
 - RegridDataPlane
+- SeriesAnalysis
 - SeriesByInit
 - SeriesByLead
 - StatAnalysis
 - TCMPRPlotter
-- TcPairs
-- TcStat
+- TCPairs
+- TCStat
+- Usage
 </pre></div>
 </div>
 <p><strong>Example 2: Using a use-case configuration:</strong></p>

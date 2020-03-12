@@ -295,7 +295,7 @@ This is the time interval to add to each run time to determine the next run time
 <span id="id3"></span><h4><span class="section-number">3.3.1.4. </span>Looping over Forecast Leads<a class="headerlink" href="#looping-over-forecast-leads" title="Permalink to this headline">¶</a></h4>
 <p>Many of the wrappers will also loop over a list of forecast leads relative to the current valid/initialization time that is being processed.</p>
 <div class="section" id="lead-seq">
-<h5><span class="section-number">3.3.1.4.1. </span><a class="reference internal" href="glossary.html#term-lead-seq"><span class="xref std std-term">LEAD_SEQ</span></a><a class="headerlink" href="#lead-seq" title="Permalink to this headline">¶</a></h5>
+<h5><a class="reference internal" href="glossary.html#term-lead-seq"><span class="xref std std-term">LEAD_SEQ</span></a><a class="headerlink" href="#lead-seq" title="Permalink to this headline">¶</a></h5>
 <p>This variable can be set to a comma-separated list of integer values (with optional units) to define the forecast leads that will be processed relative to the initialization/valid time. See <a class="reference internal" href="#time-interval-units"><span class="std std-ref">Time Interval Units</span></a> for information on time interval formatting. Units of hours are assumed if no units are specified. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
 <span class="n">LEAD_SEQ</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span>
@@ -339,7 +339,7 @@ above. Each <a class="reference internal" href="glossary.html#term-lead-seq-n"><
 </div>
 </div>
 <div class="section" id="init-seq">
-<h5><span class="section-number">3.3.1.4.2. </span><a class="reference internal" href="glossary.html#term-init-seq"><span class="xref std std-term">INIT_SEQ</span></a><a class="headerlink" href="#init-seq" title="Permalink to this headline">¶</a></h5>
+<h5><a class="reference internal" href="glossary.html#term-init-seq"><span class="xref std std-term">INIT_SEQ</span></a><a class="headerlink" href="#init-seq" title="Permalink to this headline">¶</a></h5>
 <p>If METplus Wrappers is configured to loop by valid time (<a class="reference internal" href="glossary.html#term-loop-by"><span class="xref std std-term">LOOP_BY</span></a> = VALID), you can use INIT_SEQ instead of <a class="reference internal" href="glossary.html#term-lead-seq"><span class="xref std std-term">LEAD_SEQ</span></a>. This is a list of initialization hours that are available in the data. This is useful if you know when the data is initialized and you need to use a different list of forecast leads depending on the valid time being evaluated. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
 <span class="n">LOOP_BY</span> <span class="o">=</span> <span class="n">VALID</span>
@@ -378,7 +378,7 @@ Therefore these intervals are calculated based on the current run time and canno
 <div class="section" id="realtime-looping">
 <h4><span class="section-number">3.3.1.6. </span>Realtime Looping<a class="headerlink" href="#realtime-looping" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="now-and-today">
-<h5><span class="section-number">3.3.1.6.1. </span>Now and Today<a class="headerlink" href="#now-and-today" title="Permalink to this headline">¶</a></h5>
+<h5>Now and Today<a class="headerlink" href="#now-and-today" title="Permalink to this headline">¶</a></h5>
 <p>To make running in realtime easier, the METplus Wrappers support defining the begin and end times relative to
 the current clock time. For example, if the current time is 2019-04-26 08:17 and you start the METplus Wrappers
 with:</p>
@@ -390,7 +390,7 @@ VALID_END = {now?fmt=%Y%m%d%H}
 current YYYYMMDD, i.e. 20190426. You cannot change the formatting for the ‘today’ keyword.</p>
 </div>
 <div class="section" id="shift-keyword">
-<h5><span class="section-number">3.3.1.6.2. </span>Shift Keyword<a class="headerlink" href="#shift-keyword" title="Permalink to this headline">¶</a></h5>
+<h5>Shift Keyword<a class="headerlink" href="#shift-keyword" title="Permalink to this headline">¶</a></h5>
 <p>You can use the ‘shift’ keyword to shift the current time by any number of seconds. For example, if you start
 the METplus Wrappers at the same clock time with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[config]
@@ -409,7 +409,7 @@ VALID_BEG = {now?fmt=%Y%m%d%H?shift=-86400}
 </div>
 </div>
 <div class="section" id="truncate-keyword">
-<h5><span class="section-number">3.3.1.6.3. </span>Truncate Keyword<a class="headerlink" href="#truncate-keyword" title="Permalink to this headline">¶</a></h5>
+<h5>Truncate Keyword<a class="headerlink" href="#truncate-keyword" title="Permalink to this headline">¶</a></h5>
 <p>You may want to configure the METplus Wrappers to process at 00Z, 06Z, 12Z, and 18Z of a given day instead of 02Z, 08Z, 14Z, and 20Z. Having to adjust the shift amount differently if you are running at 08Z or 09Z to get the times to line up would be tedious. Instead, use the ‘truncate’ keyword. The value set here is the number of seconds that is used to determine the interval of time to round down. If you want to process every 6 hours, set ‘truncate’ to 21600 seconds:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[config]
 VALID_BEG = {now?fmt=%Y%m%d%H?shift=-86400?truncate=21600}

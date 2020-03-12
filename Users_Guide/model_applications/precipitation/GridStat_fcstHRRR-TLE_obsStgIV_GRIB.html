@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.2.3.6. HRRR Ensemble Use Case" href="EnsembleStat_fcstHRRRE_APCP3_GRIB.html" />
+    <link rel="next" title="5.2.3.6. HRRR Ensemble Use Case" href="EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.html" />
     <link rel="prev" title="5.2.3.4. GFS to CCPA GRIB Use Case" href="GridStat_fcstGFS_obsCCPA_GRIB.html" /> 
 </head>
 
@@ -193,7 +193,7 @@
 <p>This use case compares gridded probabilistic 6 hour forecast precipitation accumulation data to
 gridded 6 hour observation precipitation accumulation data.</p>
 <div class="section" id="scientific-objective">
-<h2><span class="section-number">5.2.3.5.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>This use case demonstrates allowing different accumulation amounts based on
 what data is available for each run time. 6 hour and 1 hour observation data
 is available at 6Z, so the 6 hour accumulation data is used. However, at 7Z
@@ -205,7 +205,7 @@ create a 6 hour accumulation field. The result is compared to the 6 hour
 forecast data.</p>
 </div>
 <div class="section" id="datasets">
-<h2><span class="section-number">5.2.3.5.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <p>Relevant information about the datasets that would be beneficial include:</p>
 <blockquote>
 <div><ul class="simple">
@@ -216,14 +216,14 @@ forecast data.</p>
 </div></blockquote>
 </div>
 <div class="section" id="metplus-components">
-<h2><span class="section-number">5.2.3.5.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case first runs PCPCombine on the observation data to build a 6
 hour precipitation accumulation from 1 hour files or a single 6 hour file.
 Then the observation data is regridded to the model grid using the RegridDataPlane. Finally, the
 observation files are compared to the forecast data using GridStat.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2><span class="section-number">5.2.3.5.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>The following tools are used for each run time:</p>
 <p>PCPCombine (observation) &gt; RegridDataPlane (observation) &gt; GridStat</p>
 <p>This example loops by initialization time. For each initialization time
@@ -240,7 +240,7 @@ initialization time in this example, so the following will be run:</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2><span class="section-number">5.2.3.5.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/model_applications/precipitation/GridStat_fcstHRRR-TLE_obsStgIV_GRIB.conf</p>
@@ -366,7 +366,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/precipitation/Grid
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2><span class="section-number">5.2.3.5.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -419,7 +419,8 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <span class="nv">wind_thresh</span> <span class="o">=</span> <span class="o">[</span> NA <span class="o">]</span><span class="p">;</span>
 <span class="nv">wind_logic</span>  <span class="o">=</span> UNION<span class="p">;</span>
 <span class="nv">eclv_points</span>      <span class="o">=</span> <span class="m">0</span>.05<span class="p">;</span>
-<span class="nv">nc_pairs_var_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">nc_pairs_var_suffix</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">nc_pairs_var_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="nv">rank_corr_flag</span>   <span class="o">=</span> FALSE<span class="p">;</span>
 
 //
@@ -623,7 +624,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p>parm/use_cases/met_tool_wrapper/GridStat/GridStat.py</p>
 </div>
 <div class="section" id="running-metplus">
-<h2><span class="section-number">5.2.3.5.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in GridStat_fcstHRRR-TLE_obsStgIV_GRIB.conf then a user-specific system configuration file:</p>
@@ -653,7 +654,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2><span class="section-number">5.2.3.5.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -671,7 +672,7 @@ and will contain the following files:</p>
 </ul>
 </div>
 <div class="section" id="keywords">
-<h2><span class="section-number">5.2.3.5.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <p>sphinx_gallery_thumbnail_path = ‘_static/precipitation-GridStat_fcstHRRR-TLE_obsStgIV_GRIB.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -698,7 +699,7 @@ and will contain the following files:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="EnsembleStat_fcstHRRRE_APCP3_GRIB.html" class="btn btn-neutral float-right" title="5.2.3.6. HRRR Ensemble Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.html" class="btn btn-neutral float-right" title="5.2.3.6. HRRR Ensemble Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="GridStat_fcstGFS_obsCCPA_GRIB.html" class="btn btn-neutral float-left" title="5.2.3.4. GFS to CCPA GRIB Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

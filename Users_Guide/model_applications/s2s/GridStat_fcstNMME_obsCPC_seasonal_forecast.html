@@ -192,7 +192,7 @@
 <span id="sphx-glr-users-guide-model-applications-s2s-gridstat-fcstnmme-obscpc-seasonal-forecast-py"></span><h1><span class="section-number">5.2.4.1. </span>BMKG APIK Seasonal Forecast<a class="headerlink" href="#bmkg-apik-seasonal-forecast" title="Permalink to this headline">¶</a></h1>
 <p>Seasonal forecast use case running GridStat, then passing the output into SeriesAnalysis.</p>
 <div class="section" id="scientific-objective">
-<h2><span class="section-number">5.2.4.1.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>The process of seasonal forecasting with a time horizon of one to many months
 (typically 6 to 9 months) poses new challenges to tools primarily developed for
 weather forecasting that cover a few days. These challenges include two aspects
@@ -277,7 +277,7 @@ coupled system.</p>
 </dl>
 </div>
 <div class="section" id="datasets">
-<h2><span class="section-number">5.2.4.1.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <p>All datasets are traditionally in netCDF format. Grids are either regular gaussian
 Latitude/Longitude grids or they are Lambert-conformal WRF grids.</p>
 <p>The forecast datasets contain weekly, monthly or seasonally integrated data. Here, the
@@ -301,12 +301,12 @@ time variable inside the netCDF file).</p>
 </ul>
 </div>
 <div class="section" id="metplus-components">
-<h2><span class="section-number">5.2.4.1.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case loops over initialization years and processes forecast lead months with GridStat
 It also processes the output of GridStat using two calls to SeriesAnalysis.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2><span class="section-number">5.2.4.1.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>The following tools are used for each run time: GridStat</p>
 <p>This example loops by initialization time. Each initialization time is July of each year from 1982 to 2010. For each init time it will run once, processing forecast leads 1 month through 5 months. The following times are processed:</p>
 <p>Run times:</p>
@@ -337,7 +337,7 @@ It also processes the output of GridStat using two calls to SeriesAnalysis.</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2><span class="section-number">5.2.4.1.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Grid to Grid APIK Verification - S2S Use Case 1: Comparison of NMME hindcasts to CPC observations</span>
 
 <span class="o">[</span>config<span class="o">]</span>
@@ -458,7 +458,7 @@ It also processes the output of GridStat using two calls to SeriesAnalysis.</p>
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2><span class="section-number">5.2.4.1.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <p><strong>GridStatConfig_seasonal_forecast</strong></p>
@@ -1041,7 +1041,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 </dl>
 </div>
 <div class="section" id="running-metplus">
-<h2><span class="section-number">5.2.4.1.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in GridStat_fcstNMME_obsCPC_seasonal_forecast.conf then a user-specific system configuration file:</p>
@@ -1071,7 +1071,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2><span class="section-number">5.2.4.1.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -1091,7 +1091,7 @@ Output for this use case will be found in model_applications/s2s/GridStat_fcstNM
 </div>
 </div>
 <div class="section" id="keywords">
-<h2><span class="section-number">5.2.4.1.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <p>sphinx_gallery_thumbnail_path = ‘_static/s2s-GridStat_fcstNMME_obsCPC_seasonal_forecast.png’
 .. note:: <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDFFileUseCase</a></p>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>

@@ -193,7 +193,7 @@
 <p>This use case runs the MET GridStat tool to compare gridded forecast data
 from two runs of the GloTEC model.</p>
 <div class="section" id="overview">
-<h2><span class="section-number">5.2.5.1.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <img alt="../../../_images/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg" src="../../../_images/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg" />
 <p>This use case illustrates the use of grid_stat tool for the space weather domain.
 It compares Total Electron Content for a GloTEC model run initialized with COSMIC-1
@@ -211,13 +211,13 @@ space weather event known as the St. Patrick’s Day Storm (Mar 17, 2015).</p>
 </ul>
 </div>
 <div class="section" id="scientific-objective">
-<h2><span class="section-number">5.2.5.1.2. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>Compare gridded forecast data from a run of the GloTEC model that includes
 assimilation of COSMIC-1 radio occultation (RO) observations to gridded forecast
 data from a GloTEC model run that does not include COSMIC-1 RO data.</p>
 </div>
 <div class="section" id="datasets">
-<h2><span class="section-number">5.2.5.1.3. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Forecast:</strong> GloTEC Total Electron Content (TEC) model run without assimilation of any COSMIC-1 RO data</div>
 <div class="line"><strong>Observation:</strong> GloTEC TEC model run that assimilates COSMIC-1 RO data</div>
@@ -233,20 +233,20 @@ data from a GloTEC model run that does not include COSMIC-1 RO data.</p>
 </div>
 </div>
 <div class="section" id="metplus-use-case-contact">
-<h2><span class="section-number">5.2.5.1.4. </span>METplus Use Case Contact<a class="headerlink" href="#metplus-use-case-contact" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Use Case Contact<a class="headerlink" href="#metplus-use-case-contact" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Author:</strong> Jonathan L. Vigh (National Center for Atmospheric Research / Research Applications Laboratory / Joint Numerical Testbed)</div>
 <div class="line"><strong>Last modified:</strong> 06 February 2020</div>
 </div>
 </div>
 <div class="section" id="metplus-components">
-<h2><span class="section-number">5.2.5.1.5. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case utilizes the METplus GridStat wrapper to search for
 files that are valid at a given run time and generate a command to run
 the MET tool grid_stat if all required files are found.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2><span class="section-number">5.2.5.1.6. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>GridStat is the only tool called in this example. It processes the following
 run times:</p>
 <div class="line-block">
@@ -259,7 +259,7 @@ run times:</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2><span class="section-number">5.2.5.1.7. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/model_applications/space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.conf</p>
@@ -477,7 +477,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/space_weather/Grid
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2><span class="section-number">5.2.5.1.8. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -535,7 +535,8 @@ These variables are referenced in the MET configuration file.</p>
 <span class="nv">wind_thresh</span>      <span class="o">=</span> <span class="o">[</span> NA <span class="o">]</span><span class="p">;</span>
 <span class="nv">wind_logic</span>       <span class="o">=</span> UNION<span class="p">;</span>
 <span class="nv">eclv_points</span>      <span class="o">=</span> <span class="m">0</span>.05<span class="p">;</span>
-<span class="nv">nc_pairs_var_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">nc_pairs_var_suffix</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">nc_pairs_var_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="nv">rank_corr_flag</span>   <span class="o">=</span> FALSE<span class="p">;</span>
 
 // Applies to WAM and GloTEC
@@ -752,7 +753,7 @@ These variables are referenced in the MET configuration file.</p>
 </ul>
 </div>
 <div class="section" id="running-metplus">
-<h2><span class="section-number">5.2.5.1.9. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in GridStat_fcstGloTEC_obsGloTEC_vx7.conf then a user-specific system configuration file:</p>
@@ -782,7 +783,7 @@ These variables are referenced in the MET configuration file.</p>
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2><span class="section-number">5.2.5.1.10. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -798,10 +799,14 @@ and will contain the following files:</p>
 </ul>
 </div>
 <div class="section" id="keywords">
-<h2><span class="section-number">5.2.5.1.11. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>GridStatToolUseCase SpaceWeatherAppUseCase NOAASWPCOrgUseCase GloTECModelUseCase</p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=SpaceWeatherAppUseCase&amp;check_keywords=yes&amp;area=default">SpaceWeatherAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAASWPCOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAASWPCOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=CustomStringLoopingUseCase&amp;check_keywords=yes&amp;area=default">CustomStringLoopingUseCase</a>,
+GloTECModelUseCase</p>
 </div>
 <p>sphinx_gallery_thumbnail_path = ‘_static/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg’</p>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>

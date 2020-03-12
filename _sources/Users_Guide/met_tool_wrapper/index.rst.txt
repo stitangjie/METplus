@@ -88,38 +88,6 @@ ASCII2NC
 
 
 
-.. _sphx_glr_Users_Guide_met_tool_wrapper_CustomIngest:
-
-Custom Ingest
--------------
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the CustomIngest wrapper tool to utilize the MET Python Embedding functi...">
-
-.. only:: html
-
- .. figure:: /Users_Guide/met_tool_wrapper/CustomIngest/images/thumb/sphx_glr_CustomIngest_thumb.png
-
-     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_CustomIngest_CustomIngest.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/met_tool_wrapper/CustomIngest/CustomIngest
-.. raw:: html
-
-    <div class="sphx-glr-clear"></div>
-
-
-
 .. _sphx_glr_Users_Guide_met_tool_wrapper_CyclonePlotter:
 
 Cyclone Plotter
@@ -565,13 +533,13 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in CUSTOM mode to generate a command defined by ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in USER_DEFINED mode to generate a command defin...">
 
 .. only:: html
 
- .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_pcp_custom_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_pcp_user_defined_thumb.png
 
-     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_custom.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_pcp_user_defined.py`
 
 .. raw:: html
 
@@ -581,7 +549,7 @@ PCPCombine
 .. toctree::
    :hidden:
 
-   /Users_Guide/met_tool_wrapper/PCPCombine/pcp_custom
+   /Users_Guide/met_tool_wrapper/PCPCombine/pcp_user_defined
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
@@ -614,6 +582,38 @@ PointStat
    :hidden:
 
    /Users_Guide/met_tool_wrapper/PointStat/PointStat
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_Users_Guide_met_tool_wrapper_PyEmbedIngest:
+
+Python Embedding Ingest
+-----------------------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the PyEmbedIngest wrapper tool to utilize the MET Python Embedding funct...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/met_tool_wrapper/PyEmbedIngest/images/thumb/sphx_glr_PyEmbedIngest_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PyEmbedIngest_PyEmbedIngest.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/met_tool_wrapper/PyEmbedIngest/PyEmbedIngest
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>

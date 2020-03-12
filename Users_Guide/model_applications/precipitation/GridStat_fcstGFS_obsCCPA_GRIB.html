@@ -193,13 +193,13 @@
 <p>This use case compares gridded forecast precipitation accumulation data to
 gridded 24 hour observation precipitation accumulation data.</p>
 <div class="section" id="scientific-objective">
-<h2><span class="section-number">5.2.3.4.1. </span>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>To provide useful statistical information on the relationship between observation
 data in gridded format to a gridded forecast. These values can be used to help correct
 model deviations from observed values.</p>
 </div>
 <div class="section" id="datasets">
-<h2><span class="section-number">5.2.3.4.2. </span>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <p>Relevant information about the datasets that would be beneficial include:</p>
 <blockquote>
 <div><ul class="simple">
@@ -210,13 +210,13 @@ model deviations from observed values.</p>
 </div></blockquote>
 </div>
 <div class="section" id="metplus-components">
-<h2><span class="section-number">5.2.3.4.3. </span>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case first runs PCPCombine on the observation data to build a 24
 hour precipitation accumulation file.
 Then the observation data are compared to the forecast data using GridStat.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2><span class="section-number">5.2.3.4.4. </span>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>The following tools are used for each run time:</p>
 <p>PCPCombine (observation) &gt; GridStat</p>
 <p>This example loops by valid time. There is only one
@@ -228,7 +228,7 @@ initialization time in this example, so the following will be run:</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2><span class="section-number">5.2.3.4.5. </span>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/model_applications/precipitation/GridStat_fcstGFS_obsCCPA_GRIB.conf</p>
@@ -319,7 +319,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/precipitation/Grid
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2><span class="section-number">5.2.3.4.6. </span>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -371,7 +371,8 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <span class="nv">wind_thresh</span>   <span class="o">=</span> <span class="o">[</span> NA <span class="o">]</span><span class="p">;</span>
 <span class="nv">wind_logic</span>    <span class="o">=</span> UNION<span class="p">;</span>
 <span class="nv">eclv_points</span>   <span class="o">=</span> <span class="m">0</span>.05<span class="p">;</span>
-<span class="nv">nc_pairs_var_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">nc_pairs_var_suffix</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+<span class="nv">nc_pairs_var_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="nv">rank_corr_flag</span>   <span class="o">=</span> FALSE<span class="p">;</span>
 
 //
@@ -551,7 +552,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p>parm/use_cases/met_tool_wrapper/GridStat/GridStat.py</p>
 </div>
 <div class="section" id="running-metplus">
-<h2><span class="section-number">5.2.3.4.7. </span>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in GridStat_fcstGFS_obsCCPA_GRIB.conf then a user-specific system configuration file:</p>
@@ -581,7 +582,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2><span class="section-number">5.2.3.4.8. </span>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -594,7 +595,7 @@ and will contain the following files:</p>
 </ul>
 </div>
 <div class="section" id="keywords">
-<h2><span class="section-number">5.2.3.4.9. </span>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <p>sphinx_gallery_thumbnail_path = ‘_static/precipitation-GridStat_fcstGFS_obsCCPA_GRIB.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
