@@ -261,7 +261,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case processes precipitation accumulation data over time.">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded ...">
 
 .. only:: html
 
@@ -281,7 +281,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case compares 1 6- hour gridded forecast precipitation accumulation file to gridded 6 ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded ...">
 
 .. only:: html
 
@@ -321,7 +321,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case compares gridded probabilistic 6 hour forecast precipitation accumulation data to...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case compares a 6-hour gridded probabilistic quantitative precipitation forecast (PQPF...">
 
 .. only:: html
 
@@ -361,7 +361,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case compares 1 6- hour gridded forecast precipitation accumulation file to gridded 6 ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded ...">
 
 .. only:: html
 

@@ -191,11 +191,14 @@
 </div>
 <div class="sphx-glr-example-title section" id="hrrr-tle-vs-stage-iv-grib-use-case">
 <span id="sphx-glr-users-guide-model-applications-precipitation-gridstat-fcsthrrr-tle-obsstgiv-grib-py"></span><h1><span class="section-number">5.2.4.5. </span>HRRR-TLE vs. Stage IV GRIB Use Case<a class="headerlink" href="#hrrr-tle-vs-stage-iv-grib-use-case" title="Permalink to this headline">¶</a></h1>
-<p>This use case compares gridded probabilistic 6 hour forecast precipitation accumulation data to
-gridded 6 hour observation precipitation accumulation data.</p>
+<p>This use case compares a 6-hour gridded probabilistic quantitative precipitation forecast (PQPF) to a gridded 6-hour observed quantitative precipitation estimate (QPE).  It computes probabilistic statistics for a field generated outside of METplus.</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
-<p>This use case demonstrates allowing different accumulation amounts based on
+<p>This use case demonstrates the evaluation of a probabilistic field.  The
+HRRR-Time Lag Ensemble (TLE) used in this example was used to demonstrate
+prototype ensemble post-processing techniques. A time-lagged ensemble can
+provide higher temporal resolution and be used to compute several different
+accumulation amounts based on
 what data is available for each run time. 6 hour and 1 hour observation data
 is available at 6Z, so the 6 hour accumulation data is used. However, at 7Z
 only a 1 hour accumulation field is available, so it uses the 1 hour field,
@@ -674,11 +677,22 @@ and will contain the following files:</p>
 </div>
 <div class="section" id="keywords">
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
-<p>sphinx_gallery_thumbnail_path = ‘_static/precipitation-GridStat_fcstHRRR-TLE_obsStgIV_GRIB.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&amp;check_keywords=yes&amp;area=default">PrecipitationAppUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PCPCombineToolUseCase&amp;check_keywords=yes&amp;area=default">PCPCombineToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=RegridDataPlaneToolUseCase&amp;check_keywords=yes&amp;area=default">RegridDataPlaneToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&amp;check_keywords=yes&amp;area=default">GRIBFileUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&amp;check_keywords=yes&amp;area=default">GRIB2FileUseCase</a></p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&amp;check_keywords=yes&amp;area=default">PrecipitationAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PCPCombineToolUseCase&amp;check_keywords=yes&amp;area=default">PCPCombineToolUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=RegridDataPlaneToolUseCase&amp;check_keywords=yes&amp;area=default">RegridDataPlaneToolUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&amp;check_keywords=yes&amp;area=default">GRIBFileUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&amp;check_keywords=yes&amp;area=default">GRIB2FileUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;chek_keywords=yes&amp;area=default">NetCDFFileUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAWPCOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAWPCOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHMTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHMTOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHWTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHWTOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ConvectionAllowingModelsAppUseCase&amp;check_keywords=yes&amp;area=default">ConvectionAllowingModelsAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ProbabilityVerificationAppUseCase&amp;check_keywords=yes&amp;area=default">ProbabilityVerificationAppUseCase</a></p>
 </div>
+<p>sphinx_gallery_thumbnail_path = ‘_static/precipitation-GridStat_fcstHRRR-TLE_obsStgIV_GRIB.png’</p>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-precipitation-gridstat-fcsthrrr-tle-obsstgiv-grib-py">
 <div class="sphx-glr-download docutils container">

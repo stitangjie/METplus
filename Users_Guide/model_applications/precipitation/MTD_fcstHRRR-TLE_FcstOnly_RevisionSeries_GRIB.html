@@ -191,13 +191,10 @@
 </div>
 <div class="sphx-glr-example-title section" id="hrrr-tle-mode-time-domain-use-case">
 <span id="sphx-glr-users-guide-model-applications-precipitation-mtd-fcsthrrr-tle-fcstonly-revisionseries-grib-py"></span><h1><span class="section-number">5.2.4.2. </span>HRRR-TLE MODE Time Domain Use Case<a class="headerlink" href="#hrrr-tle-mode-time-domain-use-case" title="Permalink to this headline">¶</a></h1>
-<p>This use case processes precipitation accumulation data over time.</p>
+<p>This use case compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded 6-hour observed quantitative precipitation estimate (QPE).  It holds the valid time constant and loops over the lead-times in reverse order to build a dataset for a revision series computation (aka forecast consistency)</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
-<p>To provide useful statistical information on aggregated object-based information
-over a time series. This non-standard approach (i.e. a holistic approach to weather
-systems over grid or point assessments) provides alternative views to numerical model
-accuracy and offers new solutions to model adjustments.</p>
+<p>This use case demonstrates the use of the MTD tool to evaluate an updating forecast field and evaluate the forecast consistency.  The use case looks for all forecasts valid at a given time and passes them into MTD.  Objects are identified and tracked through time via the tool.  The output can then be loaded into METviewer to compute the revision series and assess the consistency either of one case or many.  See other HRRR-TLE use cases for a description of the Time Lagged Ensemble (TLE) field.</p>
 </div>
 <div class="section" id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
@@ -217,7 +214,7 @@ accuracy and offers new solutions to model adjustments.</p>
 <p>The following tools are used for each run time:</p>
 <p>MTD</p>
 <p>This example loops by valid time. For each valid time
-it will run once, processing forecast leads 0 through 12. There is only one
+it will run once, processing forecast leads 12 through 0. There is only one
 valid time in this example, so the following will be run:</p>
 <p>Run times:</p>
 <div class="line-block">
@@ -648,11 +645,19 @@ and will contain the following files:</p>
 </div>
 <div class="section" id="keywords">
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
-<p>sphinx_gallery_thumbnail_path = ‘_static/precipitation-MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&amp;check_keywords=yes&amp;area=default">MTDToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&amp;check_keywords=yes&amp;area=default">PrecipitationAppUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHMTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHMTOrgUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&amp;check_keywords=yes&amp;area=default">GRIB2FileUseCase</a></p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&amp;check_keywords=yes&amp;area=default">MTDToolUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&amp;check_keywords=yes&amp;area=default">PrecipitationAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHMTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHMTOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&amp;check_keywords=yes&amp;area=default">GRIB2FileUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAWPCOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAWPCOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHMTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHMTOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHWTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHWTOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ConvectionAllowingModelsAppUseCase&amp;check_keywords=yes&amp;area=default">ConvectionAllowingModelsAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=RevisionSeriesUseCase&amp;check_keywords=yes&amp;area=default">RevisionSeriesUseCase</a></p>
 </div>
+<p>sphinx_gallery_thumbnail_path = ‘_static/precipitation-MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.png’</p>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-precipitation-mtd-fcsthrrr-tle-fcstonly-revisionseries-grib-py">
 <div class="sphx-glr-download docutils container">

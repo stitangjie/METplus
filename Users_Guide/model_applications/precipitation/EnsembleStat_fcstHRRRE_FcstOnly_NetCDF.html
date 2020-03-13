@@ -191,13 +191,13 @@
 </div>
 <div class="sphx-glr-example-title section" id="hrrr-ensemble-use-case">
 <span id="sphx-glr-users-guide-model-applications-precipitation-ensemblestat-fcsthrrre-fcstonly-netcdf-py"></span><h1><span class="section-number">5.2.4.6. </span>HRRR Ensemble Use Case<a class="headerlink" href="#hrrr-ensemble-use-case" title="Permalink to this headline">¶</a></h1>
-<p>This use case creates ensemble statistics from a previously accumulated 3 hour
+<p>This use case creates ensemble fields from a previously accumulated 3 hour
 precipitation case</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
-<p>To provide useful, statistical information on the relationship between observation data
-and an ensemble forecast. This information can be used to help correct ensemble
-member deviations from observed values.</p>
+<p>Post-process ensemble members to derive simple (non-bias-corrected) mean,
+standard deviation (spread), minimum, maximum, and range fields for use in
+other MET tools.</p>
 </div>
 <div class="section" id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
@@ -209,7 +209,7 @@ member deviations from observed values.</p>
 </div>
 <div class="section" id="metplus-components">
 <h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
-<p>This use case runs EnsembleStat on HRRRE data from 3 members after
+<p>This use case runs Ensemble-Stat on HRRRE data from 3 members after
 running it through pcp_combine to create a 3 hour precipitation accumulation</p>
 </div>
 <div class="section" id="metplus-workflow">
@@ -638,7 +638,14 @@ The following folder/file combination will be created:</p>
 <p>sphinx_gallery_thumbnail_path = ‘_static/precipitation-EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=EnsembleStatToolUseCase&amp;check_keywords=yes&amp;area=default">EnsembleStatToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHWTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHWTOrgUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&amp;check_keywords=yes&amp;area=default">PrecipitationAppUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDFFileUseCase</a></p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=EnsembleStatToolUseCase&amp;check_keywords=yes&amp;area=default">EnsembleStatToolUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHWTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHWTOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&amp;check_keywords=yes&amp;area=default">PrecipitationAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDFFileUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=EnsembleAppUseCase&amp;check_keywords=yes&amp;area=default">EnsembleAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ConvectionAllowingModelsAppUseCase&amp;check_keywords=yes&amp;area=default">ConvectionAllowingModelsAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ProbabilityGenerationAppUseCase&amp;check_keywords=yes&amp;area=default">ProbabilityGenerationAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHWTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHWTOrgUseCase</a></p>
 </div>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-precipitation-ensemblestat-fcsthrrre-fcstonly-netcdf-py">
