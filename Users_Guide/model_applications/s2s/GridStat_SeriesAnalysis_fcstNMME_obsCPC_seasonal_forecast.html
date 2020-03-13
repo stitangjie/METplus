@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.4.1. BMKG APIK Seasonal Forecast &mdash; METplus 3.0 documentation</title>
+  <title>5.2.5.1. BMKG APIK Seasonal Forecast &mdash; METplus 3.0 documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.2.5.1. Glotec vs. Glotec" href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html" />
-    <link rel="prev" title="5.2.3.7. HREF-mean to Stage IV QPE GEMPAK Use Case" href="../precipitation/GridStat_fcstHREFmean_obsStgIV_Gempak.html" /> 
+    <link rel="next" title="5.2.6.1. Glotec vs. Glotec" href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html" />
+    <link rel="prev" title="5.2.4.7. HREF-mean to Stage IV QPE GEMPAK Use Case" href="../precipitation/GridStat_fcstHREFmean_obsStgIV_Gempak.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -98,11 +98,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../../met_tool_wrapper/index.html">5.1. MET tools</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.2. Model Applications</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.1. Convection Allowing Models</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.2. Medium Range</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.3. Precipitation</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.4. Subseasonal to Seasonal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.5. Space Weather</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.6. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.2. Cryosphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.3. Medium Range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#precipitation">5.2.4. Precipitation</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.5. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.6. Space Weather</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.7. Tropical Cyclone and Extra Tropical Cyclone</a></li>
 </ul>
 </li>
 </ul>
@@ -165,13 +166,13 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.4.1. </span>BMKG APIK Seasonal Forecast</li>
+      <li><span class="section-number">5.2.5.1. </span>BMKG APIK Seasonal Forecast</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../../_sources/Users_Guide/model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/Users_Guide/model_applications/s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -186,10 +187,10 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-s2s-gridstat-fcstnmme-obscpc-seasonal-forecast-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-s2s-gridstat-seriesanalysis-fcstnmme-obscpc-seasonal-forecast-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="bmkg-apik-seasonal-forecast">
-<span id="sphx-glr-users-guide-model-applications-s2s-gridstat-fcstnmme-obscpc-seasonal-forecast-py"></span><h1><span class="section-number">5.2.4.1. </span>BMKG APIK Seasonal Forecast<a class="headerlink" href="#bmkg-apik-seasonal-forecast" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-users-guide-model-applications-s2s-gridstat-seriesanalysis-fcstnmme-obscpc-seasonal-forecast-py"></span><h1><span class="section-number">5.2.5.1. </span>BMKG APIK Seasonal Forecast<a class="headerlink" href="#bmkg-apik-seasonal-forecast" title="Permalink to this headline">¶</a></h1>
 <p>Seasonal forecast use case running GridStat, then passing the output into SeriesAnalysis.</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
@@ -423,11 +424,11 @@ It also processes the output of GridStat using two calls to SeriesAnalysis.</p>
 <span class="c1"># input and output data directories</span>
 <span class="nv">FCST_GRID_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/s2s/NMME/hindcast/monthly
 <span class="nv">OBS_GRID_STAT_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>INPUT_BASE<span class="o">}</span>/model_applications/s2s/NMME/obs
-<span class="nv">GRID_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast/GridStat
+<span class="nv">GRID_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast/GridStat
 
 <span class="nv">BOTH_SERIES_ANALYSIS_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>GRID_STAT_OUTPUT_DIR<span class="o">}</span>
 
-<span class="nv">SERIES_ANALYSIS_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast/SeriesAnalysis
+<span class="nv">SERIES_ANALYSIS_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/model_applications/s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast/SeriesAnalysis
 
 <span class="c1"># used in full_stats config file only</span>
 <span class="nv">SERIES_ANALYSIS_CLIMO_MEAN_INPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>SERIES_ANALYSIS_OUTPUT_DIR<span class="o">}</span>
@@ -818,7 +819,8 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 // Number of grid points to be processed concurrently.  Set smaller to use
 // less memory but increase the number of passes through the data.
 //
-<span class="nv">block_size</span> <span class="o">=</span> <span class="m">72</span>*72<span class="p">;</span>
+//block_size <span class="o">=</span> <span class="m">72</span>*72<span class="p">;</span>
+<span class="nv">block_size</span> <span class="o">=</span> <span class="m">360</span>*181<span class="p">;</span>
 
 //
 // Ratio of valid matched pairs to compute statistics <span class="k">for</span> a grid point
@@ -998,7 +1000,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 // Number of grid points to be processed concurrently.  Set smaller to use
 // less memory but increase the number of passes through the data.
 //
-<span class="nv">block_size</span> <span class="o">=</span> <span class="m">72</span>*72<span class="p">;</span>
+<span class="nv">block_size</span> <span class="o">=</span> <span class="m">360</span>*181<span class="p">;</span>
 
 //
 // Ratio of valid matched pairs to compute statistics <span class="k">for</span> a grid point
@@ -1044,13 +1046,13 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
-<li><p>Passing in GridStat_fcstNMME_obsCPC_seasonal_forecast.conf then a user-specific system configuration file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast.conf -c /path/to/user_system.conf
+<li><p>Passing in GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.conf then a user-specific system configuration file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/model_applications/s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.conf -c /path/to/user_system.conf
 </pre></div>
 </div>
 </li>
-<li><p>Modifying the configurations in parm/metplus_config, then passing in GridStat_fcstNMME_obsCPC_seasonal_forecast.conf:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast.conf
+<li><p>Modifying the configurations in parm/metplus_config, then passing in GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.conf:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/model_applications/s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.conf
 </pre></div>
 </div>
 </li>
@@ -1077,13 +1079,13 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 </pre></div>
 </div>
 <p>Refer to the value set for <strong>OUTPUT_BASE</strong> to find where the output data was generated.
-Output for this use case will be found in model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast/GridStat (relative to <strong>OUTPUT_BASE</strong>)</p>
+Output for this use case will be found in model_applications/s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast/GridStat (relative to <strong>OUTPUT_BASE</strong>)</p>
 <p>For each month and year there will be two files written:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>* grid_stat_NMME-hindcast_precip_vs_CPC_IC<span class="o">{</span>%Y%b<span class="o">}</span>01_2301360000L_20081001_000000V.stat
 * grid_stat_NMME-hindcast_precip_vs_CPC_IC<span class="o">{</span>%Y%b<span class="o">}</span>01_2301360000L_20081001_000000V_pairs.nc
 </pre></div>
 </div>
-<p>Output from SeriesAnalysis will be found in model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast/SeriesAnalysis (relative to <strong>OUTPUT_BASE</strong>)</p>
+<p>Output from SeriesAnalysis will be found in model_applications/s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast/SeriesAnalysis (relative to <strong>OUTPUT_BASE</strong>)</p>
 <p>For each month there will be two files written:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>* series_analysis_NMME_CPC_stats_ICJul_<span class="o">{</span>%m<span class="o">}</span>_climo.nc
 * series_analysis_NMME_CPC_stats_ICJul_<span class="o">{</span>%m<span class="o">}</span>_full_stats.nc
@@ -1092,15 +1094,18 @@ Output for this use case will be found in model_applications/s2s/GridStat_fcstNM
 </div>
 <div class="section" id="keywords">
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
-<p>sphinx_gallery_thumbnail_path = ‘_static/s2s-GridStat_fcstNMME_obsCPC_seasonal_forecast.png’
-.. note:: <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDFFileUseCase</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDFFileUseCase</a></p>
+</div>
+<p>sphinx_gallery_thumbnail_path = ‘_static/s2s-GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.png’</p>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-s2s-gridstat-fcstnmme-obscpc-seasonal-forecast-py">
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-s2s-gridstat-seriesanalysis-fcstnmme-obscpc-seasonal-forecast-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/91b7635c2cf5b24c69454b312089032c/GridStat_fcstNMME_obsCPC_seasonal_forecast.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">GridStat_fcstNMME_obsCPC_seasonal_forecast.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/ef1ec7e0c4809b2f32eacbdb6d1aaddf/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../../_downloads/84e645759a11280036732d591477c090/GridStat_fcstNMME_obsCPC_seasonal_forecast.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">GridStat_fcstNMME_obsCPC_seasonal_forecast.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/c3b44830714ef0a9cca61e1c608dc745/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -1115,10 +1120,10 @@ Output for this use case will be found in model_applications/s2s/GridStat_fcstNM
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html" class="btn btn-neutral float-right" title="5.2.5.1. Glotec vs. Glotec" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html" class="btn btn-neutral float-right" title="5.2.6.1. Glotec vs. Glotec" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../precipitation/GridStat_fcstHREFmean_obsStgIV_Gempak.html" class="btn btn-neutral float-left" title="5.2.3.7. HREF-mean to Stage IV QPE GEMPAK Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../precipitation/GridStat_fcstHREFmean_obsStgIV_Gempak.html" class="btn btn-neutral float-left" title="5.2.4.7. HREF-mean to Stage IV QPE GEMPAK Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -68,6 +68,38 @@ Convection Allowing Models
 
 
 
+.. _sphx_glr_Users_Guide_model_applications_cryosphere:
+
+Cryosphere
+----------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run both the MET GridStat and MODE tools to compare the National Ice Center ...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/cryosphere/images/thumb/sphx_glr_GridStat_MODE_fcstIMS_obsNCEP_sea_ice_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/cryosphere/GridStat_MODE_fcstIMS_obsNCEP_sea_ice
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
 .. _sphx_glr_Users_Guide_model_applications_medium_range:
 
 Medium Range
@@ -365,9 +397,9 @@ Subseasonal to Seasonal
 
 .. only:: html
 
- .. figure:: /Users_Guide/model_applications/s2s/images/thumb/sphx_glr_GridStat_fcstNMME_obsCPC_seasonal_forecast_thumb.png
+ .. figure:: /Users_Guide/model_applications/s2s/images/thumb/sphx_glr_GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast_thumb.png
 
-     :ref:`sphx_glr_Users_Guide_model_applications_s2s_GridStat_fcstNMME_obsCPC_seasonal_forecast.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_s2s_GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.py`
 
 .. raw:: html
 
@@ -377,7 +409,7 @@ Subseasonal to Seasonal
 .. toctree::
    :hidden:
 
-   /Users_Guide/model_applications/s2s/GridStat_fcstNMME_obsCPC_seasonal_forecast
+   /Users_Guide/model_applications/s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
