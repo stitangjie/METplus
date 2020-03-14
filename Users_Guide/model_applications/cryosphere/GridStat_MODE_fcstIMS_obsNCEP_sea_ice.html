@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="5.2.3.1. Feature Relative Standard Use Case (simple series analysis by initialization times)" href="../medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_Standard.html" />
-    <link rel="prev" title="5.2.1.2. HRRR Ensemble Use Case" href="../convection_allowing_models/EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.html" /> 
+    <link rel="prev" title="5.2.1.3. HRRR Hail MODE Use Case" href="../convection_allowing_models/MODE_fcstHRRR_obsMRMS_Hail_GRIB2.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -191,15 +191,14 @@
 </div>
 <div class="sphx-glr-example-title section" id="use-case-sea-ice-validation-and-verification">
 <span id="sphx-glr-users-guide-model-applications-cryosphere-gridstat-mode-fcstims-obsncep-sea-ice-py"></span><h1><span class="section-number">5.2.2.1. </span>Use Case: Sea Ice Validation and Verification<a class="headerlink" href="#use-case-sea-ice-validation-and-verification" title="Permalink to this headline">¶</a></h1>
-<p>This use case will run both the MET GridStat and MODE tools to compare the National Ice Center (NIC)
-Interactive Multisensor Snow and Ice Mapping System (IMS; <a class="reference external" href="https://www.natice.noaa.gov/ims/index.html">https://www.natice.noaa.gov/ims/index.html</a>)
-and the National Centers for Environmental Prediction (NCEP) sea ice analysis
-(<a class="reference external" href="https://polar.ncep.noaa.gov/seaice/Analyses.shtml">https://polar.ncep.noaa.gov/seaice/Analyses.shtml</a>). Future uses include comparing sea ice forecast
-models against sea ice observations. For now, it is limited to observation against observation.</p>
+<p>Compare IMS sea ice concentration analysis to NCEP sea ice concentration analysis.
+This use case will run both the MET GridStat and MODE tools to generate statistics and diagnostics.</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
-<p>Compare IMS sea ice concentration analysis to NCEP sea ice concentration
-analysis. Generate statistics of the results.</p>
+<p>Run Grid-Stat and MODE to compare the National Ice Center (NIC) Interactive Multisensor Snow
+and Ice Mapping System (IMS) and the National Centers for Environmental Prediction (NCEP)
+sea ice analysis.  This is a validation and diagnostics use case because it is limited to a
+comparison between IMS analysis to NCEP analysis.</p>
 </div>
 <div class="section" id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
@@ -232,7 +231,7 @@ of MET, IMS is referred to as “forecast” and NCEP is referred to as “obser
 </dl>
 </li>
 <li><p>Data source: Received from Robert Grumbine at EMC. IMS data is originally from the NIC. NCEP data is originally from NCEP.</p></li>
-<li><p>Location: All input data is located on eyewall.</p></li>
+<li><p>Location: IMS: <a class="reference external" href="https://www.natice.noaa.gov/ims/index.html">https://www.natice.noaa.gov/ims/index.html</a>; IMS - (<a class="reference external" href="https://polar.ncep.noaa.gov/seaice/Analyses.shtml">https://polar.ncep.noaa.gov/seaice/Analyses.shtml</a>)</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -942,7 +941,11 @@ and example.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MODEToolUseCase&amp;check_keywords=yes&amp;area=default">MODEToolUseCase</a></p>
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MODEToolUseCase&amp;check_keywords=yes&amp;area=default">MODEToolUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MarineAndCryoAppUseCase&amp;check_keywords=yes&amp;area=default">MarineAndCryoUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ValidationUseCase&amp;check_keywords=yes&amp;area=default">ValidationUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=S2SAppUseCase&amp;check_keywords=yes&amp;area=default">S2SAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAEMCOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAA Environmental Modeling Center (EMC)</a></p>
 </div>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-cryosphere-gridstat-mode-fcstims-obsncep-sea-ice-py">
@@ -968,7 +971,7 @@ and example.</p>
         <a href="../medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_Standard.html" class="btn btn-neutral float-right" title="5.2.3.1. Feature Relative Standard Use Case (simple series analysis by initialization times)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../convection_allowing_models/EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.html" class="btn btn-neutral float-left" title="5.2.1.2. HRRR Ensemble Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../convection_allowing_models/MODE_fcstHRRR_obsMRMS_Hail_GRIB2.html" class="btn btn-neutral float-left" title="5.2.1.3. HRRR Hail MODE Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

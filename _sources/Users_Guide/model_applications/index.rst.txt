@@ -62,6 +62,26 @@ Convection Allowing Models
    :hidden:
 
    /Users_Guide/model_applications/convection_allowing_models/EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case builds hourly gridded fields for multiple variables pertinent to hail prediction ...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/convection_allowing_models/images/thumb/sphx_glr_MODE_fcstHRRR_obsMRMS_Hail_GRIB2_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_MODE_fcstHRRR_obsMRMS_Hail_GRIB2.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/convection_allowing_models/MODE_fcstHRRR_obsMRMS_Hail_GRIB2
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
@@ -77,7 +97,7 @@ Cryosphere
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run both the MET GridStat and MODE tools to compare the National Ice Center ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Compare IMS sea ice concentration analysis to NCEP sea ice concentration analysis.   This use c...">
 
 .. only:: html
 
@@ -241,7 +261,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case processes precipitation accumulation data over time.">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded ...">
 
 .. only:: html
 

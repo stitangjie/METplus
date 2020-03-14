@@ -191,20 +191,21 @@
 </div>
 <div class="sphx-glr-example-title section" id="hrrr-tle-mode-time-domain-use-case">
 <span id="sphx-glr-users-guide-model-applications-precipitation-mtd-fcsthrrr-tle-obsmrms-py"></span><h1><span class="section-number">5.2.4.1. </span>HRRR-TLE MODE Time Domain Use Case<a class="headerlink" href="#hrrr-tle-mode-time-domain-use-case" title="Permalink to this headline">¶</a></h1>
-<p>This use case processes precipitation accumulation data over time.</p>
+<p>This use case compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded 6-hour observed NCEP MRMS quantitative precipitation estimate (QPE).  It identifies objects in each fields and tracks them through time.</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
-<p>To provide useful statistical information on aggregated object-based information
-over a time series. This non-standard approach (i.e. a holistic approach to weather
-systems over grid or point assessments) provides alternative views to numerical model
-accuracy and offers new solutions to model adjustments.</p>
+<p>This use case demonstrates the evaluation of an ensemble mean field from a
+prototype ensemble post-processing technique for time-lagged ensembles
+(HRRR-TLE). MTD is used to provide useful object attributes and diagnostics on
+aggregated over a time series. This non-traditional
+approach provides alternative information and diagnostics to inform model development.</p>
 </div>
 <div class="section" id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
 <li><p>Forecast dataset: HRRR-TLE forecasts in GRIB2</p></li>
-<li><p>Observation dataset: MRMS</p></li>
+<li><p>Observation dataset: Multi Radar Multi Sensor (MRMS)</p></li>
 <li><p>Sources of data (links, contacts, etc…)</p></li>
 </ul>
 </div></blockquote>
@@ -638,11 +639,19 @@ and will contain the following files:</p>
 </div>
 <div class="section" id="keywords">
 <h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
-<p>sphinx_gallery_thumbnail_path = ‘_static/precipitation-MTD_fcstHRRR-TLE_obsMRMS.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&amp;check_keywords=yes&amp;area=default">MTDToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&amp;check_keywords=yes&amp;area=default">PrecipitationAppUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&amp;check_keywords=yes&amp;area=default">GRIB2FileUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDFFileUseCase</a></p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&amp;check_keywords=yes&amp;area=default">MTDToolUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&amp;check_keywords=yes&amp;area=default">PrecipitationAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&amp;check_keywords=yes&amp;area=default">GRIB2FileUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&amp;check_keywords=yes&amp;area=default">NetCDFFileUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAWPCOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAWPCOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHMTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHMTOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAHWTOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAHWTOrgUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ConvectionAllowingModelsAppUseCase&amp;check_keywords=yes&amp;area=default">ConvectionAllowingModelsAppUseCase</a>,
+<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ProbabilityVerificationAppUseCase&amp;check_keywords=yes&amp;area=default">ProbabilityVerificationAppUseCase</a></p>
 </div>
+<p>sphinx_gallery_thumbnail_path = ‘_static/precipitation-MTD_fcstHRRR-TLE_obsMRMS.png’</p>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-precipitation-mtd-fcsthrrr-tle-obsmrms-py">
 <div class="sphx-glr-download docutils container">
