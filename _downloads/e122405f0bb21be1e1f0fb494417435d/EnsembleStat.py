@@ -1,8 +1,8 @@
 """
-EnsembleStat
-============
+EnsembleStat: Basic Use Case
+=============================
 
-This use case will run the MET EnsembleStat tool to compare gridded ensemble
+This use case will run the MET Ensemble-Stat tool to compare gridded ensemble
 forecast data to gridded AND point observation data.
 
 """

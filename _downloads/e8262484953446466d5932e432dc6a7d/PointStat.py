@@ -1,8 +1,8 @@
 """
-PointStat
-=========
+PointStat: Basic Use Case
+=============================================================================
 
-This use case will run the MET PointStat tool to compare gridded forecast data to
+This use case will run the MET Point-Stat tool to compare gridded forecast data to
 point observation data.
 
 """

@@ -9,8 +9,8 @@
     .. _sphx_glr_Users_Guide_met_tool_wrapper_RegridDataPlane_RegridDataPlane_python_embedding.py:
 
 
-RegridDataPlane with Python Embedding
-=====================================
+RegridDataPlane: Using Python Embedding
+=============================================================================
 
 This use case will run the MET RegridDataPlane tool to regrid data using a python embedding script to read the input data.
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.3.6. CONUS Surface Grid to Point Observation &mdash; METplus 3.0 documentation</title>
+  <title>5.2.3.6. Point-Stat: Standard Verification for CONUS Surface (GFS:NAM:Grib:prepBUFR) &mdash; METplus 3.0 documentation</title>
   
 
   
@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="5.2.4.1. HRRR-TLE MODE Time Domain Use Case" href="../precipitation/MTD_fcstHRRR-TLE_obsMRMS.html" />
-    <link rel="prev" title="5.2.3.5. Grid Comparison" href="GridStat_fcstGFS_obsGFS_Sfc_MultiField.html" /> 
+    <link rel="prev" title="5.2.3.5. Multi_Tool: Feature Relative by Init (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -166,7 +166,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.3.6. </span>CONUS Surface Grid to Point Observation</li>
+      <li><span class="section-number">5.2.3.6. </span>Point-Stat: Standard Verification for CONUS Surface (GFS:NAM:Grib:prepBUFR)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,16 +189,17 @@
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-medium-range-pointstat-fcstgfs-obsnam-sfc-multifield-prepbufr-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="conus-surface-grid-to-point-observation">
-<span id="sphx-glr-users-guide-model-applications-medium-range-pointstat-fcstgfs-obsnam-sfc-multifield-prepbufr-py"></span><h1><span class="section-number">5.2.3.6. </span>CONUS Surface Grid to Point Observation<a class="headerlink" href="#conus-surface-grid-to-point-observation" title="Permalink to this headline">¶</a></h1>
-<p>This use case will run PB2NC to move the PrepBufr format files to NetCDF and then
-compare a gridded forecast field to point observations, with an output of statistical
-comparisons.</p>
+<div class="sphx-glr-example-title section" id="point-stat-standard-verification-for-conus-surface-gfs-nam-grib-prepbufr">
+<span id="sphx-glr-users-guide-model-applications-medium-range-pointstat-fcstgfs-obsnam-sfc-multifield-prepbufr-py"></span><h1><span class="section-number">5.2.3.6. </span>Point-Stat: Standard Verification for CONUS Surface (GFS:NAM:Grib:prepBUFR)<a class="headerlink" href="#point-stat-standard-verification-for-conus-surface-gfs-nam-grib-prepbufr" title="Permalink to this headline">¶</a></h1>
+<p>This use case will run PB2NC to convert PrepBufr format files to NetCDF and then
+compare a gridded forecast field to point observations and compute Continuous
+statistics over time.</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>To provide useful statistical information on the relationship between observation data
-in point format to a gridded forecast. These values can be used to help correct model
-deviations from observed values.</p>
+in point format to a gridded forecast. These values can be used to assess the skill
+of the prediction. Statistics are store as partial sums to save space and Stat-Analysis
+must be used to compute Continuous statistics.</p>
 </div>
 <div class="section" id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
@@ -825,7 +826,7 @@ and will contain the following files:</p>
 <p>sphinx_gallery_thumbnail_path = ‘_static/medium_range-PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PB2NCToolUseCase&amp;check_keywords=yes&amp;area=default">PB2NCToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MediumRangeAppUseCase&amp;check_keywords=yes&amp;area=default">MediumRangeAppUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PointStatToolUseCase&amp;check_keywords=yes&amp;area=default">PointStatToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&amp;check_keywords=yes&amp;area=default">GRIBFileUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=prepBUFRFileUseCase&amp;check_keywords=yes&amp;area=default">prepBUFRFileUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAEMCOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAEMCOrgUseCase</a></p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PB2NCToolUseCase&amp;check_keywords=yes&amp;area=default">PB2NCToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MediumRangeAppUseCase&amp;check_keywords=yes&amp;area=default">MediumRangeAppUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PointStatToolUseCase&amp;check_keywords=yes&amp;area=default">PointStatToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&amp;check_keywords=yes&amp;area=default">GRIBFileUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=prepBUFRFileUseCase&amp;check_keywords=yes&amp;area=default">prepBUFRFileUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAEMCOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAEMCOrgUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=RegriddingInToolUseCase&amp;check_keywords=yes&amp;area=default">RegriddinginTool</a>  , <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=ObsTimeSummaryUseCase&amp;check_keywords=yes&amp;area=default">ObsTimeSummary</a></p>
 </div>
 <p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-medium-range-pointstat-fcstgfs-obsnam-sfc-multifield-prepbufr-py">
@@ -851,7 +852,7 @@ and will contain the following files:</p>
         <a href="../precipitation/MTD_fcstHRRR-TLE_obsMRMS.html" class="btn btn-neutral float-right" title="5.2.4.1. HRRR-TLE MODE Time Domain Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="GridStat_fcstGFS_obsGFS_Sfc_MultiField.html" class="btn btn-neutral float-left" title="5.2.3.5. Grid Comparison" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.html" class="btn btn-neutral float-left" title="5.2.3.5. Multi_Tool: Feature Relative by Init (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -25,7 +25,7 @@ Convection Allowing Models
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case processes data over time.">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case identifies objects through space and time. HREF data in GEMPak format is used.  T...">
 
 .. only:: html
 
@@ -45,7 +45,7 @@ Convection Allowing Models
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case builds hourly gridded fields for multiple variables, comparing the resulting data...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case demonstrates both features of Ensemble-Stat, basic ensemble postprocessing and co...">
 
 .. only:: html
 
@@ -129,27 +129,7 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Feature Relative Standard Use Case (simple series analysis by initialization times)">
-
-.. only:: html
-
- .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_Standard_thumb.png
-
-     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_Standard.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_Standard
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will change the point observation format to NetCDF and then  compare the GFS fore...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will convert prepBUFR point format to NetCDF and then  compute Continuous Statist...">
 
 .. only:: html
 
@@ -189,13 +169,13 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Series by Lead (for forecast hour groupings)">
+    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool: Feature Relative by Lead (with lead groupings) (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)">
 
 .. only:: html
 
- .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_FhrGrouping_thumb.png
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_thumb.png
 
-     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_FhrGrouping.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py`
 
 .. raw:: html
 
@@ -205,7 +185,7 @@ Medium Range
 .. toctree::
    :hidden:
 
-   /Users_Guide/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_FhrGrouping
+   /Users_Guide/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead
 
 .. raw:: html
 
@@ -229,7 +209,27 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run PB2NC to move the PrepBufr format files to NetCDF and then compare a gri...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool: Feature Relative by Init (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run PB2NC to convert PrepBufr format files to NetCDF and then compare a grid...">
 
 .. only:: html
 
@@ -361,7 +361,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="HRRR Ensemble Use Case">
+    <div class="sphx-glr-thumbcontainer" tooltip="Ensemble-Stat: Basic Post-Processing only">
 
 .. only:: html
 
@@ -413,7 +413,7 @@ Subseasonal to Seasonal
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Seasonal forecast use case running GridStat, then passing the output into SeriesAnalysis.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Seasonal forecast use case running Gridi-Stat then passing the output into Series-Analysis.">
 
 .. only:: html
 
@@ -445,7 +445,7 @@ Space Weather
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case runs the MET GridStat tool to compare gridded forecast data  from two runs of the...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case runs the MET GridStat tool to compare gridded analyses   from two runs of the Glo...">
 
 .. only:: html
 
@@ -476,7 +476,7 @@ Tropical Cyclone and Extra Tropical Cyclone
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Cyclone Plotter Use case">
+    <div class="sphx-glr-thumbcontainer" tooltip="Cyclone Plotter: From TC-Pairs Output (ADeck:BDeck:modified ATCF)">
 
 .. only:: html
 
@@ -496,7 +496,7 @@ Tropical Cyclone and Extra Tropical Cyclone
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Track and Intensity Use case (generate mean, median and box plots)">
+    <div class="sphx-glr-thumbcontainer" tooltip="Track and Intensity Plotter: Generate mean, median and box plots (ADeck:BDeck:ATCF)">
 
 .. only:: html
 

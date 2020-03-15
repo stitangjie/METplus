@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.5.1. BMKG APIK Seasonal Forecast &mdash; METplus 3.0 documentation</title>
+  <title>5.2.5.1. Grid-Stat and Series-Analysis: BMKG APIK Seasonal Forecast (NMME:CPC:NetCDF) &mdash; METplus 3.0 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.2.6.1. Glotec vs. Glotec" href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html" />
+    <link rel="next" title="5.2.6.1. Grid-Stat: GloTEC validation (GloTEC:GloTEC:NetCDF with multiple times)" href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html" />
     <link rel="prev" title="5.2.4.7. HREF-mean to Stage IV QPE GEMPAK Use Case" href="../precipitation/GridStat_fcstHREFmean_obsStgIV_Gempak.html" /> 
 </head>
 
@@ -166,7 +166,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.5.1. </span>BMKG APIK Seasonal Forecast</li>
+      <li><span class="section-number">5.2.5.1. </span>Grid-Stat and Series-Analysis: BMKG APIK Seasonal Forecast (NMME:CPC:NetCDF)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,9 +189,10 @@
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-s2s-gridstat-seriesanalysis-fcstnmme-obscpc-seasonal-forecast-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="bmkg-apik-seasonal-forecast">
-<span id="sphx-glr-users-guide-model-applications-s2s-gridstat-seriesanalysis-fcstnmme-obscpc-seasonal-forecast-py"></span><h1><span class="section-number">5.2.5.1. </span>BMKG APIK Seasonal Forecast<a class="headerlink" href="#bmkg-apik-seasonal-forecast" title="Permalink to this headline">¶</a></h1>
-<p>Seasonal forecast use case running GridStat, then passing the output into SeriesAnalysis.</p>
+<div class="sphx-glr-example-title section" id="grid-stat-and-series-analysis-bmkg-apik-seasonal-forecast-nmme-cpc-netcdf">
+<span id="sphx-glr-users-guide-model-applications-s2s-gridstat-seriesanalysis-fcstnmme-obscpc-seasonal-forecast-py"></span><h1><span class="section-number">5.2.5.1. </span>Grid-Stat and Series-Analysis: BMKG APIK Seasonal Forecast (NMME:CPC:NetCDF)<a class="headerlink" href="#grid-stat-and-series-analysis-bmkg-apik-seasonal-forecast-nmme-cpc-netcdf" title="Permalink to this headline">¶</a></h1>
+<p>Seasonal forecast use case running Gridi-Stat then passing the output
+into Series-Analysis.</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>The process of seasonal forecasting with a time horizon of one to many months
@@ -291,10 +292,9 @@ is a collection of datasets formatted in equivalent format to the forecast. The
 hindcast ensemble is identified through the year in the filename (as well as in the
 time variable inside the netCDF file).</p>
 <p>Forecast Datasets:</p>
-<ul class="simple">
-<li><p>variable of interest: pr (precipitation: cumulative monthly sum)</p></li>
-<li><p>format of precipitation variable: time,lat,lon (here dimensions: 29,181,361) with time variable representing 29 samples of same Julian Init-Time of hindcasts over past 29 years.</p></li>
-</ul>
+<p>NMME
+* variable of interest: pr (precipitation: cumulative monthly sum)
+* format of precipitation variable: time,lat,lon (here dimensions: 29,181,361) with time variable representing 29 samples of same Julian Init-Time of hindcasts over past 29 years.</p>
 <p>Hindcast Datasets:</p>
 <p>Observational Dataset:</p>
 <ul class="simple">
@@ -1123,7 +1123,7 @@ Output for this use case will be found in model_applications/s2s/GridStat_Series
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html" class="btn btn-neutral float-right" title="5.2.6.1. Glotec vs. Glotec" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html" class="btn btn-neutral float-right" title="5.2.6.1. Grid-Stat: GloTEC validation (GloTEC:GloTEC:NetCDF with multiple times)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../precipitation/GridStat_fcstHREFmean_obsStgIV_Gempak.html" class="btn btn-neutral float-left" title="5.2.4.7. HREF-mean to Stage IV QPE GEMPAK Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

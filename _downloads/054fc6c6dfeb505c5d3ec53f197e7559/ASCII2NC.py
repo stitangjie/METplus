@@ -1,6 +1,6 @@
 """
-ASCII2NC
-========
+ASCII2NC:Basic Use Case
+========================
 
 This use case will run the MET ASCII2NC tool to convert point observation data in ASCII text format to NetCDF format.
 

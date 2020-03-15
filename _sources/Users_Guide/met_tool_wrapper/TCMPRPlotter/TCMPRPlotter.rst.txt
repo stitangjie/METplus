@@ -9,8 +9,8 @@
     .. _sphx_glr_Users_Guide_met_tool_wrapper_TCMPRPlotter_TCMPRPlotter.py:
 
 
-TCMPRPlotter
-============
+TCMPRPlotter: Basic Use Case
+=======================================================
 
 This use case will run the MET R script tcmpr_plotter.R to generate various statistical
 plots of tropical cyclone tracks.
@@ -19,7 +19,7 @@ plots of tropical cyclone tracks.
 Scientific Objective
 --------------------
 
-Generate statistical plots of tropical cyclone tracks.
+Generate plots of tropical cyclone tracks.
 
 Datasets
 --------

@@ -9,8 +9,8 @@
     .. _sphx_glr_Users_Guide_met_tool_wrapper_PB2NC_PB2NC.py:
 
 
-PB2NC
-========
+PB2NC: Basic Use Case
+=====================
 
 This use case will run the MET PB2NC tool to convert prepBUFR point observation data to NetCDF format.
 
@@ -18,7 +18,7 @@ This use case will run the MET PB2NC tool to convert prepBUFR point observation 
 Scientific Objective
 --------------------
 
-None. Simply converting file formats so point observations can be read by the MET tools.
+Simply converting file formats so point observations can be read by the MET tools.
 
 Datasets
 --------

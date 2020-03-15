@@ -9,8 +9,8 @@
     .. _sphx_glr_Users_Guide_met_tool_wrapper_ASCII2NC_ASCII2NC_python_embedding.py:
 
 
-ASCII2NC using Python Embedding
-===============================
+ASCII2NC: Using Python Embedding
+=============================================================================
 
 This use case will run the MET ASCII2NC tool to convert point observation data in ASCII text format to NetCDF format using Python Embedding
 

@@ -515,7 +515,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <span class="nv">nbrhd</span> <span class="o">=</span> <span class="o">{</span>
    <span class="nv">field</span>      <span class="o">=</span> BOTH<span class="p">;</span>
    <span class="nv">shape</span>      <span class="o">=</span> SQUARE<span class="p">;</span>
-   <span class="nv">width</span>      <span class="o">=</span> <span class="o">[</span> <span class="m">1</span> <span class="o">]</span><span class="p">;</span>
+   <span class="nv">width</span>      <span class="o">=</span> <span class="o">[</span> <span class="m">3</span>,7,15 <span class="o">]</span><span class="p">;</span>
    <span class="nv">cov_thresh</span> <span class="o">=</span> <span class="o">[</span> &gt;<span class="o">=</span><span class="m">0</span>.5 <span class="o">]</span><span class="p">;</span>
    <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">1</span>.0<span class="p">;</span>
 <span class="o">}</span>
@@ -576,12 +576,12 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
    <span class="nv">pstd</span>   <span class="o">=</span> NONE<span class="p">;</span>
    <span class="nv">pjc</span>    <span class="o">=</span> NONE<span class="p">;</span>
    <span class="nv">prc</span>    <span class="o">=</span> NONE<span class="p">;</span>
-   <span class="nv">eclv</span>   <span class="o">=</span> BOTH<span class="p">;</span>
+   <span class="nv">eclv</span>   <span class="o">=</span> NONE<span class="p">;</span>
    <span class="nv">nbrctc</span> <span class="o">=</span> NONE<span class="p">;</span>
    <span class="nv">nbrcts</span> <span class="o">=</span> NONE<span class="p">;</span>
    <span class="nv">nbrcnt</span> <span class="o">=</span> NONE<span class="p">;</span>
-   <span class="nv">grad</span>   <span class="o">=</span> BOTH<span class="p">;</span>
-   <span class="nv">dmap</span>   <span class="o">=</span> NONE<span class="p">;</span>
+   <span class="nv">grad</span>   <span class="o">=</span> NONE<span class="p">;</span>
+   <span class="nv">dmap</span>   <span class="o">=</span> STAT<span class="p">;</span>
 <span class="o">}</span>
 
 //
@@ -598,7 +598,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
    <span class="nv">nbrhd</span>        <span class="o">=</span> FALSE<span class="p">;</span>
    <span class="nv">fourier</span>      <span class="o">=</span> FALSE<span class="p">;</span>
    <span class="nv">gradient</span>     <span class="o">=</span> FALSE<span class="p">;</span>
-   <span class="nv">distance_map</span> <span class="o">=</span> FALSE<span class="p">;</span>
+   <span class="nv">distance_map</span> <span class="o">=</span> TRUE<span class="p">;</span>
    <span class="nv">apply_mask</span>   <span class="o">=</span> FALSE<span class="p">;</span>
 <span class="o">}</span>
 

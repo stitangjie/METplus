@@ -9,8 +9,8 @@
     .. _sphx_glr_Users_Guide_met_tool_wrapper_MODE_MODE.py:
 
 
-MODE
-========
+MODE: Basic Use Case
+====================
 
 This use case will run the MET MODE tool to compare gridded forecast data to gridded observation data.
 

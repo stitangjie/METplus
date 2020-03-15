@@ -9,7 +9,7 @@
     .. _sphx_glr_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py:
 
 
-Use Case: Sea Ice Validation and Verification
+Grid-Stat and MODE: Sea Ice Validation (IMS:NCEPanalysis:Grib2)  
 ====================================================================================================
 
 Compare IMS sea ice concentration analysis to NCEP sea ice concentration analysis.  

@@ -9,8 +9,8 @@
     .. _sphx_glr_Users_Guide_met_tool_wrapper_GempakToCF_GempakToCF.py:
 
 
-GempakToCF
-==========
+GempakToCF: Basic Use Case
+=============================================================================
 
 This use case will run the GempakToCF (external) tool to convert Gempak data to NetCDF format.
 

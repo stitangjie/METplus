@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.3.5. Grid Comparison &mdash; METplus 3.0 documentation</title>
+  <title>5.2.3.4. Grid-Stat: Standard Verification of Surface Fields (GFS:GFS:Grib) &mdash; METplus 3.0 documentation</title>
   
 
   
@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.2.3.6. CONUS Surface Grid to Point Observation" href="PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.html" />
-    <link rel="prev" title="5.2.3.4. Series by Lead (for forecast hour groupings)" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_FhrGrouping.html" /> 
+    <link rel="next" title="5.2.3.5. Multi_Tool: Feature Relative by Init (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.html" />
+    <link rel="prev" title="5.2.3.3. Multi_Tool: Feature Relative by Lead (with lead groupings) (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)" href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -166,7 +166,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.3.5. </span>Grid Comparison</li>
+      <li><span class="section-number">5.2.3.4. </span>Grid-Stat: Standard Verification of Surface Fields (GFS:GFS:Grib)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,14 +189,17 @@
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-medium-range-gridstat-fcstgfs-obsgfs-sfc-multifield-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="grid-comparison">
-<span id="sphx-glr-users-guide-model-applications-medium-range-gridstat-fcstgfs-obsgfs-sfc-multifield-py"></span><h1><span class="section-number">5.2.3.5. </span>Grid Comparison<a class="headerlink" href="#grid-comparison" title="Permalink to this headline">¶</a></h1>
-<p>This use case will run the MET GridStat tool to compare gridded forecast data to gridded observation data over a few valid times and generate statistics over time.</p>
+<div class="sphx-glr-example-title section" id="grid-stat-standard-verification-of-surface-fields-gfs-gfs-grib">
+<span id="sphx-glr-users-guide-model-applications-medium-range-gridstat-fcstgfs-obsgfs-sfc-multifield-py"></span><h1><span class="section-number">5.2.3.4. </span>Grid-Stat: Standard Verification of Surface Fields (GFS:GFS:Grib)<a class="headerlink" href="#grid-stat-standard-verification-of-surface-fields-gfs-gfs-grib" title="Permalink to this headline">¶</a></h1>
+<p>This use case will run the MET GridStat tool to compare gridded forecast
+data to gridded observation data over a few valid times and generate
+Continous statistics over time.</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>To provide useful statistical information on the relationship between observation
-data in gridded format to a gridded forecast. These values can be used to help
-correct model deviations from observed values.</p>
+data in gridded format to a gridded forecast. These values can be used to assess
+the skill of the prediction.  Statistics stored only as partial sums to save space.
+Stat-Analysis must be used to compute Continuous Statistics.</p>
 </div>
 <div class="section" id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
@@ -700,10 +703,10 @@ and will contain the following files:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.html" class="btn btn-neutral float-right" title="5.2.3.6. CONUS Surface Grid to Point Observation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.html" class="btn btn-neutral float-right" title="5.2.3.5. Multi_Tool: Feature Relative by Init (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_FhrGrouping.html" class="btn btn-neutral float-left" title="5.2.3.4. Series by Lead (for forecast hour groupings)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.html" class="btn btn-neutral float-left" title="5.2.3.3. Multi_Tool: Feature Relative by Lead (with lead groupings) (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

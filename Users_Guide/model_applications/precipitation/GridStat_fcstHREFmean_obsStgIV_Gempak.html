@@ -39,8 +39,8 @@
   <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.2.5.1. BMKG APIK Seasonal Forecast" href="../s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.html" />
-    <link rel="prev" title="5.2.4.6. HRRR Ensemble Use Case" href="EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.html" /> 
+    <link rel="next" title="5.2.5.1. Grid-Stat and Series-Analysis: BMKG APIK Seasonal Forecast (NMME:CPC:NetCDF)" href="../s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.html" />
+    <link rel="prev" title="5.2.4.6. Ensemble-Stat: Basic Post-Processing only" href="EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -526,7 +526,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <span class="nv">nbrhd</span> <span class="o">=</span> <span class="o">{</span>
    <span class="nv">field</span>      <span class="o">=</span> BOTH<span class="p">;</span>
    <span class="nv">shape</span>      <span class="o">=</span> SQUARE<span class="p">;</span>
-   <span class="nv">width</span>      <span class="o">=</span> <span class="o">[</span> <span class="m">1</span> <span class="o">]</span><span class="p">;</span>
+   <span class="nv">width</span>      <span class="o">=</span> <span class="o">[</span> <span class="m">3</span>,7,15 <span class="o">]</span><span class="p">;</span>
    <span class="nv">cov_thresh</span> <span class="o">=</span> <span class="o">[</span> &gt;<span class="o">=</span><span class="m">0</span>.5 <span class="o">]</span><span class="p">;</span>
    <span class="nv">vld_thresh</span> <span class="o">=</span> <span class="m">1</span>.0<span class="p">;</span>
 <span class="o">}</span>
@@ -587,12 +587,12 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
    <span class="nv">pstd</span>   <span class="o">=</span> NONE<span class="p">;</span>
    <span class="nv">pjc</span>    <span class="o">=</span> NONE<span class="p">;</span>
    <span class="nv">prc</span>    <span class="o">=</span> NONE<span class="p">;</span>
-   <span class="nv">eclv</span>   <span class="o">=</span> BOTH<span class="p">;</span>
+   <span class="nv">eclv</span>   <span class="o">=</span> NONE<span class="p">;</span>
    <span class="nv">nbrctc</span> <span class="o">=</span> NONE<span class="p">;</span>
    <span class="nv">nbrcts</span> <span class="o">=</span> NONE<span class="p">;</span>
    <span class="nv">nbrcnt</span> <span class="o">=</span> NONE<span class="p">;</span>
-   <span class="nv">grad</span>   <span class="o">=</span> BOTH<span class="p">;</span>
-   <span class="nv">dmap</span>   <span class="o">=</span> NONE<span class="p">;</span>
+   <span class="nv">grad</span>   <span class="o">=</span> NONE<span class="p">;</span>
+   <span class="nv">dmap</span>   <span class="o">=</span> STAT<span class="p">;</span>
 <span class="o">}</span>
 
 //
@@ -609,7 +609,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
    <span class="nv">nbrhd</span>        <span class="o">=</span> FALSE<span class="p">;</span>
    <span class="nv">fourier</span>      <span class="o">=</span> FALSE<span class="p">;</span>
    <span class="nv">gradient</span>     <span class="o">=</span> FALSE<span class="p">;</span>
-   <span class="nv">distance_map</span> <span class="o">=</span> FALSE<span class="p">;</span>
+   <span class="nv">distance_map</span> <span class="o">=</span> TRUE<span class="p">;</span>
    <span class="nv">apply_mask</span>   <span class="o">=</span> FALSE<span class="p">;</span>
 <span class="o">}</span>
 
@@ -710,10 +710,10 @@ and will contain the following files:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.html" class="btn btn-neutral float-right" title="5.2.5.1. BMKG APIK Seasonal Forecast" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.html" class="btn btn-neutral float-right" title="5.2.5.1. Grid-Stat and Series-Analysis: BMKG APIK Seasonal Forecast (NMME:CPC:NetCDF)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.html" class="btn btn-neutral float-left" title="5.2.4.6. HRRR Ensemble Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.html" class="btn btn-neutral float-left" title="5.2.4.6. Ensemble-Stat: Basic Post-Processing only" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

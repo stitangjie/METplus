@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1.1.1. ASCII2NC using Python Embedding with User Python &mdash; METplus 3.0 documentation</title>
+  <title>5.1.1.1. ASCII2NC: Using Python Embedding with MET_PYTHON_EXE &mdash; METplus 3.0 documentation</title>
   
 
   
@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.1.1.2. ASCII2NC" href="ASCII2NC.html" />
+    <link rel="next" title="5.1.1.2. ASCII2NC:Basic Use Case" href="ASCII2NC.html" />
     <link rel="prev" title="5.1. MET tools" href="../index.html" /> 
 </head>
 
@@ -109,12 +109,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#pointstat">5.1.11. PointStat</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#python-embedding-ingest">5.1.12. Python Embedding Ingest</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#regriddataplane">5.1.13. RegridDataPlane</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#seriesbyinit">5.1.14. SeriesByInit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#seriesbylead">5.1.15. SeriesByLead</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#statanalysis">5.1.16. StatAnalysis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tcmprplotter">5.1.17. TCMPRPlotter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tcpairs">5.1.18. TCPairs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tcstat">5.1.19. TCStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#statanalysis">5.1.14. StatAnalysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tcmprplotter">5.1.15. TCMPRPlotter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tcpairs">5.1.16. TCPairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tcstat">5.1.17. TCStat</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../model_applications/index.html">5.2. Model Applications</a></li>
@@ -178,7 +176,7 @@
         
           <li><a href="../index.html"><span class="section-number">5.1. </span>MET tools</a> &raquo;</li>
         
-      <li><span class="section-number">5.1.1.1. </span>ASCII2NC using Python Embedding with User Python</li>
+      <li><span class="section-number">5.1.1.1. </span>ASCII2NC: Using Python Embedding with MET_PYTHON_EXE</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -201,12 +199,16 @@
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-ascii2nc-ascii2nc-python-embedding-user-py-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="ascii2nc-using-python-embedding-with-user-python">
-<span id="sphx-glr-users-guide-met-tool-wrapper-ascii2nc-ascii2nc-python-embedding-user-py-py"></span><h1><span class="section-number">5.1.1.1. </span>ASCII2NC using Python Embedding with User Python<a class="headerlink" href="#ascii2nc-using-python-embedding-with-user-python" title="Permalink to this headline">¶</a></h1>
-<p>This use case will run the MET ASCII2NC tool to convert point observation data in ASCII text format to NetCDF format using Python Embedding functionality and specifying a different user-defined version of Python to run the script.</p>
+<div class="sphx-glr-example-title section" id="ascii2nc-using-python-embedding-with-met-python-exe">
+<span id="sphx-glr-users-guide-met-tool-wrapper-ascii2nc-ascii2nc-python-embedding-user-py-py"></span><h1><span class="section-number">5.1.1.1. </span>ASCII2NC: Using Python Embedding with MET_PYTHON_EXE<a class="headerlink" href="#ascii2nc-using-python-embedding-with-met-python-exe" title="Permalink to this headline">¶</a></h1>
+<p>This use case will run the MET ASCII2NC tool to convert point observation data in ASCII text format to NetCDF format using Python Embedding
+functionality and specifying a different user-defined version of Python to run the script. It additionally shows how to configure METplus
+to use an Python environment or package that was not used in building the MET tools.</p>
 <div class="section" id="scientific-objective">
 <h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
-<p>None. Simply converting file formats so point observations can be read by the MET tools.</p>
+<p>Simply converting file formats so point observations can be read by the MET tools through the use of a user-defined
+Python script and running in either a different environment that the MET build or using a package not currently a
+METplus dependency.</p>
 </div>
 <div class="section" id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
@@ -422,7 +424,7 @@ and will contain the following file:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ASCII2NC.html" class="btn btn-neutral float-right" title="5.1.1.2. ASCII2NC" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ASCII2NC.html" class="btn btn-neutral float-right" title="5.1.1.2. ASCII2NC:Basic Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral float-left" title="5.1. MET tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

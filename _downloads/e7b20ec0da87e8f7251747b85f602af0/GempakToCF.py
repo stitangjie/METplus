@@ -1,6 +1,6 @@
 """
-GempakToCF
-==========
+GempakToCF: Basic Use Case
+=============================================================================
 
 This use case will run the GempakToCF (external) tool to convert Gempak data to NetCDF format.
 
