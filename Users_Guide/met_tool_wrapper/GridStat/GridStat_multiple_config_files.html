@@ -394,7 +394,7 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/GridStat/GridStat.co
 <span class="nv">GRID_STAT_CLIMO_STDEV_INPUT_DIR</span> <span class="o">=</span>
 
 <span class="c1"># directory to write output from GridStat</span>
-<span class="nv">GRID_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/grid_stat
+<span class="nv">GRID_STAT_OUTPUT_DIR</span> <span class="o">=</span> <span class="o">{</span>OUTPUT_BASE<span class="o">}</span>/met_tool_wrapper/GridStat/GridStat
 
 <span class="c1"># End of [dir] section and start of [filename_templates] section</span>
 <span class="o">[</span>filename_templates<span class="o">]</span>
@@ -787,18 +787,20 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
-<li><p>Passing in GridStat.conf, then GridStat_forecast.conf, then GridStat_observation.conf, then a user-specific system configuration file:</p>
+<li><p>Passing in GridStat.conf, GridStat_forecast.conf, GridStat_observation.conf, an explicit override of the output directory, then a user-specific system configuration file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/met_tool_wrapper/GridStat/GridStat.conf
 -c /path/to/METplus/parm/use_cases/met_tool_wrapper/GridStat/GridStat_forecast.conf
 -c /path/to/METplus/parm/use_cases/met_tool_wrapper/GridStat/GridStat_observation.conf
+-c dir.GRID_STAT_OUTPUT_DIR<span class="o">={</span>OUTPUT_BASE<span class="o">}</span>/met_tool_wrapper/GridStat/GridStat_multiple_config
 -c /path/to/user_system.conf
 </pre></div>
 </div>
 </li>
-<li><p>Modifying the configurations in parm/metplus_config, then passing in GridStat.conf, then GridStat_foreacst.conf, GridStat_observation.conf:</p>
+<li><p>Modifying the configurations in parm/metplus_config, passing in GridStat.conf, GridStat_foreacst.conf, GridStat_observation.conf, and an explicit override of the output directory:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/METplus/parm/use_cases/met_tool_wrapper/GridStat/GridStat.conf
 -c /path/to/METplus/parm/use_cases/met_tool_wrapper/GridStat/GridStat_forecast.conf
 -c /path/to/METplus/parm/use_cases/met_tool_wrapper/GridStat/GridStat_observation.conf
+-c dir.GRID_STAT_OUTPUT_DIR<span class="o">={</span>OUTPUT_BASE<span class="o">}</span>/met_tool_wrapper/GridStat/GridStat_multiple_config
 </pre></div>
 </div>
 </li>
