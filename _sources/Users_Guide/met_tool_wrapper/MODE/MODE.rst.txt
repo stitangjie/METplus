@@ -1,10 +1,12 @@
-.. note::
-    :class: sphx-glr-download-link-note
+.. only:: html
 
-    Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_MODE_MODE.py>` to download the full example code
-.. rst-class:: sphx-glr-example-title
+    .. note::
+        :class: sphx-glr-download-link-note
 
-.. _sphx_glr_Users_Guide_met_tool_wrapper_MODE_MODE.py:
+        Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_MODE_MODE.py>`     to download the full example code
+    .. rst-class:: sphx-glr-example-title
+
+    .. _sphx_glr_Users_Guide_met_tool_wrapper_MODE_MODE.py:
 
 
 MODE: Basic Use Case
@@ -139,6 +141,7 @@ and will contain the following files:
 
 
 
+
 Keywords
 --------
 
@@ -149,7 +152,7 @@ sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-MODE.png'
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.021 seconds)
+   **Total running time of the script:** ( 0 minutes  0.000 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_met_tool_wrapper_MODE_MODE.py:

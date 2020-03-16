@@ -12,7 +12,7 @@ MET tools
 
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -29,9 +29,9 @@ ASCII2NC
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/ASCII2NC/images/thumb/sphx_glr_ASCII2NC_python_embedding_user_py_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/ASCII2NC/images/thumb/sphx_glr_ASCII2NC_python_embedding_user_py_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_ASCII2NC_ASCII2NC_python_embedding_user_py.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_ASCII2NC_ASCII2NC_python_embedding_user_py.py`
 
 .. raw:: html
 
@@ -49,9 +49,9 @@ ASCII2NC
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/ASCII2NC/images/thumb/sphx_glr_ASCII2NC_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/ASCII2NC/images/thumb/sphx_glr_ASCII2NC_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_ASCII2NC_ASCII2NC.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_ASCII2NC_ASCII2NC.py`
 
 .. raw:: html
 
@@ -69,9 +69,9 @@ ASCII2NC
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/ASCII2NC/images/thumb/sphx_glr_ASCII2NC_python_embedding_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/ASCII2NC/images/thumb/sphx_glr_ASCII2NC_python_embedding_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_ASCII2NC_ASCII2NC_python_embedding.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_ASCII2NC_ASCII2NC_python_embedding.py`
 
 .. raw:: html
 
@@ -84,7 +84,7 @@ ASCII2NC
    /Users_Guide/met_tool_wrapper/ASCII2NC/ASCII2NC_python_embedding
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -101,9 +101,9 @@ Cyclone Plotter
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/CyclonePlotter/images/thumb/sphx_glr_CyclonePlotter_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/CyclonePlotter/images/thumb/sphx_glr_CyclonePlotter_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_CyclonePlotter_CyclonePlotter.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_CyclonePlotter_CyclonePlotter.py`
 
 .. raw:: html
 
@@ -116,7 +116,7 @@ Cyclone Plotter
    /Users_Guide/met_tool_wrapper/CyclonePlotter/CyclonePlotter
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -133,9 +133,9 @@ EnsembleStat
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/EnsembleStat/images/thumb/sphx_glr_EnsembleStat_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/EnsembleStat/images/thumb/sphx_glr_EnsembleStat_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_EnsembleStat_EnsembleStat.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_EnsembleStat_EnsembleStat.py`
 
 .. raw:: html
 
@@ -153,9 +153,9 @@ EnsembleStat
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/EnsembleStat/images/thumb/sphx_glr_EnsembleStat_python_embedding_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/EnsembleStat/images/thumb/sphx_glr_EnsembleStat_python_embedding_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_EnsembleStat_EnsembleStat_python_embedding.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_EnsembleStat_EnsembleStat_python_embedding.py`
 
 .. raw:: html
 
@@ -168,7 +168,7 @@ EnsembleStat
    /Users_Guide/met_tool_wrapper/EnsembleStat/EnsembleStat_python_embedding
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -185,9 +185,9 @@ Example
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/Example/images/thumb/sphx_glr_Example_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/Example/images/thumb/sphx_glr_Example_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_Example_Example.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_Example_Example.py`
 
 .. raw:: html
 
@@ -200,7 +200,7 @@ Example
    /Users_Guide/met_tool_wrapper/Example/Example
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -217,9 +217,9 @@ GempakToCF
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/GempakToCF/images/thumb/sphx_glr_GempakToCF_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/GempakToCF/images/thumb/sphx_glr_GempakToCF_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_GempakToCF_GempakToCF.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_GempakToCF_GempakToCF.py`
 
 .. raw:: html
 
@@ -232,7 +232,7 @@ GempakToCF
    /Users_Guide/met_tool_wrapper/GempakToCF/GempakToCF
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -249,9 +249,9 @@ GridStat
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/GridStat/images/thumb/sphx_glr_GridStat_multiple_config_files_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/GridStat/images/thumb/sphx_glr_GridStat_multiple_config_files_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_GridStat_GridStat_multiple_config_files.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_GridStat_GridStat_multiple_config_files.py`
 
 .. raw:: html
 
@@ -269,9 +269,9 @@ GridStat
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/GridStat/images/thumb/sphx_glr_GridStat_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/GridStat/images/thumb/sphx_glr_GridStat_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_GridStat_GridStat.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_GridStat_GridStat.py`
 
 .. raw:: html
 
@@ -284,7 +284,7 @@ GridStat
    /Users_Guide/met_tool_wrapper/GridStat/GridStat
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -301,9 +301,9 @@ MODE
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/MODE/images/thumb/sphx_glr_MODE_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/MODE/images/thumb/sphx_glr_MODE_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_MODE_MODE.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_MODE_MODE.py`
 
 .. raw:: html
 
@@ -316,7 +316,7 @@ MODE
    /Users_Guide/met_tool_wrapper/MODE/MODE
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -333,9 +333,9 @@ MTD
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/MTD/images/thumb/sphx_glr_MTD_python_embedding_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/MTD/images/thumb/sphx_glr_MTD_python_embedding_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_MTD_MTD_python_embedding.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_MTD_MTD_python_embedding.py`
 
 .. raw:: html
 
@@ -353,9 +353,9 @@ MTD
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/MTD/images/thumb/sphx_glr_MTD_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/MTD/images/thumb/sphx_glr_MTD_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_MTD_MTD.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_MTD_MTD.py`
 
 .. raw:: html
 
@@ -368,7 +368,7 @@ MTD
    /Users_Guide/met_tool_wrapper/MTD/MTD
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -385,9 +385,9 @@ PB2NC
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/PB2NC/images/thumb/sphx_glr_PB2NC_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/PB2NC/images/thumb/sphx_glr_PB2NC_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PB2NC_PB2NC.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PB2NC_PB2NC.py`
 
 .. raw:: html
 
@@ -400,7 +400,7 @@ PB2NC
    /Users_Guide/met_tool_wrapper/PB2NC/PB2NC
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -417,9 +417,9 @@ PCPCombine
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_sum_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_sum_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_sum.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_sum.py`
 
 .. raw:: html
 
@@ -433,53 +433,13 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode to build a 15 hour accumulation fiel...">
-
-.. only:: html
-
-    .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_bucket_thumb.png
-
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_bucket.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/met_tool_wrapper/PCPCombine/PCPCombine_bucket
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode to build a 15 minute accumulation fi...">
-
-.. only:: html
-
-    .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_add_thumb.png
-
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_add.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/met_tool_wrapper/PCPCombine/PCPCombine_add
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode using a python script to read input ...">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_python_embedding_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_python_embedding_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_python_embedding.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_python_embedding.py`
 
 .. raw:: html
 
@@ -493,13 +453,13 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode and read in files. It highlights the...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in SUBTRACT mode to extract a 3 hour accumulatio...">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_loop_custom_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_subtract_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_loop_custom.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_subtract.py`
 
 .. raw:: html
 
@@ -509,7 +469,7 @@ PCPCombine
 .. toctree::
    :hidden:
 
-   /Users_Guide/met_tool_wrapper/PCPCombine/PCPCombine_loop_custom
+   /Users_Guide/met_tool_wrapper/PCPCombine/PCPCombine_subtract
 
 .. raw:: html
 
@@ -517,9 +477,9 @@ PCPCombine
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_user_defined_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_user_defined_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_user_defined.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_user_defined.py`
 
 .. raw:: html
 
@@ -537,9 +497,9 @@ PCPCombine
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_derive_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_derive_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_derive.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_derive.py`
 
 .. raw:: html
 
@@ -553,13 +513,13 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in SUBTRACT mode to extract a 3 hour accumulatio...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode to build a 15 minute accumulation fi...">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_subtract_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_add_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_subtract.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_add.py`
 
 .. raw:: html
 
@@ -569,10 +529,50 @@ PCPCombine
 .. toctree::
    :hidden:
 
-   /Users_Guide/met_tool_wrapper/PCPCombine/PCPCombine_subtract
+   /Users_Guide/met_tool_wrapper/PCPCombine/PCPCombine_add
+
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode and read in files. It highlights the...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_loop_custom_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_loop_custom.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/met_tool_wrapper/PCPCombine/PCPCombine_loop_custom
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode to build a 15 hour accumulation fiel...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/met_tool_wrapper/PCPCombine/images/thumb/sphx_glr_PCPCombine_bucket_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_bucket.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/met_tool_wrapper/PCPCombine/PCPCombine_bucket
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -589,9 +589,9 @@ PointStat
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/PointStat/images/thumb/sphx_glr_PointStat_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/PointStat/images/thumb/sphx_glr_PointStat_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PointStat_PointStat.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PointStat_PointStat.py`
 
 .. raw:: html
 
@@ -604,7 +604,7 @@ PointStat
    /Users_Guide/met_tool_wrapper/PointStat/PointStat
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -621,9 +621,9 @@ Python Embedding Ingest
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/PyEmbedIngest/images/thumb/sphx_glr_PyEmbedIngest_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/PyEmbedIngest/images/thumb/sphx_glr_PyEmbedIngest_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PyEmbedIngest_PyEmbedIngest.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PyEmbedIngest_PyEmbedIngest.py`
 
 .. raw:: html
 
@@ -636,7 +636,7 @@ Python Embedding Ingest
    /Users_Guide/met_tool_wrapper/PyEmbedIngest/PyEmbedIngest
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -653,9 +653,9 @@ RegridDataPlane
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/RegridDataPlane/images/thumb/sphx_glr_RegridDataPlane_python_embedding_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/RegridDataPlane/images/thumb/sphx_glr_RegridDataPlane_python_embedding_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_RegridDataPlane_RegridDataPlane_python_embedding.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_RegridDataPlane_RegridDataPlane_python_embedding.py`
 
 .. raw:: html
 
@@ -673,9 +673,9 @@ RegridDataPlane
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/RegridDataPlane/images/thumb/sphx_glr_RegridDataPlane_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/RegridDataPlane/images/thumb/sphx_glr_RegridDataPlane_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_RegridDataPlane_RegridDataPlane.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_RegridDataPlane_RegridDataPlane.py`
 
 .. raw:: html
 
@@ -688,7 +688,7 @@ RegridDataPlane
    /Users_Guide/met_tool_wrapper/RegridDataPlane/RegridDataPlane
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -705,9 +705,9 @@ StatAnalysis
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/StatAnalysis/images/thumb/sphx_glr_StatAnalysis_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/StatAnalysis/images/thumb/sphx_glr_StatAnalysis_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_StatAnalysis_StatAnalysis.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_StatAnalysis_StatAnalysis.py`
 
 .. raw:: html
 
@@ -720,7 +720,7 @@ StatAnalysis
    /Users_Guide/met_tool_wrapper/StatAnalysis/StatAnalysis
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -737,9 +737,9 @@ TCMPRPlotter
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/TCMPRPlotter/images/thumb/sphx_glr_TCMPRPlotter_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/TCMPRPlotter/images/thumb/sphx_glr_TCMPRPlotter_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_TCMPRPlotter_TCMPRPlotter.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_TCMPRPlotter_TCMPRPlotter.py`
 
 .. raw:: html
 
@@ -752,7 +752,7 @@ TCMPRPlotter
    /Users_Guide/met_tool_wrapper/TCMPRPlotter/TCMPRPlotter
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -765,33 +765,13 @@ TCPairs
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This METplus use case will run the MET tc_pairs tool on modified ATCF data generated by running...">
-
-.. only:: html
-
-    .. figure:: /Users_Guide/met_tool_wrapper/TCPairs/images/thumb/sphx_glr_TCPairs_extra_tropical_thumb.png
-
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_TCPairs_TCPairs_extra_tropical.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/met_tool_wrapper/TCPairs/TCPairs_extra_tropical
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="This use case runs the MET tc_pairs tool on ATCF file format data generated by the GFDL cyclone...">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/TCPairs/images/thumb/sphx_glr_TCPairs_tropical_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/TCPairs/images/thumb/sphx_glr_TCPairs_tropical_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_TCPairs_TCPairs_tropical.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_TCPairs_TCPairs_tropical.py`
 
 .. raw:: html
 
@@ -802,9 +782,29 @@ TCPairs
    :hidden:
 
    /Users_Guide/met_tool_wrapper/TCPairs/TCPairs_tropical
+
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-thumbcontainer" tooltip="This METplus use case will run the MET tc_pairs tool on modified ATCF data generated by running...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/met_tool_wrapper/TCPairs/images/thumb/sphx_glr_TCPairs_extra_tropical_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_TCPairs_TCPairs_extra_tropical.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/met_tool_wrapper/TCPairs/TCPairs_extra_tropical
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -821,9 +821,9 @@ TCStat
 
 .. only:: html
 
-    .. figure:: /Users_Guide/met_tool_wrapper/TCStat/images/thumb/sphx_glr_TCStat_thumb.png
+ .. figure:: /Users_Guide/met_tool_wrapper/TCStat/images/thumb/sphx_glr_TCStat_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_met_tool_wrapper_TCStat_TCStat.py`
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_TCStat_TCStat.py`
 
 .. raw:: html
 
@@ -836,7 +836,7 @@ TCStat
    /Users_Guide/met_tool_wrapper/TCStat/TCStat
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 

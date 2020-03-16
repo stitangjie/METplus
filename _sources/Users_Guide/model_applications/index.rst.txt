@@ -12,7 +12,7 @@ Model Applications
 
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -25,33 +25,13 @@ Convection Allowing Models
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Builds hourly gridded fields for multiple variables pertinent to hail prediction. (HRRR:MRMS ME...">
-
-.. only:: html
-
-    .. figure:: /Users_Guide/model_applications/convection_allowing_models/images/thumb/sphx_glr_MODE_fcstHRRR_obsMRMS_Hail_GRIB2_thumb.png
-
-        :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_MODE_fcstHRRR_obsMRMS_Hail_GRIB2.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/model_applications/convection_allowing_models/MODE_fcstHRRR_obsMRMS_Hail_GRIB2
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="This use case identifies objects through space and time. This is a forecast only use-case. (HRR...">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/convection_allowing_models/images/thumb/sphx_glr_MTD_fcstHREF_FcstOnly_Gempak_thumb.png
+ .. figure:: /Users_Guide/model_applications/convection_allowing_models/images/thumb/sphx_glr_MTD_fcstHREF_FcstOnly_Gempak_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_MTD_fcstHREF_FcstOnly_Gempak.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_MTD_fcstHREF_FcstOnly_Gempak.py`
 
 .. raw:: html
 
@@ -69,9 +49,9 @@ Convection Allowing Models
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/convection_allowing_models/images/thumb/sphx_glr_EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField_thumb.png
+ .. figure:: /Users_Guide/model_applications/convection_allowing_models/images/thumb/sphx_glr_EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.py`
 
 .. raw:: html
 
@@ -82,9 +62,29 @@ Convection Allowing Models
    :hidden:
 
    /Users_Guide/model_applications/convection_allowing_models/EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField
+
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-thumbcontainer" tooltip="Builds hourly gridded fields for multiple variables pertinent to hail prediction. (HRRR:MRMS ME...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/convection_allowing_models/images/thumb/sphx_glr_MODE_fcstHRRR_obsMRMS_Hail_GRIB2_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_MODE_fcstHRRR_obsMRMS_Hail_GRIB2.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/convection_allowing_models/MODE_fcstHRRR_obsMRMS_Hail_GRIB2
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -101,9 +101,9 @@ Cryosphere
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/cryosphere/images/thumb/sphx_glr_GridStat_MODE_fcstIMS_obsNCEP_sea_ice_thumb.png
+ .. figure:: /Users_Guide/model_applications/cryosphere/images/thumb/sphx_glr_GridStat_MODE_fcstIMS_obsNCEP_sea_ice_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py`
 
 .. raw:: html
 
@@ -116,7 +116,7 @@ Cryosphere
    /Users_Guide/model_applications/cryosphere/GridStat_MODE_fcstIMS_obsNCEP_sea_ice
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -129,73 +129,13 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool">
-
-.. only:: html
-
-    .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_thumb.png
-
-        :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool">
-
-.. only:: html
-
-    .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit_thumb.png
-
-        :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Convert prepBufr format files to NetCDF and then compute Continuous statistics for surface fiel...">
-
-.. only:: html
-
-    .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr_thumb.png
-
-        :ref:`sphx_glr_Users_Guide_model_applications_medium_range_PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/model_applications/medium_range/PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="Convert prepBUFR point format to NetCDF and then  compute Continuous statistics for  upper air ...">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr_thumb.png
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_medium_range_PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.py`
 
 .. raw:: html
 
@@ -213,9 +153,9 @@ Medium Range
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_GridStat_fcstGFS_obsGFS_climoNCEP_MultiField_thumb.png
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_GridStat_fcstGFS_obsGFS_climoNCEP_MultiField_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_medium_range_GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.py`
 
 .. raw:: html
 
@@ -229,13 +169,33 @@ Medium Range
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool: Feature Relative by Lead (with lead groupings) (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET GridStat tool to compare gridded forecast data to gridded observ...">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_GridStat_fcstGFS_obsGFS_Sfc_MultiField_thumb.png
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_GridStat_fcstGFS_obsGFS_Sfc_MultiField_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_medium_range_GridStat_fcstGFS_obsGFS_Sfc_MultiField.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_GridStat_fcstGFS_obsGFS_Sfc_MultiField.py`
 
 .. raw:: html
 
@@ -246,9 +206,49 @@ Medium Range
    :hidden:
 
    /Users_Guide/model_applications/medium_range/GridStat_fcstGFS_obsGFS_Sfc_MultiField
+
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool: Feature Relative by Init (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Convert prepBufr format files to NetCDF and then compute Continuous statistics for surface fiel...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/medium_range/PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -261,13 +261,13 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Ensemble">
+    <div class="sphx-glr-thumbcontainer" tooltip="Identifies objects in each fields and tracks them through time. (HRRR-TLE:MRMS:Grib2)">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_EnsembleStat_fcstHRRRE_FcstOnly_NetCDF_thumb.png
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_MTD_fcstHRRR-TLE_obsMRMS_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_precipitation_EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_obsMRMS.py`
 
 .. raw:: html
 
@@ -277,67 +277,7 @@ Precipitation
 .. toctree::
    :hidden:
 
-   /Users_Guide/model_applications/precipitation/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Computes probabilistic statistics for probabilistic QPF. (HRRE-TLE:StageIV:Grib2,Grib1)">
-
-.. only:: html
-
-    .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstHRRR-TLE_obsStgIV_GRIB_thumb.png
-
-        :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHRRR-TLE_obsStgIV_GRIB.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/model_applications/precipitation/GridStat_fcstHRRR-TLE_obsStgIV_GRIB
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded 6-hour observe...">
-
-.. only:: html
-
-    .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstHREFmean_obsStgIV_NetCDF_thumb.png
-
-        :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHREFmean_obsStgIV_NetCDF.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/model_applications/precipitation/GridStat_fcstHREFmean_obsStgIV_NetCDF
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded 6-hour observe...">
-
-.. only:: html
-
-    .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstHREFmean_obsStgIV_Gempak_thumb.png
-
-        :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHREFmean_obsStgIV_Gempak.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/model_applications/precipitation/GridStat_fcstHREFmean_obsStgIV_Gempak
+   /Users_Guide/model_applications/precipitation/MTD_fcstHRRR-TLE_obsMRMS
 
 .. raw:: html
 
@@ -345,9 +285,9 @@ Precipitation
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB_thumb.png
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.py`
 
 .. raw:: html
 
@@ -361,13 +301,33 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Grid">
+    <div class="sphx-glr-thumbcontainer" tooltip="Compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded 6-hour observe...">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstGFS_obsCCPA_GRIB_thumb.png
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstHREFmean_obsStgIV_NetCDF_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstGFS_obsCCPA_GRIB.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHREFmean_obsStgIV_NetCDF.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/GridStat_fcstHREFmean_obsStgIV_NetCDF
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Grid-Stat: 24-hour Accum Precip Use Case">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstGFS_obsCCPA_GRIB_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstGFS_obsCCPA_GRIB.py`
 
 .. raw:: html
 
@@ -381,13 +341,13 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Identifies objects in each fields and tracks them through time. (HRRR-TLE:MRMS:Grib2)">
+    <div class="sphx-glr-thumbcontainer" tooltip="Computes probabilistic statistics for probabilistic QPF. (HRRE-TLE:StageIV:Grib2,Grib1)">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_MTD_fcstHRRR-TLE_obsMRMS_thumb.png
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstHRRR-TLE_obsStgIV_GRIB_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_obsMRMS.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHRRR-TLE_obsStgIV_GRIB.py`
 
 .. raw:: html
 
@@ -397,10 +357,50 @@ Precipitation
 .. toctree::
    :hidden:
 
-   /Users_Guide/model_applications/precipitation/MTD_fcstHRRR-TLE_obsMRMS
+   /Users_Guide/model_applications/precipitation/GridStat_fcstHRRR-TLE_obsStgIV_GRIB
+
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-thumbcontainer" tooltip="Ensemble-Stat: Basic Post-Processing only">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_EnsembleStat_fcstHRRRE_FcstOnly_NetCDF_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded 6-hour observe...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstHREFmean_obsStgIV_Gempak_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHREFmean_obsStgIV_Gempak.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/GridStat_fcstHREFmean_obsStgIV_Gempak
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -417,9 +417,9 @@ Subseasonal to Seasonal
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/s2s/images/thumb/sphx_glr_GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast_thumb.png
+ .. figure:: /Users_Guide/model_applications/s2s/images/thumb/sphx_glr_GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_s2s_GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_s2s_GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.py`
 
 .. raw:: html
 
@@ -432,7 +432,7 @@ Subseasonal to Seasonal
    /Users_Guide/model_applications/s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -449,9 +449,9 @@ Space Weather
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/space_weather/images/thumb/sphx_glr_GridStat_fcstGloTEC_obsGloTEC_vx7_thumb.png
+ .. figure:: /Users_Guide/model_applications/space_weather/images/thumb/sphx_glr_GridStat_fcstGloTEC_obsGloTEC_vx7_thumb.jpg
 
-        :ref:`sphx_glr_Users_Guide_model_applications_space_weather_GridStat_fcstGloTEC_obsGloTEC_vx7.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_space_weather_GridStat_fcstGloTEC_obsGloTEC_vx7.py`
 
 .. raw:: html
 
@@ -464,7 +464,7 @@ Space Weather
    /Users_Guide/model_applications/space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 
@@ -476,13 +476,13 @@ Tropical Cyclone and Extra Tropical Cyclone
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Cyclone Plotter">
+    <div class="sphx-glr-thumbcontainer" tooltip="Cyclone Plotter: From TC-Pairs Output">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/tc_and_extra_tc/images/thumb/sphx_glr_Plotter_fcstGFS_obsGFS_ExtraTC_thumb.png
+ .. figure:: /Users_Guide/model_applications/tc_and_extra_tc/images/thumb/sphx_glr_Plotter_fcstGFS_obsGFS_ExtraTC_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_ExtraTC.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_ExtraTC.py`
 
 .. raw:: html
 
@@ -496,13 +496,13 @@ Tropical Cyclone and Extra Tropical Cyclone
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Track and Intensity Plotter">
+    <div class="sphx-glr-thumbcontainer" tooltip="Track and Intensity Plotter: Generate mean, median and box plots (ADeck:BDeck:ATCF)">
 
 .. only:: html
 
-    .. figure:: /Users_Guide/model_applications/tc_and_extra_tc/images/thumb/sphx_glr_Plotter_fcstGFS_obsGFS_RPlotting_thumb.png
+ .. figure:: /Users_Guide/model_applications/tc_and_extra_tc/images/thumb/sphx_glr_Plotter_fcstGFS_obsGFS_RPlotting_thumb.png
 
-        :ref:`sphx_glr_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_RPlotting.py`
+     :ref:`sphx_glr_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_RPlotting.py`
 
 .. raw:: html
 
@@ -515,7 +515,7 @@ Tropical Cyclone and Extra Tropical Cyclone
    /Users_Guide/model_applications/tc_and_extra_tc/Plotter_fcstGFS_obsGFS_RPlotting
 .. raw:: html
 
-    <div style='clear:both'></div>
+    <div class="sphx-glr-clear"></div>
 
 
 

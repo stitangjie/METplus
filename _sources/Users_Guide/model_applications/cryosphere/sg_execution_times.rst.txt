@@ -5,6 +5,8 @@
 
 Computation times
 =================
-**00:00.021** total execution time for **Users_Guide_model_applications_cryosphere** files:
+**00:00.000** total execution time for **Users_Guide_model_applications_cryosphere** files:
 
-- **00:00.021**: :ref:`sphx_glr_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py` (``GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py``)
++---------------------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py` (``GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py``) | 00:00.000 | 0.0 MB |
++---------------------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+

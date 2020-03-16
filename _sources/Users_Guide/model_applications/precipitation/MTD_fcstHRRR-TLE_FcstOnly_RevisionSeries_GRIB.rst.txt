@@ -1,10 +1,12 @@
-.. note::
-    :class: sphx-glr-download-link-note
+.. only:: html
 
-    Click :ref:`here <sphx_glr_download_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.py>` to download the full example code
-.. rst-class:: sphx-glr-example-title
+    .. note::
+        :class: sphx-glr-download-link-note
 
-.. _sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.py:
+        Click :ref:`here <sphx_glr_download_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.py>`     to download the full example code
+    .. rst-class:: sphx-glr-example-title
+
+    .. _sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.py:
 
 
 MTD: Build Revision Series to Evaluate Forecast Consistency 
@@ -142,7 +144,7 @@ sphinx_gallery_thumbnail_path = '_static/precipitation-MTD_fcstHRRR-TLE_FcstOnly
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.021 seconds)
+   **Total running time of the script:** ( 0 minutes  0.000 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.py:

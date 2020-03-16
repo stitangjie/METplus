@@ -5,6 +5,8 @@
 
 Computation times
 =================
-**00:00.021** total execution time for **Users_Guide_model_applications_space_weather** files:
+**00:00.000** total execution time for **Users_Guide_model_applications_space_weather** files:
 
-- **00:00.021**: :ref:`sphx_glr_Users_Guide_model_applications_space_weather_GridStat_fcstGloTEC_obsGloTEC_vx7.py` (``GridStat_fcstGloTEC_obsGloTEC_vx7.py``)
++----------------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_Users_Guide_model_applications_space_weather_GridStat_fcstGloTEC_obsGloTEC_vx7.py` (``GridStat_fcstGloTEC_obsGloTEC_vx7.py``) | 00:00.000 | 0.0 MB |
++----------------------------------------------------------------------------------------------------------------------------------------------+-----------+--------+

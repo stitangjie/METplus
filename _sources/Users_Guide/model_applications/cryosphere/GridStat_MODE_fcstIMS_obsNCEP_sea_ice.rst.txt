@@ -1,10 +1,12 @@
-.. note::
-    :class: sphx-glr-download-link-note
+.. only:: html
 
-    Click :ref:`here <sphx_glr_download_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py>` to download the full example code
-.. rst-class:: sphx-glr-example-title
+    .. note::
+        :class: sphx-glr-download-link-note
 
-.. _sphx_glr_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py:
+        Click :ref:`here <sphx_glr_download_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py>`     to download the full example code
+    .. rst-class:: sphx-glr-example-title
+
+    .. _sphx_glr_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py:
 
 
 Grid-Stat and MODE: Sea Ice Validation (IMS:NCEPanalysis:Grib2)  
@@ -157,7 +159,7 @@ Keywords
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.021 seconds)
+   **Total running time of the script:** ( 0 minutes  0.000 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py:
