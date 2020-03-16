@@ -143,7 +143,7 @@ Keywords
 
 sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-MTD.png'
 
-.. note:: `MTDToolUseCase <https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&check_keywords=yes&area=default>`_
+.. note:: `MTDToolUseCase <https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&check_keywords=yes&area=default>`_, `DiagnosticsUseCase <https://ncar.github.io/METplus/search.html?q=DiagnosticsUseCase&check_keywords=yes&area=default>`_
 
 
 .. rst-class:: sphx-glr-timing

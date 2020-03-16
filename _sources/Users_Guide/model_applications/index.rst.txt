@@ -341,26 +341,6 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Computes probabilistic statistics for probabilistic QPF. (HRRE-TLE:StageIV:Grib2,Grib1)">
-
-.. only:: html
-
- .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstHRRR-TLE_obsStgIV_GRIB_thumb.png
-
-     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHRRR-TLE_obsStgIV_GRIB.py`
-
-.. raw:: html
-
-    </div>
-
-
-.. toctree::
-   :hidden:
-
-   /Users_Guide/model_applications/precipitation/GridStat_fcstHRRR-TLE_obsStgIV_GRIB
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="Ensemble-Stat: Basic Post-Processing only">
 
 .. only:: html
@@ -398,6 +378,26 @@ Precipitation
    :hidden:
 
    /Users_Guide/model_applications/precipitation/GridStat_fcstHREFmean_obsStgIV_Gempak
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Computes probabilistic statistics for probabilistic QPF. (HRRE-TLE:StageIV:Grib2,Grib1)">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstHRRR-TLE_obsStgIV_GRIB_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHRRR-TLE_obsStgIV_GRIB.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/GridStat_fcstHRRR-TLE_obsStgIV_GRIB
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>

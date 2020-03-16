@@ -9,7 +9,7 @@
     .. _sphx_glr_Users_Guide_met_tool_wrapper_TCPairs_TCPairs_extra_tropical.py:
 
 
-TCPairsETC: Basic Use Case for Extra Tropical Cyclones
+TCPairs: Basic Use Case for Extra Tropical Cyclones
 ========================================================================
 
 This METplus use case will run the MET tc_pairs tool on modified ATCF data
@@ -134,8 +134,9 @@ and will contain the following files:
 Keywords
 --------
 
-.. note:: `TCPairsToolUseCase <https://ncar.github.io/METplus/search.html?q=TCPairsToolUseCase&check_keywords=yes&area=default>`_,
-          `SBUOrgUseCase <https://ncar.github.io/METplus/search.html?q=SBUOrgUseCase&check_keywords=yes&area=default>`_
+.. note::
+ `TCPairsToolUseCase <https://ncar.github.io/METplus/search.html?q=TCPairsToolUseCase&check_keywords=yes&area=default>`_,
+ `SBUOrgUseCase <https://ncar.github.io/METplus/search.html?q=SBUOrgUseCase&check_keywords=yes&area=default>`_
 
 sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-TCPairs.png'
 

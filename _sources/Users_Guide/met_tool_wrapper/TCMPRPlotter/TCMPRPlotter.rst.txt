@@ -109,7 +109,8 @@ and will contain the following files:
 Keywords
 --------
 
-.. note:: `TCMPRPlotterUseCase <https://ncar.github.io/METplus/search.html?q=TCMPRPlotterUseCase&check_keywords=yes&area=default>`_
+.. note::
+ `TCMPRPlotterUseCase <https://ncar.github.io/METplus/search.html?q=TCMPRPlotterUseCase&check_keywords=yes&area=default>`_
 
 
 .. rst-class:: sphx-glr-timing

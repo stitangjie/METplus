@@ -610,8 +610,8 @@ PointStat
 
 .. _sphx_glr_Users_Guide_met_tool_wrapper_PyEmbedIngest:
 
-Python Embedding Ingest
------------------------
+PyEmbedIngest
+-------------
 
 
 
@@ -686,6 +686,58 @@ RegridDataPlane
    :hidden:
 
    /Users_Guide/met_tool_wrapper/RegridDataPlane/RegridDataPlane
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_Users_Guide_met_tool_wrapper_SeriesAnalysis:
+
+SeriesAnalysis
+--------------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET SeriesAnalysis tool over a series of input files via python Embe...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/met_tool_wrapper/SeriesAnalysis/images/thumb/sphx_glr_SeriesAnalysis_python_embedding_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_SeriesAnalysis_SeriesAnalysis_python_embedding.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/met_tool_wrapper/SeriesAnalysis/SeriesAnalysis_python_embedding
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET Seriesi-Analysis tool over a series of input files and computes ...">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/met_tool_wrapper/SeriesAnalysis/images/thumb/sphx_glr_SeriesAnalysis_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_met_tool_wrapper_SeriesAnalysis_SeriesAnalysis.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/met_tool_wrapper/SeriesAnalysis/SeriesAnalysis
 .. raw:: html
 
     <div class="sphx-glr-clear"></div>
