@@ -8,7 +8,7 @@ Computation times
 **00:00.000** total execution time for **Users_Guide_met_tool_wrapper_GridStat** files:
 
 +---------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_GridStat_GridStat_multiple_config_files.py` (``GridStat_multiple_config_files.py``) | 00:00.000 | 0.0 MB |
-+---------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
 | :ref:`sphx_glr_Users_Guide_met_tool_wrapper_GridStat_GridStat.py` (``GridStat.py``)                                             | 00:00.000 | 0.0 MB |
++---------------------------------------------------------------------------------------------------------------------------------+-----------+--------+
+| :ref:`sphx_glr_Users_Guide_met_tool_wrapper_GridStat_GridStat_multiple_config_files.py` (``GridStat_multiple_config_files.py``) | 00:00.000 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------------------+-----------+--------+

@@ -101,22 +101,23 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#metplus-wrappers-directory-structure">2.6. METplus Wrappers directory structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#set-up-your-environment">2.7. Set up your environment</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#cshrc">2.7.1. .cshrc:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bashrc">2.7.2. .bashrc:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-components-and-using-manage-externals">2.7. Build_components and using manage_externals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-your-environment">2.8. Set up your environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cshrc">2.8.1. .cshrc:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bashrc">2.8.2. .bashrc:</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#set-up-metplus-wrappers-configuration-files">2.8. Set up METplus Wrappers Configuration files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#updating-configuration-files-handling-deprecated-configuration-variables">2.9. Updating Configuration Files - Handling Deprecated Configuration Variables</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#simple-rename">2.9.1. Simple Rename</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#fcst-obs-both-variables">2.9.2. FCST/OBS/BOTH Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pcpcombine-input-levels">2.9.3. PCPCombine Input Levels</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#met-configuration-files">2.9.4. MET Configuration Files</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sed-commands">2.9.5. SED Commands</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#validate-config-helper-script">2.9.6. Validate Config Helper Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-metplus-wrappers-configuration-files">2.9. Set up METplus Wrappers Configuration files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updating-configuration-files-handling-deprecated-configuration-variables">2.10. Updating Configuration Files - Handling Deprecated Configuration Variables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#simple-rename">2.10.1. Simple Rename</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fcst-obs-both-variables">2.10.2. FCST/OBS/BOTH Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pcpcombine-input-levels">2.10.3. PCPCombine Input Levels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#met-configuration-files">2.10.4. MET Configuration Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sed-commands">2.10.5. SED Commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#validate-config-helper-script">2.10.6. Validate Config Helper Script</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#running-metplus-wrappers">2.10. Running METplus Wrappers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-metplus-wrappers">2.11. Running METplus Wrappers</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">3. System Configuration</a></li>
@@ -301,7 +302,9 @@ directories to the METplus Wrappers directory. You should have the
 following directory structure:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">METplus</span><span class="o">/</span>
   <span class="n">docs</span><span class="o">/</span>
+  <span class="n">build_components</span><span class="o">/</span>
   <span class="n">internal_tests</span><span class="o">/</span>
+  <span class="n">manage_exernals</span><span class="o">/</span>
   <span class="n">parm</span><span class="o">/</span>
   <span class="n">sorc</span><span class="o">/</span>
   <span class="n">ush</span><span class="o">/</span>
@@ -315,8 +318,12 @@ files that are used to create the METplus wrapper API documentaton. The Doxygen
 documentation can be created and viewed via web browser if the developer
 has Doxygen installed on the host.  The Doxygen documentation is useful to contributors and is not
 necessary for METplus end-users.</p>
+<p>The build_components/ directory contains scripts that use manage_externals
+and files available on dtcenter.org to download MET and start the build process</p>
 <p>The internal_tests/ directory contains unit test scripts that are only
 relevant to METplus Wrappers developers and contributors.</p>
+<p>The manage_externals/ directory contains scripts used to facilitate the downloading and management
+of components that METplus interacts with such as MET and METviewer</p>
 <p>The parm/ directory contains all the configuration files for MET and
 METplus Wrappers.</p>
 <p>The sorc/ directory contains Doxygen executables to generate
@@ -325,8 +332,20 @@ documentation for developers.</p>
 METplus Wrappers.</p>
 <p>The ush/ directory contains the Python wrappers to the MET tools.</p>
 </div>
+<div class="section" id="build-components-and-using-manage-externals">
+<h2><span class="section-number">2.7. </span>Build_components and using manage_externals<a class="headerlink" href="#build-components-and-using-manage-externals" title="Permalink to this headline">¶</a></h2>
+<p>Running build_components/build_MET.sh will</p>
+<ul class="simple">
+<li><p>clone MET and METviewer from github using the manage_externals scripts</p></li>
+<li><p>grab the current MET compile script and all of the necessary external libraries</p></li>
+<li><p>build the external libraries</p></li>
+<li><p>attempt to build met</p></li>
+</ul>
+<p>Building MET requires fine tuning on just about all systems, this should at least get most of
+the way through the process and allow just a few manual changes to get it completely built.</p>
+</div>
 <div class="section" id="set-up-your-environment">
-<h2><span class="section-number">2.7. </span>Set up your environment<a class="headerlink" href="#set-up-your-environment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.8. </span>Set up your environment<a class="headerlink" href="#set-up-your-environment" title="Permalink to this headline">¶</a></h2>
 <p>Environment variables need to be set to allow the METplus Wrappers
 application to be run from any directory and for locating the necessary
 Python modules. There is an option to set the JLOGFILE environment
@@ -337,7 +356,7 @@ be directed to stdout (your display).</p>
 <p>Add the following information to your .cshrc (C shell) or .bashrc (Bash
 shell):</p>
 <div class="section" id="cshrc">
-<h3><span class="section-number">2.7.1. </span>.cshrc:<a class="headerlink" href="#cshrc" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.8.1. </span>.cshrc:<a class="headerlink" href="#cshrc" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Open your .cshrc file and do the following:</p></li>
 <li><p>To your PATH, add: <em>&lt;full-path-to</em>-<em>METplus</em>&gt;/ush</p></li>
@@ -355,7 +374,7 @@ shell):</p>
 </div>
 </div>
 <div class="section" id="bashrc">
-<h3><span class="section-number">2.7.2. </span>.bashrc:<a class="headerlink" href="#bashrc" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.8.2. </span>.bashrc:<a class="headerlink" href="#bashrc" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Open your .bashrc file and do the following:</p></li>
 <li><p>To your PATH, add : <em>&lt;full-path-to-METplus</em>&gt;/ush</p></li>
@@ -374,7 +393,7 @@ directory where you want the logs to reside</p></li>
 </div>
 </div>
 <div class="section" id="set-up-metplus-wrappers-configuration-files">
-<h2><span class="section-number">2.8. </span>Set up METplus Wrappers Configuration files<a class="headerlink" href="#set-up-metplus-wrappers-configuration-files" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.9. </span>Set up METplus Wrappers Configuration files<a class="headerlink" href="#set-up-metplus-wrappers-configuration-files" title="Permalink to this headline">¶</a></h2>
 <p>There are four METplus Wrappers configuration files that must be defined
 prior to running METplus Wrappers. These configuration files reside in
 the METplus_INSTALL_DIRECTORY/METplus/parm/metplus_config</p>
@@ -431,14 +450,14 @@ to make customizations by over-riding any of these values in their own
 configuration files.</p>
 </div>
 <div class="section" id="updating-configuration-files-handling-deprecated-configuration-variables">
-<h2><span class="section-number">2.9. </span>Updating Configuration Files - Handling Deprecated Configuration Variables<a class="headerlink" href="#updating-configuration-files-handling-deprecated-configuration-variables" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.10. </span>Updating Configuration Files - Handling Deprecated Configuration Variables<a class="headerlink" href="#updating-configuration-files-handling-deprecated-configuration-variables" title="Permalink to this headline">¶</a></h2>
 <p>If you have used a previous release of METplus before, this content is important to getting started using a newly released version.</p>
 <p>METplus developers strive to allow backwards compatibility so new versions of the tools will continue to work as they did in previous versions.
 However, sometimes changes are necessary for clarity and cohesion. Many configuration variable names have changed in version 3.0 in an attempt to make their function more clear.
 If any deprecated METplus configuration variables are found in a user’s use case, execution will stop immediately and an error report of all variables that must be updated is output.
 In some cases, simply renaming the variable is sufficient. Other changes may require more thought. The next few sections will outline a few of common changes that will need to be made. In the last section, a tool called validate_config.py is described. This tool can be used to help with this transition by automating some of the work required to update your configuration files.</p>
 <div class="section" id="simple-rename">
-<h3><span class="section-number">2.9.1. </span>Simple Rename<a class="headerlink" href="#simple-rename" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.10.1. </span>Simple Rename<a class="headerlink" href="#simple-rename" title="Permalink to this headline">¶</a></h3>
 <p>In most cases, there is a simple one-to-one relationship between a deprecated configuration variable and a valid one. In this case, renaming the variable will resolve the issue.</p>
 <p>Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">met_util</span><span class="o">.</span><span class="n">py</span><span class="p">)</span> <span class="n">ERROR</span><span class="p">:</span> <span class="n">DEPRECATED</span> <span class="n">CONFIG</span> <span class="n">ITEMS</span> <span class="n">WERE</span> <span class="n">FOUND</span><span class="o">.</span> <span class="n">PLEASE</span> <span class="n">REMOVE</span><span class="o">/</span><span class="n">REPLACE</span> <span class="n">THEM</span> <span class="n">FROM</span> <span class="n">CONFIG</span> <span class="n">FILES</span>
@@ -449,7 +468,7 @@ In some cases, simply renaming the variable is sufficient. Other changes may req
 <p>These cases can be handled automatically by using the <a class="reference internal" href="#validate-config"><span class="std std-ref">Validate Config Helper Script</span></a>.</p>
 </div>
 <div class="section" id="fcst-obs-both-variables">
-<h3><span class="section-number">2.9.2. </span>FCST/OBS/BOTH Variables<a class="headerlink" href="#fcst-obs-both-variables" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.10.2. </span>FCST/OBS/BOTH Variables<a class="headerlink" href="#fcst-obs-both-variables" title="Permalink to this headline">¶</a></h3>
 <p>Field information passed into many of the MET tools is defined with the [FCST/OBS]_VAR&lt;n&gt;_[NAME/LEVELS/THRESH/OPTIONS] configuration variables.
 For example, FCST_VAR1_NAME and FCST_VAR1_LEVELS are used to define forecast name/level values that are compared to observations defined with OBS_VAR1_NAME and OBS_VAR1_LEVELS.</p>
 <p>Before METplus 3.0, users could define the FCST_* variables and omit the OBS_* variables or vice versa. In this case, it was assumed the undefined values matched the coresponding term. For example, if FCST_VAR1_NAME = TMP and OBS_VAR1_NAME is not defined, it was assumed that OBS_VAR1_NAME = TMP as well. This method was not always clear to users.</p>
@@ -464,7 +483,7 @@ For example, FCST_VAR1_NAME and FCST_VAR1_LEVELS are used to define forecast nam
 <p>These cases can be handled automatically by using the <a class="reference internal" href="#validate-config"><span class="std std-ref">Validate Config Helper Script</span></a>, but users should review the suggested changes, as they may want to update differently.</p>
 </div>
 <div class="section" id="pcpcombine-input-levels">
-<h3><span class="section-number">2.9.3. </span>PCPCombine Input Levels<a class="headerlink" href="#pcpcombine-input-levels" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.10.3. </span>PCPCombine Input Levels<a class="headerlink" href="#pcpcombine-input-levels" title="Permalink to this headline">¶</a></h3>
 <p>Prior to METplus 3.0, the PCPCombine wrapper only allowed the user to define a single input accumulation amount to be used to build a desired accumulation. However, some data sets include more than one accumulation field.
 PCPCombine wrapper was enhanced in version 3.0 to allow users to specify a list of accumulations available in the input data.
 Instead of only being able to specify FCST_PCP_COMBINE_INPUT_LEVEL, users can now specify a list of accumulations with <a class="reference internal" href="glossary.html#term-fcst-pcp-combine-input-accums"><span class="xref std std-term">FCST_PCP_COMBINE_INPUT_ACCUMS</span></a>.</p>
@@ -475,7 +494,7 @@ Instead of only being able to specify FCST_PCP_COMBINE_INPUT_LEVEL, users can no
 <p>These cases can be handled automatically by using the <a class="reference internal" href="#validate-config"><span class="std std-ref">Validate Config Helper Script</span></a>, but users should review the suggested changes, as they may want to include other available input accumulations.</p>
 </div>
 <div class="section" id="met-configuration-files">
-<h3><span class="section-number">2.9.4. </span>MET Configuration Files<a class="headerlink" href="#met-configuration-files" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.10.4. </span>MET Configuration Files<a class="headerlink" href="#met-configuration-files" title="Permalink to this headline">¶</a></h3>
 <p>The METplus wrappers set environment variables that are read by the MET configuration files to customize each run. Some of the environment variables that were previously set by METplus wrappers to handle very specific use cases are no longer set in favor of using a common set of variables across the MET tools. The following are examples of changes that have occurred in METplus regarding environment variables.</p>
 <p>EnsembleStat previously set $GRID_VX to define the grid to use to regrid data within the tool. In version 3.0, MET tools that have a ‘to_grid’ value in the ‘grid’ dictionary of the MET config file have a uniformly named METplus configuration variable called &lt;MET-tool&gt;_REGRID_TO_GRID (i.e. <a class="reference internal" href="glossary.html#term-ensemble-stat-regrid-to-grid"><span class="xref std std-term">ENSEMBLE_STAT_REGRID_TO_GRID</span></a>) that is used to define this value:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Before:
@@ -519,7 +538,7 @@ After:
 <p>These cases can be handled automatically by using the <a class="reference internal" href="#validate-config"><span class="std std-ref">Validate Config Helper Script</span></a>, but users should review the suggested changes and make sure they add the appropriate recommended METplus configuration variables to their files to achieve the same behavior.</p>
 </div>
 <div class="section" id="sed-commands">
-<h3><span class="section-number">2.9.5. </span>SED Commands<a class="headerlink" href="#sed-commands" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.10.5. </span>SED Commands<a class="headerlink" href="#sed-commands" title="Permalink to this headline">¶</a></h3>
 <p>Running master_metplus.py with one or more configuration files that contain deprecated variables that can be fixed with a find/replace command will generate a file in the {OUTPUT_BASE} called sed_commands.txt. This file contains a list of commands that can be run to update the configuration file. Lines that start with “#Add” are intended to notify the user to add a variable to their METplus configuration file.</p>
 <p>The <a class="reference internal" href="#validate-config"><span class="std std-ref">Validate Config Helper Script</span></a> will step you through each of these commands and execute them upon your approval.</p>
 <p>Example sed_commands.txt content:</p>
@@ -535,7 +554,7 @@ After:
 </div>
 </div>
 <div class="section" id="validate-config-helper-script">
-<span id="validate-config"></span><h3><span class="section-number">2.9.6. </span>Validate Config Helper Script<a class="headerlink" href="#validate-config-helper-script" title="Permalink to this headline">¶</a></h3>
+<span id="validate-config"></span><h3><span class="section-number">2.10.6. </span>Validate Config Helper Script<a class="headerlink" href="#validate-config-helper-script" title="Permalink to this headline">¶</a></h3>
 <p>The script named validate_config.py is found in the same directory as master_metplus.py. To use this script, call it with the same arguments that you would pass to master_metplus.py:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">master_metplus</span><span class="o">.</span><span class="n">py</span>  <span class="o">-</span><span class="n">c</span> <span class="o">./</span><span class="n">my_conf</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">c</span> <span class="o">./</span><span class="n">another_config</span><span class="o">.</span><span class="n">py</span>
 <span class="n">validate_config</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">c</span> <span class="o">./</span><span class="n">my_conf</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">c</span> <span class="o">./</span><span class="n">another_config</span><span class="o">.</span><span class="n">py</span>
@@ -620,7 +639,7 @@ Make this change before continuing! [OK]
 </div>
 </div>
 <div class="section" id="running-metplus-wrappers">
-<h2><span class="section-number">2.10. </span>Running METplus Wrappers<a class="headerlink" href="#running-metplus-wrappers" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.11. </span>Running METplus Wrappers<a class="headerlink" href="#running-metplus-wrappers" title="Permalink to this headline">¶</a></h2>
 <p>Running METplus Wrappers involves invoking the Python script
 master_metplus.py from any directory followed by a list of configuration
 files (file path relative to the
