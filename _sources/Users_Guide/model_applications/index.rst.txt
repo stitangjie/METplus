@@ -189,7 +189,7 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET GridStat tool to compare gridded forecast data to gridded observ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Run the MET GridStat tool to compare gridded forecast data to gridded observation data over a f...">
 
 .. only:: html
 
@@ -209,7 +209,7 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool: Feature Relative by Init (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)">
+    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool: Feature Relative by Init">
 
 .. only:: html
 
@@ -413,7 +413,7 @@ Subseasonal to Seasonal
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Seasonal forecast use case running Gridi-Stat then passing the output into Series-Analysis.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Seasonal forecast use case running Gridi-Stat then passing the output into Series-Analysis. (NM...">
 
 .. only:: html
 
@@ -496,7 +496,7 @@ Tropical Cyclone and Extra Tropical Cyclone
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Track and Intensity Plotter: Generate mean, median and box plots (ADeck:BDeck:ATCF)">
+    <div class="sphx-glr-thumbcontainer" tooltip="Track and Intensity Plotter: Generate mean, median and box plots">
 
 .. only:: html
 

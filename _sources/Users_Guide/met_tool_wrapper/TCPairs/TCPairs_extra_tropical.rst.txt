@@ -137,6 +137,8 @@ Keywords
 .. note:: `TCPairsToolUseCase <https://ncar.github.io/METplus/search.html?q=TCPairsToolUseCase&check_keywords=yes&area=default>`_,
           `SBUOrgUseCase <https://ncar.github.io/METplus/search.html?q=SBUOrgUseCase&check_keywords=yes&area=default>`_
 
+sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-TCPairs.png'
+
 
 .. rst-class:: sphx-glr-timing
 
