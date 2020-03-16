@@ -169,7 +169,7 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool: Feature Relative by Lead (with lead groupings) (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)">
+    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool: Feature Relative by Lead (with lead groupings)">
 
 .. only:: html
 
@@ -321,7 +321,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Grid-Stat: 24-hour Accum Precip Use Case">
+    <div class="sphx-glr-thumbcontainer" tooltip="Grid-Stat: 24-hour QPF Use Case">
 
 .. only:: html
 

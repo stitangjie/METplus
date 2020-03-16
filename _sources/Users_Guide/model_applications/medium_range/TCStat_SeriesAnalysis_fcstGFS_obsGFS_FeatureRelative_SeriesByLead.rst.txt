@@ -9,7 +9,7 @@
     .. _sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py:
 
 
-Multi_Tool: Feature Relative by Lead (with lead groupings) (Adeck,GFS:Bdeck,GFS:ATCF,Grib2)
+Multi_Tool: Feature Relative by Lead (with lead groupings) 
 ==================================================================================================
 Calls multiple tools to produce diagnostic plots of systematic errors  
 relative to a feature (e.g. cyclone, MCS, etc...).  

@@ -9,7 +9,7 @@
     .. _sphx_glr_Users_Guide_model_applications_medium_range_PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.py:
 
 
-Point-Stat: Standard Verification for CONUS Surface (GFS:NAM:Grib:prepBUFR)
+Point-Stat: Standard Verification for CONUS Surface 
 ==============================================================================
 
 Convert prepBufr format files to NetCDF and then
