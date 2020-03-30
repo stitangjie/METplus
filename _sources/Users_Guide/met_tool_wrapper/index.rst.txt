@@ -25,7 +25,7 @@ ASCII2NC
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET ASCII2NC tool to convert point observation data in ASCII text fo...">
+    <div class="sphx-glr-thumbcontainer" tooltip="ASCII2NC_python_embedding _user_py.conf">
 
 .. only:: html
 
@@ -45,7 +45,7 @@ ASCII2NC
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET ASCII2NC tool to convert point observation data in ASCII text fo...">
+    <div class="sphx-glr-thumbcontainer" tooltip="ASCII2NC.conf">
 
 .. only:: html
 
@@ -65,7 +65,7 @@ ASCII2NC
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET ASCII2NC tool to convert point observation data in ASCII text fo...">
+    <div class="sphx-glr-thumbcontainer" tooltip="ASCII2NC_python _embedding.conf">
 
 .. only:: html
 
@@ -97,7 +97,7 @@ Cyclone Plotter
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Generates a plot of cyclone tracks.  No MET tool is invoked for this example.">
+    <div class="sphx-glr-thumbcontainer" tooltip="CyclonePlotter.conf">
 
 .. only:: html
 
@@ -129,7 +129,7 @@ EnsembleStat
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET Ensemble-Stat tool to compare gridded ensemble forecast data to ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="EnsembleStat.conf">
 
 .. only:: html
 
@@ -149,7 +149,7 @@ EnsembleStat
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET EnsembleStat tool to compare gridded ensemble forecast data to g...">
+    <div class="sphx-glr-thumbcontainer" tooltip="EnsembleStat_python _embedding.conf">
 
 .. only:: html
 
@@ -181,7 +181,7 @@ Example
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This is METplus&#x27; version of a &quot;Hello World&quot; use case. It will loop over run times and output in...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Example.conf">
 
 .. only:: html
 
@@ -213,7 +213,7 @@ GempakToCF
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the GempakToCF (external) tool to convert Gempak data to NetCDF format.">
+    <div class="sphx-glr-thumbcontainer" tooltip="GempakToCF.conf">
 
 .. only:: html
 
@@ -245,7 +245,7 @@ GridStat
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET Grid-Stat tool to compare gridded forecast data to gridded obser...">
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_multiple _config_files.conf">
 
 .. only:: html
 
@@ -265,7 +265,7 @@ GridStat
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET Grid-Stat tool to compare gridded forecast data to gridded obser...">
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat.conf">
 
 .. only:: html
 
@@ -297,7 +297,7 @@ MODE
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET MODE tool to compare gridded forecast data to gridded observatio...">
+    <div class="sphx-glr-thumbcontainer" tooltip="MODE.conf">
 
 .. only:: html
 
@@ -329,7 +329,7 @@ MTD
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET MTD (MODE Time Domain) tool to compare gridded forecast data to ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="MTD_python_embedding.conf">
 
 .. only:: html
 
@@ -349,7 +349,7 @@ MTD
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET MTD (MODE Time Domain) tool to compare gridded forecast data to ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="MTD.conf">
 
 .. only:: html
 
@@ -381,7 +381,7 @@ PB2NC
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PB2NC tool to convert prepBUFR point observation data to NetCDF ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PB2NC.conf">
 
 .. only:: html
 
@@ -413,7 +413,7 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in SUM mode to build a 15 minute accumulation fi...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_sum.conf">
 
 .. only:: html
 
@@ -433,7 +433,7 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode using a python script to read input ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_python _embedding.conf">
 
 .. only:: html
 
@@ -453,7 +453,7 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in SUBTRACT mode to extract a 3 hour accumulatio...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_subtract.conf">
 
 .. only:: html
 
@@ -473,7 +473,7 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in USER_DEFINED mode to generate a command defin...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_user_defined.conf">
 
 .. only:: html
 
@@ -493,7 +493,7 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in DERIVE mode to generate statistics using mult...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_derive.conf">
 
 .. only:: html
 
@@ -513,7 +513,7 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode to build a 15 minute accumulation fi...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_add.conf">
 
 .. only:: html
 
@@ -533,7 +533,7 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode and read in files. It highlights the...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_loop _custom.conf">
 
 .. only:: html
 
@@ -553,7 +553,7 @@ PCPCombine
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET PCPCombine tool in ADD mode to build a 15 hour accumulation fiel...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_bucket.conf">
 
 .. only:: html
 
@@ -585,7 +585,7 @@ PointStat
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET Point-Stat tool to compare gridded forecast data to point observ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PointStat.conf">
 
 .. only:: html
 
@@ -617,7 +617,7 @@ PyEmbedIngest
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the Python Embedding Ingest (PyEmbedIngest) wrapper tool to utilize the ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PyEmbedIngest.conf">
 
 .. only:: html
 
@@ -649,7 +649,7 @@ RegridDataPlane
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET RegridDataPlane tool to regrid data using a python embedding scr...">
+    <div class="sphx-glr-thumbcontainer" tooltip="RegridDataPlane_python _embedding.conf">
 
 .. only:: html
 
@@ -669,7 +669,7 @@ RegridDataPlane
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET Regrid-Data-Plane tool to regrid observation data in GRIB format...">
+    <div class="sphx-glr-thumbcontainer" tooltip="RegridDataPlane.conf">
 
 .. only:: html
 
@@ -701,7 +701,7 @@ SeriesAnalysis
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET SeriesAnalysis tool over a series of input files via python Embe...">
+    <div class="sphx-glr-thumbcontainer" tooltip="SeriesAnalysis_python _embedding.conf">
 
 .. only:: html
 
@@ -721,7 +721,7 @@ SeriesAnalysis
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET Seriesi-Analysis tool over a series of input files and computes ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="SeriesAnalysis.conf">
 
 .. only:: html
 
@@ -753,7 +753,7 @@ StatAnalysis
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET Stat-Analysis tool providing summary statistical information and...">
+    <div class="sphx-glr-thumbcontainer" tooltip="StatAnalysis.conf">
 
 .. only:: html
 
@@ -785,7 +785,7 @@ TCMPRPlotter
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET R script tcmpr_plotter.R to generate various statistical plots o...">
+    <div class="sphx-glr-thumbcontainer" tooltip="TCMPRPlotter.conf">
 
 .. only:: html
 
@@ -817,7 +817,7 @@ TCPairs
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case runs the MET tc_pairs tool on ATCF file format data generated by the GFDL cyclone...">
+    <div class="sphx-glr-thumbcontainer" tooltip="TCPairs_tropical.conf">
 
 .. only:: html
 
@@ -837,7 +837,7 @@ TCPairs
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This METplus use case will run the MET tc_pairs tool on modified ATCF data generated by running...">
+    <div class="sphx-glr-thumbcontainer" tooltip="TCPairs_extra _tropical.conf">
 
 .. only:: html
 
@@ -869,7 +869,7 @@ TCStat
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case will run the MET TCi-Stat tool to provide summary statistics from a TC-Pairs run.">
+    <div class="sphx-glr-thumbcontainer" tooltip="TCStat.conf">
 
 .. only:: html
 
@@ -890,6 +890,23 @@ TCStat
 
     <div class="sphx-glr-clear"></div>
 
+
+
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-gallery
+
+
+  .. container:: sphx-glr-download
+
+    :download:`Download all examples in Python source code: met_tool_wrapper_python.zip <//home/mccabe/metplus-doc/METplus/docs/Users_Guide/met_tool_wrapper/met_tool_wrapper_python.zip>`
+
+
+
+  .. container:: sphx-glr-download
+
+    :download:`Download all examples in Jupyter notebooks: met_tool_wrapper_jupyter.zip <//home/mccabe/metplus-doc/METplus/docs/Users_Guide/met_tool_wrapper/met_tool_wrapper_jupyter.zip>`
 
 
 .. only:: html

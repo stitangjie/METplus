@@ -643,7 +643,7 @@ Make this change before continuing! [OK]
 <p>Running METplus Wrappers involves invoking the Python script
 master_metplus.py from any directory followed by a list of configuration
 files (file path relative to the
-<em>&lt;path_to_METplus_install_dir</em>&gt;/METplus/parm directory).</p>
+<em>&lt;path_to_METplus_install_dir&gt;</em>/parm directory).</p>
 <p><strong>Example 1: Using a “default” configuration:</strong>
 Copy and paste the following into an empty text file and name it ‘my_user_config.conf’:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span># This is a comment, comments are defined with a # at the beginning of the line
@@ -663,13 +663,16 @@ OUTPUT_BASE = /tmp/output
 </div>
 <p>Run METplus via: <code class="docutils literal notranslate"><span class="pre">master_metplus.py</span> <span class="pre">-c</span> <span class="pre">./&lt;my_user_config.conf&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">master_metplus.py</span> <span class="pre">-c</span> <span class="pre">/&lt;username&gt;/&lt;my_user_config.conf&gt;</span></code> if you saved your default config in a directory other than where you are running master_metplus.py.</p>
 <p>When the above command is run, a usage message appears indicating that other config files are required to perform useful tasks, as well as a list of currently supported wrappers:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>USAGE: This is a default process, please indicate more specific processes in the PROCESS_LIST variable in one or more of the following configuration files:
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>USAGE: This text is displayed when [config] PROCESS_LIST = Usage.
+Pass in a configuration file (with -c or --config) that overrides [config] PROCESS_LIST to run other processes. For example:
 
--parm/metplus_config/metplus_runtime.conf
--parm/metplus_use_cases/&lt;usecase_name&gt;/&lt;usecase_name.conf&gt;
--parm/metplus_use_cases/&lt;usecase_name&gt;/examples/&lt;example_name&gt;.conf
+master_metplus.py -c parm/use_cases/met_tool_wrapper/GridStat/GridStat.conf
 
-Currently available processes are:
+or
+
+master_metplus.py --config parm/use_cases/model_applications/precipitation/GridStat_fcstHRRR-TLE_obsStgIV_GRIB.conf
+
+Possible processes:
 - ASCII2NC
 - CyclonePlotter
 - EnsembleStat
@@ -697,17 +700,24 @@ Currently available processes are:
 </div>
 <p><strong>Example 2: Using a use-case configuration:</strong></p>
 <p>The command:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c use_cases/feature_relative/feature_relative.conf
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c use_cases/met_tool_wrapper/GridStat/GridStat.conf
 </pre></div>
 </div>
-<p>will run METplus using the defaults set in the three config files found in parm/metplus_config. Any variables defined in these three config files can be over-ridden in the parm/use_cases/feature_relative/feature_relative.conf file. METplus will run using the values specified in the feature_relative.conf file.</p>
+<p>will run METplus using the defaults set in the config files found in parm/metplus_config. Any variables defined in these three config files can be overridden in the parm/use_cases/GridStat/GridStat.conf file. METplus will run using the values specified in the GridStat.conf file.</p>
 <p><strong>Example 3: Using example configuration to perform a specific evaluation (e.g. Model 1 vs. Obs 1, Model 1 vs. Obs 2, Model 2 vs. Obs 1, etc…):</strong></p>
 <p>The command:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c use_cases/feature_relative/feature_relative.conf \
--c use_cases/feature_relative/examples/series_by_lead_all_fhrs.conf
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c use_cases/met_tool_wrapper/GridStat/GridStat.conf \
+-c use_cases/met_tool_wrapper/GridStat/GridStat_forecast.conf \
+-c use_cases/met_tool_wrapper/GridStat/GridStat_observation.conf
 </pre></div>
 </div>
-<p>will run METplus using the defaults set in the three config files in parm/metplus_config, where variables can be over-ridden by parm/use_cases/feature_relative/feature_relative.conf or in parm/use_cases/feature_relative/examples/series_by_lead_all_fhrs.conf. The order in which conf files are called is important. Variables that are defined in intermediate conf files will be over-ridden by the same variables set in the conf file following it, or the last conf file.</p>
+<p>will run METplus using the defaults set in the config files in parm/metplus_config, where variables can be overridden by parm/use_cases/met_tool_wrapper/GridStat/GridStat.conf, then by parm/use_cases/met_tool_wrapper/GridStat/GridStat_forecast.conf, then by parm/use_cases/met_tool_wrapper/GridStat/GridStat_observation.conf. The order in which conf files are called is important. Variables that are defined in intermediate conf files will be overridden by the same variables set in the conf file following it, or the last conf file. For example, if FCST_VAR1_NAME = TMP in GridStat.conf and FCST_VAR1_NAME = TEMP in GridStat_forecast.conf, the value used will be TEMP because GridStat_forecast.conf was read after GridStat.conf.</p>
+<p>Separating configurations into multiple files can be useful if you want to compare different forecasts or observations in the same way. For example, to compare a different forecast to the observation in this example, copy GridStat_forecast.conf into a directory outside of the METplus repository (i.e. /home/user/METplus_user_config), rename it (i.e. GridStat_myforecast.conf), then change the values to match the new data set (input directory, input filename template, field name, etc.). Then you can run the new use case:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c use_cases/met_tool_wrapper/GridStat/GridStat.conf \
+-c /home/user/METplus_user_config/GridStat_myforecast.conf \
+-c use_cases/met_tool_wrapper/GridStat/GridStat_observation.conf
+</pre></div>
+</div>
 <dl class="footnote brackets">
 <dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>R version 3.2.5 is required when the TCMPRPlotter wraps the

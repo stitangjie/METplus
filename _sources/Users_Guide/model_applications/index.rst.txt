@@ -25,7 +25,7 @@ Convection Allowing Models
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This use case identifies objects through space and time. This is a forecast only use-case. (HRR...">
+    <div class="sphx-glr-thumbcontainer" tooltip="MTD_fcstHREF_FcstOnly _Gempak.conf">
 
 .. only:: html
 
@@ -45,7 +45,7 @@ Convection Allowing Models
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Demonstrates both features of Ensemble-Stat, basic ensemble postprocessing and computation of e...">
+    <div class="sphx-glr-thumbcontainer" tooltip="EnsembleStat_fcstHRRRE _obsHRRRE_Sfc_MultiField.conf">
 
 .. only:: html
 
@@ -65,7 +65,7 @@ Convection Allowing Models
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Builds hourly gridded fields for multiple variables pertinent to hail prediction. (HRRR:MRMS ME...">
+    <div class="sphx-glr-thumbcontainer" tooltip="MODE_fcstHRRR_obsMRMS _Hail_GRIB2.conf">
 
 .. only:: html
 
@@ -97,7 +97,7 @@ Cryosphere
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Runs bot GridStat and MODE tools to compare two ice concentration analyses  and generate statis...">
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_MODE_fcstIMS _obsNCEP_sea_ice.conf">
 
 .. only:: html
 
@@ -129,7 +129,7 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Convert prepBUFR point format to NetCDF and then  compute Continuous statistics for  upper air ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PointStat_fcstGFS_obsGDAS _UpperAir_MultiField _PrepBufr.conf">
 
 .. only:: html
 
@@ -149,7 +149,7 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Run the Grid-Stat and Stat-Analysis tools to anomaly statistics. (GFS:GFS:NCEP:Grib) ">
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGFS_obsGFS _climoNCEP_MultiField.conf">
 
 .. only:: html
 
@@ -169,7 +169,7 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool: Feature Relative by Lead (with lead groupings)">
+    <div class="sphx-glr-thumbcontainer" tooltip="TCStat_SeriesAnalysis_fcstGFS _obsGFS_FeatureRelative _SeriesByLead.conf">
 
 .. only:: html
 
@@ -189,7 +189,7 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Run the MET GridStat tool to compare gridded forecast data to gridded observation data over a f...">
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGFS_obsGFS _Sfc_MultiField.conf">
 
 .. only:: html
 
@@ -209,7 +209,7 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Multi_Tool: Feature Relative by Init">
+    <div class="sphx-glr-thumbcontainer" tooltip="TCStat_SeriesAnalysis_fcstGFS _obsGFS_FeatureRelative _SeriesByInit.conf">
 
 .. only:: html
 
@@ -229,7 +229,7 @@ Medium Range
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Convert prepBufr format files to NetCDF and then compute Continuous statistics for surface fiel...">
+    <div class="sphx-glr-thumbcontainer" tooltip="PointStat_fcstGFS_obsNAM_Sfc _MultiField_PrepBufr.conf">
 
 .. only:: html
 
@@ -261,7 +261,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Identifies objects in each fields and tracks them through time. (HRRR-TLE:MRMS:Grib2)">
+    <div class="sphx-glr-thumbcontainer" tooltip="MTD_fcstHRRR-TLE _obsMRMS.conf">
 
 .. only:: html
 
@@ -281,7 +281,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Holds the valid time constant and loops over lead-times to build a  dataset for a revision seri...">
+    <div class="sphx-glr-thumbcontainer" tooltip="MTD_fcstHRRR-TLE_FcstOnly _RevisionSeries_GRIB.conf">
 
 .. only:: html
 
@@ -301,7 +301,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded 6-hour observe...">
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstHREFmean _obsStgIV_Netcdf.conf">
 
 .. only:: html
 
@@ -321,7 +321,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Grid-Stat: 24-hour QPF Use Case">
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGFS _obsCCPA_Grib.conf">
 
 .. only:: html
 
@@ -341,7 +341,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Ensemble-Stat: Basic Post-Processing only">
+    <div class="sphx-glr-thumbcontainer" tooltip="EnsembleStat_fcstHRRRE _FcstOnly_NetCDF.conf">
 
 .. only:: html
 
@@ -361,7 +361,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Compares a 6-hour gridded quantitative precipitation forecast (QPF) to a gridded 6-hour observe...">
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstHREFmean _obsStgIV_Gempak.conf">
 
 .. only:: html
 
@@ -381,7 +381,7 @@ Precipitation
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Computes probabilistic statistics for probabilistic QPF. (HRRE-TLE:StageIV:Grib2,Grib1)">
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstHRRR _obsStgIV_GRIB.conf">
 
 .. only:: html
 
@@ -413,7 +413,7 @@ Subseasonal to Seasonal
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Seasonal forecast use case running Gridi-Stat then passing the output into Series-Analysis. (NM...">
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_SeriesAnalysis _fcstNMME_obsCPC _seasonal_forecast.conf">
 
 .. only:: html
 
@@ -445,7 +445,7 @@ Space Weather
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Demonstrates the use of METplus for model validation as both of the  &quot;forecast&quot; and &quot;obs&quot; field...">
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGloTEC _obsGloTEC_vx7.conf">
 
 .. only:: html
 
@@ -476,7 +476,7 @@ Tropical Cyclone and Extra Tropical Cyclone
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Cyclone Plotter: From TC-Pairs Output">
+    <div class="sphx-glr-thumbcontainer" tooltip="Plotter_fcstGFS _obsGFS_ExtraTC.conf ">
 
 .. only:: html
 
@@ -496,7 +496,7 @@ Tropical Cyclone and Extra Tropical Cyclone
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Track and Intensity Plotter: Generate mean, median and box plots">
+    <div class="sphx-glr-thumbcontainer" tooltip="Plotter_fcstGFS _obsGFS_RPlotting.conf ">
 
 .. only:: html
 
@@ -517,6 +517,23 @@ Tropical Cyclone and Extra Tropical Cyclone
 
     <div class="sphx-glr-clear"></div>
 
+
+
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-gallery
+
+
+  .. container:: sphx-glr-download
+
+    :download:`Download all examples in Python source code: model_applications_python.zip <//home/mccabe/metplus-doc/METplus/docs/Users_Guide/model_applications/model_applications_python.zip>`
+
+
+
+  .. container:: sphx-glr-download
+
+    :download:`Download all examples in Jupyter notebooks: model_applications_jupyter.zip <//home/mccabe/metplus-doc/METplus/docs/Users_Guide/model_applications/model_applications_jupyter.zip>`
 
 
 .. only:: html

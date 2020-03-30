@@ -12,7 +12,7 @@
 MODE: Basic Use Case
 ====================
 
-This use case will run the MET MODE tool to compare gridded forecast data to gridded observation data.
+MODE.conf
 
 
 Scientific Objective
@@ -133,12 +133,6 @@ and will contain the following files:
     # * mode_WRF_RH_vs_WRF_RH_P500_120000L_20050807_120000V_000000A_obj.nc
     # * mode_WRF_RH_vs_WRF_RH_P500_120000L_20050807_120000V_000000A_obj.txt
     # * mode_WRF_RH_vs_WRF_RH_P500_120000L_20050807_120000V_000000A.ps
-
-
-
-
-
-
 
 
 

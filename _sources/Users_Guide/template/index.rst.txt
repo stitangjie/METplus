@@ -32,6 +32,23 @@
 
 
 
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-gallery
+
+
+  .. container:: sphx-glr-download
+
+    :download:`Download all examples in Python source code: template_python.zip <//home/mccabe/metplus-doc/METplus/docs/Users_Guide/template/template_python.zip>`
+
+
+
+  .. container:: sphx-glr-download
+
+    :download:`Download all examples in Jupyter notebooks: template_jupyter.zip <//home/mccabe/metplus-doc/METplus/docs/Users_Guide/template/template_jupyter.zip>`
+
+
 .. only:: html
 
  .. rst-class:: sphx-glr-signature
