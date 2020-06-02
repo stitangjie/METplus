@@ -81,6 +81,7 @@ function run_pytest_and_check() {
 }
 
 
+run_pytest_and_check command_builder
 run_pytest_and_check config
 run_pytest_and_check check_metplus_python_version
 run_pytest_and_check grid_stat

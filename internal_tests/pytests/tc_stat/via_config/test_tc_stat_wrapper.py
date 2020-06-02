@@ -3,10 +3,11 @@
 import os
 import sys
 import pytest
-import produtil
-import config_metplus
-from tc_stat_wrapper import TcStatWrapper
 
+import produtil
+
+from metplus.util import config_metplus
+from metplus.wrappers.tc_stat_wrapper import TCStatWrapper
 
 #
 # -----------Mandatory-----------
@@ -37,10 +38,10 @@ def tc_stat_wrapper():
          files.  Subsequent tests can customize the final METplus configuration
          to over-ride these /path/to values."""
 
-    # Default, empty TcStatWrapper with some configuration values set
+    # Default, empty TCStatWrapper with some configuration values set
     # to /path/to:
     conf = metplus_config()
-    return TcStatWrapper(conf, None)
+    return TCStatWrapper(conf, None)
 
 
 
@@ -49,10 +50,10 @@ def metplus_config():
     """! Generate the METplus config object"""
     try:
         if 'JLOGFILE' in os.environ:
-            produtil.setup.setup(send_dbn=False, jobname='TcStatWrapper ',
+            produtil.setup.setup(send_dbn=False, jobname='TCStatWrapper ',
                                  jlogfile=os.environ['JLOGFILE'])
         else:
-            produtil.setup.setup(send_dbn=False, jobname='TcStatWrapper ')
+            produtil.setup.setup(send_dbn=False, jobname='TCStatWrapper ')
         produtil.log.postmsg('tc_stat_wrapper  is starting')
 
         # Read in the configuration object CONFIG

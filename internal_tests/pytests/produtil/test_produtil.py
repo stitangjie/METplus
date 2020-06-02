@@ -2,13 +2,15 @@
 
 import os
 import subprocess
-import produtil.setup
 import sys
 import logging
 import pytest
-import config_metplus
-import config_launcher as launcher
-import met_util as util
+
+import produtil.setup
+
+from metplus.util import config_metplus
+from metplus.util.config import config_launcher as launcher
+from metplus.util import met_util as util
 
 
 #

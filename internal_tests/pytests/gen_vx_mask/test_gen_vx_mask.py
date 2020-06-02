@@ -5,13 +5,15 @@ import sys
 import re
 import logging
 from collections import namedtuple
-import produtil
 import pytest
 import datetime
-import config_metplus
-from gen_vx_mask_wrapper import GenVxMaskWrapper
-import met_util as util
-import time_util
+
+import produtil
+
+from metplus.util import config_metplus
+from metplus.wrappers.gen_vx_mask_wrapper import GenVxMaskWrapper
+from metplus.util import met_util as util
+from metplus.util import time_util
 
 # --------------------TEST CONFIGURATION and FIXTURE SUPPORT -------------
 #

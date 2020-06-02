@@ -2,10 +2,12 @@ import pytest
 import os
 import sys
 import logging
+
 import produtil
-import config_metplus
-import met_util as util
-from series_by_init_wrapper import SeriesByInitWrapper
+
+from metplus.util import config_metplus
+from metplus.util import met_util as util
+from metplus.wrappers.series_by_init_wrapper import SeriesByInitWrapper
 
 #  To support the METplus config files
 def pytest_addoption(parser):

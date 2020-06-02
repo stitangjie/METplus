@@ -5,12 +5,14 @@ import sys
 import re
 import logging
 from collections import namedtuple
-import produtil
 import pytest
 import datetime
-import config_metplus
-import feature_util
-import met_util as util
+
+import produtil
+
+from metplus.util import config_metplus
+from metplus.util import feature_util
+from metplus.util import met_util as util
 
 # --------------------TEST CONFIGURATION and FIXTURE SUPPORT -------------
 #

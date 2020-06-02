@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 
 import os
-import config_metplus
 import datetime
 import sys
 import logging
 import re
 import pytest
-from point_stat_wrapper import PointStatWrapper
-import met_util as util
+
 import produtil.setup
+
+from metplus.util import config_metplus
+from metplus.wrappers.point_stat_wrapper import PointStatWrapper
+from metplus.util import met_util as util
 
 #
 # These are tests (not necessarily unit tests) for the

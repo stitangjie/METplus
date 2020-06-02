@@ -5,11 +5,13 @@ import sys
 import re
 import csv
 import pytest
+
 import produtil
-import config_metplus
-from command_builder import CommandBuilder
-from tc_pairs_wrapper import TCPairsWrapper
-import met_util as util
+
+from metplus.util import config_metplus
+from metplus.wrappers.command_builder import CommandBuilder
+from metplus.wrappers.tc_pairs_wrapper import TCPairsWrapper
+from metplus.util import met_util as util
 
 
 #

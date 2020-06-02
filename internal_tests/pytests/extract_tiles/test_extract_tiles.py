@@ -9,7 +9,7 @@
 import sys
 import os
 my_path = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, my_path + '/../../../ush')
+sys.path.insert(0, my_path + '/../../..')
 
 # Alternatively try this if the above my_path lines do not work
 # sys.path.append("/../../../ush/ExtractTilesWrapper")
@@ -18,11 +18,13 @@ import datetime
 import logging
 import re
 import pytest
-from extract_tiles_wrapper import ExtractTilesWrapper
-from tc_pairs_wrapper import TCPairsWrapper
+
 import produtil
-import config_metplus
-import met_util as util
+
+from metplus.wrappers.extract_tiles_wrapper import ExtractTilesWrapper
+from metplus.wrappers.tc_pairs_wrapper import TCPairsWrapper
+from metplus.util import config_metplus
+from metplus.util import met_util as util
 
 # --------------------TEST CONFIGURATION and FIXTURE SUPPORT -------------
 #
